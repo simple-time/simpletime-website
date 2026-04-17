@@ -1,0 +1,26 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+import AppStoreButton from './AppStoreButton.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="relative py-24 sm:py-28 bg-brand text-white overflow-hidden">
+  <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-accent/30 blur-[120px]"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-3xl px-5 sm:px-8 text-center">
+    <h2 class="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">{t('cta.title')}</h2>
+    <p class="mt-5 text-lg text-blue-100/90">{t('cta.subtitle')}</p>
+    <div class="mt-10 flex justify-center">
+      <AppStoreButton label={t('cta.button')} variant="light" size="lg" />
+    </div>
+  </div>
+</section>

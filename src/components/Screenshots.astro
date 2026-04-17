@@ -1,0 +1,56 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const shots = [
+  { src: '/screenshots/1.png', key: 'track' },
+  { src: '/screenshots/2.png', key: 'customize' },
+  { src: '/screenshots/3.png', key: 'overview' },
+  { src: '/screenshots/4.png', key: 'timeline' },
+] as const;
+---
+
+<section id="screenshots" class="relative py-24 sm:py-32 bg-gradient-to-b from-slate-950 via-brand-dark to-brand text-white overflow-hidden">
+  <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-accent/20 blur-[120px]"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-14 sm:mb-20">
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
+        {t('screenshots.title')}
+      </h2>
+      <p class="mt-5 text-lg text-blue-100/80">{t('screenshots.subtitle')}</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6">
+      {
+        shots.map((s) => (
+          <figure class="group">
+            <div class="relative overflow-hidden rounded-[28px] bg-brand-dark/60 ring-1 ring-white/10 transition-transform group-hover:-translate-y-1">
+              <img
+                src={s.src}
+                alt={t(`screenshots.${s.key}.title` as any)}
+                loading="lazy"
+                width="400"
+                height="867"
+                class="w-full h-auto"
+              />
+            </div>
+            <figcaption class="mt-5 text-center">
+              <div class="text-base font-semibold">{t(`screenshots.${s.key}.title` as any)}</div>
+              <div class="mt-1 text-sm text-blue-100/70">{t(`screenshots.${s.key}.body` as any)}</div>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</section>

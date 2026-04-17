@@ -1,0 +1,71 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+import AppStoreButton from './AppStoreButton.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="relative overflow-hidden bg-brand text-white">
+  <!-- Background glow effects -->
+  <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
+    <div class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-accent/30 blur-[120px]"></div>
+    <div class="absolute -bottom-48 -right-32 w-[600px] h-[600px] rounded-full bg-brand-light/40 blur-[120px]"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 pt-20 pb-28 sm:pt-28 sm:pb-36">
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+      <div class="mb-10 relative">
+        <div class="absolute inset-0 bg-white/20 blur-2xl rounded-[28%]"></div>
+        <img
+          src="/logo.png"
+          alt="SimpleTime"
+          width="128"
+          height="128"
+          class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-[28%] shadow-2xl shadow-black/30 ring-1 ring-white/10 bg-white"
+        />
+      </div>
+
+      <p class="text-sm font-medium tracking-wider uppercase text-blue-200 mb-5">
+        {t('hero.eyebrow')}
+      </p>
+
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05]">
+        {t('hero.title.part1')}<br />
+        <span class="bg-gradient-to-r from-blue-200 via-white to-blue-200 bg-clip-text text-transparent">
+          {t('hero.title.part2')}
+        </span>
+      </h1>
+
+      <p class="mt-7 text-lg sm:text-xl text-blue-100/90 leading-relaxed max-w-2xl">
+        {t('hero.subtitle')}
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center gap-4">
+        <AppStoreButton label={t('hero.cta.appstore')} variant="light" size="lg" />
+        <a
+          href="#features"
+          class="inline-flex items-center gap-1.5 text-white/90 hover:text-white font-medium px-5 py-3 transition-colors"
+        >
+          {t('hero.cta.features')}
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 7h8" />
+            <path d="M7 3l4 4-4 4" />
+          </svg>
+        </a>
+      </div>
+
+      <p class="mt-6 text-sm text-blue-200/70">{t('hero.availability')}</p>
+    </div>
+  </div>
+
+  <!-- subtle bottom curve -->
+  <svg aria-hidden="true" class="relative block w-full text-white" viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,60 C480,0 960,0 1440,60 L1440,60 L0,60 Z" fill="currentColor" />
+  </svg>
+</section>
