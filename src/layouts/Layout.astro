@@ -3,7 +3,7 @@ import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import type { Lang } from '../i18n/ui';
-import { useTranslations } from '../i18n/utils';
+import { useTranslations, getAltLangPath } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -17,7 +17,10 @@ const t = useTranslations(lang);
 
 const metaTitle = title ?? t('meta.title');
 const metaDescription = description ?? t('meta.description');
-const canonical = new URL(path, Astro.site ?? 'https://simple-time.app').toString();
+const site = Astro.site ?? 'https://simple-time.app';
+const canonical = new URL(path, site).toString();
+const enPath = lang === 'en' ? path : getAltLangPath(lang, path);
+const dePath = lang === 'de' ? path : getAltLangPath(lang, path);
 ---
 
 <!doctype html>
@@ -40,9 +43,9 @@ const canonical = new URL(path, Astro.site ?? 'https://simple-time.app').toStrin
     <meta property="og:image" content={new URL('/logo.png', Astro.site ?? 'https://simple-time.app').toString()} />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="alternate" hreflang="en" href={new URL(path.replace(/^\/de/, '') || '/', Astro.site ?? 'https://simple-time.app').toString()} />
-    <link rel="alternate" hreflang="de" href={new URL(`/de${path.replace(/^\/de/, '')}`.replace(/\/\/+/g, '/'), Astro.site ?? 'https://simple-time.app').toString()} />
-    <link rel="alternate" hreflang="x-default" href={new URL(path.replace(/^\/de/, '') || '/', Astro.site ?? 'https://simple-time.app').toString()} />
+    <link rel="alternate" hreflang="en" href={new URL(enPath, site).toString()} />
+    <link rel="alternate" hreflang="de" href={new URL(dePath, site).toString()} />
+    <link rel="alternate" hreflang="x-default" href={new URL(enPath, site).toString()} />
   </head>
   <body class="bg-white text-slate-900 antialiased">
     <Navbar lang={lang} path={path} />

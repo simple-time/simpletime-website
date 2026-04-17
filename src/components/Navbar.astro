@@ -1,6 +1,6 @@
 ---
 import type { Lang } from '../i18n/ui';
-import { useTranslations, APP_STORE_URL } from '../i18n/utils';
+import { useTranslations, APP_STORE_URL, getAltLangPath } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -12,9 +12,7 @@ const t = useTranslations(lang);
 const home = lang === 'de' ? '/de/' : '/';
 const contactPath = lang === 'de' ? '/de/kontakt/' : '/contact/';
 
-// language switch: flip between EN and DE versions of the same page
-const stripped = path.replace(/^\/de/, '') || '/';
-const altHref = lang === 'de' ? stripped : `/de${stripped}`.replace(/\/\/+/g, '/');
+const altHref = getAltLangPath(lang, path);
 ---
 
 <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-slate-200/60">
