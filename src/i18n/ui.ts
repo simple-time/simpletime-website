@@ -119,6 +119,9 @@ export const ui = {
     'privacy.website.hosting.title': 'Hosting',
     'privacy.website.hosting.body':
       'Provider: GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. More information can be found in GitHub’s privacy statement at https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement.',
+    'privacy.website.cdn.title': 'Content Delivery Network',
+    'privacy.website.cdn.body':
+      'To deliver this website quickly and protect it against attacks, we use Cloudflare, a content delivery network and reverse proxy provided by Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. When you access the site, your request passes through Cloudflare’s servers. Cloudflare processes technical connection data — in particular your IP address and user agent — to deliver content, detect security threats and block malicious traffic. For bot protection and session security Cloudflare may set technically necessary cookies (e.g. __cf_bm, _cfuvid); these are not used for tracking or analytics. The legal basis is our legitimate interest in a secure and performant website under Art. 6 (1) (f) GDPR. Cloudflare is certified under the EU-U.S. Data Privacy Framework, and a data processing agreement is in place. Further information can be found in Cloudflare’s privacy policy at https://www.cloudflare.com/privacypolicy/.',
     'privacy.rights.title': 'Your Rights',
     'privacy.rights.body':
       'Under the GDPR you have the right to information, correction, deletion, restriction of processing, data portability and to object to processing. You can reach us at any time using the contact details below.',
@@ -242,6 +245,9 @@ export const ui = {
     'privacy.website.hosting.title': 'Hosting',
     'privacy.website.hosting.body':
       'Anbieter: GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Weitere Informationen findest du in GitHubs Datenschutzerklärung unter https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement.',
+    'privacy.website.cdn.title': 'Content Delivery Network',
+    'privacy.website.cdn.body':
+      'Zur schnellen Auslieferung und zum Schutz dieser Website vor Angriffen setzen wir Cloudflare ein, ein Content Delivery Network und Reverse-Proxy-Dienst der Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Beim Aufruf dieser Website wird deine Anfrage über die Server von Cloudflare geleitet. Cloudflare verarbeitet dabei technische Verbindungsdaten — insbesondere deine IP-Adresse und den User-Agent —, um Inhalte auszuliefern, Sicherheitsbedrohungen zu erkennen und schädlichen Datenverkehr zu blockieren. Zur Bot-Erkennung und Sitzungssicherheit kann Cloudflare technisch notwendige Cookies setzen (z. B. __cf_bm, _cfuvid); diese werden nicht zu Tracking- oder Analysezwecken verwendet. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren und performanten Website gemäß Art. 6 Abs. 1 lit. f DSGVO. Cloudflare ist unter dem EU-U.S. Data Privacy Framework zertifiziert, und mit dem Anbieter wurde ein Auftragsverarbeitungsvertrag geschlossen. Weitere Informationen findest du in der Datenschutzerklärung von Cloudflare unter https://www.cloudflare.com/de-de/privacypolicy/.',
     'privacy.rights.title': 'Deine Rechte',
     'privacy.rights.body':
       'Nach der DSGVO hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie das Recht, der Verarbeitung zu widersprechen. Du erreichst uns jederzeit unter den unten angegebenen Kontaktdaten.',
