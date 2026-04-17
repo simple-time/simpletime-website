@@ -10,10 +10,11 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const year = new Date().getFullYear();
 
+const prefix = lang === 'de' ? '/de' : '';
 const links = {
-  contact: lang === 'de' ? '/de/kontakt/' : '/contact/',
-  imprint: lang === 'de' ? '/de/impressum/' : '/imprint/',
-  privacy: lang === 'de' ? '/de/datenschutz/' : '/privacy/',
+  contact: `${prefix}/contact/`,
+  imprint: `${prefix}/imprint/`,
+  privacy: `${prefix}/privacy/`,
 };
 ---
 

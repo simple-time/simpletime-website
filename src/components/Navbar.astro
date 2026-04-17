@@ -10,7 +10,7 @@ interface Props {
 const { lang, path } = Astro.props;
 const t = useTranslations(lang);
 const home = lang === 'de' ? '/de/' : '/';
-const contactPath = lang === 'de' ? '/de/kontakt/' : '/contact/';
+const contactPath = lang === 'de' ? '/de/contact/' : '/contact/';
 
 const altHref = getAltLangPath(lang, path);
 ---
