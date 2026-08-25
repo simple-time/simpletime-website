@@ -1,16 +1,83 @@
 @import "tailwindcss";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
-@import "@fontsource/inter/800.css";
+/* Latin subset only — EN and DE need nothing else, and this drops
+   30 unused font files from the build. */
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/inter/latin-700.css";
+@import "@fontsource/inter/latin-800.css";
+
+/* Dark mode is class-driven so the header toggle can override the OS setting. */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-brand: #173685;
-  --color-brand-dark: #0f2560;
-  --color-brand-light: #2a4fa8;
-  --color-accent: #2563eb;
+  /* Brand ramp built around the app icon blue (#173685). */
+  --color-brand-50: #eef2fb;
+  --color-brand-100: #dbe4f7;
+  --color-brand-200: #b8c9ef;
+  --color-brand-300: #8ea9e3;
+  --color-brand-400: #6084d4;
+  --color-brand-500: #3d5fc0;
+  --color-brand-600: #2a4fa8;
+  --color-brand-700: #173685;
+  --color-brand-800: #0f2560;
+  --color-brand-900: #0a1943;
+  --color-brand-950: #060f2a;
+
+  /* Semantic tokens — these flip in dark mode via the variables below. */
+  --color-canvas: var(--canvas);
+  --color-canvas-alt: var(--canvas-alt);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+
+  --shadow-soft: 0 1px 2px rgb(13 18 32 / 0.04), 0 8px 24px -12px rgb(13 18 32 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(13 18 32 / 0.05), 0 18px 40px -18px rgb(13 18 32 / 0.22);
+  --shadow-device: 0 4px 12px rgb(13 18 32 / 0.12), 0 32px 64px -24px rgb(13 18 32 / 0.35);
+}
+
+:root {
+  --canvas: #fbfbfd;
+  --canvas-alt: #f4f5f9;
+  --surface: #ffffff;
+  --surface-2: #f6f7fa;
+  --line: #e7e9f0;
+  --line-strong: #d5d9e4;
+  --ink: #0d1220;
+  --muted: #545d73;
+  --subtle: #838ca2;
+  --accent: #173685;
+  --accent-hover: #0f2560;
+  --on-accent: #ffffff;
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: #070910;
+  --canvas-alt: #0c0f19;
+  --surface: #11141f;
+  --surface-2: #171b28;
+  --line: #232839;
+  --line-strong: #313850;
+  --ink: #f1f3f9;
+  --muted: #a3abc0;
+  --subtle: #737c93;
+  --accent: #8ea9e3;
+  --accent-hover: #b8c9ef;
+  --on-accent: #0a1943;
+  color-scheme: dark;
 }
 
 html {
@@ -18,16 +85,74 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  /* Sticky header offset for in-page anchors. */
+  scroll-padding-top: 5rem;
 }
 
 body {
   font-family: var(--font-sans);
   font-feature-settings: "cv11", "ss01", "ss03";
+  background-color: var(--canvas);
+  color: var(--ink);
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px) saturate(1.2);
-  -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+/* Display type wants tighter tracking than Inter's default. */
+.text-display {
+  letter-spacing: -0.035em;
+  line-height: 1.03;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Visible, consistent keyboard focus everywhere. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Scroll reveal — starts hidden only when JS will animate it, so
+   no-JS visitors still see every section. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Horizontal snap rail used by the screenshot gallery. */
+.snap-rail {
+  scrollbar-width: none;
+}
+
+.snap-rail::-webkit-scrollbar {
+  display: none;
 }

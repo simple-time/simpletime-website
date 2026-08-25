@@ -1,0 +1,54 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+import { FAQ_KEYS } from '../i18n/faq';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="faq" class="scroll-mt-20 bg-canvas-alt py-20 sm:py-28">
+  <div class="mx-auto max-w-3xl px-5 sm:px-8">
+    <div class="reveal mb-12 text-center">
+      <h2 class="text-display text-3xl font-bold sm:text-[2.5rem]">{t('faq.title')}</h2>
+      <p class="mt-4 text-[17px] text-muted">{t('faq.subtitle')}</p>
+    </div>
+
+    <div class="reveal divide-y divide-line overflow-hidden rounded-3xl border border-line bg-surface">
+      {
+        FAQ_KEYS.map((k) => (
+          <details class="group">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-[16px] font-medium transition-colors hover:bg-surface-2">
+              {t(`faq.${k}.q` as any)}
+              <svg
+                class="h-4 w-4 shrink-0 text-subtle transition-transform duration-200 group-open:rotate-45"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M8 3v10M3 8h10" />
+              </svg>
+            </summary>
+            <p class="px-6 pb-6 text-[15px] leading-relaxed text-muted">
+              {t(`faq.${k}.a` as any)}
+            </p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Safari still renders the default disclosure triangle without this. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

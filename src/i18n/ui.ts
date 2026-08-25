@@ -17,6 +17,11 @@ export const ui = {
     'nav.screenshots': 'Screenshots',
     'nav.contact': 'Contact',
     'nav.appstore': 'View on App Store',
+    'nav.faq': 'FAQ',
+    'nav.menu': 'Open menu',
+    'nav.menu.close': 'Close menu',
+    'nav.theme': 'Switch between light and dark',
+    'skip.content': 'Skip to content',
 
     'hero.eyebrow': 'Time Tracker for iOS',
     'hero.title.part1': 'Track time',
@@ -26,6 +31,9 @@ export const ui = {
     'hero.cta.appstore': 'Download on the App Store',
     'hero.cta.features': 'See features',
     'hero.availability': 'Free · iPhone · iPad · Mac',
+    'hero.proof.price': 'Free to download',
+    'hero.proof.account': 'No account needed',
+    'hero.proof.private': 'Data stays on your device',
 
     'features.title': 'Focus on what truly matters: your time.',
     'features.subtitle': 'Everything you need for conscious time tracking — nothing you don’t.',
@@ -61,10 +69,74 @@ export const ui = {
     'screenshots.overview.body': 'See your entire day in one clear list.',
     'screenshots.timeline.title': 'Timeline',
     'screenshots.timeline.body': 'Visualize your day hour by hour.',
+    'screenshots.analyze.title': 'Analyze',
+    'screenshots.analyze.body': 'See exactly where your time goes.',
+    'screenshots.reports.title': 'Reports',
+    'screenshots.reports.body': 'A detailed breakdown per task.',
 
-    'idealfor.title': 'Made for everyone who values their time.',
-    'idealfor.body':
-      'Students, freelancers, employees, self-employed professionals, creatives, athletes — and anyone who wants to understand how they truly spend their time.',
+    'showcase.day.eyebrow': 'The daily view',
+    'showcase.day.title': 'Your whole day, in one clear place.',
+    'showcase.day.body':
+      'Start a task with a single tap and let SimpleTime keep the record. Every entry carries its start and end time, its duration and an optional note — so your day reconstructs itself while you work.',
+    'showcase.day.point1': 'One tap to start, one to stop',
+    'showcase.day.point2': 'Favorites for what you track every day',
+    'showcase.day.point3': 'An hour-by-hour timeline of your day',
+
+    'showcase.insight.eyebrow': 'Statistics',
+    'showcase.insight.title': 'See exactly where your time goes.',
+    'showcase.insight.body':
+      'Daily, weekly and monthly charts turn your entries into a picture you can act on. Need the raw numbers? Export any range as CSV and open it in Excel or Numbers.',
+    'showcase.insight.point1': 'Charts by day, week and month',
+    'showcase.insight.point2': 'Detailed reports for every task',
+    'showcase.insight.point3': 'CSV export for external analysis',
+
+    'showcase.personal.eyebrow': 'Your setup',
+    'showcase.personal.title': 'Shaped around how you work.',
+    'showcase.personal.body':
+      'Give every task its own color, icon and category, and nest subtasks to mirror how a project is really structured. Mark what you use most as a favorite and it stays at the top.',
+    'showcase.personal.point1': 'Colors, SF Symbols and emoji',
+    'showcase.personal.point2': 'Categories, tasks and subtasks',
+    'showcase.personal.point3': 'Favorites always within reach',
+
+    'gallery.title': 'A closer look.',
+    'gallery.subtitle': 'Every screen, exactly as it appears on your device.',
+
+    'audience.title': 'Made for everyone who values their time.',
+    'audience.subtitle':
+      'Students, freelancers, employees, creatives, athletes — anyone who wants to understand how they truly spend their time.',
+    'audience.work.title': 'Work & freelance',
+    'audience.work.body':
+      'Keep client work and projects apart, and export a clean record whenever you need one.',
+    'audience.study.title': 'Studies & learning',
+    'audience.study.body':
+      'See how much time a subject really takes and plan the next week from actual numbers.',
+    'audience.training.title': 'Training & habits',
+    'audience.training.body':
+      'Log sessions, sleep or practice and watch consistency build up over the weeks.',
+    'audience.everyday.title': 'Everyday life',
+    'audience.everyday.body':
+      'Find out where the hours actually go — and decide for yourself what you want to change.',
+
+    'faq.title': 'Questions, answered.',
+    'faq.subtitle': 'Everything worth knowing before you download.',
+    'faq.free.q': 'Is SimpleTime really free?',
+    'faq.free.a':
+      'Yes. SimpleTime is free to download from the App Store and runs on iPhone, iPad and Mac.',
+    'faq.account.q': 'Do I need an account?',
+    'faq.account.a':
+      'No. There is no sign-up and no login. You open the app and start tracking straight away.',
+    'faq.data.q': 'Where is my data stored?',
+    'faq.data.a':
+      'Exclusively on your device. If you turn on iCloud backup, your data is transferred encrypted to your own iCloud account. We have no access to it at any point.',
+    'faq.sync.q': 'Does it sync across my devices?',
+    'faq.sync.a':
+      'Yes, through iCloud. Backups run daily or weekly, and your entries stay in sync across iPhone, iPad and Mac.',
+    'faq.export.q': 'Can I get my data out again?',
+    'faq.export.a':
+      'At any time. SimpleTime exports your time data as CSV, ready for Excel, Numbers or any other analysis tool.',
+    'faq.tracking.q': 'Does the app track me?',
+    'faq.tracking.a':
+      'No. SimpleTime contains no analytics SDKs, no advertising and no third-party crash reporting, and it creates no user profiles.',
 
     'cta.title': 'Ready to start tracking?',
     'cta.subtitle': 'Available free on iPhone, iPad and Mac.',
@@ -142,6 +214,11 @@ export const ui = {
     'nav.screenshots': 'Screenshots',
     'nav.contact': 'Kontakt',
     'nav.appstore': 'Im App Store ansehen',
+    'nav.faq': 'FAQ',
+    'nav.menu': 'Menü öffnen',
+    'nav.menu.close': 'Menü schließen',
+    'nav.theme': 'Zwischen hell und dunkel wechseln',
+    'skip.content': 'Zum Inhalt springen',
 
     'hero.eyebrow': 'Zeiterfassung für iOS',
     'hero.title.part1': 'Zeit tracken —',
@@ -151,6 +228,9 @@ export const ui = {
     'hero.cta.appstore': 'Im App Store laden',
     'hero.cta.features': 'Funktionen ansehen',
     'hero.availability': 'Kostenlos · iPhone · iPad · Mac',
+    'hero.proof.price': 'Kostenlos laden',
+    'hero.proof.account': 'Kein Konto nötig',
+    'hero.proof.private': 'Daten bleiben auf dem Gerät',
 
     'features.title': 'Konzentrier dich auf das Wesentliche: deine Zeit.',
     'features.subtitle':
@@ -187,10 +267,74 @@ export const ui = {
     'screenshots.overview.body': 'Dein ganzer Tag in einer klaren Liste.',
     'screenshots.timeline.title': 'Timeline',
     'screenshots.timeline.body': 'Visualisiere deinen Tag Stunde für Stunde.',
+    'screenshots.analyze.title': 'Auswerten',
+    'screenshots.analyze.body': 'Sieh genau, wohin deine Zeit fließt.',
+    'screenshots.reports.title': 'Berichte',
+    'screenshots.reports.body': 'Detaillierte Aufschlüsselung pro Aufgabe.',
 
-    'idealfor.title': 'Für alle, die ihre Zeit wertschätzen.',
-    'idealfor.body':
-      'Studierende, Freelancer, Angestellte, Selbstständige, Kreative, Sportler — und alle, die verstehen wollen, wie sie ihre Zeit wirklich verbringen.',
+    'showcase.day.eyebrow': 'Die Tagesansicht',
+    'showcase.day.title': 'Dein ganzer Tag an einem Ort.',
+    'showcase.day.body':
+      'Ein Tipp startet eine Aufgabe, den Rest übernimmt SimpleTime. Jeder Eintrag hält Start- und Endzeit, Dauer und eine optionale Notiz fest — dein Tag schreibt sich nebenbei mit.',
+    'showcase.day.point1': 'Ein Tipp zum Starten, einer zum Stoppen',
+    'showcase.day.point2': 'Favoriten für alles, was du täglich trackst',
+    'showcase.day.point3': 'Zeitstrahl deines Tages, Stunde für Stunde',
+
+    'showcase.insight.eyebrow': 'Statistiken',
+    'showcase.insight.title': 'Sieh genau, wohin deine Zeit fließt.',
+    'showcase.insight.body':
+      'Diagramme nach Tag, Woche und Monat machen aus deinen Einträgen ein Bild, mit dem du etwas anfangen kannst. Und wenn du die Rohdaten brauchst: als CSV exportieren und in Excel oder Numbers öffnen.',
+    'showcase.insight.point1': 'Diagramme nach Tag, Woche und Monat',
+    'showcase.insight.point2': 'Detaillierte Berichte je Aufgabe',
+    'showcase.insight.point3': 'CSV-Export für externe Auswertungen',
+
+    'showcase.personal.eyebrow': 'Deine Einrichtung',
+    'showcase.personal.title': 'Passt sich an, wie du arbeitest.',
+    'showcase.personal.body':
+      'Jede Aufgabe bekommt eigene Farbe, eigenes Symbol und eine Kategorie. Mit Unteraufgaben bildest du ab, wie ein Projekt wirklich aufgebaut ist — und was du am häufigsten brauchst, bleibt als Favorit ganz oben.',
+    'showcase.personal.point1': 'Farben, SF Symbols und Emoji',
+    'showcase.personal.point2': 'Kategorien, Aufgaben und Unteraufgaben',
+    'showcase.personal.point3': 'Favoriten immer in Reichweite',
+
+    'gallery.title': 'Aus der Nähe.',
+    'gallery.subtitle': 'Jeder Screen genau so, wie er auf deinem Gerät aussieht.',
+
+    'audience.title': 'Für alle, die ihre Zeit wertschätzen.',
+    'audience.subtitle':
+      'Studierende, Freelancer, Angestellte, Kreative, Sportler — und alle, die verstehen wollen, wie sie ihre Zeit wirklich verbringen.',
+    'audience.work.title': 'Beruf & Freelance',
+    'audience.work.body':
+      'Trenne Kundenarbeit und Projekte sauber voneinander und exportiere bei Bedarf einen klaren Nachweis.',
+    'audience.study.title': 'Studium & Lernen',
+    'audience.study.body':
+      'Sieh, wie viel Zeit ein Fach wirklich kostet, und plane die nächste Woche mit echten Zahlen.',
+    'audience.training.title': 'Training & Gewohnheiten',
+    'audience.training.body':
+      'Erfasse Einheiten, Schlaf oder Übungszeit und beobachte, wie über die Wochen Konstanz entsteht.',
+    'audience.everyday.title': 'Alltag',
+    'audience.everyday.body':
+      'Finde heraus, wohin die Stunden tatsächlich gehen — und entscheide selbst, was du ändern willst.',
+
+    'faq.title': 'Häufige Fragen.',
+    'faq.subtitle': 'Alles Wissenswerte vor dem Download.',
+    'faq.free.q': 'Ist SimpleTime wirklich kostenlos?',
+    'faq.free.a':
+      'Ja. SimpleTime lässt sich kostenlos im App Store laden und läuft auf iPhone, iPad und Mac.',
+    'faq.account.q': 'Brauche ich ein Konto?',
+    'faq.account.a':
+      'Nein. Es gibt keine Registrierung und keinen Login. Du öffnest die App und legst direkt los.',
+    'faq.data.q': 'Wo werden meine Daten gespeichert?',
+    'faq.data.a':
+      'Ausschließlich auf deinem Gerät. Wenn du das iCloud-Backup aktivierst, werden deine Daten verschlüsselt in deinen eigenen iCloud-Account übertragen. Wir haben zu keinem Zeitpunkt Zugriff darauf.',
+    'faq.sync.q': 'Synchronisiert die App zwischen meinen Geräten?',
+    'faq.sync.a':
+      'Ja, über iCloud. Die Sicherung läuft täglich oder wöchentlich, deine Einträge bleiben auf iPhone, iPad und Mac synchron.',
+    'faq.export.q': 'Komme ich wieder an meine Daten heran?',
+    'faq.export.a':
+      'Jederzeit. SimpleTime exportiert deine Zeitdaten als CSV — direkt nutzbar in Excel, Numbers oder jedem anderen Auswertungstool.',
+    'faq.tracking.q': 'Trackt mich die App?',
+    'faq.tracking.a':
+      'Nein. SimpleTime enthält keine Analytics-SDKs, keine Werbung und kein Crash-Reporting von Drittanbietern. Es werden keine Nutzerprofile erstellt.',
 
     'cta.title': 'Bereit loszulegen?',
     'cta.subtitle': 'Kostenlos verfügbar auf iPhone, iPad und Mac.',

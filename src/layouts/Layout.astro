@@ -4,15 +4,21 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import type { Lang } from '../i18n/ui';
 import { useTranslations, getAltLangPath } from '../i18n/utils';
+import interRegular from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
+import interBold from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
 
 interface Props {
   lang: Lang;
   title?: string;
   description?: string;
   path: string;
+  /** Extra schema.org objects to embed, e.g. the FAQ on the home page. */
+  jsonLd?: Record<string, unknown>[];
+  /** The 404 has no real URL: skip canonical, hreflang and indexing. */
+  noIndex?: boolean;
 }
 
-const { lang, title, description, path } = Astro.props;
+const { lang, title, description, path, jsonLd = [], noIndex = false } = Astro.props;
 const t = useTranslations(lang);
 
 const metaTitle = title ?? t('meta.title');
@@ -21,37 +27,129 @@ const site = Astro.site ?? 'https://simple-time.app';
 const canonical = new URL(path, site).toString();
 const enPath = lang === 'en' ? path : getAltLangPath(lang, path);
 const dePath = lang === 'de' ? path : getAltLangPath(lang, path);
+const ogImage = new URL(lang === 'de' ? '/og-de.png' : '/og.png', site).toString();
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'SimpleTime',
+  applicationCategory: 'ProductivityApplication',
+  operatingSystem: 'iOS, iPadOS, macOS',
+  url: site.toString(),
+  description: metaDescription,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'EUR',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Luca Efinger',
+  },
+};
+
+const schemas = [appSchema, ...jsonLd];
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#173685" />
+    <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#070910" media="(prefers-color-scheme: dark)" />
     <title>{metaTitle}</title>
     <meta name="description" content={metaDescription} />
-    <link rel="canonical" href={canonical} />
+    {noIndex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
     <link rel="icon" type="image/png" href="/logo.png" />
+
+    {/* The two weights above the fold — preloaded so the headline paints once. */}
+    <link rel="preload" as="font" type="font/woff2" href={interRegular} crossorigin="anonymous" />
+    <link rel="preload" as="font" type="font/woff2" href={interBold} crossorigin="anonymous" />
     <link rel="apple-touch-icon" href="/logo.png" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SimpleTime" />
+    <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
     <meta property="og:title" content={metaTitle} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL('/logo.png', Astro.site ?? 'https://simple-time.app').toString()} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="SimpleTime — time tracker for iOS" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={metaTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={ogImage} />
 
-    <link rel="alternate" hreflang="en" href={new URL(enPath, site).toString()} />
-    <link rel="alternate" hreflang="de" href={new URL(dePath, site).toString()} />
-    <link rel="alternate" hreflang="x-default" href={new URL(enPath, site).toString()} />
+    {
+      !noIndex && (
+        <>
+          <link rel="alternate" hreflang="en" href={new URL(enPath, site).toString()} />
+          <link rel="alternate" hreflang="de" href={new URL(dePath, site).toString()} />
+          <link rel="alternate" hreflang="x-default" href={new URL(enPath, site).toString()} />
+        </>
+      )
+    }
+
+    <script is:inline set:html={JSON.stringify(schemas)} type="application/ld+json" />
+
+    {/* Runs before first paint so the correct theme is applied without a flash. */}
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        root.classList.add('js');
+        try {
+          const saved = localStorage.getItem('theme');
+          const dark =
+            saved === 'dark' ||
+            (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          root.classList.toggle('dark', dark);
+        } catch {
+          /* localStorage unavailable — fall back to the light default. */
+        }
+      })();
+    </script>
   </head>
-  <body class="bg-white text-slate-900 antialiased">
-    <Navbar lang={lang} path={path} />
-    <main>
+  <body class="bg-canvas text-ink antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-accent focus:px-4 focus:py-2.5 focus:text-sm focus:font-medium focus:text-on-accent"
+    >
+      {t('skip.content')}
+    </a>
+
+    {/* The 404 has no localised twin, so its language switch targets the home page. */}
+    <Navbar lang={lang} path={noIndex ? '/' : path} />
+    <main id="main">
       <slot />
     </main>
     <Footer lang={lang} />
+
+    <script>
+      // Reveal sections as they scroll into view. The `.js` class on <html>
+      // means no-JS visitors never see the hidden starting state.
+      const items = document.querySelectorAll<HTMLElement>('.reveal');
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (reduced || !('IntersectionObserver' in window)) {
+        items.forEach((el) => el.classList.add('is-visible'));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const el = entry.target as HTMLElement;
+              const delay = Number(el.dataset.revealDelay ?? 0);
+              window.setTimeout(() => el.classList.add('is-visible'), delay);
+              observer.unobserve(el);
+            });
+          },
+          { rootMargin: '0px 0px -10% 0px', threshold: 0.05 },
+        );
+        items.forEach((el) => observer.observe(el));
+      }
+    </script>
   </body>
 </html>

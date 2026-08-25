@@ -2,39 +2,54 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout lang="en" path="/404/" title="404 · Page not found · SimpleTime">
+<Layout lang="en" path="/404/" title="404 · Page not found · SimpleTime" noIndex>
   <section class="relative overflow-hidden">
-    <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
-      <div class="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-accent/20 blur-[120px]"></div>
-      <div class="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-brand-light/30 blur-[120px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-brand-50 to-canvas dark:from-brand-950/60 dark:to-canvas"
+      >
+      </div>
+      <div
+        class="absolute -top-40 left-1/2 h-[420px] w-[760px] -translate-x-1/2 rounded-full bg-brand-200/40 blur-[120px] dark:bg-brand-700/20"
+      >
+      </div>
     </div>
 
-    <div class="relative mx-auto max-w-3xl px-5 sm:px-8 py-28 sm:py-36 text-center">
-      <p class="text-[120px] sm:text-[160px] font-bold tracking-tight leading-none text-brand">404</p>
-
-      <h1 class="mt-6 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
-        Page not found
-      </h1>
-      <p class="mt-2 text-xl sm:text-2xl font-medium text-slate-500">
-        Seite nicht gefunden
+    <div class="mx-auto max-w-3xl px-5 py-28 text-center sm:px-8 sm:py-36">
+      <p
+        class="text-display bg-gradient-to-br from-brand-700 via-brand-500 to-brand-400 bg-clip-text text-[110px] font-bold text-transparent sm:text-[150px] dark:from-brand-200 dark:via-brand-300 dark:to-brand-400"
+      >
+        404
       </p>
 
-      <p class="mt-8 text-slate-700 leading-relaxed max-w-md mx-auto">
+      <h1 class="text-display mt-4 text-3xl font-bold sm:text-4xl">Page not found</h1>
+      <p class="mt-2 text-xl font-medium text-subtle sm:text-2xl">Seite nicht gefunden</p>
+
+      <p class="mx-auto mt-8 max-w-md leading-relaxed text-muted">
         The page you're looking for doesn't exist or has been moved.
       </p>
-      <p class="mt-2 text-slate-500 leading-relaxed max-w-md mx-auto">
+      <p class="mx-auto mt-2 max-w-md leading-relaxed text-subtle">
         Die Seite, die du suchst, existiert nicht oder wurde verschoben.
       </p>
 
-      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <div class="mt-10 flex justify-center">
         <a
           id="home-link"
           href="/"
-          class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-medium px-6 py-3 rounded-full transition-colors"
+          class="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-on-accent transition-opacity hover:opacity-90"
         >
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 12H5" />
-            <path d="m12 19-7-7 7-7" />
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M19 12H5"></path>
+            <path d="m12 19-7-7 7-7"></path>
           </svg>
           <span id="home-link-label">Back to home</span>
         </a>
@@ -43,13 +58,19 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <script is:inline>
+    // The 404 is served for every unmatched path, so localise it at runtime.
     (function () {
-      if (window.location.pathname.startsWith('/de/')) {
-        const link = document.getElementById('home-link');
-        const label = document.getElementById('home-link-label');
+      var isDe = window.location.pathname.startsWith('/de/');
+      var link = document.getElementById('home-link');
+      var label = document.getElementById('home-link-label');
+      var langSwitch = document.getElementById('lang-switch');
+      if (isDe) {
         if (link) link.setAttribute('href', '/de/');
         if (label) label.textContent = 'Zurück zur Startseite';
+        document.documentElement.lang = 'de';
       }
+      // There is no /de/404/ document — send the language switch to the home page.
+      if (langSwitch) langSwitch.setAttribute('href', isDe ? '/' : '/de/');
     })();
   </script>
 </Layout>
