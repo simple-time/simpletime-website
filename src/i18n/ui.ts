@@ -29,6 +29,7 @@ export const ui = {
     'nav.faq': 'FAQ',
     'nav.menu': 'Open menu',
     'nav.menu.close': 'Close menu',
+    'nav.language': 'Language',
     'nav.theme': 'Switch between light and dark',
     'skip.content': 'Skip to content',
 
@@ -229,6 +230,7 @@ export const ui = {
     'nav.faq': 'FAQ',
     'nav.menu': 'Menü öffnen',
     'nav.menu.close': 'Menü schließen',
+    'nav.language': 'Sprache',
     'nav.theme': 'Zwischen hell und dunkel wechseln',
     'skip.content': 'Zum Inhalt springen',
 
@@ -429,6 +431,7 @@ export const ui = {
     'nav.faq': 'FAQ',
     'nav.menu': 'Ouvrir le menu',
     'nav.menu.close': 'Fermer le menu',
+    'nav.language': 'Langue',
     'nav.theme': 'Basculer entre clair et sombre',
     'skip.content': 'Aller au contenu',
 
@@ -630,6 +633,7 @@ export const ui = {
     'nav.faq': 'Preguntas',
     'nav.menu': 'Abrir menú',
     'nav.menu.close': 'Cerrar menú',
+    'nav.language': 'Idioma',
     'nav.theme': 'Cambiar entre claro y oscuro',
     'skip.content': 'Ir al contenido',
 

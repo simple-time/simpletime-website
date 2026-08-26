@@ -1,0 +1,139 @@
+---
+import { languages, type Lang } from '../i18n/ui';
+import { useTranslations, getAllLangPaths } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  path: string;
+  class?: string;
+}
+
+const { lang, path, class: className = '' } = Astro.props;
+const t = useTranslations(lang);
+
+// Same page in every locale, so switching keeps the visitor where they are.
+const langPaths = getAllLangPaths(path);
+const options = (Object.keys(languages) as Lang[]).map((code) => ({
+  code,
+  name: languages[code],
+  href: langPaths[code],
+  current: code === lang,
+}));
+---
+
+{/*
+  A <details> disclosure rather than a JS menu: it opens by keyboard and
+  works with no JavaScript at all, which matters because this is the only
+  way to reach the other language versions. The script below only adds
+  the conveniences — closing on Escape or on an outside click.
+
+  The list scrolls, so adding locales does not push the panel off-screen.
+*/}
+<details class={`lang-menu relative ${className}`}>
+  <summary
+    class="flex cursor-pointer list-none items-center gap-1.5 rounded-full px-2.5 py-1.5 text-[13px] font-medium text-muted transition-colors hover:bg-surface-2 hover:text-ink"
+    aria-label={`${t('nav.language')}: ${languages[lang]}`}
+  >
+    <svg
+      class="h-4 w-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.7"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M3.2 9.5h17.6M3.2 14.5h17.6"></path>
+      <path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"></path>
+    </svg>
+    <span class="uppercase">{lang}</span>
+    <svg
+      class="lang-chevron h-3 w-3 transition-transform duration-200"
+      viewBox="0 0 12 12"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M3 4.5L6 7.5l3-3"></path>
+    </svg>
+  </summary>
+
+  <div
+    class="absolute right-0 top-full z-50 mt-2 w-56 overflow-hidden rounded-2xl border border-line bg-surface shadow-lift"
+  >
+    <p class="border-b border-line px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-subtle">
+      {t('nav.language')}
+    </p>
+    <ul class="max-h-[min(60vh,20rem)] overflow-y-auto py-1">
+      {
+        options.map((o) => (
+          <li>
+            <a
+              href={o.href}
+              hreflang={o.code}
+              lang={o.code}
+              aria-current={o.current ? 'true' : undefined}
+              class:list={[
+                'flex items-center justify-between gap-3 px-4 py-2.5 text-[15px] transition-colors',
+                o.current ? 'font-medium text-ink' : 'text-muted hover:bg-surface-2 hover:text-ink',
+              ]}
+            >
+              <span>{o.name}</span>
+              <span class="flex items-center gap-2">
+                <span class="text-[11px] uppercase tracking-wide text-subtle">{o.code}</span>
+                {o.current && (
+                  <svg
+                    class="h-3.5 w-3.5 text-accent"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M2.5 7.4l3 3L11.5 4" />
+                  </svg>
+                )}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</details>
+
+<style>
+  .lang-menu > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .lang-menu[open] > summary .lang-chevron {
+    transform: rotate(180deg);
+  }
+</style>
+
+<script>
+  // Native <details> already opens and closes by keyboard; this only adds
+  // the dismissal behaviour people expect from a dropdown.
+  const menus = document.querySelectorAll<HTMLDetailsElement>('.lang-menu');
+
+  document.addEventListener('click', (event) => {
+    menus.forEach((menu) => {
+      if (menu.open && !menu.contains(event.target as Node)) menu.open = false;
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    menus.forEach((menu) => {
+      if (!menu.open) return;
+      menu.open = false;
+      menu.querySelector('summary')?.focus();
+    });
+  });
+</script>
