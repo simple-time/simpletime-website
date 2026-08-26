@@ -22,22 +22,34 @@ const {
 } = Astro.props;
 ---
 
-<!--
-  The screenshots already include the iOS status bar and Dynamic Island,
-  so the frame only supplies the bezel, the titanium edge and the shadow.
--->
-<div class={`relative ${className}`}>
+{/*
+  Corner radii are in `cqw` (percent of the frame's own width), not `%`.
+  A percentage border-radius resolves horizontally against width and
+  vertically against height, which on a tall element produces elliptical
+  corners. The radii below are concentric: outer = screen + bezel, with
+  the screen at iOS's 12.5% of screen width.
+
+  The screens are prepared at the true 1320:2868 ratio by
+  scripts/prepare-screens.py, so the frame needs no aspect fixing here.
+*/}
+<div class={`@container relative ${className}`}>
   <div
-    class="relative rounded-[13%] bg-slate-950 p-[2.2%] shadow-device ring-1 ring-white/12 dark:ring-white/10"
+    class="relative rounded-[14.2cqw] bg-[#0c0d10] p-[2.2cqw] shadow-device ring-1 ring-black/20 dark:ring-white/10"
   >
-    <!-- Brushed metal edge -->
+    {/* Polished titanium edge catching light from the top left. */}
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-0 rounded-[13%] bg-gradient-to-br from-white/22 via-transparent to-white/10"
+      class="pointer-events-none absolute inset-0 rounded-[14.2cqw] bg-gradient-to-br from-white/25 via-white/5 to-white/15"
+    >
+    </div>
+    {/* Hairline where the glass meets the band. */}
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-[1.4cqw] rounded-[12.8cqw] ring-1 ring-black/60"
     >
     </div>
 
-    <div class="relative overflow-hidden rounded-[11%] bg-white">
+    <div class="relative overflow-hidden rounded-[12cqw] bg-white">
       <Image
         src={image}
         alt={alt}
