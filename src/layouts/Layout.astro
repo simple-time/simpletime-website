@@ -61,12 +61,16 @@ const schemas = [appSchema, ...jsonLd];
     <title>{metaTitle}</title>
     <meta name="description" content={metaDescription} />
     {noIndex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
-    <link rel="icon" type="image/png" href="/logo.png" />
+    {/* Round in the browser tab; the Apple touch icon stays square because
+        iOS applies its own mask and renders transparency as black. */}
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192" />
 
     {/* The two weights above the fold — preloaded so the headline paints once. */}
     <link rel="preload" as="font" type="font/woff2" href={interRegular} crossorigin="anonymous" />
     <link rel="preload" as="font" type="font/woff2" href={interBold} crossorigin="anonymous" />
-    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SimpleTime" />
