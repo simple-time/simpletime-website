@@ -36,10 +36,7 @@
   --color-accent-hover: var(--accent-hover);
   --color-on-accent: var(--on-accent);
 
-  /* "Noto Sans JP" follows Inter: Inter has no CJK, so Japanese pages fall
-     through to it. See scripts/generate-fonts-css.py for why it cannot
-     share the Inter family. */
-  --font-sans: "Inter", "Noto Sans JP", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   --radius-4xl: 2rem;
   --radius-5xl: 2.5rem;
@@ -79,6 +76,17 @@
   --accent-hover: #b8c9ef;
   --on-accent: #0a1943;
   color-scheme: dark;
+}
+
+/* Japanese and Chinese share most Han codepoints but draw them
+   differently, so the CJK font is chosen by document language rather than
+   stacked. Anything the CJK font is not asked for still comes from Inter. */
+html:lang(ja) {
+  --font-sans: "Inter", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+}
+
+html:lang(zh) {
+  --font-sans: "Inter", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
 }
 
 html {

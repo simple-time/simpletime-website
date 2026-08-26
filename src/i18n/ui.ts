@@ -10,6 +10,8 @@ export const languages = {
   tr: 'Türkçe',
   ar: 'العربية',
   ja: '日本語',
+  zh: '简体中文',
+  hi: 'हिन्दी',
 } as const;
 
 export const defaultLang = 'en' as const;
@@ -2230,6 +2232,408 @@ export const ui = {
     'privacy.changes.title': '変更',
     'privacy.changes.body':
       'アプリ、サイト、または法的要件の変更を反映するため、本ポリシーを随時更新することがあります。最新版は常にこのページでご確認いただけます。',
+  },
+  zh: {
+    'meta.title': 'SimpleTime – iOS 时间记录应用',
+    'meta.description':
+      '轻松记录时间。SimpleTime 是一款为 iPhone、iPad 和 Mac 打造的清晰易用的时间记录应用。无需账户，没有追踪，数据留在你手中。',
+    'meta.contact.description':
+      '有问题、建议或想反馈错误？请发邮件给 SimpleTime，我们会阅读每一封来信，并在几个工作日内回复。',
+    'meta.privacy.description':
+      'SimpleTime 如何处理你的数据：一切都保存在你的设备上，iCloud 备份可选且经过加密，没有分析，没有追踪。',
+    'meta.imprint.description':
+      'simple-time.app 依据德国 TMG 第 5 条的法律声明：运营者、联系方式，以及 SimpleTime 应用与网站的责任说明。',
+
+    'nav.features': '功能',
+    'nav.screenshots': '截图',
+    'nav.contact': '联系我们',
+    'nav.appstore': '在 App Store 查看',
+    'nav.faq': '常见问题',
+    'nav.menu': '打开菜单',
+    'nav.menu.close': '关闭菜单',
+    'nav.language': '语言',
+    'nav.theme': '切换浅色与深色',
+    'skip.content': '跳到主要内容',
+
+    'hero.eyebrow': 'iOS 时间记录应用',
+    'hero.title.part1': '你的时间，',
+    'hero.title.part2': '轻松掌握。',
+    'hero.subtitle':
+      'SimpleTime 帮助你更有意识、更高效地使用时间。工作、学习、训练或个人项目，都能清晰有条理地记录下来，没有多余的复杂。',
+    'hero.cta.appstore': '在 App Store 下载',
+    'hero.cta.features': '查看功能',
+    'hero.availability': '免费 · iPhone · iPad · Mac',
+    'hero.proof.price': '免费下载',
+    'hero.proof.account': '无需账户',
+    'hero.proof.private': '数据留在设备上',
+
+    'features.title': '专注于真正重要的事：你的时间。',
+    'features.subtitle': '有意识地记录时间所需的一切，别无冗余。',
+    'features.instant.title': '即刻开始',
+    'features.instant.body':
+      '轻点一下就能开始记录。快速、直观，不打扰你。',
+    'features.structured.title': '结构化的任务与子任务',
+    'features.structured.body':
+      '按层级整理你的活动，如实反映工作、学习或项目的结构。',
+    'features.timeline.title': '每日视图与时间线',
+    'features.timeline.body':
+      '一眼看清这一天：开始与结束时间、时长，以及可选的备注。',
+    'features.stats.title': '自动统计',
+    'features.stats.body':
+      '清晰易读的图表按日、周、月呈现你的活动。',
+    'features.icloud.title': '智能 iCloud 备份',
+    'features.icloud.body':
+      '数据每天或每周自动备份到 iCloud，并在你的设备之间同步。',
+    'features.export.title': 'CSV 导出',
+    'features.export.body':
+      '将时间数据导出到 Excel、Numbers 或任何其他分析工具。',
+    'features.private.title': '私密而安全',
+    'features.private.body':
+      '数据只属于你。SimpleTime 不收集任何个人信息，也不与第三方共享任何内容。',
+
+    'screenshots.track.title': '记录',
+    'screenshots.track.body': '一眼看完当天的所有活动。',
+    'screenshots.customize.title': '自定义',
+    'screenshots.customize.body': '为每个任务设置颜色和分类。',
+    'screenshots.overview.title': '总览',
+    'screenshots.overview.body': '一整天都在一份清晰的列表里。',
+    'screenshots.timeline.title': '时间线',
+    'screenshots.timeline.body': '按小时呈现你的一天。',
+    'screenshots.analyze.title': '分析',
+    'screenshots.analyze.body': '清楚看见时间去了哪里。',
+    'screenshots.reports.title': '报告',
+    'screenshots.reports.body': '按任务的详细明细。',
+
+    'showcase.day.eyebrow': '每日视图',
+    'showcase.day.title': '一整天，都在一处。',
+    'showcase.day.body':
+      '轻点一下开始任务，记录交给 SimpleTime。每条记录都带有开始与结束时间、时长和可选备注，你在工作的同时，这一天就自己成形了。',
+    'showcase.day.point1': '一点开始，一点停止',
+    'showcase.day.point2': '把每天都记录的事设为收藏',
+    'showcase.day.point3': '按小时呈现的一天时间线',
+
+    'showcase.insight.eyebrow': '统计',
+    'showcase.insight.title': '清楚看见时间去了哪里。',
+    'showcase.insight.body':
+      '按日、周、月的图表把你的记录变成可以据此行动的图景。需要原始数字？把任意时间段导出为 CSV，在 Excel 或 Numbers 中打开。',
+    'showcase.insight.point1': '按日、周、月的图表',
+    'showcase.insight.point2': '每个任务的详细报告',
+    'showcase.insight.point3': '用于外部分析的 CSV 导出',
+
+    'showcase.personal.eyebrow': '你的设置',
+    'showcase.personal.title': '贴合你的工作方式。',
+    'showcase.personal.body':
+      '为每个任务设置专属的颜色、图标和分类，用子任务还原项目的真实结构。最常用的会留在收藏里，始终排在最前。',
+    'showcase.personal.point1': '颜色、SF Symbols 和表情符号',
+    'showcase.personal.point2': '分类、任务与子任务',
+    'showcase.personal.point3': '收藏随时触手可及',
+
+    'gallery.title': '走近看看。',
+    'gallery.subtitle': '每个界面，都和你设备上看到的一样。',
+
+    'audience.title': '献给每一位珍惜时间的人。',
+    'audience.subtitle':
+      '学生、自由职业者、上班族、创作者、运动员，以及所有想弄清楚时间究竟去了哪里的人。',
+    'audience.work.title': '工作与自由职业',
+    'audience.work.body':
+      '把客户工作和自己的项目分开管理，需要时导出一份清晰的记录。',
+    'audience.study.title': '学习与进修',
+    'audience.study.body':
+      '看清一门课真正需要多少时间，用真实数字规划下一周。',
+    'audience.training.title': '训练与习惯',
+    'audience.training.body':
+      '记录训练、睡眠或练习，看着坚持在一周周里累积起来。',
+    'audience.everyday.title': '日常生活',
+    'audience.everyday.body':
+      '弄清楚时间实际去了哪里，再由你自己决定想改变什么。',
+
+    'faq.title': '常见问题',
+    'faq.subtitle': '下载之前值得了解的事。',
+    'faq.free.q': 'SimpleTime 真的免费吗？',
+    'faq.free.a':
+      '是的。SimpleTime 可在 App Store 免费下载，支持 iPhone、iPad 和 Mac。',
+    'faq.account.q': '需要账户吗？',
+    'faq.account.a':
+      '不需要。没有注册，也没有登录。打开应用即可开始记录。',
+    'faq.data.q': '我的数据保存在哪里？',
+    'faq.data.a':
+      '只保存在你的设备上。如果你启用 iCloud 备份，数据会加密传输到你自己的 iCloud 账户。我们在任何时候都无法访问这些数据。',
+    'faq.sync.q': '会在我的多台设备之间同步吗？',
+    'faq.sync.a':
+      '会，通过 iCloud 同步。备份每天或每周进行，你的记录在 iPhone、iPad 和 Mac 之间保持一致。',
+    'faq.export.q': '我能把数据取回来吗？',
+    'faq.export.a':
+      '随时可以。SimpleTime 将时间数据导出为 CSV，可直接用于 Excel、Numbers 或任何其他分析工具。',
+    'faq.tracking.q': '这个应用会追踪我吗？',
+    'faq.tracking.a':
+      '不会。SimpleTime 没有分析 SDK、没有广告、没有第三方崩溃报告工具，也不会创建用户画像。',
+
+    'cta.title': '准备好开始了吗？',
+    'cta.subtitle': '在 iPhone、iPad 和 Mac 上免费使用。',
+    'cta.button': '在 App Store 下载',
+
+    'footer.tagline': '轻松记录时间。',
+    'footer.legal': '法律信息',
+    'footer.product': '产品',
+    'footer.appstore': 'App Store',
+    'footer.contact': '联系我们',
+    'footer.imprint': '法律声明',
+    'footer.privacy': '隐私',
+    'footer.copyright': '© {year} Luca Efinger. 保留所有权利。',
+
+    'contact.title': '联系我们',
+    'contact.subtitle': '有问题、建议或想法？欢迎来信。',
+    'contact.email.label': '电子邮件',
+    'contact.email.body':
+      '请写信到下面的地址，我们会阅读每一封来信，并尽快回复。',
+    'contact.response':
+      '我们通常在几个工作日内回复。反馈错误时，请附上设备型号和 iOS 版本。',
+
+    'imprint.title': '法律声明',
+    'imprint.country': '德国',
+    'imprint.according': '依据德国 TMG 第 5 条的信息',
+    'imprint.contact': '联系我们',
+    'imprint.responsible': '依据 RStV 第 55 条第 2 款的内容负责人',
+    'imprint.disclaimer.title': '免责声明',
+    'imprint.disclaimer.liability.title': '内容责任',
+    'imprint.disclaimer.liability.body':
+      '作为服务提供者，我们依据一般法律规定对本网站上的自有内容负责（TMG 第 7 条第 1 款）。但依据 TMG 第 8 至 10 条，我们没有义务监控所传输或存储的第三方信息，也没有义务调查显示存在违法行为的情形。依据一般法律规定删除信息或阻止其使用的义务不受影响。相关责任仅自得知具体侵权行为之时起产生。一经得知此类侵权，我们将立即删除相关内容。',
+    'imprint.disclaimer.links.title': '链接责任',
+    'imprint.disclaimer.links.body':
+      '我们的网站包含指向第三方外部网站的链接，我们无法影响其内容。因此我们对这些外部内容不承担任何责任。所链接页面的内容始终由其各自的提供者或运营者负责。设置链接时，我们已就可能的违法情形对相关页面进行了检查，当时未发现违法内容。但在没有具体侵权迹象的情况下，持续监控所链接页面的内容并不合理。一经得知侵权行为，我们将立即删除相关链接。',
+    'imprint.disclaimer.copyright.title': '著作权',
+    'imprint.disclaimer.copyright.body':
+      '网站运营者在本网站上创作的内容和作品受德国著作权法保护。超出著作权法允许范围的复制、修改、传播和任何形式的利用，均须取得相应作者或创作者的书面同意。本网站的下载与复制仅限于私人非商业用途。',
+
+    'privacy.title': '隐私政策',
+    'privacy.lastUpdated': '最后更新',
+    'privacy.intro.title': '概述',
+    'privacy.intro.body':
+      '保护你的个人数据对我们很重要。本政策说明你在使用 SimpleTime 应用和本网站时，哪些数据会被处理，以及如何处理。简而言之：我们尽可能少地收集，并且不与第三方共享任何内容。',
+    'privacy.app.title': 'SimpleTime 应用',
+    'privacy.app.body':
+      'SimpleTime 不收集任何个人信息。你输入的所有数据——活动、任务、分类、备注和时间——都只保存在你的设备上。你可以选择启用 iCloud 备份；在这种情况下，数据会通过 Apple 的 iCloud 基础设施加密传输到你自己的 iCloud 账户。我们在任何时候都无法访问这些数据。',
+    'privacy.app.nocollect.title': '没有分析，没有追踪',
+    'privacy.app.nocollect.body':
+      '应用中没有分析 SDK、没有广告、没有第三方崩溃报告工具，也没有用户追踪。不会创建用户画像。',
+    'privacy.website.title': '本网站',
+    'privacy.website.body':
+      '本网站托管在 Cloudflare Workers 上。访问时，你的浏览器出于技术原因会向服务器发送 IP 地址和用户代理信息，这是任何网站传输都无法避免的。Cloudflare 可能出于安全目的将这些信息暂时保存在服务器日志中。我们自己不收集、不存储也不分析此类数据。本网站不使用 Cookie、分析、追踪或第三方字体，字体由我们自己的服务器提供。',
+    'privacy.website.hosting.title': '托管',
+    'privacy.website.hosting.body':
+      '提供商：Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, 美国。详情请参阅 Cloudflare 的隐私政策：https://www.cloudflare.com/privacypolicy/。',
+    'privacy.website.cdn.title': '内容分发网络',
+    'privacy.website.cdn.body':
+      '为快速分发本网站并防范攻击，我们使用 Cloudflare, Inc.（101 Townsend Street, San Francisco, CA 94107, 美国）提供的内容分发网络和反向代理服务 Cloudflare。访问本网站时，你的请求会经过 Cloudflare 的服务器。Cloudflare 在此过程中会处理技术连接数据，特别是你的 IP 地址和用户代理信息，用于分发内容、识别安全威胁并拦截恶意流量。为防范机器人和保障会话安全，Cloudflare 可能设置技术上必要的 Cookie（例如 __cf_bm、_cfuvid）；这些不用于追踪或分析。法律依据是我们对安全且高效网站的正当利益，依据 GDPR 第 6 条第 1 款 (f) 项。Cloudflare 已获得 EU-U.S. Data Privacy Framework 认证，并已签订数据处理协议。详情请见 https://www.cloudflare.com/privacypolicy/。',
+    'privacy.rights.title': '你的权利',
+    'privacy.rights.body':
+      '依据 GDPR，你享有访问、更正、删除、限制处理、数据可携以及反对处理的权利。你可以随时通过下方的联系方式与我们联系。',
+    'privacy.contact.title': '联系我们',
+    'privacy.contact.body': '有关数据保护的问题，请联系：',
+    'privacy.changes.title': '变更',
+    'privacy.changes.body':
+      '为反映应用、网站或法律要求的变化，我们可能不时更新本政策。现行版本始终可在此处查阅。',
+  },
+  hi: {
+    'meta.title': 'SimpleTime – iOS के लिए समय ट्रैकर',
+    'meta.description':
+      'अपना समय बिना मेहनत के दर्ज करें। SimpleTime iPhone, iPad और Mac के लिए एक सरल और सहज समय ट्रैकर है। कोई खाता नहीं, कोई ट्रैकिंग नहीं — आपका डेटा आपके पास रहता है।',
+    'meta.contact.description':
+      'कोई सवाल, सुझाव या कोई गड़बड़ी बतानी है? SimpleTime को ईमेल लिखें — हम हर संदेश पढ़ते हैं और कुछ कार्यदिवसों में जवाब देते हैं।',
+    'meta.privacy.description':
+      'SimpleTime आपके डेटा के साथ कैसे पेश आता है: सब कुछ आपके डिवाइस पर रहता है, iCloud बैकअप वैकल्पिक और एन्क्रिप्टेड है, न कोई विश्लेषण, न ट्रैकिंग।',
+    'meta.imprint.description':
+      'simple-time.app की कानूनी जानकारी, जर्मन TMG की धारा 5 के अनुसार: संचालक, संपर्क विवरण और SimpleTime ऐप व वेबसाइट से जुड़ी उत्तरदायित्व जानकारी।',
+
+    'nav.features': 'विशेषताएँ',
+    'nav.screenshots': 'स्क्रीनशॉट',
+    'nav.contact': 'संपर्क',
+    'nav.appstore': 'App Store पर देखें',
+    'nav.faq': 'सवाल',
+    'nav.menu': 'मेन्यू खोलें',
+    'nav.menu.close': 'मेन्यू बंद करें',
+    'nav.language': 'भाषा',
+    'nav.theme': 'हल्के और गहरे रंग के बीच बदलें',
+    'skip.content': 'सामग्री पर जाएँ',
+
+    'hero.eyebrow': 'iOS के लिए समय ट्रैकर',
+    'hero.title.part1': 'आपका समय,',
+    'hero.title.part2': 'बिना मेहनत।',
+    'hero.subtitle':
+      'SimpleTime आपको अपना समय सोच-समझकर और कारगर ढंग से इस्तेमाल करने में मदद करता है। काम, पढ़ाई, अभ्यास या निजी परियोजनाएँ — अपनी गतिविधियाँ बेवजह की उलझन के बिना, साफ़ और व्यवस्थित ढंग से दर्ज करें।',
+    'hero.cta.appstore': 'App Store से डाउनलोड करें',
+    'hero.cta.features': 'विशेषताएँ देखें',
+    'hero.availability': 'निःशुल्क · iPhone · iPad · Mac',
+    'hero.proof.price': 'निःशुल्क डाउनलोड',
+    'hero.proof.account': 'खाते की ज़रूरत नहीं',
+    'hero.proof.private': 'डेटा डिवाइस पर रहता है',
+
+    'features.title': 'उस पर ध्यान दें जो सचमुच मायने रखता है: आपका समय।',
+    'features.subtitle': 'सोच-समझकर समय दर्ज करने के लिए जो चाहिए, बस उतना ही।',
+    'features.instant.title': 'तुरंत शुरू करें',
+    'features.instant.body':
+      'दर्ज करना शुरू करने के लिए एक टैप काफ़ी है। तेज़, सहज और बिना ध्यान भटकाए।',
+    'features.structured.title': 'व्यवस्थित कार्य और उप-कार्य',
+    'features.structured.body':
+      'अपनी गतिविधियों को श्रेणीबद्ध ढंग से व्यवस्थित करें और काम, पढ़ाई या परियोजनाओं की संरचना को ठीक वैसा ही दर्शाएँ।',
+    'features.timeline.title': 'दिन का दृश्य और समयरेखा',
+    'features.timeline.body':
+      'पूरा दिन एक नज़र में: शुरू और खत्म होने का समय, अवधि और वैकल्पिक टिप्पणियाँ।',
+    'features.stats.title': 'स्वतः आँकड़े',
+    'features.stats.body':
+      'साफ़ और बताने वाले चार्ट आपकी गतिविधियाँ दिन, सप्ताह और महीने के हिसाब से दिखाते हैं।',
+    'features.icloud.title': 'समझदार iCloud बैकअप',
+    'features.icloud.body':
+      'आपका डेटा हर दिन या हर सप्ताह अपने आप iCloud में सुरक्षित होता है और आपके डिवाइसों के बीच समन्वित रहता है।',
+    'features.export.title': 'CSV निर्यात',
+    'features.export.body':
+      'अपने समय के आँकड़े Excel, Numbers या किसी भी विश्लेषण उपकरण में निर्यात करें।',
+    'features.private.title': 'निजी और सुरक्षित',
+    'features.private.body':
+      'आपका डेटा सिर्फ़ आपका है। SimpleTime कोई निजी जानकारी नहीं जुटाता और किसी तीसरे पक्ष के साथ कुछ भी साझा नहीं करता।',
+
+    'screenshots.track.title': 'दर्ज करें',
+    'screenshots.track.body': 'दिन भर की सभी गतिविधियाँ एक नज़र में।',
+    'screenshots.customize.title': 'अपने मुताबिक ढालें',
+    'screenshots.customize.body': 'हर कार्य के लिए रंग और श्रेणियाँ।',
+    'screenshots.overview.title': 'सिंहावलोकन',
+    'screenshots.overview.body': 'पूरा दिन एक साफ़ सूची में।',
+    'screenshots.timeline.title': 'समयरेखा',
+    'screenshots.timeline.body': 'आपका दिन घंटे-दर-घंटे।',
+    'screenshots.analyze.title': 'विश्लेषण',
+    'screenshots.analyze.body': 'ठीक-ठीक देखें कि समय कहाँ जाता है।',
+    'screenshots.reports.title': 'रिपोर्ट',
+    'screenshots.reports.body': 'हर कार्य का विस्तृत ब्यौरा।',
+
+    'showcase.day.eyebrow': 'दिन का दृश्य',
+    'showcase.day.title': 'पूरा दिन एक ही जगह।',
+    'showcase.day.body':
+      'एक टैप से कार्य शुरू करें और रिकॉर्ड रखना SimpleTime पर छोड़ दें। हर प्रविष्टि में शुरू और खत्म होने का समय, अवधि और एक वैकल्पिक टिप्पणी रहती है — आप काम करते हैं और आपका दिन अपने आप बनता जाता है।',
+    'showcase.day.point1': 'शुरू करने के लिए एक टैप, रोकने के लिए एक और',
+    'showcase.day.point2': 'रोज़ दर्ज होने वाली चीज़ों के लिए पसंदीदा',
+    'showcase.day.point3': 'दिन की घंटे-दर-घंटे समयरेखा',
+
+    'showcase.insight.eyebrow': 'आँकड़े',
+    'showcase.insight.title': 'ठीक-ठीक देखें कि समय कहाँ जाता है।',
+    'showcase.insight.body':
+      'दिन, सप्ताह और महीने के चार्ट आपकी प्रविष्टियों को ऐसी तस्वीर में बदल देते हैं जिस पर आप कदम उठा सकें। कच्चे आँकड़े चाहिए? किसी भी अवधि को CSV में निर्यात करें और Excel या Numbers में खोलें।',
+    'showcase.insight.point1': 'दिन, सप्ताह और महीने के चार्ट',
+    'showcase.insight.point2': 'हर कार्य की विस्तृत रिपोर्ट',
+    'showcase.insight.point3': 'बाहरी विश्लेषण के लिए CSV निर्यात',
+
+    'showcase.personal.eyebrow': 'आपकी सेटिंग',
+    'showcase.personal.title': 'आपके काम करने के ढंग के मुताबिक ढल जाता है।',
+    'showcase.personal.body':
+      'हर कार्य को अपना रंग, अपना चिह्न और अपनी श्रेणी दें, और उप-कार्यों से किसी परियोजना की असली संरचना दर्शाएँ। जो सबसे ज़्यादा काम आता है वह पसंदीदा में सबसे ऊपर बना रहता है।',
+    'showcase.personal.point1': 'रंग, SF Symbols और इमोजी',
+    'showcase.personal.point2': 'श्रेणियाँ, कार्य और उप-कार्य',
+    'showcase.personal.point3': 'पसंदीदा हमेशा हाथ के पास',
+
+    'gallery.title': 'और करीब से।',
+    'gallery.subtitle': 'हर स्क्रीन ठीक वैसी ही, जैसी आपके डिवाइस पर दिखती है।',
+
+    'audience.title': 'उन सबके लिए जो अपने समय की कद्र करते हैं।',
+    'audience.subtitle':
+      'विद्यार्थी, स्वतंत्र पेशेवर, कर्मचारी, रचनात्मक काम करने वाले, खिलाड़ी — और वे सब जो जानना चाहते हैं कि उनका समय असल में कहाँ जाता है।',
+    'audience.work.title': 'काम और स्वतंत्र पेशा',
+    'audience.work.body':
+      'ग्राहकों का काम और अपनी परियोजनाएँ अलग-अलग रखें, और ज़रूरत पड़ने पर साफ़ ब्यौरा निर्यात करें।',
+    'audience.study.title': 'पढ़ाई और सीखना',
+    'audience.study.body':
+      'देखें कि किसी विषय में असल में कितना समय लगता है, और अगले सप्ताह की योजना असली आँकड़ों से बनाएँ।',
+    'audience.training.title': 'अभ्यास और आदतें',
+    'audience.training.body':
+      'सत्र, नींद या रियाज़ दर्ज करें और देखें कि हफ़्ते-दर-हफ़्ते नियमितता कैसे बनती है।',
+    'audience.everyday.title': 'रोज़मर्रा की ज़िंदगी',
+    'audience.everyday.body':
+      'पता लगाएँ कि घंटे असल में कहाँ जाते हैं — और खुद तय करें कि आप क्या बदलना चाहते हैं।',
+
+    'faq.title': 'अकसर पूछे जाने वाले सवाल',
+    'faq.subtitle': 'डाउनलोड करने से पहले जानने लायक सब कुछ।',
+    'faq.free.q': 'क्या SimpleTime सचमुच निःशुल्क है?',
+    'faq.free.a':
+      'हाँ। SimpleTime App Store से निःशुल्क डाउनलोड होता है और iPhone, iPad तथा Mac पर चलता है।',
+    'faq.account.q': 'क्या खाता बनाना ज़रूरी है?',
+    'faq.account.a':
+      'नहीं। न पंजीकरण है, न लॉगिन। आप ऐप खोलते हैं और सीधे दर्ज करना शुरू कर देते हैं।',
+    'faq.data.q': 'मेरा डेटा कहाँ रखा जाता है?',
+    'faq.data.a':
+      'सिर्फ़ आपके डिवाइस पर। अगर आप iCloud बैकअप चालू करते हैं, तो डेटा एन्क्रिप्टेड रूप में आपके अपने iCloud खाते में भेजा जाता है। हमें किसी भी समय उस तक पहुँच नहीं होती।',
+    'faq.sync.q': 'क्या यह मेरे डिवाइसों के बीच समन्वित होता है?',
+    'faq.sync.a':
+      'हाँ, iCloud के ज़रिए। बैकअप हर दिन या हर सप्ताह होता है, और आपकी प्रविष्टियाँ iPhone, iPad तथा Mac पर एक जैसी रहती हैं।',
+    'faq.export.q': 'क्या मैं अपना डेटा वापस निकाल सकता हूँ?',
+    'faq.export.a':
+      'कभी भी। SimpleTime आपके समय के आँकड़े CSV में निर्यात करता है — Excel, Numbers या किसी भी विश्लेषण उपकरण के लिए तैयार।',
+    'faq.tracking.q': 'क्या यह ऐप मुझे ट्रैक करता है?',
+    'faq.tracking.a':
+      'नहीं। SimpleTime में न विश्लेषण SDK हैं, न विज्ञापन, न किसी तीसरे पक्ष की क्रैश रिपोर्टिंग, और न ही उपयोगकर्ता प्रोफ़ाइल बनाई जाती हैं।',
+
+    'cta.title': 'शुरू करने के लिए तैयार हैं?',
+    'cta.subtitle': 'iPhone, iPad और Mac पर निःशुल्क उपलब्ध।',
+    'cta.button': 'App Store से डाउनलोड करें',
+
+    'footer.tagline': 'अपना समय बिना मेहनत के दर्ज करें।',
+    'footer.legal': 'कानूनी जानकारी',
+    'footer.product': 'उत्पाद',
+    'footer.appstore': 'App Store',
+    'footer.contact': 'संपर्क',
+    'footer.imprint': 'कानूनी सूचना',
+    'footer.privacy': 'निजता',
+    'footer.copyright': '© {year} Luca Efinger. सर्वाधिकार सुरक्षित।',
+
+    'contact.title': 'संपर्क',
+    'contact.subtitle': 'सवाल, सुझाव या विचार? हमें लिखें।',
+    'contact.email.label': 'ईमेल',
+    'contact.email.body':
+      'नीचे दिए पते पर हमें लिखें — हम हर संदेश पढ़ते हैं और जितनी जल्दी हो सके जवाब देते हैं।',
+    'contact.response':
+      'आम तौर पर हम कुछ कार्यदिवसों में जवाब देते हैं। गड़बड़ी बताते समय अपने डिवाइस का मॉडल और iOS संस्करण ज़रूर लिखें।',
+
+    'imprint.title': 'कानूनी सूचना',
+    'imprint.country': 'जर्मनी',
+    'imprint.according': 'जर्मन TMG की धारा 5 के अनुसार जानकारी',
+    'imprint.contact': 'संपर्क',
+    'imprint.responsible': 'RStV की धारा 55, उपधारा 2 के अनुसार सामग्री के लिए उत्तरदायी',
+    'imprint.disclaimer.title': 'अस्वीकरण',
+    'imprint.disclaimer.liability.title': 'सामग्री के लिए उत्तरदायित्व',
+    'imprint.disclaimer.liability.body':
+      'सेवा प्रदाता के रूप में हम इन पृष्ठों पर अपनी सामग्री के लिए सामान्य कानून के अनुसार उत्तरदायी हैं (TMG की धारा 7, उपधारा 1)। हालाँकि TMG की धाराओं 8 से 10 के अनुसार हम प्रेषित या संग्रहीत पराई जानकारी की निगरानी करने, या अवैध गतिविधि की ओर संकेत करने वाली परिस्थितियों की जाँच करने के लिए बाध्य नहीं हैं। सामान्य कानून के अनुसार जानकारी हटाने या उसके उपयोग को रोकने के दायित्व इससे अप्रभावित रहते हैं। इस संबंध में उत्तरदायित्व किसी ठोस उल्लंघन की जानकारी होने के क्षण से ही उत्पन्न होता है। ऐसे उल्लंघनों की जानकारी मिलते ही हम संबंधित सामग्री तुरंत हटा देंगे।',
+    'imprint.disclaimer.links.title': 'लिंक के लिए उत्तरदायित्व',
+    'imprint.disclaimer.links.body':
+      'हमारी पेशकश में तीसरे पक्ष की बाहरी वेबसाइटों के लिंक शामिल हैं, जिनकी सामग्री पर हमारा कोई प्रभाव नहीं है। इसलिए हम इन बाहरी सामग्रियों के लिए कोई उत्तरदायित्व नहीं ले सकते। लिंक किए गए पृष्ठों की सामग्री के लिए हमेशा उनका संबंधित प्रदाता या संचालक उत्तरदायी होता है। लिंक जोड़ते समय संबंधित पृष्ठों की संभावित कानूनी उल्लंघनों के लिए जाँच की गई थी और उस समय कोई अवैध सामग्री नहीं दिखी थी। फिर भी, उल्लंघन के ठोस संकेत के बिना लिंक किए गए पृष्ठों की सामग्री की लगातार निगरानी करना उचित रूप से अपेक्षित नहीं है। उल्लंघनों की जानकारी मिलते ही हम संबंधित लिंक तुरंत हटा देंगे।',
+    'imprint.disclaimer.copyright.title': 'कॉपीराइट',
+    'imprint.disclaimer.copyright.body':
+      'इन पृष्ठों पर साइट संचालक द्वारा बनाई गई सामग्री और कृतियाँ जर्मन कॉपीराइट कानून के अधीन हैं। कॉपीराइट की सीमाओं से बाहर प्रतिलिपि, संशोधन, वितरण और किसी भी प्रकार के उपयोग के लिए संबंधित लेखक या रचनाकार की लिखित सहमति आवश्यक है। इस साइट के डाउनलोड और प्रतिलिपियाँ केवल निजी, गैर-व्यावसायिक उपयोग के लिए अनुमत हैं।',
+
+    'privacy.title': 'निजता नीति',
+    'privacy.lastUpdated': 'अंतिम अद्यतन',
+    'privacy.intro.title': 'सिंहावलोकन',
+    'privacy.intro.body':
+      'आपके निजी डेटा की सुरक्षा हमारे लिए महत्वपूर्ण है। यह नीति बताती है कि SimpleTime ऐप और इस वेबसाइट के उपयोग पर कौन-सा डेटा और किस तरह संसाधित होता है। संक्षेप में: हम कम से कम जुटाते हैं और किसी तीसरे पक्ष के साथ कुछ भी साझा नहीं करते।',
+    'privacy.app.title': 'SimpleTime ऐप',
+    'privacy.app.body':
+      'SimpleTime कोई निजी जानकारी नहीं जुटाता। आप जो भी डेटा दर्ज करते हैं — गतिविधियाँ, कार्य, श्रेणियाँ, टिप्पणियाँ और समय — वह सिर्फ़ आपके डिवाइस पर रखा जाता है। आप चाहें तो iCloud बैकअप चालू कर सकते हैं; उस स्थिति में आपका डेटा Apple के iCloud ढाँचे के ज़रिए एन्क्रिप्टेड रूप में आपके अपने iCloud खाते में भेजा जाता है। हमें किसी भी समय इस डेटा तक पहुँच नहीं होती।',
+    'privacy.app.nocollect.title': 'न विश्लेषण, न ट्रैकिंग',
+    'privacy.app.nocollect.body':
+      'ऐप में कोई विश्लेषण SDK, विज्ञापन, तीसरे पक्ष के क्रैश रिपोर्टिंग उपकरण या उपयोगकर्ता ट्रैकिंग नहीं है। कोई उपयोगकर्ता प्रोफ़ाइल नहीं बनाई जाती।',
+    'privacy.website.title': 'यह वेबसाइट',
+    'privacy.website.body':
+      'यह वेबसाइट Cloudflare Workers पर होस्ट की गई है। पहुँचने पर आपका ब्राउज़र तकनीकी कारणों से सर्वर को एक IP पता और यूज़र एजेंट भेजता है, जो किसी भी वेबसाइट की डिलीवरी के लिए अपरिहार्य है। Cloudflare सुरक्षा कारणों से यह जानकारी सर्वर लॉग में अस्थायी रूप से रख सकता है। हम स्वयं ऐसा डेटा न जुटाते हैं, न रखते हैं और न ही उसका विश्लेषण करते हैं। यह वेबसाइट न कुकीज़ का, न विश्लेषण का, न ट्रैकिंग का और न ही तीसरे पक्ष के फ़ॉन्ट का उपयोग करती है — फ़ॉन्ट हमारे अपने सर्वर से दिए जाते हैं।',
+    'privacy.website.hosting.title': 'होस्टिंग',
+    'privacy.website.hosting.body':
+      'प्रदाता: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, अमेरिका। अधिक जानकारी Cloudflare की निजता नीति में: https://www.cloudflare.com/privacypolicy/।',
+    'privacy.website.cdn.title': 'सामग्री वितरण नेटवर्क',
+    'privacy.website.cdn.body':
+      'इस वेबसाइट को तेज़ी से पहुँचाने और हमलों से बचाने के लिए हम Cloudflare का उपयोग करते हैं, जो Cloudflare, Inc. (101 Townsend Street, San Francisco, CA 94107, अमेरिका) का सामग्री वितरण नेटवर्क और रिवर्स प्रॉक्सी सेवा है। साइट पर पहुँचने पर आपका अनुरोध Cloudflare के सर्वरों से होकर गुज़रता है। इस दौरान Cloudflare तकनीकी कनेक्शन डेटा — विशेष रूप से आपका IP पता और यूज़र एजेंट — सामग्री पहुँचाने, सुरक्षा खतरों को पहचानने और हानिकारक ट्रैफ़िक को रोकने के लिए संसाधित करता है। बॉट सुरक्षा और सत्र सुरक्षा के लिए Cloudflare तकनीकी रूप से आवश्यक कुकीज़ रख सकता है (जैसे __cf_bm, _cfuvid); इनका उपयोग ट्रैकिंग या विश्लेषण के लिए नहीं होता। कानूनी आधार GDPR के अनुच्छेद 6, अनुच्छेद 1, बिंदु (f) के अनुसार सुरक्षित और तेज़ वेबसाइट में हमारा वैध हित है। Cloudflare EU-U.S. Data Privacy Framework के तहत प्रमाणित है और उसके साथ डेटा प्रसंस्करण अनुबंध किया गया है। अधिक जानकारी: https://www.cloudflare.com/privacypolicy/।',
+    'privacy.rights.title': 'आपके अधिकार',
+    'privacy.rights.body':
+      'GDPR के अनुसार आपको जानकारी पाने, सुधार कराने, मिटवाने, प्रसंस्करण सीमित कराने, डेटा की सुवाह्यता तथा प्रसंस्करण पर आपत्ति करने का अधिकार है। नीचे दिए संपर्क विवरण से आप हमसे कभी भी संपर्क कर सकते हैं।',
+    'privacy.contact.title': 'संपर्क',
+    'privacy.contact.body': 'डेटा सुरक्षा से जुड़े सवालों के लिए संपर्क करें:',
+    'privacy.changes.title': 'बदलाव',
+    'privacy.changes.body':
+      'ऐप, वेबसाइट या कानूनी अपेक्षाओं में बदलाव को दर्शाने के लिए हम समय-समय पर इस नीति को अद्यतन कर सकते हैं। लागू संस्करण हमेशा यहीं उपलब्ध रहता है।',
   },
 } as const;
 

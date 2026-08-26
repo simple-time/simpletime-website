@@ -27,13 +27,15 @@ Run after changing any hero copy:
 import re
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
 INTER = ROOT / "node_modules/@fontsource/inter"
 ARMENIAN = ROOT / "node_modules/@fontsource/noto-sans-armenian"
 ARABIC = ROOT / "node_modules/@fontsource/noto-sans-arabic"
+DEVANAGARI = ROOT / "node_modules/@fontsource/noto-sans-devanagari"
 JAPANESE = ROOT / "node_modules/@fontsource-variable/noto-sans-jp"
+CHINESE = ROOT / "node_modules/@fontsource-variable/noto-sans-sc"
 PUBLIC = ROOT / "public"
 SCREEN = ROOT / "src/assets/screens/track.png"
 
@@ -52,6 +54,12 @@ SUBSETS = [
         "armenian",
     ),
     ("arabic", ARABIC / "files/noto-sans-arabic-arabic-{w}-normal.woff2", ARABIC / "400.css", "arabic"),
+    (
+        "devanagari",
+        DEVANAGARI / "files/noto-sans-devanagari-devanagari-{w}-normal.woff2",
+        DEVANAGARI / "400.css",
+        "devanagari",
+    ),
 ]
 
 COPY = {
@@ -66,9 +74,16 @@ COPY = {
     "tr": ("Zamanın,", "zahmetsizce.", "iPhone, iPad ve Mac için sade bir zaman takibi.", "Ücretsiz · Hesap yok · İzleme yok"),
     "ar": ("وقتك،", "دون عناء.", "تتبّع واضح للوقت على iPhone وiPad وMac.", "مجاني · بلا حساب · بلا تتبّع"),
     "ja": ("あなたの時間を、", "手軽に。", "iPhone、iPad、Mac 向けのシンプルな時間記録アプリ。", "無料 · アカウント不要 · トラッキングなし"),
+    "zh": ("你的时间，", "轻松掌握。", "为 iPhone、iPad 和 Mac 打造的清晰时间记录应用。", "免费 · 无需账户 · 没有追踪"),
+    "hi": ("आपका समय,", "बिना मेहनत।", "iPhone, iPad और Mac के लिए सरल समय ट्रैकर।", "निःशुल्क · खाता नहीं · ट्रैकिंग नहीं"),
 }
 
 RTL = {"ar"}
+
+# Devanagari reorders matras and forms conjuncts, so it cannot be drawn
+# codepoint by codepoint. Those runs go through HarfBuzz and are filled
+# from the glyph outlines; see draw_shaped below.
+SHAPED = {"devanagari"}
 
 
 def parse_range(css_path: Path, subset: str) -> set[int]:
@@ -94,10 +109,10 @@ def parse_range(css_path: Path, subset: str) -> set[int]:
     return points
 
 
-def japanese_subsets() -> list[tuple[str, Path, set[int]]]:
-    """Noto Sans JP ships 124 subsets in one stylesheet; each needs its own
-    entry so a character can be traced back to the file that holds it."""
-    css = (JAPANESE / "index.css").read_text(encoding="utf-8")
+def cjk_subsets(pkg: Path, prefix: str) -> list[tuple[str, Path, set[int]]]:
+    """The CJK fonts ship dozens of subsets in one stylesheet; each needs its
+    own entry so a character can be traced back to the file that holds it."""
+    css = (pkg / "index.css").read_text(encoding="utf-8")
     out = []
     for i, match in enumerate(re.finditer(r"@font-face \{(.*?)\}", css, re.S)):
         body = match.group(1)
@@ -113,14 +128,15 @@ def japanese_subsets() -> list[tuple[str, Path, set[int]]]:
                 points.update(range(int(lo, 16), int(hi, 16) + 1))
             else:
                 points.add(int(part, 16))
-        out.append((f"jp-{i}", JAPANESE / "files" / src.group(1), points))
+        out.append((f"{prefix}-{i}", pkg / "files" / src.group(1), points))
     return out
 
 
 RANGES: list[tuple[str, Path, set[int]]] = [
     (name, tmpl, parse_range(css, subset)) for name, tmpl, css, subset in SUBSETS
 ]
-RANGES += japanese_subsets()
+RANGES += cjk_subsets(JAPANESE, "jp")
+RANGES += cjk_subsets(CHINESE, "sc")
 
 _fonts: dict[tuple[str, int, int], ImageFont.FreeTypeFont] = {}
 
@@ -157,8 +173,17 @@ def shape(text: str, lang: str) -> str:
     return get_display(arabic_reshaper.reshape(text))
 
 
+# Japanese and Chinese share most Han codepoints but draw them differently,
+# so the card's locale decides which CJK family may match.
+CJK_PREFIX = {"ja": "jp-", "zh": "sc-"}
+_locale = "en"
+
+
 def subset_for(ch: str) -> str:
+    allowed = CJK_PREFIX.get(_locale)
     for name, _, points in RANGES:
+        if name.startswith(("jp-", "sc-")) and (allowed is None or not name.startswith(allowed)):
+            continue
         if ord(ch) in points:
             return name
     return "latin"  # spaces, digits and punctuation the ranges do not list
@@ -182,14 +207,144 @@ def runs(text: str) -> list[tuple[str, str]]:
 
 
 def measure(draw, text, weight, size) -> float:
-    return sum(draw.textlength(seg, font=font(sub, weight, size)) for sub, seg in runs(text))
+    total = 0.0
+    for sub, seg in runs(text):
+        if sub in SHAPED:
+            total += shaped_run(sub, seg, weight, size)[1]
+        else:
+            total += draw.textlength(seg, font=font(sub, weight, size))
+    return total
 
 
 def draw_text(draw, x, y, text, weight, size, fill) -> None:
+    """`y` is the ascender line, matching Pillow's default text anchor."""
     for sub, seg in runs(text):
         face = font(sub, weight, size)
-        draw.text((x, y), seg, font=face, fill=fill)
-        x += draw.textlength(seg, font=face)
+        if sub in SHAPED:
+            mask, advance, mask_baseline = shaped_run(sub, seg, weight, size)
+            ascent = face.getmetrics()[0]
+            # Line the shaped mask's baseline up with Pillow's.
+            draw._image.paste(fill, (int(x), int(y + ascent - mask_baseline)), mask)
+            x += advance
+        else:
+            draw.text((x, y), seg, font=face, fill=fill)
+            x += draw.textlength(seg, font=face)
+
+
+_shapers: dict[str, tuple] = {}
+
+
+def shaper(subset: str, weight: int):
+    """HarfBuzz font plus the fontTools glyph set for one subset.
+
+    HarfBuzz cannot read woff2, so the file is decompressed first —
+    without that every character shapes to .notdef.
+    """
+    key = f"{subset}-{weight}"
+    if key not in _shapers:
+        import io as _io
+
+        import uharfbuzz as hb
+        from fontTools.ttLib import TTFont
+
+        path = str(next(t for n, t, _ in RANGES if n == subset)).format(w=weight)
+        tt = TTFont(path)
+        tt.flavor = None
+        raw = _io.BytesIO()
+        tt.save(raw)
+        _shapers[key] = (hb, hb.Font(hb.Face(raw.getvalue())), tt)
+    return _shapers[key]
+
+
+def _contours(pen, scale, ox, oy):
+    """Flatten a glyph's outline into polygons."""
+    out, cur, last = [], [], None
+
+    def pt(p):
+        return (ox + p[0] * scale, oy - p[1] * scale)
+
+    for op, args in pen.value:
+        if op == "moveTo":
+            cur, last = [pt(args[0])], args[0]
+        elif op == "lineTo":
+            cur.append(pt(args[0]))
+            last = args[0]
+        elif op == "qCurveTo":
+            pts = list(args)
+            on = pts[-1] if pts[-1] is not None else pts[0]
+            ctrl, prev = pts[:-1], last
+            for i, c in enumerate(ctrl):
+                end = on if i == len(ctrl) - 1 else ((c[0] + ctrl[i + 1][0]) / 2, (c[1] + ctrl[i + 1][1]) / 2)
+                for t in (j / 8 for j in range(1, 9)):
+                    cur.append(pt((
+                        (1 - t) ** 2 * prev[0] + 2 * (1 - t) * t * c[0] + t * t * end[0],
+                        (1 - t) ** 2 * prev[1] + 2 * (1 - t) * t * c[1] + t * t * end[1],
+                    )))
+                prev = end
+            last = on
+        elif op == "curveTo":
+            c1, c2, end = args
+            prev = last
+            for t in (j / 10 for j in range(1, 11)):
+                cur.append(pt((
+                    (1 - t) ** 3 * prev[0] + 3 * (1 - t) ** 2 * t * c1[0] + 3 * (1 - t) * t * t * c2[0] + t**3 * end[0],
+                    (1 - t) ** 3 * prev[1] + 3 * (1 - t) ** 2 * t * c1[1] + 3 * (1 - t) * t * t * c2[1] + t**3 * end[1],
+                )))
+            last = end
+        elif op == "closePath":
+            if len(cur) > 2:
+                out.append(cur)
+            cur = []
+    if len(cur) > 2:
+        out.append(cur)
+    return out
+
+
+SS = 3  # supersampling for the shaped path, which has no antialiasing of its own
+
+
+def shaped_run(subset, text, weight, size):
+    """Return (mask, advance) for a run that needs shaping."""
+    # Decomposing, not plain RecordingPen: composite glyphs — आ among them —
+    # record only component references, which flatten to nothing and drop the
+    # letter silently.
+    from fontTools.pens.recordingPen import DecomposingRecordingPen
+
+    hb, hbfont, tt = shaper(subset, weight)
+    buf = hb.Buffer()
+    buf.add_str(text)
+    buf.guess_segment_properties()
+    hb.shape(hbfont, buf)
+
+    upem = tt["head"].unitsPerEm
+    glyphs, order = tt.getGlyphSet(), tt.getGlyphOrder()
+    scale = size * SS / upem
+
+    advance = sum(p.x_advance for p in buf.glyph_positions) * size / upem
+    width = max(1, int(advance * SS) + size * SS)
+    height = size * SS * 3
+    baseline = size * SS * 2
+
+    acc = Image.new("1", (width, height), 0)
+    x = 0.0
+    for info, pos in zip(buf.glyph_infos, buf.glyph_positions):
+        pen = DecomposingRecordingPen(glyphs)
+        glyphs[order[info.codepoint]].draw(pen)
+
+        # Even-odd within one glyph, so its counters stay open — but OR
+        # between glyphs. XOR across glyphs cancels wherever two of them
+        # overlap, and in Devanagari they routinely do: it silently ate the
+        # first letter of every run.
+        glyph = Image.new("1", (width, height), 0)
+        for contour in _contours(pen, scale, x + pos.x_offset * scale, baseline - pos.y_offset * scale):
+            layer = Image.new("1", (width, height), 0)
+            ImageDraw.Draw(layer).polygon(contour, fill=1)
+            glyph = ImageChops.logical_xor(glyph, layer)
+        acc = ImageChops.logical_or(acc, glyph)
+        x += pos.x_advance * scale
+
+    mask = acc.convert("L").resize((width // SS, height // SS), Image.LANCZOS)
+    return mask, advance, size * 2
 
 
 def rounded(size, radius) -> Image.Image:
@@ -199,6 +354,9 @@ def rounded(size, radius) -> Image.Image:
 
 
 def build(lang: str, out: Path) -> None:
+    global _locale
+    _locale = lang
+
     gradient = Image.new("RGB", (W, H))
     px = gradient.load()
     for y in range(H):

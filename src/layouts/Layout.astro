@@ -12,6 +12,8 @@ import armenianRegular from '@fontsource/noto-sans-armenian/files/noto-sans-arme
 import armenianBold from '@fontsource/noto-sans-armenian/files/noto-sans-armenian-armenian-700-normal.woff2?url';
 import arabicRegular from '@fontsource/noto-sans-arabic/files/noto-sans-arabic-arabic-400-normal.woff2?url';
 import arabicBold from '@fontsource/noto-sans-arabic/files/noto-sans-arabic-arabic-700-normal.woff2?url';
+import devanagariRegular from '@fontsource/noto-sans-devanagari/files/noto-sans-devanagari-devanagari-400-normal.woff2?url';
+import devanagariBold from '@fontsource/noto-sans-devanagari/files/noto-sans-devanagari-devanagari-700-normal.woff2?url';
 
 interface Props {
   lang: Lang;
@@ -45,6 +47,8 @@ const OG_LOCALE: Record<string, string> = {
   tr: 'tr_TR',
   ar: 'ar_AR',
   ja: 'ja_JP',
+  zh: 'zh_CN',
+  hi: 'hi_IN',
 };
 const ogImage = new URL(lang === 'en' ? '/og.png' : `/og-${lang}.png`, site).toString();
 
@@ -54,7 +58,8 @@ const ogImage = new URL(lang === 'en' ? '/og.png' : `/og-${lang}.png`, site).toS
 const RTL_LOCALES = new Set<Lang>(['ar']);
 const dir = RTL_LOCALES.has(lang) ? 'rtl' : 'ltr';
 
-// Japanese is deliberately absent: Noto Sans JP is split into 121 subsets
+// Japanese and Chinese are deliberately absent: their fonts are split into
+// dozens of subsets
 // and which ones a page needs is only known once the text is laid out, so
 // there is nothing sensible to preload. Its Latin preload still covers the
 // wordmark and the App Store button.
@@ -62,6 +67,7 @@ const SCRIPT_FONTS: Partial<Record<Lang, [string, string]>> = {
   ru: [cyrillicRegular, cyrillicBold],
   hy: [armenianRegular, armenianBold],
   ar: [arabicRegular, arabicBold],
+  hi: [devanagariRegular, devanagariBold],
 };
 const [preloadRegular, preloadBold] = SCRIPT_FONTS[lang] ?? [latinRegular, latinBold];
 

@@ -30,24 +30,34 @@ OUT = ROOT / "src/styles/fonts.css"
 
 WEIGHTS = (400, 500, 600, 700, 800)
 
-# (label, package, subset, css file, file template, family, variable?)
-# Priority order — earlier entries win overlapping codepoints.
+# (label, package, subset, css file, file template, family, variable?, shared?)
 #
-# Japanese is the one script that does NOT share the 'Inter' family. Its
-# faces declare a variable weight range (100 900) while every other face
-# declares a discrete weight, and Chrome then never selects them: it
-# matches a discrete face by weight, finds no glyph, and falls straight
-# out of the family to the system font. Measured — no Japanese file was
-# ever requested. Under its own family name it is simply the next entry
-# in the stack, which works, and unicode-range still keeps it off pages
-# without Japanese text.
+# `shared` entries form one de-overlapping chain under the 'Inter' family:
+# each keeps only what no earlier entry claimed, so a script's font is
+# never pulled onto a page that lacks that script.
+#
+# The CJK fonts sit outside that chain, for two separate reasons.
+#
+# They cannot share the 'Inter' family: their faces declare a variable
+# weight range (100 900) while every other face declares a discrete
+# weight, and Chrome then never selects them — it matches a discrete face
+# by weight, finds no glyph and falls straight out of the family to a
+# system font. Measured: /ja/ requested no Japanese file at all.
+#
+# And they cannot de-overlap against each other: Japanese and Chinese
+# share 11,245 codepoints, 72% of the smaller set. Subtracting would hand
+# most Han characters to whichever came first and render the other
+# language in the wrong regional glyph forms. Each keeps its full
+# coverage under its own family, selected per locale in global.css.
 SOURCES = [
-    ("latin", "@fontsource/inter", "latin", "400.css", "inter-latin-{w}-normal.woff2", "Inter", False),
-    ("latin-ext", "@fontsource/inter", "latin-ext", "400.css", "inter-latin-ext-{w}-normal.woff2", "Inter", False),
-    ("cyrillic", "@fontsource/inter", "cyrillic", "400.css", "inter-cyrillic-{w}-normal.woff2", "Inter", False),
-    ("armenian", "@fontsource/noto-sans-armenian", "armenian", "400.css", "noto-sans-armenian-armenian-{w}-normal.woff2", "Inter", False),
-    ("arabic", "@fontsource/noto-sans-arabic", "arabic", "400.css", "noto-sans-arabic-arabic-{w}-normal.woff2", "Inter", False),
-    ("japanese", "@fontsource-variable/noto-sans-jp", None, "index.css", None, "Noto Sans JP", True),
+    ("latin", "@fontsource/inter", "latin", "400.css", "inter-latin-{w}-normal.woff2", "Inter", False, True),
+    ("latin-ext", "@fontsource/inter", "latin-ext", "400.css", "inter-latin-ext-{w}-normal.woff2", "Inter", False, True),
+    ("cyrillic", "@fontsource/inter", "cyrillic", "400.css", "inter-cyrillic-{w}-normal.woff2", "Inter", False, True),
+    ("armenian", "@fontsource/noto-sans-armenian", "armenian", "400.css", "noto-sans-armenian-armenian-{w}-normal.woff2", "Inter", False, True),
+    ("arabic", "@fontsource/noto-sans-arabic", "arabic", "400.css", "noto-sans-arabic-arabic-{w}-normal.woff2", "Inter", False, True),
+    ("devanagari", "@fontsource/noto-sans-devanagari", "devanagari", "400.css", "noto-sans-devanagari-devanagari-{w}-normal.woff2", "Inter", False, True),
+    ("japanese", "@fontsource-variable/noto-sans-jp", None, "index.css", None, "Noto Sans JP", True, False),
+    ("chinese", "@fontsource-variable/noto-sans-sc", None, "index.css", None, "Noto Sans SC", True, False),
 ]
 
 
@@ -109,7 +119,7 @@ lines = [
 claimed: set[int] = set()
 summary: list[tuple[str, int, int]] = []
 
-for label, pkg, subset, css_name, template, family, variable in SOURCES:
+for label, pkg, subset, css_name, template, family, variable, shared in SOURCES:
     faces = read_faces(pkg, css_name, subset)
     if not faces:
         raise SystemExit(f"no faces found for {label} in {pkg}/{css_name}")
@@ -121,7 +131,10 @@ for label, pkg, subset, css_name, template, family, variable in SOURCES:
         dropped += len(points) - len(trimmed)
         if not trimmed:
             continue
-        claimed |= trimmed
+        # Only the shared chain claims codepoints; the CJK families are
+        # trimmed against it but never against each other.
+        if shared:
+            claimed |= trimmed
         spec = to_spec(trimmed)
 
         if variable:
