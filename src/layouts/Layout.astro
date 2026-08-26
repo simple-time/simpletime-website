@@ -8,6 +8,8 @@ import latinRegular from '@fontsource/inter/files/inter-latin-400-normal.woff2?u
 import latinBold from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
 import cyrillicRegular from '@fontsource/inter/files/inter-cyrillic-400-normal.woff2?url';
 import cyrillicBold from '@fontsource/inter/files/inter-cyrillic-700-normal.woff2?url';
+import armenianRegular from '@fontsource/noto-sans-armenian/files/noto-sans-armenian-armenian-400-normal.woff2?url';
+import armenianBold from '@fontsource/noto-sans-armenian/files/noto-sans-armenian-armenian-700-normal.woff2?url';
 
 interface Props {
   lang: Lang;
@@ -36,15 +38,17 @@ const OG_LOCALE: Record<string, string> = {
   es: 'es_ES',
   it: 'it_IT',
   ru: 'ru_RU',
+  hy: 'hy_AM',
 };
 const ogImage = new URL(lang === 'en' ? '/og.png' : `/og-${lang}.png`, site).toString();
 
-// Preload the subset this locale's body copy is actually set in. The other
-// subset still loads on demand — the brand name stays Latin everywhere.
-const CYRILLIC_LOCALES = new Set(['ru']);
-const [preloadRegular, preloadBold] = CYRILLIC_LOCALES.has(lang)
-  ? [cyrillicRegular, cyrillicBold]
-  : [latinRegular, latinBold];
+// Preload the script this locale's body copy is actually set in. The Latin
+// files still load on demand — the brand name stays Latin everywhere.
+const SCRIPT_FONTS: Partial<Record<Lang, [string, string]>> = {
+  ru: [cyrillicRegular, cyrillicBold],
+  hy: [armenianRegular, armenianBold],
+};
+const [preloadRegular, preloadBold] = SCRIPT_FONTS[lang] ?? [latinRegular, latinBold];
 
 const appSchema = {
   '@context': 'https://schema.org',
