@@ -13,6 +13,13 @@ export const ui = {
     'meta.description':
       'Track time effortlessly. SimpleTime is a clean, intuitive time tracker for iPhone, iPad and Mac. No accounts, no tracking — your data stays with you.',
 
+    'meta.contact.description':
+      'Questions, feedback or a bug to report? Reach SimpleTime by email — every message is read and answered within a few working days.',
+    'meta.privacy.description':
+      'How SimpleTime handles your data: everything stays on your device, iCloud backup is optional and encrypted, and there is no analytics or tracking.',
+    'meta.imprint.description':
+      'Legal notice for simple-time.app under § 5 TMG — operator, contact details and liability information for the SimpleTime app and website.',
+
     'nav.features': 'Features',
     'nav.screenshots': 'Screenshots',
     'nav.contact': 'Contact',
@@ -209,6 +216,13 @@ export const ui = {
     'meta.title': 'SimpleTime – Zeiterfassung für iOS',
     'meta.description':
       'Zeit mühelos tracken. SimpleTime ist ein klarer, intuitiver Zeittracker für iPhone, iPad und Mac. Ohne Account, ohne Tracking — deine Daten bleiben bei dir.',
+
+    'meta.contact.description':
+      'Fragen, Rückmeldungen oder ein Fehler? Schreib SimpleTime eine E-Mail — jede Nachricht wird gelesen und innerhalb weniger Werktage beantwortet.',
+    'meta.privacy.description':
+      'Wie SimpleTime mit deinen Daten umgeht: Alles bleibt auf deinem Gerät, das iCloud-Backup ist optional und verschlüsselt, kein Analytics, kein Tracking.',
+    'meta.imprint.description':
+      'Impressum für simple-time.app nach § 5 TMG — Betreiber, Kontaktdaten und Haftungshinweise zur SimpleTime-App und zur Website.',
 
     'nav.features': 'Funktionen',
     'nav.screenshots': 'Screenshots',

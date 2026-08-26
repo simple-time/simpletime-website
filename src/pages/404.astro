@@ -22,13 +22,13 @@ import Layout from '../layouts/Layout.astro';
         404
       </p>
 
-      <h1 class="text-display mt-4 text-3xl font-bold sm:text-4xl">Page not found</h1>
-      <p class="mt-2 text-xl font-medium text-subtle sm:text-2xl">Seite nicht gefunden</p>
+      <h1 data-lang-en class="text-display mt-4 text-3xl font-bold sm:text-4xl">Page not found</h1>
+      <p lang="de" class="mt-2 text-xl font-medium text-subtle sm:text-2xl">Seite nicht gefunden</p>
 
-      <p class="mx-auto mt-8 max-w-md leading-relaxed text-muted">
+      <p data-lang-en class="mx-auto mt-8 max-w-md leading-relaxed text-muted">
         The page you're looking for doesn't exist or has been moved.
       </p>
-      <p class="mx-auto mt-2 max-w-md leading-relaxed text-subtle">
+      <p lang="de" class="mx-auto mt-2 max-w-md leading-relaxed text-subtle">
         Die Seite, die du suchst, existiert nicht oder wurde verschoben.
       </p>
 
@@ -67,7 +67,14 @@ import Layout from '../layouts/Layout.astro';
       if (isDe) {
         if (link) link.setAttribute('href', '/de/');
         if (label) label.textContent = 'Zurück zur Startseite';
+        // The page root becomes German, so the language of parts flips too.
         document.documentElement.lang = 'de';
+        document.querySelectorAll('[lang="de"]').forEach(function (el) {
+          el.removeAttribute('lang');
+        });
+        document.querySelectorAll('[data-lang-en]').forEach(function (el) {
+          el.setAttribute('lang', 'en');
+        });
       }
       // There is no /de/404/ document — send the language switch to the home page.
       if (langSwitch) langSwitch.setAttribute('href', isDe ? '/' : '/de/');
