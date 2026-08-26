@@ -10,6 +10,8 @@ import cyrillicRegular from '@fontsource/inter/files/inter-cyrillic-400-normal.w
 import cyrillicBold from '@fontsource/inter/files/inter-cyrillic-700-normal.woff2?url';
 import armenianRegular from '@fontsource/noto-sans-armenian/files/noto-sans-armenian-armenian-400-normal.woff2?url';
 import armenianBold from '@fontsource/noto-sans-armenian/files/noto-sans-armenian-armenian-700-normal.woff2?url';
+import arabicRegular from '@fontsource/noto-sans-arabic/files/noto-sans-arabic-arabic-400-normal.woff2?url';
+import arabicBold from '@fontsource/noto-sans-arabic/files/noto-sans-arabic-arabic-700-normal.woff2?url';
 
 interface Props {
   lang: Lang;
@@ -41,14 +43,25 @@ const OG_LOCALE: Record<string, string> = {
   hy: 'hy_AM',
   pt: 'pt_PT',
   tr: 'tr_TR',
+  ar: 'ar_AR',
+  ja: 'ja_JP',
 };
 const ogImage = new URL(lang === 'en' ? '/og.png' : `/og-${lang}.png`, site).toString();
 
 // Preload the script this locale's body copy is actually set in. The Latin
 // files still load on demand — the brand name stays Latin everywhere.
+// Arabic is right-to-left; everything else here reads left-to-right.
+const RTL_LOCALES = new Set<Lang>(['ar']);
+const dir = RTL_LOCALES.has(lang) ? 'rtl' : 'ltr';
+
+// Japanese is deliberately absent: Noto Sans JP is split into 121 subsets
+// and which ones a page needs is only known once the text is laid out, so
+// there is nothing sensible to preload. Its Latin preload still covers the
+// wordmark and the App Store button.
 const SCRIPT_FONTS: Partial<Record<Lang, [string, string]>> = {
   ru: [cyrillicRegular, cyrillicBold],
   hy: [armenianRegular, armenianBold],
+  ar: [arabicRegular, arabicBold],
 };
 const [preloadRegular, preloadBold] = SCRIPT_FONTS[lang] ?? [latinRegular, latinBold];
 
@@ -80,7 +93,7 @@ const jsonLdPayload = JSON.stringify(schemas).replace(/</g, '\\u003c');
 ---
 
 <!doctype html>
-<html lang={lang} class="scroll-smooth">
+<html lang={lang} dir={dir} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -148,7 +161,7 @@ const jsonLdPayload = JSON.stringify(schemas).replace(/</g, '\\u003c');
   <body class="bg-canvas text-ink antialiased">
     <a
       href="#main"
-      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-accent focus:px-4 focus:py-2.5 focus:text-sm focus:font-medium focus:text-on-accent"
+      class="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-accent focus:px-4 focus:py-2.5 focus:text-sm focus:font-medium focus:text-on-accent"
     >
       {t('skip.content')}
     </a>

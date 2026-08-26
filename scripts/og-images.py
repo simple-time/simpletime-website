@@ -12,6 +12,13 @@ once already — the Turkish dotless ı looks like a latin-ext character but
 lives in the Latin subset, and rendering it from the wrong file produced
 a NO GLYPH box in the middle of the headline.
 
+Arabic additionally needs shaping and bidi reordering, which this Pillow
+build cannot do (no Raqm). arabic_reshaper and python-bidi do it in pure
+Python; without them the Arabic card is skipped rather than written with
+disconnected letters in the wrong order:
+
+    pip install arabic-reshaper python-bidi
+
 Run after changing any hero copy:
 
     python3 scripts/og-images.py
@@ -25,6 +32,8 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 INTER = ROOT / "node_modules/@fontsource/inter"
 ARMENIAN = ROOT / "node_modules/@fontsource/noto-sans-armenian"
+ARABIC = ROOT / "node_modules/@fontsource/noto-sans-arabic"
+JAPANESE = ROOT / "node_modules/@fontsource-variable/noto-sans-jp"
 PUBLIC = ROOT / "public"
 SCREEN = ROOT / "src/assets/screens/track.png"
 
@@ -42,6 +51,7 @@ SUBSETS = [
         ARMENIAN / "400.css",
         "armenian",
     ),
+    ("arabic", ARABIC / "files/noto-sans-arabic-arabic-{w}-normal.woff2", ARABIC / "400.css", "arabic"),
 ]
 
 COPY = {
@@ -54,7 +64,11 @@ COPY = {
     "hy": ("Ժամանակը՝", "առանց ջանքի։", "Պարզ ժամանակի հաշվառում iPhone-ի, iPad-ի և Mac-ի համար։", "Անվճար · Առանց հաշվի · Առանց հետագծման"),
     "pt": ("O seu tempo,", "sem esforço.", "Um registo de tempo claro para iPhone, iPad e Mac.", "Gratuito · Sem conta · Sem rastreio"),
     "tr": ("Zamanın,", "zahmetsizce.", "iPhone, iPad ve Mac için sade bir zaman takibi.", "Ücretsiz · Hesap yok · İzleme yok"),
+    "ar": ("وقتك،", "دون عناء.", "تتبّع واضح للوقت على iPhone وiPad وMac.", "مجاني · بلا حساب · بلا تتبّع"),
+    "ja": ("あなたの時間を、", "手軽に。", "iPhone、iPad、Mac 向けのシンプルな時間記録アプリ。", "無料 · アカウント不要 · トラッキングなし"),
 }
+
+RTL = {"ar"}
 
 
 def parse_range(css_path: Path, subset: str) -> set[int]:
@@ -80,16 +94,67 @@ def parse_range(css_path: Path, subset: str) -> set[int]:
     return points
 
 
-RANGES = [(name, tmpl, parse_range(css, subset)) for name, tmpl, css, subset in SUBSETS]
+def japanese_subsets() -> list[tuple[str, Path, set[int]]]:
+    """Noto Sans JP ships 124 subsets in one stylesheet; each needs its own
+    entry so a character can be traced back to the file that holds it."""
+    css = (JAPANESE / "index.css").read_text(encoding="utf-8")
+    out = []
+    for i, match in enumerate(re.finditer(r"@font-face \{(.*?)\}", css, re.S)):
+        body = match.group(1)
+        src = re.search(r"url\(\./files/([^)]+?\.woff2)\)", body)
+        declared = re.search(r"unicode-range:\s*([^;]+);", body)
+        if not src or not declared:
+            continue
+        points: set[int] = set()
+        for part in declared.group(1).split(","):
+            part = part.strip().removeprefix("U+")
+            if "-" in part:
+                lo, hi = part.split("-")
+                points.update(range(int(lo, 16), int(hi, 16) + 1))
+            else:
+                points.add(int(part, 16))
+        out.append((f"jp-{i}", JAPANESE / "files" / src.group(1), points))
+    return out
+
+
+RANGES: list[tuple[str, Path, set[int]]] = [
+    (name, tmpl, parse_range(css, subset)) for name, tmpl, css, subset in SUBSETS
+]
+RANGES += japanese_subsets()
+
 _fonts: dict[tuple[str, int, int], ImageFont.FreeTypeFont] = {}
 
 
 def font(subset: str, weight: int, size: int) -> ImageFont.FreeTypeFont:
     key = (subset, weight, size)
     if key not in _fonts:
-        path = next(t for n, t, _ in RANGES if n == subset)
-        _fonts[key] = ImageFont.truetype(str(path).format(w=weight), size)
+        path = str(next(t for n, t, _ in RANGES if n == subset))
+        if "{w}" in path:
+            face = ImageFont.truetype(path.format(w=weight), size)
+        else:
+            # Variable file, one per subset. Pillow loads the default
+            # instance, so the weight axis has to be set explicitly —
+            # otherwise the Japanese headline renders light next to a
+            # bold Latin wordmark.
+            face = ImageFont.truetype(path, size)
+            face.set_variation_by_axes([weight])
+        _fonts[key] = face
     return _fonts[key]
+
+
+def shape(text: str, lang: str) -> str:
+    """Arabic needs contextual shaping and bidi reordering before Pillow can
+    draw it; this build has no Raqm, so it is done in Python."""
+    if lang not in RTL:
+        return text
+    try:
+        import arabic_reshaper
+        from bidi.algorithm import get_display
+    except ImportError:
+        raise SystemExit(
+            "Arabic needs shaping: pip install arabic-reshaper python-bidi"
+        )
+    return get_display(arabic_reshaper.reshape(text))
 
 
 def subset_for(ch: str) -> str:
@@ -172,25 +237,39 @@ def build(lang: str, out: Path) -> None:
     base.paste(logo, (80, 74), rounded((60, 60), 16))
     draw.text((156, 88), "SimpleTime", font=font("latin", 600, 30), fill="#ffffff")
 
-    line1, line2, subtitle, meta = COPY[lang]
+    line1, line2, subtitle, meta = (shape(t, lang) for t in COPY[lang])
+    rtl = lang in RTL
+
+    # In RTL the text block is mirrored: it starts at the right edge of the
+    # column and grows leftwards, matching how the site itself lays out.
+    right_edge = 728
+
+    def place(text, weight, size, y, fill, left=78):
+        x = right_edge - measure(draw, text, weight, size) if rtl else left
+        draw_text(draw, x, y, text, weight, size, fill)
 
     # Shrink until the longest line clears the device.
     size = 74
     while size > 40 and max(measure(draw, line1, 800, size), measure(draw, line2, 800, size)) > 650:
         size -= 2
-    draw_text(draw, 78, 196 + (74 - size) // 2, line1, 800, size, "#ffffff")
-    draw_text(draw, 78, 286 + (74 - size) // 2, line2, 800, size, "#a9c0f0")
+    place(line1, 800, size, 196 + (74 - size) // 2, "#ffffff")
+    place(line2, 800, size, 286 + (74 - size) // 2, "#a9c0f0")
 
     sub_size = 27
     while sub_size > 16 and measure(draw, subtitle, 400, sub_size) > 650:
         sub_size -= 1
-    draw_text(draw, 80, 410, subtitle, 400, sub_size, "#d3ddf5")
+    place(subtitle, 400, sub_size, 410, "#d3ddf5", left=80)
 
-    draw.ellipse([82, 489, 94, 501], fill="#8ea9e3")
     meta_size = 23
     while meta_size > 14 and measure(draw, meta, 500, meta_size) > 600:
         meta_size -= 1
-    draw_text(draw, 108, 481 + (23 - meta_size) // 2, meta, 500, meta_size, "#9fb3de")
+    meta_width = measure(draw, meta, 500, meta_size)
+    if rtl:
+        draw.ellipse([right_edge + 8, 489, right_edge + 20, 501], fill="#8ea9e3")
+        draw_text(draw, right_edge - meta_width, 481 + (23 - meta_size) // 2, meta, 500, meta_size, "#9fb3de")
+    else:
+        draw.ellipse([82, 489, 94, 501], fill="#8ea9e3")
+        draw_text(draw, 108, 481 + (23 - meta_size) // 2, meta, 500, meta_size, "#9fb3de")
 
     base.save(out, optimize=True)
     used = sorted({sub for sub, _ in runs(line1 + line2 + subtitle + meta)})
