@@ -2,16 +2,16 @@ export const languages = {
   en: 'English',
   de: 'Deutsch',
   fr: 'Français',
-  es: 'Español',
   it: 'Italiano',
-  ru: 'Русский',
-  hy: 'Հայերեն',
+  es: 'Español',
   pt: 'Português',
+  ru: 'Русский',
   tr: 'Türkçe',
+  hy: 'Հայերեն',
   ar: 'العربية',
-  ja: '日本語',
-  zh: '简体中文',
   hi: 'हिन्दी',
+  zh: '简体中文',
+  ja: '日本語',
 } as const;
 
 export const defaultLang = 'en' as const;
