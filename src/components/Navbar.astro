@@ -1,6 +1,6 @@
 ---
-import type { Lang } from '../i18n/ui';
-import { useTranslations, APP_STORE_URL, getAltLangPath } from '../i18n/utils';
+import { languages, type Lang } from '../i18n/ui';
+import { useTranslations, APP_STORE_URL, getAllLangPaths, langPrefix } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -9,9 +9,18 @@ interface Props {
 
 const { lang, path } = Astro.props;
 const t = useTranslations(lang);
-const home = lang === 'de' ? '/de/' : '/';
-const contactPath = lang === 'de' ? '/de/contact/' : '/contact/';
-const altHref = getAltLangPath(lang, path);
+const prefix = langPrefix(lang);
+const home = `${prefix}/`;
+const contactPath = `${prefix}/contact/`;
+
+// Same page in every locale, so switching language keeps the visitor in place.
+const langPaths = getAllLangPaths(path);
+const langList = (Object.keys(languages) as Lang[]).map((code) => ({
+  code,
+  name: languages[code],
+  href: langPaths[code],
+  current: code === lang,
+}));
 
 const links = [
   { href: `${home}#features`, label: t('nav.features') },
@@ -76,14 +85,27 @@ const links = [
         </svg>
       </button>
 
-      <a
-        id="lang-switch"
-        href={altHref}
-        class="rounded-full px-2.5 py-1.5 text-sm font-medium text-muted transition-colors hover:bg-surface-2 hover:text-ink"
-        aria-label={`Switch to ${t('lang.switch')}`}
-      >
-        {lang === 'de' ? 'EN' : 'DE'}
-      </a>
+      <nav aria-label="Language" class="hidden items-center sm:flex">
+        {
+          langList.map((l) => (
+            <a
+              href={l.href}
+              hreflang={l.code}
+              lang={l.code}
+              aria-current={l.current ? 'true' : undefined}
+              title={l.name}
+              class:list={[
+                'rounded-full px-2 py-1.5 text-[13px] font-medium uppercase transition-colors',
+                l.current
+                  ? 'text-ink'
+                  : 'text-subtle hover:bg-surface-2 hover:text-ink',
+              ]}
+            >
+              {l.code}
+            </a>
+          ))
+        }
+      </nav>
 
       <a
         href={APP_STORE_URL}
@@ -142,6 +164,27 @@ const links = [
       >
         {t('nav.appstore')}
       </a>
+
+      <nav aria-label="Language" class="mt-5 flex flex-wrap gap-2 sm:hidden">
+        {
+          langList.map((l) => (
+            <a
+              href={l.href}
+              hreflang={l.code}
+              lang={l.code}
+              aria-current={l.current ? 'true' : undefined}
+              class:list={[
+                'rounded-full border px-3.5 py-2 text-[14px] font-medium transition-colors',
+                l.current
+                  ? 'border-line-strong bg-surface-2 text-ink'
+                  : 'border-line text-muted hover:text-ink',
+              ]}
+            >
+              {l.name}
+            </a>
+          ))
+        }
+      </nav>
     </div>
   </div>
 </header>

@@ -1,6 +1,6 @@
 ---
 import type { Lang } from '../i18n/ui';
-import { useTranslations, APP_STORE_URL, CONTACT_EMAIL } from '../i18n/utils';
+import { useTranslations, APP_STORE_URL, CONTACT_EMAIL, langPrefix } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -10,9 +10,9 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const year = new Date().getFullYear();
 
-const prefix = lang === 'de' ? '/de' : '';
+const prefix = langPrefix(lang);
 const links = {
-  home: lang === 'de' ? '/de/' : '/',
+  home: `${prefix}/`,
   contact: `${prefix}/contact/`,
   imprint: `${prefix}/imprint/`,
   privacy: `${prefix}/privacy/`,

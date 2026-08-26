@@ -1,5 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+// The 404 is served for every unmatched path in every locale, so it ships
+// English and swaps to the visitor's language at runtime. Showing one
+// language at a time keeps it readable and avoids mixed-language markup.
+const COPY = {
+  de: {
+    title: 'Seite nicht gefunden',
+    body: 'Die Seite, die du suchst, existiert nicht oder wurde verschoben.',
+    home: 'Zurück zur Startseite',
+  },
+  fr: {
+    title: 'Page introuvable',
+    body: 'La page que vous cherchez n’existe pas ou a été déplacée.',
+    home: 'Retour à l’accueil',
+  },
+  es: {
+    title: 'Página no encontrada',
+    body: 'La página que buscas no existe o se ha movido.',
+    home: 'Volver al inicio',
+  },
+};
 ---
 
 <Layout lang="en" path="/404/" title="404 · Page not found · SimpleTime" noIndex>
@@ -22,14 +43,10 @@ import Layout from '../layouts/Layout.astro';
         404
       </p>
 
-      <h1 data-lang-en class="text-display mt-4 text-3xl font-bold sm:text-4xl">Page not found</h1>
-      <p lang="de" class="mt-2 text-xl font-medium text-subtle sm:text-2xl">Seite nicht gefunden</p>
+      <h1 id="nf-title" class="text-display mt-4 text-3xl font-bold sm:text-4xl">Page not found</h1>
 
-      <p data-lang-en class="mx-auto mt-8 max-w-md leading-relaxed text-muted">
+      <p id="nf-body" class="mx-auto mt-6 max-w-md leading-relaxed text-muted">
         The page you're looking for doesn't exist or has been moved.
-      </p>
-      <p lang="de" class="mx-auto mt-2 max-w-md leading-relaxed text-subtle">
-        Die Seite, die du suchst, existiert nicht oder wurde verschoben.
       </p>
 
       <div class="mt-10 flex justify-center">
@@ -57,27 +74,18 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <script is:inline>
-    // The 404 is served for every unmatched path, so localise it at runtime.
+  <script is:inline define:vars={{ COPY }}>
     (function () {
-      var isDe = window.location.pathname.startsWith('/de/');
-      var link = document.getElementById('home-link');
-      var label = document.getElementById('home-link-label');
-      var langSwitch = document.getElementById('lang-switch');
-      if (isDe) {
-        if (link) link.setAttribute('href', '/de/');
-        if (label) label.textContent = 'Zurück zur Startseite';
-        // The page root becomes German, so the language of parts flips too.
-        document.documentElement.lang = 'de';
-        document.querySelectorAll('[lang="de"]').forEach(function (el) {
-          el.removeAttribute('lang');
-        });
-        document.querySelectorAll('[data-lang-en]').forEach(function (el) {
-          el.setAttribute('lang', 'en');
-        });
-      }
-      // There is no /de/404/ document — send the language switch to the home page.
-      if (langSwitch) langSwitch.setAttribute('href', isDe ? '/' : '/de/');
+      var match = window.location.pathname.match(/^\/(de|fr|es)(?=\/|$)/);
+      if (!match) return;
+      var copy = COPY[match[1]];
+      if (!copy) return;
+
+      document.documentElement.lang = match[1];
+      document.getElementById('nf-title').textContent = copy.title;
+      document.getElementById('nf-body').textContent = copy.body;
+      document.getElementById('home-link').setAttribute('href', '/' + match[1] + '/');
+      document.getElementById('home-link-label').textContent = copy.home;
     })();
   </script>
 </Layout>

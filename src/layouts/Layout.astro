@@ -2,8 +2,8 @@
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import type { Lang } from '../i18n/ui';
-import { useTranslations, getAltLangPath } from '../i18n/utils';
+import { languages, type Lang } from '../i18n/ui';
+import { useTranslations, getAllLangPaths } from '../i18n/utils';
 import interRegular from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
 import interBold from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
 
@@ -25,9 +25,15 @@ const metaTitle = title ?? t('meta.title');
 const metaDescription = description ?? t('meta.description');
 const site = Astro.site ?? 'https://simple-time.app';
 const canonical = new URL(path, site).toString();
-const enPath = lang === 'en' ? path : getAltLangPath(lang, path);
-const dePath = lang === 'de' ? path : getAltLangPath(lang, path);
-const ogImage = new URL(lang === 'de' ? '/og-de.png' : '/og.png', site).toString();
+const langPaths = getAllLangPaths(path);
+
+const OG_LOCALE: Record<string, string> = {
+  en: 'en_US',
+  de: 'de_DE',
+  fr: 'fr_FR',
+  es: 'es_ES',
+};
+const ogImage = new URL(lang === 'en' ? '/og.png' : `/og-${lang}.png`, site).toString();
 
 const appSchema = {
   '@context': 'https://schema.org',
@@ -74,7 +80,7 @@ const schemas = [appSchema, ...jsonLd];
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SimpleTime" />
-    <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
+    <meta property="og:locale" content={OG_LOCALE[lang]} />
     <meta property="og:title" content={metaTitle} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonical} />
@@ -90,9 +96,10 @@ const schemas = [appSchema, ...jsonLd];
     {
       !noIndex && (
         <>
-          <link rel="alternate" hreflang="en" href={new URL(enPath, site).toString()} />
-          <link rel="alternate" hreflang="de" href={new URL(dePath, site).toString()} />
-          <link rel="alternate" hreflang="x-default" href={new URL(enPath, site).toString()} />
+          {(Object.keys(languages) as (keyof typeof languages)[]).map((l) => (
+            <link rel="alternate" hreflang={l} href={new URL(langPaths[l], site).toString()} />
+          ))}
+          <link rel="alternate" hreflang="x-default" href={new URL(langPaths.en, site).toString()} />
         </>
       )
     }
