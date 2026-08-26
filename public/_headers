@@ -28,6 +28,10 @@
   Cache-Control: public, max-age=604800
 /og-hy.png
   Cache-Control: public, max-age=604800
+/og-pt.png
+  Cache-Control: public, max-age=604800
+/og-tr.png
+  Cache-Control: public, max-age=604800
 /favicon.ico
   Cache-Control: public, max-age=604800
 /favicon-32.png
