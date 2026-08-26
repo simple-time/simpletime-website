@@ -1,11 +1,17 @@
 @import "tailwindcss";
-/* Latin subset only — EN and DE need nothing else, and this drops
-   30 unused font files from the build. */
+/* Only the subsets the site's locales actually need. Each subset is a
+   separate @font-face with a unicode-range, so a Latin-only visitor never
+   downloads the Cyrillic files and vice versa. */
 @import "@fontsource/inter/latin-400.css";
 @import "@fontsource/inter/latin-500.css";
 @import "@fontsource/inter/latin-600.css";
 @import "@fontsource/inter/latin-700.css";
 @import "@fontsource/inter/latin-800.css";
+@import "@fontsource/inter/cyrillic-400.css";
+@import "@fontsource/inter/cyrillic-500.css";
+@import "@fontsource/inter/cyrillic-600.css";
+@import "@fontsource/inter/cyrillic-700.css";
+@import "@fontsource/inter/cyrillic-800.css";
 
 /* Dark mode is class-driven so the header toggle can override the OS setting. */
 @custom-variant dark (&:where(.dark, .dark *));

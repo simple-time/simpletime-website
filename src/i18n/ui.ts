@@ -3,6 +3,8 @@ export const languages = {
   de: 'Deutsch',
   fr: 'Français',
   es: 'Español',
+  it: 'Italiano',
+  ru: 'Русский',
 } as const;
 
 export const defaultLang = 'en' as const;
@@ -816,6 +818,408 @@ export const ui = {
     'privacy.changes.title': 'Cambios',
     'privacy.changes.body':
       'Podemos actualizar esta política de privacidad de vez en cuando para reflejar cambios en la app, en el sitio web o en los requisitos legales. La versión vigente siempre está disponible aquí.',
+  },
+  it: {
+    'meta.title': 'SimpleTime – Monitoraggio del tempo per iOS',
+    'meta.description':
+      'Monitora il tuo tempo senza sforzo. SimpleTime è un tracker del tempo chiaro e intuitivo per iPhone, iPad e Mac. Nessun account, nessun tracciamento: i tuoi dati restano con te.',
+    'meta.contact.description':
+      'Hai una domanda, un suggerimento o un bug da segnalare? Scrivi a SimpleTime via e-mail: leggiamo ogni messaggio e rispondiamo in pochi giorni lavorativi.',
+    'meta.privacy.description':
+      'Come SimpleTime tratta i tuoi dati: tutto resta sul tuo dispositivo, il backup su iCloud è facoltativo e cifrato, nessuna analisi e nessun tracciamento.',
+    'meta.imprint.description':
+      'Note legali di simple-time.app ai sensi del § 5 TMG: titolare, contatti e informazioni sulla responsabilità per l’app e il sito SimpleTime.',
+
+    'nav.features': 'Funzioni',
+    'nav.screenshots': 'Schermate',
+    'nav.contact': 'Contatti',
+    'nav.appstore': 'Guarda su App Store',
+    'nav.faq': 'FAQ',
+    'nav.menu': 'Apri il menu',
+    'nav.menu.close': 'Chiudi il menu',
+    'nav.language': 'Lingua',
+    'nav.theme': 'Passa da chiaro a scuro',
+    'skip.content': 'Vai al contenuto',
+
+    'hero.eyebrow': 'Monitoraggio del tempo per iOS',
+    'hero.title.part1': 'Il tuo tempo,',
+    'hero.title.part2': 'senza sforzo.',
+    'hero.subtitle':
+      'SimpleTime ti aiuta a usare il tuo tempo in modo consapevole ed efficiente. Lavoro, studio, allenamento o progetti personali: registra le tue attività in modo chiaro e strutturato, senza complicazioni inutili.',
+    'hero.cta.appstore': 'Scarica su App Store',
+    'hero.cta.features': 'Scopri le funzioni',
+    'hero.availability': 'Gratis · iPhone · iPad · Mac',
+    'hero.proof.price': 'Download gratuito',
+    'hero.proof.account': 'Nessun account',
+    'hero.proof.private': 'I dati restano sul dispositivo',
+
+    'features.title': 'Concentrati su ciò che conta davvero: il tuo tempo.',
+    'features.subtitle': 'Tutto il necessario per monitorare il tempo con consapevolezza, e nulla di più.',
+    'features.instant.title': 'Parti all’istante',
+    'features.instant.body':
+      'Basta un tocco per iniziare a registrare. Veloce, intuitivo e senza distrazioni.',
+    'features.structured.title': 'Attività e sottoattività strutturate',
+    'features.structured.body':
+      'Organizza le tue attività in modo gerarchico e rispecchia con precisione lavoro, studio o progetti.',
+    'features.timeline.title': 'Vista giornaliera e cronologia',
+    'features.timeline.body':
+      'Tieni la giornata sott’occhio: orari di inizio e fine, durata e note facoltative.',
+    'features.stats.title': 'Statistiche automatiche',
+    'features.stats.body':
+      'Grafici chiari e significativi mostrano le tue attività per giorno, settimana e mese.',
+    'features.icloud.title': 'Backup iCloud intelligente',
+    'features.icloud.body':
+      'I tuoi dati vengono salvati automaticamente su iCloud, ogni giorno o ogni settimana, e si sincronizzano tra i tuoi dispositivi.',
+    'features.export.title': 'Esportazione CSV',
+    'features.export.body':
+      'Esporta i tuoi dati sul tempo verso Excel, Numbers o qualsiasi altro strumento di analisi.',
+    'features.private.title': 'Privato e sicuro',
+    'features.private.body':
+      'I tuoi dati appartengono solo a te. SimpleTime non raccoglie informazioni personali e non condivide nulla con terze parti.',
+
+    'screenshots.track.title': 'Registra',
+    'screenshots.track.body': 'Tutte le attività del giorno a colpo d’occhio.',
+    'screenshots.customize.title': 'Personalizza',
+    'screenshots.customize.body': 'Colori e categorie per ogni attività.',
+    'screenshots.overview.title': 'Panoramica',
+    'screenshots.overview.body': 'Tutta la giornata in un elenco chiaro.',
+    'screenshots.timeline.title': 'Cronologia',
+    'screenshots.timeline.body': 'Visualizza la giornata ora per ora.',
+    'screenshots.analyze.title': 'Analizza',
+    'screenshots.analyze.body': 'Scopri esattamente dove va il tuo tempo.',
+    'screenshots.reports.title': 'Report',
+    'screenshots.reports.body': 'Un dettaglio completo per ogni attività.',
+
+    'showcase.day.eyebrow': 'La vista giornaliera',
+    'showcase.day.title': 'Tutta la giornata in un unico posto.',
+    'showcase.day.body':
+      'Avvia un’attività con un tocco e lascia che sia SimpleTime a tenere il registro. Ogni voce porta con sé orario di inizio e fine, durata e una nota facoltativa: la giornata si ricostruisce da sola mentre lavori.',
+    'showcase.day.point1': 'Un tocco per iniziare, uno per fermare',
+    'showcase.day.point2': 'Preferiti per ciò che registri ogni giorno',
+    'showcase.day.point3': 'Una cronologia della giornata, ora per ora',
+
+    'showcase.insight.eyebrow': 'Statistiche',
+    'showcase.insight.title': 'Scopri esattamente dove va il tuo tempo.',
+    'showcase.insight.body':
+      'I grafici per giorno, settimana e mese trasformano le tue voci in un quadro su cui puoi agire. Ti servono i numeri grezzi? Esporta qualsiasi periodo in CSV e aprilo in Excel o Numbers.',
+    'showcase.insight.point1': 'Grafici per giorno, settimana e mese',
+    'showcase.insight.point2': 'Report dettagliati per ogni attività',
+    'showcase.insight.point3': 'Esportazione CSV per analisi esterne',
+
+    'showcase.personal.eyebrow': 'La tua configurazione',
+    'showcase.personal.title': 'Si adatta al tuo modo di lavorare.',
+    'showcase.personal.body':
+      'Dai a ogni attività il suo colore, la sua icona e la sua categoria, e annida le sottoattività per rispecchiare la struttura reale di un progetto. Ciò che usi di più resta tra i preferiti, sempre in cima.',
+    'showcase.personal.point1': 'Colori, SF Symbols ed emoji',
+    'showcase.personal.point2': 'Categorie, attività e sottoattività',
+    'showcase.personal.point3': 'Preferiti sempre a portata di mano',
+
+    'gallery.title': 'Più da vicino.',
+    'gallery.subtitle': 'Ogni schermata esattamente come appare sul tuo dispositivo.',
+
+    'audience.title': 'Per chi dà valore al proprio tempo.',
+    'audience.subtitle':
+      'Studenti, liberi professionisti, dipendenti, creativi, sportivi e chiunque voglia capire come impiega davvero il proprio tempo.',
+    'audience.work.title': 'Lavoro e libera professione',
+    'audience.work.body':
+      'Tieni separati il lavoro per i clienti e i progetti, ed esporta un resoconto chiaro quando serve.',
+    'audience.study.title': 'Studio e apprendimento',
+    'audience.study.body':
+      'Scopri quanto tempo richiede davvero una materia e pianifica la settimana successiva su dati reali.',
+    'audience.training.title': 'Allenamento e abitudini',
+    'audience.training.body':
+      'Registra sessioni, sonno o esercizio e osserva la costanza consolidarsi settimana dopo settimana.',
+    'audience.everyday.title': 'Vita quotidiana',
+    'audience.everyday.body':
+      'Scopri dove finiscono davvero le ore e decidi tu che cosa vuoi cambiare.',
+
+    'faq.title': 'Domande frequenti.',
+    'faq.subtitle': 'Tutto quello che conviene sapere prima di scaricare.',
+    'faq.free.q': 'SimpleTime è davvero gratis?',
+    'faq.free.a':
+      'Sì. SimpleTime si scarica gratuitamente da App Store e funziona su iPhone, iPad e Mac.',
+    'faq.account.q': 'Serve un account?',
+    'faq.account.a':
+      'No. Non c’è registrazione né login. Apri l’app e inizi subito a registrare.',
+    'faq.data.q': 'Dove vengono salvati i miei dati?',
+    'faq.data.a':
+      'Esclusivamente sul tuo dispositivo. Se attivi il backup su iCloud, i dati vengono trasferiti cifrati sul tuo account iCloud. Noi non vi abbiamo accesso in nessun momento.',
+    'faq.sync.q': 'Si sincronizza tra i miei dispositivi?',
+    'faq.sync.a':
+      'Sì, tramite iCloud. I backup vengono eseguiti ogni giorno o ogni settimana e le tue voci restano sincronizzate tra iPhone, iPad e Mac.',
+    'faq.export.q': 'Posso riprendere i miei dati?',
+    'faq.export.a':
+      'In qualsiasi momento. SimpleTime esporta i tuoi dati sul tempo in CSV, pronti per Excel, Numbers o qualsiasi altro strumento di analisi.',
+    'faq.tracking.q': 'L’app mi traccia?',
+    'faq.tracking.a':
+      'No. SimpleTime non contiene SDK di analisi, né pubblicità, né strumenti di segnalazione crash di terze parti, e non crea profili utente.',
+
+    'cta.title': 'Pronto a iniziare?',
+    'cta.subtitle': 'Disponibile gratis su iPhone, iPad e Mac.',
+    'cta.button': 'Scarica su App Store',
+
+    'footer.tagline': 'Monitora il tuo tempo senza sforzo.',
+    'footer.legal': 'Informazioni legali',
+    'footer.product': 'Prodotto',
+    'footer.appstore': 'App Store',
+    'footer.contact': 'Contatti',
+    'footer.imprint': 'Note legali',
+    'footer.privacy': 'Privacy',
+    'footer.copyright': '© {year} Luca Efinger. Tutti i diritti riservati.',
+
+    'contact.title': 'Contatti',
+    'contact.subtitle': 'Domande, suggerimenti o idee? Scrivici.',
+    'contact.email.label': 'E-mail',
+    'contact.email.body':
+      'Scrivici all’indirizzo qui sotto: leggiamo ogni messaggio e rispondiamo il prima possibile.',
+    'contact.response':
+      'Di solito rispondiamo entro pochi giorni lavorativi. Per un bug, indica il modello del dispositivo e la versione di iOS.',
+
+    'imprint.title': 'Note legali',
+    'imprint.country': 'Germania',
+    'imprint.according': 'Informazioni ai sensi del § 5 TMG',
+    'imprint.contact': 'Contatti',
+    'imprint.responsible': 'Responsabile dei contenuti ai sensi del § 55, comma 2 RStV',
+    'imprint.disclaimer.title': 'Esclusione di responsabilità',
+    'imprint.disclaimer.liability.title': 'Responsabilità per i contenuti',
+    'imprint.disclaimer.liability.body':
+      'In qualità di fornitore di servizi siamo responsabili dei contenuti propri di queste pagine secondo le norme generali (§ 7, comma 1 TMG). Ai sensi dei §§ da 8 a 10 TMG non siamo però tenuti a sorvegliare le informazioni altrui trasmesse o memorizzate, né a ricercare circostanze che indichino attività illecite. Restano impregiudicati gli obblighi di rimozione o blocco dell’uso di informazioni previsti dalle norme generali. Una responsabilità in tal senso sussiste soltanto dal momento in cui si viene a conoscenza di una violazione concreta. Non appena verremo a conoscenza di tali violazioni, rimuoveremo immediatamente i contenuti in questione.',
+    'imprint.disclaimer.links.title': 'Responsabilità per i collegamenti',
+    'imprint.disclaimer.links.body':
+      'La nostra offerta contiene collegamenti a siti web esterni di terzi, sui cui contenuti non abbiamo alcuna influenza. Per questo motivo non possiamo assumerci alcuna responsabilità per tali contenuti esterni. Del contenuto delle pagine collegate è sempre responsabile il rispettivo fornitore o gestore. Al momento del collegamento le pagine sono state verificate per accertare eventuali violazioni di legge. In quel momento non erano riconoscibili contenuti illeciti. Un controllo permanente dei contenuti delle pagine collegate non è però esigibile senza indizi concreti di una violazione. Non appena verremo a conoscenza di violazioni, rimuoveremo immediatamente i collegamenti in questione.',
+    'imprint.disclaimer.copyright.title': 'Diritto d’autore',
+    'imprint.disclaimer.copyright.body':
+      'I contenuti e le opere create dal gestore del sito su queste pagine sono soggetti al diritto d’autore tedesco. La riproduzione, l’elaborazione, la diffusione e qualsiasi forma di utilizzo al di fuori dei limiti del diritto d’autore richiedono il consenso scritto del rispettivo autore o creatore. I download e le copie di questo sito sono consentiti soltanto per uso privato e non commerciale.',
+
+    'privacy.title': 'Informativa sulla privacy',
+    'privacy.lastUpdated': 'Ultimo aggiornamento',
+    'privacy.intro.title': 'Panoramica',
+    'privacy.intro.body':
+      'La protezione dei tuoi dati personali è importante per noi. Questa informativa spiega quali dati vengono trattati quando usi l’app SimpleTime e questo sito, e in che modo. In breve: raccogliamo il minimo indispensabile e non condividiamo nulla con terze parti.',
+    'privacy.app.title': 'L’app SimpleTime',
+    'privacy.app.body':
+      'SimpleTime non raccoglie alcuna informazione personale. Tutti i dati che inserisci — attività, compiti, categorie, note e tempi — sono memorizzati esclusivamente sul tuo dispositivo. Puoi attivare facoltativamente il backup su iCloud; in tal caso i tuoi dati vengono trasferiti cifrati tramite l’infrastruttura iCloud di Apple sul tuo account iCloud. Non abbiamo in alcun momento accesso a questi dati.',
+    'privacy.app.nocollect.title': 'Nessuna analisi, nessun tracciamento',
+    'privacy.app.nocollect.body':
+      'L’app non contiene SDK di analisi, pubblicità, strumenti di segnalazione crash di terze parti né tracciamento degli utenti. Non vengono creati profili utente.',
+    'privacy.website.title': 'Questo sito web',
+    'privacy.website.body':
+      'Questo sito è ospitato su Cloudflare Workers. Alla consultazione, il tuo browser trasmette per motivi tecnici un indirizzo IP e uno user agent al server, cosa inevitabile per la distribuzione di qualsiasi sito web. Cloudflare può conservare temporaneamente queste informazioni in file di log per finalità di sicurezza. Noi stessi non raccogliamo, non memorizziamo e non analizziamo tali dati. Questo sito non usa cookie, analisi, tracciamento né font di terze parti: il carattere Inter viene servito dal nostro server.',
+    'privacy.website.hosting.title': 'Hosting',
+    'privacy.website.hosting.body':
+      'Fornitore: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Trovi maggiori informazioni nell’informativa sulla privacy di Cloudflare all’indirizzo https://www.cloudflare.com/privacypolicy/.',
+    'privacy.website.cdn.title': 'Rete per la distribuzione di contenuti',
+    'privacy.website.cdn.body':
+      'Per distribuire rapidamente questo sito e proteggerlo dagli attacchi utilizziamo Cloudflare, una rete per la distribuzione di contenuti e servizio di reverse proxy di Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Alla consultazione del sito la tua richiesta transita per i server di Cloudflare. Cloudflare tratta in questo processo dati tecnici di connessione — in particolare il tuo indirizzo IP e il tuo user agent — per distribuire i contenuti, rilevare minacce alla sicurezza e bloccare il traffico dannoso. Per la protezione dai bot e la sicurezza della sessione Cloudflare può impostare cookie tecnicamente necessari (ad es. __cf_bm, _cfuvid); questi non vengono usati per tracciamento o analisi. La base giuridica è il nostro legittimo interesse a un sito sicuro e performante ai sensi dell’art. 6, par. 1, lett. f) del GDPR. Cloudflare è certificata nell’ambito dell’EU-U.S. Data Privacy Framework ed è stato stipulato un accordo sul trattamento dei dati. Trovi maggiori informazioni nell’informativa sulla privacy di Cloudflare all’indirizzo https://www.cloudflare.com/privacypolicy/.',
+    'privacy.rights.title': 'I tuoi diritti',
+    'privacy.rights.body':
+      'Ai sensi del GDPR hai diritto di accesso, rettifica, cancellazione, limitazione del trattamento, portabilità dei dati e di opposizione al trattamento. Puoi contattarci in qualsiasi momento ai recapiti indicati di seguito.',
+    'privacy.contact.title': 'Contatti',
+    'privacy.contact.body': 'Per domande sulla protezione dei dati rivolgiti a:',
+    'privacy.changes.title': 'Modifiche',
+    'privacy.changes.body':
+      'Possiamo aggiornare di tanto in tanto questa informativa per tenere conto di modifiche all’app, al sito o ai requisiti di legge. La versione in vigore è sempre disponibile qui.',
+  },
+  ru: {
+    'meta.title': 'SimpleTime – Учёт времени для iOS',
+    'meta.description':
+      'Отслеживайте своё время без усилий. SimpleTime — понятный и удобный трекер времени для iPhone, iPad и Mac. Без аккаунтов и слежки: ваши данные остаются у вас.',
+    'meta.contact.description':
+      'Есть вопрос, отзыв или сообщение об ошибке? Напишите SimpleTime по электронной почте — мы читаем каждое сообщение и отвечаем в течение нескольких рабочих дней.',
+    'meta.privacy.description':
+      'Как SimpleTime обращается с вашими данными: всё остаётся на устройстве, резервная копия в iCloud необязательна и зашифрована, без аналитики и слежки.',
+    'meta.imprint.description':
+      'Выходные данные simple-time.app согласно § 5 TMG: владелец, контактные данные и сведения об ответственности за приложение и сайт SimpleTime.',
+
+    'nav.features': 'Возможности',
+    'nav.screenshots': 'Скриншоты',
+    'nav.contact': 'Контакты',
+    'nav.appstore': 'Открыть в App Store',
+    'nav.faq': 'Вопросы',
+    'nav.menu': 'Открыть меню',
+    'nav.menu.close': 'Закрыть меню',
+    'nav.language': 'Язык',
+    'nav.theme': 'Переключить светлую и тёмную тему',
+    'skip.content': 'Перейти к содержимому',
+
+    'hero.eyebrow': 'Учёт времени для iOS',
+    'hero.title.part1': 'Ваше время,',
+    'hero.title.part2': 'без усилий.',
+    'hero.subtitle':
+      'SimpleTime помогает расходовать время осознанно и эффективно. Работа, учёба, тренировки или личные проекты — записывайте свои занятия ясно и структурированно, без лишней сложности.',
+    'hero.cta.appstore': 'Загрузить в App Store',
+    'hero.cta.features': 'Смотреть возможности',
+    'hero.availability': 'Бесплатно · iPhone · iPad · Mac',
+    'hero.proof.price': 'Бесплатная загрузка',
+    'hero.proof.account': 'Без аккаунта',
+    'hero.proof.private': 'Данные остаются на устройстве',
+
+    'features.title': 'Сосредоточьтесь на главном — на своём времени.',
+    'features.subtitle': 'Всё, что нужно для осознанного учёта времени, и ничего лишнего.',
+    'features.instant.title': 'Запуск в одно касание',
+    'features.instant.body':
+      'Одного касания достаточно, чтобы начать запись. Быстро, понятно и без отвлечений.',
+    'features.structured.title': 'Задачи и подзадачи',
+    'features.structured.body':
+      'Организуйте занятия иерархически и точно отражайте структуру работы, учёбы или проектов.',
+    'features.timeline.title': 'День и лента времени',
+    'features.timeline.body':
+      'Весь день перед глазами: время начала и окончания, длительность и заметки по желанию.',
+    'features.stats.title': 'Автоматическая статистика',
+    'features.stats.body':
+      'Наглядные диаграммы показывают ваши занятия по дням, неделям и месяцам.',
+    'features.icloud.title': 'Умная копия в iCloud',
+    'features.icloud.body':
+      'Данные автоматически сохраняются в iCloud — ежедневно или еженедельно — и синхронизируются между устройствами.',
+    'features.export.title': 'Экспорт в CSV',
+    'features.export.body':
+      'Выгружайте данные о времени в Excel, Numbers или любой другой инструмент анализа.',
+    'features.private.title': 'Приватно и надёжно',
+    'features.private.body':
+      'Ваши данные принадлежат только вам. SimpleTime не собирает личные сведения и ничего не передаёт третьим лицам.',
+
+    'screenshots.track.title': 'Запись',
+    'screenshots.track.body': 'Все занятия дня перед глазами.',
+    'screenshots.customize.title': 'Настройка',
+    'screenshots.customize.body': 'Цвета и категории для каждой задачи.',
+    'screenshots.overview.title': 'Обзор',
+    'screenshots.overview.body': 'Весь день в одном понятном списке.',
+    'screenshots.timeline.title': 'Лента времени',
+    'screenshots.timeline.body': 'Ваш день час за часом.',
+    'screenshots.analyze.title': 'Анализ',
+    'screenshots.analyze.body': 'Точно видно, куда уходит время.',
+    'screenshots.reports.title': 'Отчёты',
+    'screenshots.reports.body': 'Подробная разбивка по задачам.',
+
+    'showcase.day.eyebrow': 'Дневной обзор',
+    'showcase.day.title': 'Весь день в одном месте.',
+    'showcase.day.body':
+      'Запустите задачу одним касанием, а вести учёт предоставьте SimpleTime. У каждой записи есть время начала и окончания, длительность и заметка по желанию — день складывается сам, пока вы работаете.',
+    'showcase.day.point1': 'Одно касание — старт, ещё одно — стоп',
+    'showcase.day.point2': 'Избранное для ежедневных занятий',
+    'showcase.day.point3': 'Лента дня час за часом',
+
+    'showcase.insight.eyebrow': 'Статистика',
+    'showcase.insight.title': 'Точно видно, куда уходит время.',
+    'showcase.insight.body':
+      'Диаграммы по дням, неделям и месяцам превращают записи в картину, с которой можно работать. Нужны исходные цифры? Выгрузите любой период в CSV и откройте в Excel или Numbers.',
+    'showcase.insight.point1': 'Диаграммы по дням, неделям и месяцам',
+    'showcase.insight.point2': 'Подробные отчёты по каждой задаче',
+    'showcase.insight.point3': 'Экспорт в CSV для внешнего анализа',
+
+    'showcase.personal.eyebrow': 'Ваша настройка',
+    'showcase.personal.title': 'Подстраивается под вашу работу.',
+    'showcase.personal.body':
+      'Дайте каждой задаче свой цвет, значок и категорию, а подзадачи помогут отразить реальную структуру проекта. То, чем вы пользуетесь чаще всего, остаётся в избранном — всегда наверху.',
+    'showcase.personal.point1': 'Цвета, SF Symbols и эмодзи',
+    'showcase.personal.point2': 'Категории, задачи и подзадачи',
+    'showcase.personal.point3': 'Избранное всегда под рукой',
+
+    'gallery.title': 'Ближе к делу.',
+    'gallery.subtitle': 'Каждый экран ровно таким, каким вы увидите его на устройстве.',
+
+    'audience.title': 'Для всех, кто ценит своё время.',
+    'audience.subtitle':
+      'Студенты, фрилансеры, сотрудники, творческие люди, спортсмены — и все, кто хочет понять, на что на самом деле уходит их время.',
+    'audience.work.title': 'Работа и фриланс',
+    'audience.work.body':
+      'Разделяйте работу для клиентов и собственные проекты, а при необходимости выгружайте понятный отчёт.',
+    'audience.study.title': 'Учёба',
+    'audience.study.body':
+      'Узнайте, сколько времени на самом деле требует предмет, и планируйте следующую неделю по реальным цифрам.',
+    'audience.training.title': 'Тренировки и привычки',
+    'audience.training.body':
+      'Записывайте занятия, сон или практику и наблюдайте, как неделя за неделей появляется постоянство.',
+    'audience.everyday.title': 'Повседневность',
+    'audience.everyday.body':
+      'Выясните, куда действительно уходят часы, и сами решите, что хотите изменить.',
+
+    'faq.title': 'Частые вопросы.',
+    'faq.subtitle': 'Всё, что стоит знать перед загрузкой.',
+    'faq.free.q': 'SimpleTime действительно бесплатен?',
+    'faq.free.a':
+      'Да. SimpleTime загружается из App Store бесплатно и работает на iPhone, iPad и Mac.',
+    'faq.account.q': 'Нужен ли аккаунт?',
+    'faq.account.a':
+      'Нет. Регистрации и входа не требуется. Вы открываете приложение и сразу начинаете вести учёт.',
+    'faq.data.q': 'Где хранятся мои данные?',
+    'faq.data.a':
+      'Исключительно на вашем устройстве. Если вы включите резервное копирование в iCloud, данные будут переданы в зашифрованном виде в ваш собственный аккаунт iCloud. У нас нет к ним доступа ни в какой момент.',
+    'faq.sync.q': 'Синхронизируются ли данные между устройствами?',
+    'faq.sync.a':
+      'Да, через iCloud. Копирование выполняется ежедневно или еженедельно, а записи остаются синхронными на iPhone, iPad и Mac.',
+    'faq.export.q': 'Могу ли я забрать свои данные?',
+    'faq.export.a':
+      'В любой момент. SimpleTime выгружает данные о времени в формате CSV — сразу пригодном для Excel, Numbers или любого другого инструмента анализа.',
+    'faq.tracking.q': 'Следит ли приложение за мной?',
+    'faq.tracking.a':
+      'Нет. В SimpleTime нет ни аналитических SDK, ни рекламы, ни сторонних систем сбора отчётов о сбоях, и профили пользователей не создаются.',
+
+    'cta.title': 'Готовы начать?',
+    'cta.subtitle': 'Доступно бесплатно на iPhone, iPad и Mac.',
+    'cta.button': 'Загрузить в App Store',
+
+    'footer.tagline': 'Отслеживайте своё время без усилий.',
+    'footer.legal': 'Правовая информация',
+    'footer.product': 'Продукт',
+    'footer.appstore': 'App Store',
+    'footer.contact': 'Контакты',
+    'footer.imprint': 'Выходные данные',
+    'footer.privacy': 'Конфиденциальность',
+    'footer.copyright': '© {year} Luca Efinger. Все права защищены.',
+
+    'contact.title': 'Контакты',
+    'contact.subtitle': 'Вопросы, отзывы или идеи? Напишите нам.',
+    'contact.email.label': 'Электронная почта',
+    'contact.email.body':
+      'Напишите нам по адресу ниже — мы читаем каждое сообщение и отвечаем как можно быстрее.',
+    'contact.response':
+      'Обычно мы отвечаем в течение нескольких рабочих дней. Если сообщаете об ошибке, укажите модель устройства и версию iOS.',
+
+    'imprint.title': 'Выходные данные',
+    'imprint.country': 'Германия',
+    'imprint.according': 'Сведения согласно § 5 TMG',
+    'imprint.contact': 'Контакты',
+    'imprint.responsible': 'Ответственный за содержание согласно § 55, абз. 2 RStV',
+    'imprint.disclaimer.title': 'Отказ от ответственности',
+    'imprint.disclaimer.liability.title': 'Ответственность за содержание',
+    'imprint.disclaimer.liability.body':
+      'Как поставщик услуг мы несём ответственность за собственные материалы на этих страницах в соответствии с общими нормами права (§ 7, абз. 1 TMG). Однако согласно §§ 8–10 TMG мы не обязаны отслеживать переданную или сохранённую чужую информацию либо выяснять обстоятельства, указывающие на противоправную деятельность. Обязанности по удалению или блокированию использования информации в соответствии с общими нормами права остаются в силе. Ответственность в этой части возникает только с момента, когда нам становится известно о конкретном нарушении. При получении сведений о таких нарушениях мы незамедлительно удалим соответствующие материалы.',
+    'imprint.disclaimer.links.title': 'Ответственность за ссылки',
+    'imprint.disclaimer.links.body':
+      'Наше предложение содержит ссылки на внешние сайты третьих лиц, на содержание которых мы не можем влиять. Поэтому мы не можем нести ответственность за эти внешние материалы. За содержание страниц, на которые ведут ссылки, всегда отвечает их поставщик или оператор. На момент размещения ссылок страницы были проверены на предмет возможных нарушений закона. Противоправного содержания тогда выявлено не было. Однако постоянный контроль содержания страниц, на которые ведут ссылки, без конкретных указаний на нарушение неосуществим. При получении сведений о нарушениях мы незамедлительно удалим соответствующие ссылки.',
+    'imprint.disclaimer.copyright.title': 'Авторское право',
+    'imprint.disclaimer.copyright.body':
+      'Материалы и произведения, созданные оператором сайта на этих страницах, охраняются авторским правом Германии. Воспроизведение, переработка, распространение и любое использование за пределами, установленными авторским правом, требуют письменного согласия соответствующего автора или создателя. Загрузка и копирование этого сайта допускаются только для частного некоммерческого использования.',
+
+    'privacy.title': 'Политика конфиденциальности',
+    'privacy.lastUpdated': 'Последнее обновление',
+    'privacy.intro.title': 'Обзор',
+    'privacy.intro.body':
+      'Защита ваших персональных данных важна для нас. Эта политика объясняет, какие данные обрабатываются при использовании приложения SimpleTime и этого сайта и каким образом. Коротко: мы собираем минимум и ничего не передаём третьим лицам.',
+    'privacy.app.title': 'Приложение SimpleTime',
+    'privacy.app.body':
+      'SimpleTime не собирает никаких персональных данных. Все вводимые вами данные — занятия, задачи, категории, заметки и время — хранятся исключительно на вашем устройстве. При желании вы можете включить резервное копирование в iCloud; в этом случае данные передаются в зашифрованном виде через инфраструктуру iCloud компании Apple в ваш собственный аккаунт iCloud. У нас нет доступа к этим данным ни в какой момент.',
+    'privacy.app.nocollect.title': 'Без аналитики и слежки',
+    'privacy.app.nocollect.body':
+      'В приложении нет аналитических SDK, рекламы, сторонних инструментов сбора отчётов о сбоях и отслеживания пользователей. Профили пользователей не создаются.',
+    'privacy.website.title': 'Этот сайт',
+    'privacy.website.body':
+      'Этот сайт размещён на Cloudflare Workers. При обращении ваш браузер по техническим причинам передаёт серверу IP-адрес и строку user agent — это неизбежно при доставке любого сайта. Cloudflare может временно сохранять эти сведения в журналах сервера в целях безопасности. Сами мы такие данные не собираем, не храним и не анализируем. Сайт не использует файлы cookie, аналитику, слежение и сторонние шрифты — шрифт Inter поставляется с нашего сервера.',
+    'privacy.website.hosting.title': 'Хостинг',
+    'privacy.website.hosting.body':
+      'Поставщик: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, США. Подробнее — в политике конфиденциальности Cloudflare по адресу https://www.cloudflare.com/privacypolicy/.',
+    'privacy.website.cdn.title': 'Сеть доставки контента',
+    'privacy.website.cdn.body':
+      'Для быстрой доставки сайта и защиты от атак мы используем Cloudflare — сеть доставки контента и обратный прокси компании Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, США. При обращении к сайту ваш запрос проходит через серверы Cloudflare. При этом Cloudflare обрабатывает технические данные соединения — в частности ваш IP-адрес и user agent — чтобы доставлять содержимое, выявлять угрозы безопасности и блокировать вредоносный трафик. Для защиты от ботов и безопасности сессии Cloudflare может устанавливать технически необходимые файлы cookie (например, __cf_bm, _cfuvid); они не используются для отслеживания или аналитики. Правовым основанием является наш законный интерес в безопасном и производительном сайте согласно ст. 6, п. 1, подп. f) GDPR. Cloudflare сертифицирована в рамках EU-U.S. Data Privacy Framework, с поставщиком заключён договор об обработке данных. Подробнее — в политике конфиденциальности Cloudflare по адресу https://www.cloudflare.com/privacypolicy/.',
+    'privacy.rights.title': 'Ваши права',
+    'privacy.rights.body':
+      'Согласно GDPR вы имеете право на доступ, исправление, удаление, ограничение обработки, переносимость данных, а также право возразить против обработки. Связаться с нами можно в любое время по контактным данным ниже.',
+    'privacy.contact.title': 'Контакты',
+    'privacy.contact.body': 'По вопросам защиты данных обращайтесь:',
+    'privacy.changes.title': 'Изменения',
+    'privacy.changes.body':
+      'Время от времени мы можем обновлять эту политику, чтобы учесть изменения в приложении, на сайте или в требованиях законодательства. Действующая редакция всегда доступна здесь.',
   },
 } as const;
 

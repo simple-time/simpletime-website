@@ -22,6 +22,10 @@
   Cache-Control: public, max-age=604800
 /og-es.png
   Cache-Control: public, max-age=604800
+/og-it.png
+  Cache-Control: public, max-age=604800
+/og-ru.png
+  Cache-Control: public, max-age=604800
 /favicon.ico
   Cache-Control: public, max-age=604800
 /favicon-32.png

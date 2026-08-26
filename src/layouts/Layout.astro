@@ -4,8 +4,10 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { languages, type Lang } from '../i18n/ui';
 import { useTranslations, getAllLangPaths } from '../i18n/utils';
-import interRegular from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
-import interBold from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
+import latinRegular from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
+import latinBold from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
+import cyrillicRegular from '@fontsource/inter/files/inter-cyrillic-400-normal.woff2?url';
+import cyrillicBold from '@fontsource/inter/files/inter-cyrillic-700-normal.woff2?url';
 
 interface Props {
   lang: Lang;
@@ -32,8 +34,17 @@ const OG_LOCALE: Record<string, string> = {
   de: 'de_DE',
   fr: 'fr_FR',
   es: 'es_ES',
+  it: 'it_IT',
+  ru: 'ru_RU',
 };
 const ogImage = new URL(lang === 'en' ? '/og.png' : `/og-${lang}.png`, site).toString();
+
+// Preload the subset this locale's body copy is actually set in. The other
+// subset still loads on demand — the brand name stays Latin everywhere.
+const CYRILLIC_LOCALES = new Set(['ru']);
+const [preloadRegular, preloadBold] = CYRILLIC_LOCALES.has(lang)
+  ? [cyrillicRegular, cyrillicBold]
+  : [latinRegular, latinBold];
 
 const appSchema = {
   '@context': 'https://schema.org',
@@ -79,8 +90,8 @@ const jsonLdPayload = JSON.stringify(schemas).replace(/</g, '\\u003c');
     <link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192" />
 
     {/* The two weights above the fold — preloaded so the headline paints once. */}
-    <link rel="preload" as="font" type="font/woff2" href={interRegular} crossorigin="anonymous" />
-    <link rel="preload" as="font" type="font/woff2" href={interBold} crossorigin="anonymous" />
+    <link rel="preload" as="font" type="font/woff2" href={preloadRegular} crossorigin="anonymous" />
+    <link rel="preload" as="font" type="font/woff2" href={preloadBold} crossorigin="anonymous" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <meta property="og:type" content="website" />
