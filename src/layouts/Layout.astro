@@ -55,6 +55,11 @@ const appSchema = {
 };
 
 const schemas = [appSchema, ...jsonLd];
+
+// JSON.stringify does not escape "<", so a "</script>" inside any value
+// would close the tag early. No current string contains one, but escaping
+// removes the class of bug rather than relying on that staying true.
+const jsonLdPayload = JSON.stringify(schemas).replace(/</g, '\\u003c');
 ---
 
 <!doctype html>
@@ -104,7 +109,7 @@ const schemas = [appSchema, ...jsonLd];
       )
     }
 
-    <script is:inline set:html={JSON.stringify(schemas)} type="application/ld+json" />
+    <script is:inline set:html={jsonLdPayload} type="application/ld+json" />
 
     {/* Runs before first paint so the correct theme is applied without a flash. */}
     <script is:inline>
