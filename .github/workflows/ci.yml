@@ -129,7 +129,7 @@ jobs:
                 `| **total** | **${counts.total}** |`,
                 '',
                 scope === 'production'
-                  ? '_Production-only scope. This project currently declares no dev-only dependencies, so these numbers can legitimately match the full audit._'
+                  ? '_Production-only scope; development dependencies are omitted from this report._'
                   : '_Full dependency scope._',
                 '',
                 counts.critical > 0
@@ -249,7 +249,7 @@ jobs:
                 `| **total** | **${counts.total}** |`,
                 '',
                 scope === 'production'
-                  ? '_Production-only scope. This project currently declares no dev-only dependencies, so these numbers can legitimately match the full audit._'
+                  ? '_Production-only scope; development dependencies are omitted from this report._'
                   : '_Full dependency scope._',
                 '',
                 counts.critical > 0
@@ -303,3 +303,40 @@ jobs:
             -e GIT_CONFIG_VALUE_0=/repo \
             ghcr.io/gitleaks/gitleaks@sha256:691af3c7c5a48b16f187ce3446d5f194838f91238f27270ed36eef6359a574d9 \
             git /repo --redact --no-banner --no-color --ignore-gitleaks-allow --exit-code 1
+
+  browser-a11y:
+    name: Browser and accessibility baseline
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Use Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22.23.2'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Install Chromium
+        run: ./node_modules/.bin/playwright install --with-deps chromium
+
+      - name: Build
+        run: npm run build
+
+      - name: Test browser and accessibility baseline
+        run: npm run test:browser
+
+      - name: Upload browser test artifacts
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: browser-a11y-results
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+          if-no-files-found: warn

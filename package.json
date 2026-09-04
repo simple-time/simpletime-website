@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "postbuild": "node scripts/csp-headers.mjs"
+    "postbuild": "node scripts/csp-headers.mjs",
+    "test:browser": "playwright test"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
@@ -22,5 +23,9 @@
     "@tailwindcss/vite": "^4.0.0",
     "astro": "^5.1.0",
     "tailwindcss": "^4.0.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.62.1"
   }
 }
