@@ -1,0 +1,305 @@
+name: CI
+
+# Actions are pinned to immutable commit SHAs rather than tags: a tag can be
+# repointed at new code, a SHA cannot. The trailing comment records which
+# release each SHA corresponds to.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-headers:
+    name: Build and verify headers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Use Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22.23.2'
+
+      - name: Install
+        run: npm ci --ignore-scripts
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify headers
+        run: node scripts/check-headers.mjs
+
+  audit-full:
+    name: npm audit (full)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Use Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22.23.2'
+
+      # The one and only audit network call. Everything after this is local
+      # parsing of the JSON it produced.
+      - name: Audit
+        id: audit
+        run: |
+          set +e
+          npm audit --json > audit-full.json
+          code=$?
+          set -e
+          echo "npm-exit=$code" >> "$GITHUB_OUTPUT"
+
+      - name: Evaluate report
+        env:
+          REPORT: audit-full.json
+          SCOPE: full
+          NPM_EXIT: ${{ steps.audit.outputs.npm-exit }}
+        run: |
+          cat > "$RUNNER_TEMP/evaluate-audit.mjs" <<'EOF'
+          import { appendFileSync, readFileSync } from 'node:fs';
+
+          const scope = process.env.SCOPE;
+          const report = process.env.REPORT;
+          const LEVELS = ['info', 'low', 'moderate', 'high', 'critical'];
+
+          function block(reason) {
+            console.error(`audit(${scope}): BLOCKED - ${reason}`);
+            process.exit(1);
+          }
+
+          // npm audit exits 0 with no findings and 1 with findings. Any other
+          // code means the audit did not complete, and an audit that never
+          // completed must never be reported as zero findings.
+          const npmExit = Number(process.env.NPM_EXIT);
+          if (!Number.isInteger(npmExit) || npmExit < 0 || npmExit > 1) {
+            block(`npm audit exited ${process.env.NPM_EXIT}; the audit did not complete`);
+          }
+
+          let raw;
+          try {
+            raw = readFileSync(report, 'utf8');
+          } catch (err) {
+            block(`cannot read ${report}: ${err.message}`);
+          }
+          if (!raw.trim()) block(`${report} is empty`);
+
+          let data;
+          try {
+            data = JSON.parse(raw);
+          } catch (err) {
+            block(`${report} is not valid JSON: ${err.message}`);
+          }
+          if (data?.error) block(`npm reported an error: ${JSON.stringify(data.error)}`);
+
+          const counts = data?.metadata?.vulnerabilities;
+          if (!counts || typeof counts !== 'object') {
+            block('report has no metadata.vulnerabilities object - unexpected schema');
+          }
+          for (const level of [...LEVELS, 'total']) {
+            if (typeof counts[level] !== 'number' || !Number.isFinite(counts[level])) {
+              block(`metadata.vulnerabilities.${level} is ${JSON.stringify(counts[level])}, expected a number`);
+            }
+          }
+
+          console.log(`audit(${scope}): total=${counts.total} ${LEVELS.map((l) => `${l}=${counts[l]}`).join(' ')}`);
+
+          if (process.env.GITHUB_STEP_SUMMARY) {
+            appendFileSync(
+              process.env.GITHUB_STEP_SUMMARY,
+              [
+                `### npm audit - ${scope}`,
+                '',
+                '| severity | count |',
+                '| --- | --- |',
+                ...LEVELS.map((l) => `| ${l} | ${counts[l]} |`),
+                `| **total** | **${counts.total}** |`,
+                '',
+                scope === 'production'
+                  ? '_Production-only scope. This project currently declares no dev-only dependencies, so these numbers can legitimately match the full audit._'
+                  : '_Full dependency scope._',
+                '',
+                counts.critical > 0
+                  ? `**Blocking:** ${counts.critical} critical finding(s).`
+                  : 'No critical findings. High, moderate and low are reported but do not block today.',
+                '',
+              ].join('\n'),
+            );
+          }
+
+          if (counts.critical > 0) {
+            console.error(`audit(${scope}): ${counts.critical} critical finding(s) - failing`);
+            process.exit(1);
+          }
+          EOF
+          node "$RUNNER_TEMP/evaluate-audit.mjs"
+
+      # Findings and evaluation failures are exactly when the report is most
+      # worth keeping, so this runs regardless of the outcome above.
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: npm-audit-full
+          path: audit-full.json
+          retention-days: 7
+          if-no-files-found: warn
+
+  audit-production:
+    name: npm audit (production only)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Use Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22.23.2'
+
+      # The one and only audit network call. Everything after this is local
+      # parsing of the JSON it produced.
+      - name: Audit
+        id: audit
+        run: |
+          set +e
+          npm audit --omit=dev --json > audit-production.json
+          code=$?
+          set -e
+          echo "npm-exit=$code" >> "$GITHUB_OUTPUT"
+
+      - name: Evaluate report
+        env:
+          REPORT: audit-production.json
+          SCOPE: production
+          NPM_EXIT: ${{ steps.audit.outputs.npm-exit }}
+        run: |
+          cat > "$RUNNER_TEMP/evaluate-audit.mjs" <<'EOF'
+          import { appendFileSync, readFileSync } from 'node:fs';
+
+          const scope = process.env.SCOPE;
+          const report = process.env.REPORT;
+          const LEVELS = ['info', 'low', 'moderate', 'high', 'critical'];
+
+          function block(reason) {
+            console.error(`audit(${scope}): BLOCKED - ${reason}`);
+            process.exit(1);
+          }
+
+          // npm audit exits 0 with no findings and 1 with findings. Any other
+          // code means the audit did not complete, and an audit that never
+          // completed must never be reported as zero findings.
+          const npmExit = Number(process.env.NPM_EXIT);
+          if (!Number.isInteger(npmExit) || npmExit < 0 || npmExit > 1) {
+            block(`npm audit exited ${process.env.NPM_EXIT}; the audit did not complete`);
+          }
+
+          let raw;
+          try {
+            raw = readFileSync(report, 'utf8');
+          } catch (err) {
+            block(`cannot read ${report}: ${err.message}`);
+          }
+          if (!raw.trim()) block(`${report} is empty`);
+
+          let data;
+          try {
+            data = JSON.parse(raw);
+          } catch (err) {
+            block(`${report} is not valid JSON: ${err.message}`);
+          }
+          if (data?.error) block(`npm reported an error: ${JSON.stringify(data.error)}`);
+
+          const counts = data?.metadata?.vulnerabilities;
+          if (!counts || typeof counts !== 'object') {
+            block('report has no metadata.vulnerabilities object - unexpected schema');
+          }
+          for (const level of [...LEVELS, 'total']) {
+            if (typeof counts[level] !== 'number' || !Number.isFinite(counts[level])) {
+              block(`metadata.vulnerabilities.${level} is ${JSON.stringify(counts[level])}, expected a number`);
+            }
+          }
+
+          console.log(`audit(${scope}): total=${counts.total} ${LEVELS.map((l) => `${l}=${counts[l]}`).join(' ')}`);
+
+          if (process.env.GITHUB_STEP_SUMMARY) {
+            appendFileSync(
+              process.env.GITHUB_STEP_SUMMARY,
+              [
+                `### npm audit - ${scope}`,
+                '',
+                '| severity | count |',
+                '| --- | --- |',
+                ...LEVELS.map((l) => `| ${l} | ${counts[l]} |`),
+                `| **total** | **${counts.total}** |`,
+                '',
+                scope === 'production'
+                  ? '_Production-only scope. This project currently declares no dev-only dependencies, so these numbers can legitimately match the full audit._'
+                  : '_Full dependency scope._',
+                '',
+                counts.critical > 0
+                  ? `**Blocking:** ${counts.critical} critical finding(s).`
+                  : 'No critical findings. High, moderate and low are reported but do not block today.',
+                '',
+              ].join('\n'),
+            );
+          }
+
+          if (counts.critical > 0) {
+            console.error(`audit(${scope}): ${counts.critical} critical finding(s) - failing`);
+            process.exit(1);
+          }
+          EOF
+          node "$RUNNER_TEMP/evaluate-audit.mjs"
+
+      # Findings and evaluation failures are exactly when the report is most
+      # worth keeping, so this runs regardless of the outcome above.
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: npm-audit-production
+          path: audit-production.json
+          retention-days: 7
+          if-no-files-found: warn
+
+  secret-scan:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    steps:
+      # fetch-depth: 0 because a secret that was committed and later removed is
+      # still a leaked secret — the scan has to see the whole history.
+      - name: Check out full history
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      # Gitleaks is pinned by image digest, not by tag, and run directly rather
+      # than through a marketplace action so the pinned bytes are the only
+      # thing that executes. GIT_CONFIG_* marks the mount as a safe directory,
+      # since the container user does not own the checkout.
+      - name: Scan full history
+        run: |
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE:/repo" \
+            -e GIT_CONFIG_COUNT=1 \
+            -e GIT_CONFIG_KEY_0=safe.directory \
+            -e GIT_CONFIG_VALUE_0=/repo \
+            ghcr.io/gitleaks/gitleaks@sha256:691af3c7c5a48b16f187ce3446d5f194838f91238f27270ed36eef6359a574d9 \
+            git /repo --redact --no-banner --no-color --ignore-gitleaks-allow --exit-code 1
