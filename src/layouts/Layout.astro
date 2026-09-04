@@ -14,6 +14,10 @@ import arabicRegular from '@fontsource/noto-sans-arabic/files/noto-sans-arabic-a
 import arabicBold from '@fontsource/noto-sans-arabic/files/noto-sans-arabic-arabic-700-normal.woff2?url';
 import devanagariRegular from '@fontsource/noto-sans-devanagari/files/noto-sans-devanagari-devanagari-400-normal.woff2?url';
 import devanagariBold from '@fontsource/noto-sans-devanagari/files/noto-sans-devanagari-devanagari-700-normal.woff2?url';
+import greekRegular from '@fontsource/inter/files/inter-greek-400-normal.woff2?url';
+import greekBold from '@fontsource/inter/files/inter-greek-700-normal.woff2?url';
+import hebrewRegular from '@fontsource/noto-sans-hebrew/files/noto-sans-hebrew-hebrew-400-normal.woff2?url';
+import hebrewBold from '@fontsource/noto-sans-hebrew/files/noto-sans-hebrew-hebrew-700-normal.woff2?url';
 
 interface Props {
   lang: Lang;
@@ -49,25 +53,33 @@ const OG_LOCALE: Record<string, string> = {
   ja: 'ja_JP',
   zh: 'zh_CN',
   hi: 'hi_IN',
+  nl: 'nl_NL',
+  sv: 'sv_SE',
+  uk: 'uk_UA',
+  el: 'el_GR',
+  he: 'he_IL',
 };
 const ogImage = new URL(lang === 'en' ? '/og.png' : `/og-${lang}.png`, site).toString();
 
-// Preload the script this locale's body copy is actually set in. The Latin
-// files still load on demand — the brand name stays Latin everywhere.
-// Arabic is right-to-left; everything else here reads left-to-right.
-const RTL_LOCALES = new Set<Lang>(['ar']);
+// Arabic and Hebrew are right-to-left; everything else reads left-to-right.
+const RTL_LOCALES = new Set<Lang>(['ar', 'he']);
 const dir = RTL_LOCALES.has(lang) ? 'rtl' : 'ltr';
 
+// Preload the script this locale's body copy is actually set in. The Latin
+// files still load on demand — the brand name stays Latin everywhere.
+//
 // Japanese and Chinese are deliberately absent: their fonts are split into
-// dozens of subsets
-// and which ones a page needs is only known once the text is laid out, so
-// there is nothing sensible to preload. Its Latin preload still covers the
-// wordmark and the App Store button.
+// dozens of subsets and which ones a page needs is only known once the text
+// is laid out, so there is nothing sensible to preload. Their Latin preload
+// still covers the wordmark and the App Store button.
 const SCRIPT_FONTS: Partial<Record<Lang, [string, string]>> = {
   ru: [cyrillicRegular, cyrillicBold],
+  uk: [cyrillicRegular, cyrillicBold],
   hy: [armenianRegular, armenianBold],
   ar: [arabicRegular, arabicBold],
   hi: [devanagariRegular, devanagariBold],
+  el: [greekRegular, greekBold],
+  he: [hebrewRegular, hebrewBold],
 };
 const [preloadRegular, preloadBold] = SCRIPT_FONTS[lang] ?? [latinRegular, latinBold];
 

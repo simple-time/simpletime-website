@@ -55,7 +55,9 @@ SOURCES = [
     ("cyrillic", "@fontsource/inter", "cyrillic", "400.css", "inter-cyrillic-{w}-normal.woff2", "Inter", False, True),
     ("armenian", "@fontsource/noto-sans-armenian", "armenian", "400.css", "noto-sans-armenian-armenian-{w}-normal.woff2", "Inter", False, True),
     ("arabic", "@fontsource/noto-sans-arabic", "arabic", "400.css", "noto-sans-arabic-arabic-{w}-normal.woff2", "Inter", False, True),
+    ("greek", "@fontsource/inter", "greek", "400.css", "inter-greek-{w}-normal.woff2", "Inter", False, True),
     ("devanagari", "@fontsource/noto-sans-devanagari", "devanagari", "400.css", "noto-sans-devanagari-devanagari-{w}-normal.woff2", "Inter", False, True),
+    ("hebrew", "@fontsource/noto-sans-hebrew", "hebrew", "400.css", "noto-sans-hebrew-hebrew-{w}-normal.woff2", "Inter", False, True),
     ("japanese", "@fontsource-variable/noto-sans-jp", None, "index.css", None, "Noto Sans JP", True, False),
     ("chinese", "@fontsource-variable/noto-sans-sc", None, "index.css", None, "Noto Sans SC", True, False),
 ]

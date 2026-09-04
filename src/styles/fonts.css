@@ -236,6 +236,51 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+  src: url('../../node_modules/@fontsource/inter/files/inter-greek-400-normal.woff2') format('woff2');
+  unicode-range: U+370-377,U+37A-37F,U+384-38A,U+38C,U+38E-3A1,U+3A3-3FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/inter/files/inter-greek-500-normal.woff2') format('woff2');
+  unicode-range: U+370-377,U+37A-37F,U+384-38A,U+38C,U+38E-3A1,U+3A3-3FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/inter/files/inter-greek-600-normal.woff2') format('woff2');
+  unicode-range: U+370-377,U+37A-37F,U+384-38A,U+38C,U+38E-3A1,U+3A3-3FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/inter/files/inter-greek-700-normal.woff2') format('woff2');
+  unicode-range: U+370-377,U+37A-37F,U+384-38A,U+38C,U+38E-3A1,U+3A3-3FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/inter/files/inter-greek-800-normal.woff2') format('woff2');
+  unicode-range: U+370-377,U+37A-37F,U+384-38A,U+38C,U+38E-3A1,U+3A3-3FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
   src: url('../../node_modules/@fontsource/noto-sans-devanagari/files/noto-sans-devanagari-devanagari-400-normal.woff2') format('woff2');
   unicode-range: U+900-97F,U+1CD0-1CF9,U+20F0,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09;
 }
@@ -274,6 +319,51 @@
   font-display: swap;
   src: url('../../node_modules/@fontsource/noto-sans-devanagari/files/noto-sans-devanagari-devanagari-800-normal.woff2') format('woff2');
   unicode-range: U+900-97F,U+1CD0-1CF9,U+20F0,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/noto-sans-hebrew/files/noto-sans-hebrew-hebrew-400-normal.woff2') format('woff2');
+  unicode-range: U+307,U+590-5FF,U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/noto-sans-hebrew/files/noto-sans-hebrew-hebrew-500-normal.woff2') format('woff2');
+  unicode-range: U+307,U+590-5FF,U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/noto-sans-hebrew/files/noto-sans-hebrew-hebrew-600-normal.woff2') format('woff2');
+  unicode-range: U+307,U+590-5FF,U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/noto-sans-hebrew/files/noto-sans-hebrew-hebrew-700-normal.woff2') format('woff2');
+  unicode-range: U+307,U+590-5FF,U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/noto-sans-hebrew/files/noto-sans-hebrew-hebrew-800-normal.woff2') format('woff2');
+  unicode-range: U+307,U+590-5FF,U+FB1D-FB4F;
 }
 
 @font-face {
@@ -813,7 +903,7 @@
   font-weight: 100 900;
   font-display: swap;
   src: url('../../node_modules/@fontsource-variable/noto-sans-jp/files/noto-sans-jp-59-wght-normal.woff2') format('woff2');
-  unicode-range: U+307,U+30C,U+1EA0-1EBE,U+1EC0-1EC6,U+1EC8-1EF1,U+2074,U+20DD-20DE,U+2100;
+  unicode-range: U+30C,U+1EA0-1EBE,U+1EC0-1EC6,U+1EC8-1EF1,U+2074,U+20DD-20DE,U+2100;
 }
 
 @font-face {
@@ -2037,7 +2127,7 @@
   font-weight: 100 900;
   font-display: swap;
   src: url('../../node_modules/@fontsource-variable/noto-sans-sc/files/noto-sans-sc-97-wght-normal.woff2') format('woff2');
-  unicode-range: U+2CD,U+2D8-2D9,U+302-303,U+305-307,U+309-30D,U+311,U+31B,U+321-325,U+327-328,U+32B-32C,U+32E-32F,U+331-339,U+33C-33D,U+33F,U+348,U+352,U+35C,U+35E-35F,U+361,U+363,U+368,U+36C,U+36F;
+  unicode-range: U+2CD,U+2D8-2D9,U+302-303,U+305-306,U+309-30D,U+311,U+31B,U+321-325,U+327-328,U+32B-32C,U+32E-32F,U+331-339,U+33C-33D,U+33F,U+348,U+352,U+35C,U+35E-35F,U+361,U+363,U+368,U+36C,U+36F;
 }
 
 @font-face {

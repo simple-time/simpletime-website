@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Render the Open Graph card for every locale.
 
-The site spans four scripts and each font file holds only its own subset,
+The site spans seven scripts and each font file holds only its own subset,
 so a single string routinely needs several files: the Turkish headline
 mixes Latin with latin-ext, and every non-Latin card keeps "iPhone",
 "iPad", "Mac" and the SimpleTime wordmark in Latin.
@@ -34,6 +34,7 @@ INTER = ROOT / "node_modules/@fontsource/inter"
 ARMENIAN = ROOT / "node_modules/@fontsource/noto-sans-armenian"
 ARABIC = ROOT / "node_modules/@fontsource/noto-sans-arabic"
 DEVANAGARI = ROOT / "node_modules/@fontsource/noto-sans-devanagari"
+HEBREW = ROOT / "node_modules/@fontsource/noto-sans-hebrew"
 JAPANESE = ROOT / "node_modules/@fontsource-variable/noto-sans-jp"
 CHINESE = ROOT / "node_modules/@fontsource-variable/noto-sans-sc"
 PUBLIC = ROOT / "public"
@@ -54,6 +55,13 @@ SUBSETS = [
         "armenian",
     ),
     ("arabic", ARABIC / "files/noto-sans-arabic-arabic-{w}-normal.woff2", ARABIC / "400.css", "arabic"),
+    ("greek", INTER / "files/inter-greek-{w}-normal.woff2", INTER / "400.css", "greek"),
+    (
+        "hebrew",
+        HEBREW / "files/noto-sans-hebrew-hebrew-{w}-normal.woff2",
+        HEBREW / "400.css",
+        "hebrew",
+    ),
     (
         "devanagari",
         DEVANAGARI / "files/noto-sans-devanagari-devanagari-{w}-normal.woff2",
@@ -64,6 +72,11 @@ SUBSETS = [
 
 COPY = {
     "en": ("Track time", "effortlessly.", "A clean time tracker for iPhone, iPad and Mac.", "Free · No account · No tracking"),
+    "nl": ("Jouw tijd,", "moeiteloos.", "Een heldere tijdregistratie voor iPhone, iPad en Mac.", "Gratis · Geen account · Geen tracking"),
+    "sv": ("Din tid,", "utan möda.", "En tydlig tidrapportering för iPhone, iPad och Mac.", "Gratis · Inget konto · Ingen spårning"),
+    "uk": ("Ваш час —", "без зусиль.", "Зрозумілий трекер часу для iPhone, iPad і Mac.", "Безкоштовно · Без акаунта · Без стеження"),
+    "el": ("Ο χρόνος σας,", "χωρίς κόπο.", "Καθαρή καταγραφή χρόνου για iPhone, iPad και Mac.", "Δωρεάν · Χωρίς λογαριασμό · Χωρίς παρακολούθηση"),
+    "he": ("הזמן שלכם,", "בלי מאמץ.", "מעקב זמן ברור עבור iPhone, iPad ו-Mac.", "חינם · בלי חשבון · בלי מעקב"),
     "de": ("Zeit erfassen,", "ganz einfach.", "Zeiterfassung für iPhone, iPad und Mac.", "Kostenlos · Kein Konto · Keine Werbung"),
     "fr": ("Votre temps,", "sans effort.", "Un suivi du temps clair pour iPhone, iPad et Mac.", "Gratuit · Sans compte · Sans pistage"),
     "es": ("Tu tiempo,", "sin esfuerzo.", "Un registro de tiempo claro para iPhone, iPad y Mac.", "Gratis · Sin cuenta · Sin rastreo"),
@@ -78,7 +91,11 @@ COPY = {
     "hi": ("आपका समय,", "बिना मेहनत।", "iPhone, iPad और Mac के लिए सरल समय ट्रैकर।", "निःशुल्क · खाता नहीं · ट्रैकिंग नहीं"),
 }
 
-RTL = {"ar"}
+RTL = {"ar", "he"}
+
+# Both are right-to-left, but only Arabic joins its letters — running Hebrew
+# through the reshaper would be a no-op at best, so it only gets the bidi pass.
+RESHAPE = {"ar"}
 
 # Devanagari reorders matras and forms conjuncts, so it cannot be drawn
 # codepoint by codepoint. Those runs go through HarfBuzz and are filled
@@ -159,18 +176,22 @@ def font(subset: str, weight: int, size: int) -> ImageFont.FreeTypeFont:
 
 
 def shape(text: str, lang: str) -> str:
-    """Arabic needs contextual shaping and bidi reordering before Pillow can
-    draw it; this build has no Raqm, so it is done in Python."""
+    """Right-to-left copy needs bidi reordering — and Arabic contextual
+    shaping on top — before Pillow can draw it; this build has no Raqm, so
+    it is done in Python."""
     if lang not in RTL:
         return text
     try:
-        import arabic_reshaper
         from bidi.algorithm import get_display
     except ImportError:
-        raise SystemExit(
-            "Arabic needs shaping: pip install arabic-reshaper python-bidi"
-        )
-    return get_display(arabic_reshaper.reshape(text))
+        raise SystemExit("RTL copy needs bidi: pip install python-bidi")
+    if lang in RESHAPE:
+        try:
+            import arabic_reshaper
+        except ImportError:
+            raise SystemExit("Arabic needs shaping: pip install arabic-reshaper")
+        text = arabic_reshaper.reshape(text)
+    return get_display(text)
 
 
 # Japanese and Chinese share most Han codepoints but draw them differently,
