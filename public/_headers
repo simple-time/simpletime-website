@@ -40,6 +40,16 @@
   Cache-Control: public, max-age=604800
 /og-hi.png
   Cache-Control: public, max-age=604800
+/og-nl.png
+  Cache-Control: public, max-age=604800
+/og-sv.png
+  Cache-Control: public, max-age=604800
+/og-uk.png
+  Cache-Control: public, max-age=604800
+/og-el.png
+  Cache-Control: public, max-age=604800
+/og-he.png
+  Cache-Control: public, max-age=604800
 /favicon.ico
   Cache-Control: public, max-age=604800
 /favicon-32.png
