@@ -1,9 +1,8 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
+import { assertNoAxeViolations, createAxeReport } from './axe-policy.mjs';
 
 const SAME_ORIGIN = 'http://127.0.0.1:4322';
-
-const targets = (nodes) => nodes.map((node) => node.target.join(' '));
 
 test('browser and accessibility baseline', async ({ page }, testInfo) => {
   const { route, expectedStatus, lang, dir, mobile } = testInfo.project.metadata;
@@ -106,20 +105,10 @@ test('browser and accessibility baseline', async ({ page }, testInfo) => {
   }
 
   const axe = await new AxeBuilder({ page }).analyze();
-  const axeReport = {
+  const axeReport = createAxeReport(axe, {
     route,
     project: testInfo.project.name,
-    violations: axe.violations.map((item) => ({
-      id: item.id,
-      impact: item.impact ?? 'unknown',
-      targets: targets(item.nodes),
-    })),
-    incomplete: axe.incomplete.map((item) => ({
-      id: item.id,
-      impact: item.impact ?? 'unknown',
-      targets: targets(item.nodes),
-    })),
-  };
+  });
 
   console.log(`STWEB-004_AXE ${JSON.stringify(axeReport)}`);
   console.log(`STWEB-004_CONSOLE ${JSON.stringify({ route, project: testInfo.project.name, errors: consoleErrors })}`);
@@ -134,4 +123,5 @@ test('browser and accessibility baseline', async ({ page }, testInfo) => {
   expect(pageErrors, 'page errors after interactions on ' + route).toEqual([]);
   expect(failedRequests, 'same-origin request failures after interactions on ' + route).toEqual([]);
   expect(badResponses, 'unexpected same-origin HTTP errors after interactions on ' + route).toEqual([]);
+  assertNoAxeViolations(axeReport);
 });
