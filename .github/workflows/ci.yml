@@ -132,16 +132,16 @@ jobs:
                   ? '_Production-only scope; development dependencies are omitted from this report._'
                   : '_Full dependency scope._',
                 '',
-                counts.critical > 0
-                  ? `**Blocking:** ${counts.critical} critical finding(s).`
-                  : 'No critical findings. High, moderate and low are reported but do not block today.',
+                counts.critical > 0 || counts.high > 0
+                  ? `**Blocking:** ${counts.critical} critical and ${counts.high} high finding(s).`
+                  : 'No critical or high findings. Moderate and low are reported but do not block.',
                 '',
               ].join('\n'),
             );
           }
 
-          if (counts.critical > 0) {
-            console.error(`audit(${scope}): ${counts.critical} critical finding(s) - failing`);
+          if (counts.critical > 0 || counts.high > 0) {
+            console.error(`audit(${scope}): ${counts.critical} critical and ${counts.high} high finding(s) - failing`);
             process.exit(1);
           }
           EOF
@@ -252,16 +252,16 @@ jobs:
                   ? '_Production-only scope; development dependencies are omitted from this report._'
                   : '_Full dependency scope._',
                 '',
-                counts.critical > 0
-                  ? `**Blocking:** ${counts.critical} critical finding(s).`
-                  : 'No critical findings. High, moderate and low are reported but do not block today.',
+                counts.critical > 0 || counts.high > 0
+                  ? `**Blocking:** ${counts.critical} critical and ${counts.high} high finding(s).`
+                  : 'No critical or high findings. Moderate and low are reported but do not block.',
                 '',
               ].join('\n'),
             );
           }
 
-          if (counts.critical > 0) {
-            console.error(`audit(${scope}): ${counts.critical} critical finding(s) - failing`);
+          if (counts.critical > 0 || counts.high > 0) {
+            console.error(`audit(${scope}): ${counts.critical} critical and ${counts.high} high finding(s) - failing`);
             process.exit(1);
           }
           EOF
