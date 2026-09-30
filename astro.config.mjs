@@ -7,6 +7,12 @@ export default defineConfig({
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      // Fonts are always emitted as files. Vite inlines assets under 4 KB as
+      // data: URLs, which caught two tiny Noto Sans SC subsets – and the CSP
+      // (font-src 'self') blocks data: fonts, so every page logged two errors.
+      assetsInlineLimit: (file) => (file.endsWith('.woff2') ? false : undefined),
+    },
   },
   i18n: {
     defaultLocale: 'en',
