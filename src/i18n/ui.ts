@@ -34,7 +34,7 @@ export const ui = {
     'meta.privacy.description':
       'How SimpleTime handles your data: everything stays on your device, iCloud backup is optional and encrypted, and there is no analytics or tracking.',
     'meta.imprint.description':
-      'Legal notice for simple-time.app under § 5 TMG — operator, contact details and liability information for the SimpleTime app and website.',
+      'Legal notice for simple-time.app under § 5 DDG — operator, contact details and liability information for the SimpleTime app and website.',
 
     'nav.features': 'Features',
     'nav.screenshots': 'Screenshots',
@@ -182,13 +182,13 @@ export const ui = {
 
     'imprint.title': 'Imprint',
     'imprint.country': 'Germany',
-    'imprint.according': 'Information according to § 5 TMG',
+    'imprint.according': 'Information according to § 5 DDG',
     'imprint.contact': 'Contact',
-    'imprint.responsible': 'Responsible for content according to § 55 Abs. 2 RStV',
+    'imprint.responsible': 'Responsible for content according to § 18 Abs. 2 MStV',
     'imprint.disclaimer.title': 'Disclaimer',
     'imprint.disclaimer.liability.title': 'Liability for content',
     'imprint.disclaimer.liability.body':
-      'As a service provider we are responsible for our own content on these pages according to general law (§ 7 para. 1 TMG). According to §§ 8 to 10 TMG, however, we are not obliged to monitor transmitted or stored external information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general law remain unaffected. A corresponding liability is only possible from the point in time of knowledge of a specific infringement. Upon becoming aware of corresponding infringements, we will remove such content immediately.',
+      'As a service provider we are responsible for our own content on these pages according to general law. According to Art. 8 DSA, however, we are not obliged to monitor transmitted or stored external information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general law remain unaffected. A corresponding liability is only possible from the point in time of knowledge of a specific infringement. Upon becoming aware of corresponding infringements, we will remove such content immediately.',
     'imprint.disclaimer.links.title': 'Liability for links',
     'imprint.disclaimer.links.body':
       'Our offer contains links to external websites of third parties whose content we cannot influence. Therefore we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of an infringement. Upon becoming aware of any infringements, we will remove such links immediately.',
@@ -235,7 +235,7 @@ export const ui = {
     'meta.privacy.description':
       'Wie SimpleTime mit deinen Daten umgeht: Alles bleibt auf deinem Gerät, das iCloud-Backup ist optional und verschlüsselt, kein Analytics, kein Tracking.',
     'meta.imprint.description':
-      'Impressum für simple-time.app nach § 5 TMG — Betreiber, Kontaktdaten und Haftungshinweise zur SimpleTime-App und zur Website.',
+      'Impressum für simple-time.app nach § 5 DDG — Betreiber, Kontaktdaten und Haftungshinweise zur SimpleTime-App und zur Website.',
 
     'nav.features': 'Funktionen',
     'nav.screenshots': 'Screenshots',
@@ -384,13 +384,13 @@ export const ui = {
 
     'imprint.title': 'Impressum',
     'imprint.country': 'Deutschland',
-    'imprint.according': 'Angaben gemäß § 5 TMG',
+    'imprint.according': 'Angaben gemäß § 5 DDG',
     'imprint.contact': 'Kontakt',
-    'imprint.responsible': 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV',
+    'imprint.responsible': 'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV',
     'imprint.disclaimer.title': 'Haftungsausschluss',
     'imprint.disclaimer.liability.title': 'Haftung für Inhalte',
     'imprint.disclaimer.liability.body':
-      'Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.',
+      'Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach Art. 8 DSA sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.',
     'imprint.disclaimer.links.title': 'Haftung für Links',
     'imprint.disclaimer.links.body':
       'Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.',
@@ -436,7 +436,7 @@ export const ui = {
     'meta.privacy.description':
       'Comment SimpleTime traite vos données : tout reste sur votre appareil, la sauvegarde iCloud est facultative et chiffrée, sans analyse ni pistage.',
     'meta.imprint.description':
-      'Mentions légales de simple-time.app selon le § 5 TMG — éditeur, coordonnées et informations de responsabilité pour l’app et le site SimpleTime.',
+      'Mentions légales de simple-time.app selon le § 5 DDG — éditeur, coordonnées et informations de responsabilité pour l’app et le site SimpleTime.',
 
     'nav.features': 'Fonctionnalités',
     'nav.screenshots': 'Captures',
@@ -585,13 +585,13 @@ export const ui = {
 
     'imprint.title': 'Mentions légales',
     'imprint.country': 'Allemagne',
-    'imprint.according': 'Informations selon le § 5 TMG',
+    'imprint.according': 'Informations selon le § 5 DDG',
     'imprint.contact': 'Contact',
-    'imprint.responsible': 'Responsable du contenu selon le § 55, al. 2 RStV',
+    'imprint.responsible': 'Responsable du contenu selon le § 18, al. 2 MStV',
     'imprint.disclaimer.title': 'Avertissement',
     'imprint.disclaimer.liability.title': 'Responsabilité concernant le contenu',
     'imprint.disclaimer.liability.body':
-      'En tant que prestataire de services, nous sommes responsables de nos propres contenus sur ces pages conformément au droit commun (§ 7, al. 1 TMG). Selon les §§ 8 à 10 TMG, nous ne sommes toutefois pas tenus de surveiller les informations de tiers transmises ou stockées, ni de rechercher les circonstances révélant une activité illicite. Les obligations de retrait ou de blocage de l’utilisation d’informations en vertu du droit commun demeurent inchangées. Une responsabilité à ce titre n’est cependant engagée qu’à compter de la connaissance d’une infraction concrète. Dès que nous aurons connaissance de telles infractions, nous retirerons ces contenus sans délai.',
+      'En tant que prestataire de services, nous sommes responsables de nos propres contenus sur ces pages conformément au droit commun. Selon l’art. 8 DSA, nous ne sommes toutefois pas tenus de surveiller les informations de tiers transmises ou stockées, ni de rechercher les circonstances révélant une activité illicite. Les obligations de retrait ou de blocage de l’utilisation d’informations en vertu du droit commun demeurent inchangées. Une responsabilité à ce titre n’est cependant engagée qu’à compter de la connaissance d’une infraction concrète. Dès que nous aurons connaissance de telles infractions, nous retirerons ces contenus sans délai.',
     'imprint.disclaimer.links.title': 'Responsabilité concernant les liens',
     'imprint.disclaimer.links.body':
       'Notre offre contient des liens vers des sites externes de tiers, dont nous ne pouvons influencer le contenu. Nous ne pouvons donc assumer aucune responsabilité pour ces contenus externes. Le fournisseur ou l’exploitant des pages liées est toujours responsable de leur contenu. Les pages liées ont été vérifiées quant à d’éventuelles infractions au moment de la mise en lien. Aucun contenu illicite n’était alors décelable. Une surveillance permanente du contenu des pages liées n’est cependant pas raisonnablement exigible sans indice concret d’infraction. Dès que nous aurons connaissance d’infractions, nous retirerons ces liens sans délai.',
@@ -638,7 +638,7 @@ export const ui = {
     'meta.privacy.description':
       'Cómo trata SimpleTime tus datos: todo permanece en tu dispositivo, la copia en iCloud es opcional y cifrada, sin analíticas ni rastreo.',
     'meta.imprint.description':
-      'Aviso legal de simple-time.app según el § 5 TMG: titular, datos de contacto e información sobre responsabilidad de la app y el sitio de SimpleTime.',
+      'Aviso legal de simple-time.app según el § 5 DDG: titular, datos de contacto e información sobre responsabilidad de la app y el sitio de SimpleTime.',
 
     'nav.features': 'Funciones',
     'nav.screenshots': 'Capturas',
@@ -787,13 +787,13 @@ export const ui = {
 
     'imprint.title': 'Aviso legal',
     'imprint.country': 'Alemania',
-    'imprint.according': 'Información según el § 5 TMG',
+    'imprint.according': 'Información según el § 5 DDG',
     'imprint.contact': 'Contacto',
-    'imprint.responsible': 'Responsable del contenido según el § 55, apdo. 2 RStV',
+    'imprint.responsible': 'Responsable del contenido según el § 18, apdo. 2 MStV',
     'imprint.disclaimer.title': 'Descargo de responsabilidad',
     'imprint.disclaimer.liability.title': 'Responsabilidad por el contenido',
     'imprint.disclaimer.liability.body':
-      'Como prestador de servicios, somos responsables de nuestros propios contenidos en estas páginas conforme al derecho general (§ 7, apdo. 1 TMG). Según los §§ 8 a 10 TMG, no estamos obligados a supervisar la información ajena transmitida o almacenada, ni a investigar circunstancias que indiquen una actividad ilícita. Las obligaciones de retirar o bloquear el uso de información conforme al derecho general permanecen inalteradas. Una responsabilidad al respecto solo existe a partir del momento en que se tiene conocimiento de una infracción concreta. En cuanto tengamos conocimiento de tales infracciones, retiraremos dichos contenidos de inmediato.',
+      'Como prestador de servicios, somos responsables de nuestros propios contenidos en estas páginas conforme al derecho general. Según el art. 8 DSA, no estamos obligados a supervisar la información ajena transmitida o almacenada, ni a investigar circunstancias que indiquen una actividad ilícita. Las obligaciones de retirar o bloquear el uso de información conforme al derecho general permanecen inalteradas. Una responsabilidad al respecto solo existe a partir del momento en que se tiene conocimiento de una infracción concreta. En cuanto tengamos conocimiento de tales infracciones, retiraremos dichos contenidos de inmediato.',
     'imprint.disclaimer.links.title': 'Responsabilidad por los enlaces',
     'imprint.disclaimer.links.body':
       'Nuestra oferta contiene enlaces a sitios web externos de terceros, sobre cuyo contenido no tenemos influencia. Por ello no podemos asumir ninguna responsabilidad por esos contenidos externos. Del contenido de las páginas enlazadas siempre es responsable su respectivo proveedor u operador. Las páginas enlazadas fueron revisadas en busca de posibles infracciones legales en el momento de enlazarlas. En ese momento no se apreciaban contenidos ilícitos. Sin embargo, una supervisión permanente del contenido de las páginas enlazadas no es exigible sin indicios concretos de una infracción. En cuanto tengamos conocimiento de infracciones, retiraremos dichos enlaces de inmediato.',
@@ -840,7 +840,7 @@ export const ui = {
     'meta.privacy.description':
       'Come SimpleTime tratta i tuoi dati: tutto resta sul tuo dispositivo, il backup su iCloud è facoltativo e cifrato, nessuna analisi e nessun tracciamento.',
     'meta.imprint.description':
-      'Note legali di simple-time.app ai sensi del § 5 TMG: titolare, contatti e informazioni sulla responsabilità per l’app e il sito SimpleTime.',
+      'Note legali di simple-time.app ai sensi del § 5 DDG: titolare, contatti e informazioni sulla responsabilità per l’app e il sito SimpleTime.',
 
     'nav.features': 'Funzioni',
     'nav.screenshots': 'Schermate',
@@ -989,13 +989,13 @@ export const ui = {
 
     'imprint.title': 'Note legali',
     'imprint.country': 'Germania',
-    'imprint.according': 'Informazioni ai sensi del § 5 TMG',
+    'imprint.according': 'Informazioni ai sensi del § 5 DDG',
     'imprint.contact': 'Contatti',
-    'imprint.responsible': 'Responsabile dei contenuti ai sensi del § 55, comma 2 RStV',
+    'imprint.responsible': 'Responsabile dei contenuti ai sensi del § 18, comma 2 MStV',
     'imprint.disclaimer.title': 'Esclusione di responsabilità',
     'imprint.disclaimer.liability.title': 'Responsabilità per i contenuti',
     'imprint.disclaimer.liability.body':
-      'In qualità di fornitore di servizi siamo responsabili dei contenuti propri di queste pagine secondo le norme generali (§ 7, comma 1 TMG). Ai sensi dei §§ da 8 a 10 TMG non siamo però tenuti a sorvegliare le informazioni altrui trasmesse o memorizzate, né a ricercare circostanze che indichino attività illecite. Restano impregiudicati gli obblighi di rimozione o blocco dell’uso di informazioni previsti dalle norme generali. Una responsabilità in tal senso sussiste soltanto dal momento in cui si viene a conoscenza di una violazione concreta. Non appena verremo a conoscenza di tali violazioni, rimuoveremo immediatamente i contenuti in questione.',
+      'In qualità di fornitore di servizi siamo responsabili dei contenuti propri di queste pagine secondo le norme generali. Ai sensi dell’art. 8 DSA non siamo però tenuti a sorvegliare le informazioni altrui trasmesse o memorizzate, né a ricercare circostanze che indichino attività illecite. Restano impregiudicati gli obblighi di rimozione o blocco dell’uso di informazioni previsti dalle norme generali. Una responsabilità in tal senso sussiste soltanto dal momento in cui si viene a conoscenza di una violazione concreta. Non appena verremo a conoscenza di tali violazioni, rimuoveremo immediatamente i contenuti in questione.',
     'imprint.disclaimer.links.title': 'Responsabilità per i collegamenti',
     'imprint.disclaimer.links.body':
       'La nostra offerta contiene collegamenti a siti web esterni di terzi, sui cui contenuti non abbiamo alcuna influenza. Per questo motivo non possiamo assumerci alcuna responsabilità per tali contenuti esterni. Del contenuto delle pagine collegate è sempre responsabile il rispettivo fornitore o gestore. Al momento del collegamento le pagine sono state verificate per accertare eventuali violazioni di legge. In quel momento non erano riconoscibili contenuti illeciti. Un controllo permanente dei contenuti delle pagine collegate non è però esigibile senza indizi concreti di una violazione. Non appena verremo a conoscenza di violazioni, rimuoveremo immediatamente i collegamenti in questione.',
@@ -1041,7 +1041,7 @@ export const ui = {
     'meta.privacy.description':
       'Как SimpleTime обращается с вашими данными: всё остаётся на устройстве, резервная копия в iCloud необязательна и зашифрована, без аналитики и слежки.',
     'meta.imprint.description':
-      'Выходные данные simple-time.app согласно § 5 TMG: владелец, контактные данные и сведения об ответственности за приложение и сайт SimpleTime.',
+      'Выходные данные simple-time.app согласно § 5 DDG: владелец, контактные данные и сведения об ответственности за приложение и сайт SimpleTime.',
 
     'nav.features': 'Возможности',
     'nav.screenshots': 'Скриншоты',
@@ -1190,13 +1190,13 @@ export const ui = {
 
     'imprint.title': 'Выходные данные',
     'imprint.country': 'Германия',
-    'imprint.according': 'Сведения согласно § 5 TMG',
+    'imprint.according': 'Сведения согласно § 5 DDG',
     'imprint.contact': 'Контакты',
-    'imprint.responsible': 'Ответственный за содержание согласно § 55, абз. 2 RStV',
+    'imprint.responsible': 'Ответственный за содержание согласно § 18, абз. 2 MStV',
     'imprint.disclaimer.title': 'Отказ от ответственности',
     'imprint.disclaimer.liability.title': 'Ответственность за содержание',
     'imprint.disclaimer.liability.body':
-      'Как поставщик услуг мы несём ответственность за собственные материалы на этих страницах в соответствии с общими нормами права (§ 7, абз. 1 TMG). Однако согласно §§ 8–10 TMG мы не обязаны отслеживать переданную или сохранённую чужую информацию либо выяснять обстоятельства, указывающие на противоправную деятельность. Обязанности по удалению или блокированию использования информации в соответствии с общими нормами права остаются в силе. Ответственность в этой части возникает только с момента, когда нам становится известно о конкретном нарушении. При получении сведений о таких нарушениях мы незамедлительно удалим соответствующие материалы.',
+      'Как поставщик услуг мы несём ответственность за собственные материалы на этих страницах в соответствии с общими нормами права. Однако согласно ст. 8 DSA мы не обязаны отслеживать переданную или сохранённую чужую информацию либо выяснять обстоятельства, указывающие на противоправную деятельность. Обязанности по удалению или блокированию использования информации в соответствии с общими нормами права остаются в силе. Ответственность в этой части возникает только с момента, когда нам становится известно о конкретном нарушении. При получении сведений о таких нарушениях мы незамедлительно удалим соответствующие материалы.',
     'imprint.disclaimer.links.title': 'Ответственность за ссылки',
     'imprint.disclaimer.links.body':
       'Наше предложение содержит ссылки на внешние сайты третьих лиц, на содержание которых мы не можем влиять. Поэтому мы не можем нести ответственность за эти внешние материалы. За содержание страниц, на которые ведут ссылки, всегда отвечает их поставщик или оператор. На момент размещения ссылок страницы были проверены на предмет возможных нарушений закона. Противоправного содержания тогда выявлено не было. Однако постоянный контроль содержания страниц, на которые ведут ссылки, без конкретных указаний на нарушение неосуществим. При получении сведений о нарушениях мы незамедлительно удалим соответствующие ссылки.',
@@ -1242,7 +1242,7 @@ export const ui = {
     'meta.privacy.description':
       'Ինչպես է SimpleTime-ը վարվում ձեր տվյալների հետ․ ամեն ինչ մնում է ձեր սարքում, iCloud-ի պահուստավորումը կամընտիր է և գաղտնագրված, առանց վերլուծության և հետագծման։',
     'meta.imprint.description':
-      'simple-time.app-ի իրավական տվյալները § 5 TMG-ի համաձայն․ տիրապետող, կապի տվյալներ և պատասխանատվության մասին տեղեկություններ SimpleTime հավելվածի և կայքի համար։',
+      'simple-time.app-ի իրավական տվյալները § 5 DDG-ի համաձայն․ տիրապետող, կապի տվյալներ և պատասխանատվության մասին տեղեկություններ SimpleTime հավելվածի և կայքի համար։',
 
     'nav.features': 'Հնարավորություններ',
     'nav.screenshots': 'Էկրանապատկերներ',
@@ -1391,13 +1391,13 @@ export const ui = {
 
     'imprint.title': 'Իրավական տվյալներ',
     'imprint.country': 'Գերմանիա',
-    'imprint.according': 'Տեղեկություններ § 5 TMG-ի համաձայն',
+    'imprint.according': 'Տեղեկություններ § 5 DDG-ի համաձայն',
     'imprint.contact': 'Կապ',
-    'imprint.responsible': 'Բովանդակության համար պատասխանատու § 55, կետ 2 RStV-ի համաձայն',
+    'imprint.responsible': 'Բովանդակության համար պատասխանատու § 18, կետ 2 MStV-ի համաձայն',
     'imprint.disclaimer.title': 'Պատասխանատվության հրաժարում',
     'imprint.disclaimer.liability.title': 'Պատասխանատվություն բովանդակության համար',
     'imprint.disclaimer.liability.body':
-      'Որպես ծառայություն մատուցող՝ մենք պատասխանատու ենք այս էջերի սեփական բովանդակության համար ընդհանուր իրավունքի նորմերի համաձայն (§ 7, կետ 1 TMG)։ Սակայն §§ 8–10 TMG-ի համաձայն մենք պարտավոր չենք հսկել փոխանցված կամ պահպանված օտար տեղեկությունը կամ պարզել հանգամանքներ, որոնք վկայում են ապօրինի գործունեության մասին։ Ընդհանուր իրավունքի նորմերով նախատեսված՝ տեղեկության հեռացման կամ օգտագործման արգելափակման պարտավորությունները մնում են ուժի մեջ։ Այս մասով պատասխանատվությունը ծագում է միայն կոնկրետ խախտման մասին իմանալու պահից։ Նման խախտումների մասին տեղեկանալուն պես մենք անհապաղ կհեռացնենք համապատասխան բովանդակությունը։',
+      'Որպես ծառայություն մատուցող՝ մենք պատասխանատու ենք այս էջերի սեփական բովանդակության համար ընդհանուր իրավունքի նորմերի համաձայն։ Սակայն DSA-ի հոդված 8-ի համաձայն մենք պարտավոր չենք հսկել փոխանցված կամ պահպանված օտար տեղեկությունը կամ պարզել հանգամանքներ, որոնք վկայում են ապօրինի գործունեության մասին։ Ընդհանուր իրավունքի նորմերով նախատեսված՝ տեղեկության հեռացման կամ օգտագործման արգելափակման պարտավորությունները մնում են ուժի մեջ։ Այս մասով պատասխանատվությունը ծագում է միայն կոնկրետ խախտման մասին իմանալու պահից։ Նման խախտումների մասին տեղեկանալուն պես մենք անհապաղ կհեռացնենք համապատասխան բովանդակությունը։',
     'imprint.disclaimer.links.title': 'Պատասխանատվություն հղումների համար',
     'imprint.disclaimer.links.body':
       'Մեր առաջարկը պարունակում է հղումներ երրորդ անձանց արտաքին կայքերին, որոնց բովանդակության վրա մենք ազդեցություն չունենք։ Այդ պատճառով մենք չենք կարող պատասխանատվություն կրել այդ արտաքին բովանդակության համար։ Հղված էջերի բովանդակության համար միշտ պատասխանատու է դրանց համապատասխան մատակարարը կամ շահագործողը։ Հղումները տեղադրելու պահին էջերը ստուգվել են հնարավոր իրավախախտումների առումով։ Այդ պահին ապօրինի բովանդակություն չի հայտնաբերվել։ Սակայն հղված էջերի բովանդակության մշտական հսկողությունը առանց խախտման կոնկրետ ցուցումների իրատեսական չէ։ Խախտումների մասին տեղեկանալուն պես մենք անհապաղ կհեռացնենք համապատասխան հղումները։',
@@ -1443,7 +1443,7 @@ export const ui = {
     'meta.privacy.description':
       'Como o SimpleTime trata os seus dados: fica tudo no seu dispositivo, a cópia de segurança no iCloud é opcional e cifrada, sem análises nem rastreio.',
     'meta.imprint.description':
-      'Informação legal de simple-time.app nos termos do § 5 TMG: titular, contactos e informações de responsabilidade da aplicação e do site SimpleTime.',
+      'Informação legal de simple-time.app nos termos do § 5 DDG: titular, contactos e informações de responsabilidade da aplicação e do site SimpleTime.',
 
     'nav.features': 'Funcionalidades',
     'nav.screenshots': 'Imagens',
@@ -1592,13 +1592,13 @@ export const ui = {
 
     'imprint.title': 'Ficha legal',
     'imprint.country': 'Alemanha',
-    'imprint.according': 'Informações nos termos do § 5 TMG',
+    'imprint.according': 'Informações nos termos do § 5 DDG',
     'imprint.contact': 'Contacto',
-    'imprint.responsible': 'Responsável pelo conteúdo nos termos do § 55, n.º 2 RStV',
+    'imprint.responsible': 'Responsável pelo conteúdo nos termos do § 18, n.º 2 MStV',
     'imprint.disclaimer.title': 'Exclusão de responsabilidade',
     'imprint.disclaimer.liability.title': 'Responsabilidade pelo conteúdo',
     'imprint.disclaimer.liability.body':
-      'Enquanto prestador de serviços, somos responsáveis pelos conteúdos próprios destas páginas nos termos das normas gerais (§ 7, n.º 1 TMG). Nos termos dos §§ 8 a 10 TMG, não estamos, contudo, obrigados a vigiar informação alheia transmitida ou armazenada, nem a investigar circunstâncias que indiciem atividade ilícita. Mantêm-se inalteradas as obrigações de remoção ou bloqueio da utilização de informação previstas nas normas gerais. A responsabilidade a este título só existe a partir do momento em que se tem conhecimento de uma infração concreta. Logo que tenhamos conhecimento de tais infrações, removeremos de imediato os conteúdos em causa.',
+      'Enquanto prestador de serviços, somos responsáveis pelos conteúdos próprios destas páginas nos termos das normas gerais. Nos termos do art. 8.º do DSA, não estamos, contudo, obrigados a vigiar informação alheia transmitida ou armazenada, nem a investigar circunstâncias que indiciem atividade ilícita. Mantêm-se inalteradas as obrigações de remoção ou bloqueio da utilização de informação previstas nas normas gerais. A responsabilidade a este título só existe a partir do momento em que se tem conhecimento de uma infração concreta. Logo que tenhamos conhecimento de tais infrações, removeremos de imediato os conteúdos em causa.',
     'imprint.disclaimer.links.title': 'Responsabilidade pelas ligações',
     'imprint.disclaimer.links.body':
       'A nossa oferta contém ligações para sites externos de terceiros, sobre cujo conteúdo não temos influência. Por isso, não podemos assumir qualquer responsabilidade por esses conteúdos externos. Pelo conteúdo das páginas ligadas é sempre responsável o respetivo fornecedor ou operador. As páginas ligadas foram verificadas quanto a eventuais infrações legais no momento em que a ligação foi criada. Nessa altura, não eram reconhecíveis conteúdos ilícitos. Contudo, uma vigilância permanente do conteúdo das páginas ligadas não é exigível sem indícios concretos de uma infração. Logo que tenhamos conhecimento de infrações, removeremos de imediato as ligações em causa.',
@@ -1644,7 +1644,7 @@ export const ui = {
     'meta.privacy.description':
       'SimpleTime verilerini nasıl işliyor: her şey cihazında kalır, iCloud yedeklemesi isteğe bağlı ve şifrelidir, analiz ve izleme yoktur.',
     'meta.imprint.description':
-      'simple-time.app için § 5 TMG uyarınca yasal bilgiler: sahibi, iletişim bilgileri ve SimpleTime uygulaması ile sitesine ilişkin sorumluluk bilgileri.',
+      'simple-time.app için § 5 DDG uyarınca yasal bilgiler: sahibi, iletişim bilgileri ve SimpleTime uygulaması ile sitesine ilişkin sorumluluk bilgileri.',
 
     'nav.features': 'Özellikler',
     'nav.screenshots': 'Ekran görüntüleri',
@@ -1793,13 +1793,13 @@ export const ui = {
 
     'imprint.title': 'Künye',
     'imprint.country': 'Almanya',
-    'imprint.according': '§ 5 TMG uyarınca bilgiler',
+    'imprint.according': '§ 5 DDG uyarınca bilgiler',
     'imprint.contact': 'İletişim',
-    'imprint.responsible': '§ 55, fıkra 2 RStV uyarınca içerikten sorumlu',
+    'imprint.responsible': '§ 18, fıkra 2 MStV uyarınca içerikten sorumlu',
     'imprint.disclaimer.title': 'Sorumluluk reddi',
     'imprint.disclaimer.liability.title': 'İçerik sorumluluğu',
     'imprint.disclaimer.liability.body':
-      'Hizmet sağlayıcı olarak bu sayfalardaki kendi içeriklerimizden genel hükümler uyarınca sorumluyuz (§ 7, fıkra 1 TMG). Ancak §§ 8–10 TMG uyarınca, iletilen veya saklanan üçüncü kişi bilgilerini denetlemek ya da hukuka aykırı bir faaliyete işaret eden koşulları araştırmakla yükümlü değiliz. Genel hükümler uyarınca bilgilerin kaldırılmasına veya kullanımının engellenmesine ilişkin yükümlülükler saklıdır. Bu yöndeki sorumluluk ancak somut bir ihlalin öğrenildiği andan itibaren doğar. Bu tür ihlalleri öğrendiğimiz anda ilgili içerikleri gecikmeksizin kaldırırız.',
+      'Hizmet sağlayıcı olarak bu sayfalardaki kendi içeriklerimizden genel hükümler uyarınca sorumluyuz. Ancak DSA’nın 8. maddesi uyarınca, iletilen veya saklanan üçüncü kişi bilgilerini denetlemek ya da hukuka aykırı bir faaliyete işaret eden koşulları araştırmakla yükümlü değiliz. Genel hükümler uyarınca bilgilerin kaldırılmasına veya kullanımının engellenmesine ilişkin yükümlülükler saklıdır. Bu yöndeki sorumluluk ancak somut bir ihlalin öğrenildiği andan itibaren doğar. Bu tür ihlalleri öğrendiğimiz anda ilgili içerikleri gecikmeksizin kaldırırız.',
     'imprint.disclaimer.links.title': 'Bağlantı sorumluluğu',
     'imprint.disclaimer.links.body':
       'Sunumumuz, içeriğine etki edemeyeceğimiz üçüncü kişilere ait dış web sitelerine bağlantılar içerir. Bu nedenle bu dış içerikler için hiçbir sorumluluk üstlenemeyiz. Bağlantı verilen sayfaların içeriğinden her zaman ilgili sağlayıcı veya işletmeci sorumludur. Bağlantı verildiği sırada sayfalar olası hukuka aykırılıklar bakımından incelenmiştir. O anda hukuka aykırı içerik tespit edilmemiştir. Ancak somut bir ihlal belirtisi olmadan bağlantı verilen sayfaların içeriğinin sürekli denetlenmesi beklenemez. İhlalleri öğrendiğimiz anda ilgili bağlantıları gecikmeksizin kaldırırız.',
@@ -1845,7 +1845,7 @@ export const ui = {
     'meta.privacy.description':
       'كيف يتعامل SimpleTime مع بياناتك: كل شيء يبقى على جهازك، والنسخ الاحتياطي على iCloud اختياري ومشفّر، بلا تحليلات وبلا تتبّع.',
     'meta.imprint.description':
-      'البيانات القانونية لموقع simple-time.app وفقًا للمادة 5 من قانون TMG: المالك وبيانات الاتصال ومعلومات المسؤولية عن تطبيق SimpleTime وموقعه.',
+      'البيانات القانونية لموقع simple-time.app وفقًا للمادة 5 من قانون DDG: المالك وبيانات الاتصال ومعلومات المسؤولية عن تطبيق SimpleTime وموقعه.',
 
     'nav.features': 'الميزات',
     'nav.screenshots': 'لقطات الشاشة',
@@ -1994,13 +1994,13 @@ export const ui = {
 
     'imprint.title': 'البيانات القانونية',
     'imprint.country': 'ألمانيا',
-    'imprint.according': 'معلومات وفقًا للمادة 5 من قانون TMG',
+    'imprint.according': 'معلومات وفقًا للمادة 5 من قانون DDG',
     'imprint.contact': 'اتصل بنا',
-    'imprint.responsible': 'المسؤول عن المحتوى وفقًا للمادة 55، الفقرة 2 من RStV',
+    'imprint.responsible': 'المسؤول عن المحتوى وفقًا للمادة 18، الفقرة 2 من MStV',
     'imprint.disclaimer.title': 'إخلاء المسؤولية',
     'imprint.disclaimer.liability.title': 'المسؤولية عن المحتوى',
     'imprint.disclaimer.liability.body':
-      'بصفتنا مقدّم خدمة، نتحمّل المسؤولية عن محتوانا الخاص على هذه الصفحات وفقًا للقواعد العامة (المادة 7، الفقرة 1 من TMG). غير أننا، وفقًا للمواد 8 إلى 10 من TMG، غير ملزمين بمراقبة المعلومات الأجنبية المنقولة أو المخزّنة، ولا بالبحث عن ظروف تشير إلى نشاط غير مشروع. تبقى الالتزامات بإزالة المعلومات أو حجب استخدامها وفقًا للقواعد العامة قائمة. ولا تنشأ المسؤولية في هذا الشأن إلا من لحظة العلم بمخالفة محدّدة. وبمجرد علمنا بمثل هذه المخالفات، سنزيل المحتوى المعني فورًا.',
+      'بصفتنا مقدّم خدمة، نتحمّل المسؤولية عن محتوانا الخاص على هذه الصفحات وفقًا للقواعد العامة. غير أننا، وفقًا للمادة 8 من DSA، غير ملزمين بمراقبة المعلومات الأجنبية المنقولة أو المخزّنة، ولا بالبحث عن ظروف تشير إلى نشاط غير مشروع. تبقى الالتزامات بإزالة المعلومات أو حجب استخدامها وفقًا للقواعد العامة قائمة. ولا تنشأ المسؤولية في هذا الشأن إلا من لحظة العلم بمخالفة محدّدة. وبمجرد علمنا بمثل هذه المخالفات، سنزيل المحتوى المعني فورًا.',
     'imprint.disclaimer.links.title': 'المسؤولية عن الروابط',
     'imprint.disclaimer.links.body':
       'يحتوي عرضنا على روابط لمواقع خارجية تابعة لأطراف أخرى لا نملك تأثيرًا على محتواها. لذلك لا يمكننا تحمّل أي مسؤولية عن هذه المحتويات الخارجية. ويظل مقدّم الصفحات المرتبطة أو مشغّلها هو المسؤول دائمًا عن محتواها. وقد جرى فحص الصفحات المرتبطة بحثًا عن مخالفات قانونية محتملة وقت إنشاء الروابط، ولم يكن هناك محتوى غير مشروع ظاهر آنذاك. غير أن المراقبة الدائمة لمحتوى الصفحات المرتبطة غير معقولة دون دلائل ملموسة على مخالفة. وبمجرد علمنا بمخالفات، سنزيل الروابط المعنية فورًا.',
@@ -2046,7 +2046,7 @@ export const ui = {
     'meta.privacy.description':
       'SimpleTime のデータの扱い方について。すべては端末内に保存され、iCloud バックアップは任意かつ暗号化。解析もトラッキングもありません。',
     'meta.imprint.description':
-      'simple-time.app の運営者情報（ドイツ TMG 第5条）。運営者、連絡先、SimpleTime アプリおよびサイトに関する責任事項。',
+      'simple-time.app の運営者情報（ドイツ DDG 第5条）。運営者、連絡先、SimpleTime アプリおよびサイトに関する責任事項。',
 
     'nav.features': '機能',
     'nav.screenshots': 'スクリーンショット',
@@ -2195,13 +2195,13 @@ export const ui = {
 
     'imprint.title': '運営者情報',
     'imprint.country': 'ドイツ',
-    'imprint.according': 'ドイツ TMG 第5条に基づく表示',
+    'imprint.according': 'ドイツ DDG 第5条に基づく表示',
     'imprint.contact': 'お問い合わせ',
-    'imprint.responsible': 'RStV 第55条第2項に基づく内容責任者',
+    'imprint.responsible': 'MStV 第18条第2項に基づく内容責任者',
     'imprint.disclaimer.title': '免責事項',
     'imprint.disclaimer.liability.title': '内容についての責任',
     'imprint.disclaimer.liability.body':
-      'サービス提供者として、当方は本サイト上の自らのコンテンツについて一般法の規定に従い責任を負います（TMG 第7条第1項）。ただし TMG 第8条から第10条により、送信または保存された第三者の情報を監視する義務、および違法行為を示す状況を調査する義務は負いません。一般法の規定に基づく情報の削除または利用停止の義務はこれにより影響を受けません。この点についての責任は、具体的な権利侵害を認識した時点から生じます。当該の侵害を認識した場合、当方は直ちに該当するコンテンツを削除します。',
+      'サービス提供者として、当方は本サイト上の自らのコンテンツについて一般法の規定に従い責任を負います。ただし DSA 第8条により、送信または保存された第三者の情報を監視する義務、および違法行為を示す状況を調査する義務は負いません。一般法の規定に基づく情報の削除または利用停止の義務はこれにより影響を受けません。この点についての責任は、具体的な権利侵害を認識した時点から生じます。当該の侵害を認識した場合、当方は直ちに該当するコンテンツを削除します。',
     'imprint.disclaimer.links.title': 'リンクについての責任',
     'imprint.disclaimer.links.body':
       '当方の提供内容には、その内容に影響を及ぼすことのできない第三者の外部サイトへのリンクが含まれます。そのため、これらの外部コンテンツについて当方は一切の責任を負いません。リンク先ページの内容については、常に当該提供者または運営者が責任を負います。リンク設定の時点でリンク先ページに法的な問題がないか確認しており、その時点で違法なコンテンツは認められませんでした。ただし、具体的な侵害の兆候がないかぎり、リンク先の内容を継続的に監視することは合理的に期待できません。権利侵害を認識した場合、当方は直ちに該当するリンクを削除します。',
@@ -2247,7 +2247,7 @@ export const ui = {
     'meta.privacy.description':
       'SimpleTime 如何处理你的数据：一切都保存在你的设备上，iCloud 备份可选且经过加密，没有分析，没有追踪。',
     'meta.imprint.description':
-      'simple-time.app 依据德国 TMG 第 5 条的法律声明：运营者、联系方式，以及 SimpleTime 应用与网站的责任说明。',
+      'simple-time.app 依据德国 DDG 第 5 条的法律声明：运营者、联系方式，以及 SimpleTime 应用与网站的责任说明。',
 
     'nav.features': '功能',
     'nav.screenshots': '截图',
@@ -2396,13 +2396,13 @@ export const ui = {
 
     'imprint.title': '法律声明',
     'imprint.country': '德国',
-    'imprint.according': '依据德国 TMG 第 5 条的信息',
+    'imprint.according': '依据德国 DDG 第 5 条的信息',
     'imprint.contact': '联系我们',
-    'imprint.responsible': '依据 RStV 第 55 条第 2 款的内容负责人',
+    'imprint.responsible': '依据 MStV 第 18 条第 2 款的内容负责人',
     'imprint.disclaimer.title': '免责声明',
     'imprint.disclaimer.liability.title': '内容责任',
     'imprint.disclaimer.liability.body':
-      '作为服务提供者，我们依据一般法律规定对本网站上的自有内容负责（TMG 第 7 条第 1 款）。但依据 TMG 第 8 至 10 条，我们没有义务监控所传输或存储的第三方信息，也没有义务调查显示存在违法行为的情形。依据一般法律规定删除信息或阻止其使用的义务不受影响。相关责任仅自得知具体侵权行为之时起产生。一经得知此类侵权，我们将立即删除相关内容。',
+      '作为服务提供者，我们依据一般法律规定对本网站上的自有内容负责。但依据 DSA 第 8 条，我们没有义务监控所传输或存储的第三方信息，也没有义务调查显示存在违法行为的情形。依据一般法律规定删除信息或阻止其使用的义务不受影响。相关责任仅自得知具体侵权行为之时起产生。一经得知此类侵权，我们将立即删除相关内容。',
     'imprint.disclaimer.links.title': '链接责任',
     'imprint.disclaimer.links.body':
       '我们的网站包含指向第三方外部网站的链接，我们无法影响其内容。因此我们对这些外部内容不承担任何责任。所链接页面的内容始终由其各自的提供者或运营者负责。设置链接时，我们已就可能的违法情形对相关页面进行了检查，当时未发现违法内容。但在没有具体侵权迹象的情况下，持续监控所链接页面的内容并不合理。一经得知侵权行为，我们将立即删除相关链接。',
@@ -2448,7 +2448,7 @@ export const ui = {
     'meta.privacy.description':
       'SimpleTime आपके डेटा के साथ कैसे पेश आता है: सब कुछ आपके डिवाइस पर रहता है, iCloud बैकअप वैकल्पिक और एन्क्रिप्टेड है, न कोई विश्लेषण, न ट्रैकिंग।',
     'meta.imprint.description':
-      'simple-time.app की कानूनी जानकारी, जर्मन TMG की धारा 5 के अनुसार: संचालक, संपर्क विवरण और SimpleTime ऐप व वेबसाइट से जुड़ी उत्तरदायित्व जानकारी।',
+      'simple-time.app की कानूनी जानकारी, जर्मन DDG की धारा 5 के अनुसार: संचालक, संपर्क विवरण और SimpleTime ऐप व वेबसाइट से जुड़ी उत्तरदायित्व जानकारी।',
 
     'nav.features': 'विशेषताएँ',
     'nav.screenshots': 'स्क्रीनशॉट',
@@ -2597,13 +2597,13 @@ export const ui = {
 
     'imprint.title': 'कानूनी सूचना',
     'imprint.country': 'जर्मनी',
-    'imprint.according': 'जर्मन TMG की धारा 5 के अनुसार जानकारी',
+    'imprint.according': 'जर्मन DDG की धारा 5 के अनुसार जानकारी',
     'imprint.contact': 'संपर्क',
-    'imprint.responsible': 'RStV की धारा 55, उपधारा 2 के अनुसार सामग्री के लिए उत्तरदायी',
+    'imprint.responsible': 'MStV की धारा 18, उपधारा 2 के अनुसार सामग्री के लिए उत्तरदायी',
     'imprint.disclaimer.title': 'अस्वीकरण',
     'imprint.disclaimer.liability.title': 'सामग्री के लिए उत्तरदायित्व',
     'imprint.disclaimer.liability.body':
-      'सेवा प्रदाता के रूप में हम इन पृष्ठों पर अपनी सामग्री के लिए सामान्य कानून के अनुसार उत्तरदायी हैं (TMG की धारा 7, उपधारा 1)। हालाँकि TMG की धाराओं 8 से 10 के अनुसार हम प्रेषित या संग्रहीत पराई जानकारी की निगरानी करने, या अवैध गतिविधि की ओर संकेत करने वाली परिस्थितियों की जाँच करने के लिए बाध्य नहीं हैं। सामान्य कानून के अनुसार जानकारी हटाने या उसके उपयोग को रोकने के दायित्व इससे अप्रभावित रहते हैं। इस संबंध में उत्तरदायित्व किसी ठोस उल्लंघन की जानकारी होने के क्षण से ही उत्पन्न होता है। ऐसे उल्लंघनों की जानकारी मिलते ही हम संबंधित सामग्री तुरंत हटा देंगे।',
+      'सेवा प्रदाता के रूप में हम इन पृष्ठों पर अपनी सामग्री के लिए सामान्य कानून के अनुसार उत्तरदायी हैं। हालाँकि DSA के अनुच्छेद 8 के अनुसार हम प्रेषित या संग्रहीत पराई जानकारी की निगरानी करने, या अवैध गतिविधि की ओर संकेत करने वाली परिस्थितियों की जाँच करने के लिए बाध्य नहीं हैं। सामान्य कानून के अनुसार जानकारी हटाने या उसके उपयोग को रोकने के दायित्व इससे अप्रभावित रहते हैं। इस संबंध में उत्तरदायित्व किसी ठोस उल्लंघन की जानकारी होने के क्षण से ही उत्पन्न होता है। ऐसे उल्लंघनों की जानकारी मिलते ही हम संबंधित सामग्री तुरंत हटा देंगे।',
     'imprint.disclaimer.links.title': 'लिंक के लिए उत्तरदायित्व',
     'imprint.disclaimer.links.body':
       'हमारी पेशकश में तीसरे पक्ष की बाहरी वेबसाइटों के लिंक शामिल हैं, जिनकी सामग्री पर हमारा कोई प्रभाव नहीं है। इसलिए हम इन बाहरी सामग्रियों के लिए कोई उत्तरदायित्व नहीं ले सकते। लिंक किए गए पृष्ठों की सामग्री के लिए हमेशा उनका संबंधित प्रदाता या संचालक उत्तरदायी होता है। लिंक जोड़ते समय संबंधित पृष्ठों की संभावित कानूनी उल्लंघनों के लिए जाँच की गई थी और उस समय कोई अवैध सामग्री नहीं दिखी थी। फिर भी, उल्लंघन के ठोस संकेत के बिना लिंक किए गए पृष्ठों की सामग्री की लगातार निगरानी करना उचित रूप से अपेक्षित नहीं है। उल्लंघनों की जानकारी मिलते ही हम संबंधित लिंक तुरंत हटा देंगे।',
@@ -2649,7 +2649,7 @@ export const ui = {
     'meta.privacy.description':
       'Hoe SimpleTime met je gegevens omgaat: alles blijft op je apparaat, de iCloud-back-up is optioneel en versleuteld, geen analyse en geen tracking.',
     'meta.imprint.description':
-      'Colofon van simple-time.app volgens § 5 TMG — exploitant, contactgegevens en aansprakelijkheidsinformatie voor de SimpleTime-app en de site.',
+      'Colofon van simple-time.app volgens § 5 DDG — exploitant, contactgegevens en aansprakelijkheidsinformatie voor de SimpleTime-app en de site.',
 
     'nav.features': 'Functies',
     'nav.screenshots': 'Schermafbeeldingen',
@@ -2798,13 +2798,13 @@ export const ui = {
 
     'imprint.title': 'Colofon',
     'imprint.country': 'Duitsland',
-    'imprint.according': 'Gegevens volgens § 5 TMG',
+    'imprint.according': 'Gegevens volgens § 5 DDG',
     'imprint.contact': 'Contact',
-    'imprint.responsible': 'Verantwoordelijk voor de inhoud volgens § 55, lid 2 RStV',
+    'imprint.responsible': 'Verantwoordelijk voor de inhoud volgens § 18, lid 2 MStV',
     'imprint.disclaimer.title': 'Disclaimer',
     'imprint.disclaimer.liability.title': 'Aansprakelijkheid voor de inhoud',
     'imprint.disclaimer.liability.body':
-      'Als dienstverlener zijn wij volgens de algemene wetgeving verantwoordelijk voor onze eigen inhoud op deze pagina’s (§ 7, lid 1 TMG). Volgens §§ 8 tot 10 TMG zijn wij echter niet verplicht doorgegeven of opgeslagen informatie van derden te controleren of onderzoek te doen naar omstandigheden die op een onrechtmatige activiteit wijzen. Verplichtingen tot verwijdering of blokkering van het gebruik van informatie volgens de algemene wetgeving blijven onverlet. Aansprakelijkheid op dit punt ontstaat pas vanaf het moment waarop wij kennis krijgen van een concrete inbreuk. Zodra wij van dergelijke inbreuken op de hoogte zijn, verwijderen wij de betreffende inhoud onmiddellijk.',
+      'Als dienstverlener zijn wij volgens de algemene wetgeving verantwoordelijk voor onze eigen inhoud op deze pagina’s. Volgens art. 8 DSA zijn wij echter niet verplicht doorgegeven of opgeslagen informatie van derden te controleren of onderzoek te doen naar omstandigheden die op een onrechtmatige activiteit wijzen. Verplichtingen tot verwijdering of blokkering van het gebruik van informatie volgens de algemene wetgeving blijven onverlet. Aansprakelijkheid op dit punt ontstaat pas vanaf het moment waarop wij kennis krijgen van een concrete inbreuk. Zodra wij van dergelijke inbreuken op de hoogte zijn, verwijderen wij de betreffende inhoud onmiddellijk.',
     'imprint.disclaimer.links.title': 'Aansprakelijkheid voor links',
     'imprint.disclaimer.links.body':
       'Ons aanbod bevat links naar externe websites van derden, op de inhoud waarvan wij geen invloed hebben. Daarom kunnen wij voor die externe inhoud geen aansprakelijkheid aanvaarden. Voor de inhoud van de gelinkte pagina’s is steeds de betreffende aanbieder of beheerder verantwoordelijk. De gelinkte pagina’s zijn op het moment van linken gecontroleerd op mogelijke wetsovertredingen; onrechtmatige inhoud was toen niet zichtbaar. Permanente controle van de inhoud van gelinkte pagina’s is echter zonder concrete aanwijzingen van een inbreuk niet redelijk. Zodra wij van inbreuken op de hoogte zijn, verwijderen wij de betreffende links onmiddellijk.',
@@ -2850,7 +2850,7 @@ export const ui = {
     'meta.privacy.description':
       'Så hanterar SimpleTime dina data: allt stannar på din enhet, iCloud-säkerhetskopian är valfri och krypterad, ingen analys och ingen spårning.',
     'meta.imprint.description':
-      'Ansvarig utgivare för simple-time.app enligt § 5 TMG – innehavare, kontaktuppgifter och ansvarsinformation för appen och webbplatsen SimpleTime.',
+      'Ansvarig utgivare för simple-time.app enligt § 5 DDG – innehavare, kontaktuppgifter och ansvarsinformation för appen och webbplatsen SimpleTime.',
 
     'nav.features': 'Funktioner',
     'nav.screenshots': 'Skärmbilder',
@@ -2999,13 +2999,13 @@ export const ui = {
 
     'imprint.title': 'Ansvarig utgivare',
     'imprint.country': 'Tyskland',
-    'imprint.according': 'Uppgifter enligt § 5 TMG',
+    'imprint.according': 'Uppgifter enligt § 5 DDG',
     'imprint.contact': 'Kontakt',
-    'imprint.responsible': 'Ansvarig för innehållet enligt § 55 st. 2 RStV',
+    'imprint.responsible': 'Ansvarig för innehållet enligt § 18 st. 2 MStV',
     'imprint.disclaimer.title': 'Ansvarsfriskrivning',
     'imprint.disclaimer.liability.title': 'Ansvar för innehållet',
     'imprint.disclaimer.liability.body':
-      'Som tjänsteleverantör ansvarar vi för vårt eget innehåll på dessa sidor enligt allmänna bestämmelser (§ 7 st. 1 TMG). Enligt §§ 8–10 TMG är vi dock inte skyldiga att övervaka överförd eller lagrad information från tredje part, eller att undersöka omständigheter som tyder på olaglig verksamhet. Skyldigheter att avlägsna eller blockera användning av information enligt allmänna bestämmelser påverkas inte av detta. Ansvar i detta avseende uppstår först från den tidpunkt då vi får kännedom om en konkret överträdelse. Så snart vi får kännedom om sådana överträdelser tar vi omedelbart bort innehållet i fråga.',
+      'Som tjänsteleverantör ansvarar vi för vårt eget innehåll på dessa sidor enligt allmänna bestämmelser. Enligt artikel 8 i DSA är vi dock inte skyldiga att övervaka överförd eller lagrad information från tredje part, eller att undersöka omständigheter som tyder på olaglig verksamhet. Skyldigheter att avlägsna eller blockera användning av information enligt allmänna bestämmelser påverkas inte av detta. Ansvar i detta avseende uppstår först från den tidpunkt då vi får kännedom om en konkret överträdelse. Så snart vi får kännedom om sådana överträdelser tar vi omedelbart bort innehållet i fråga.',
     'imprint.disclaimer.links.title': 'Ansvar för länkar',
     'imprint.disclaimer.links.body':
       'Vårt erbjudande innehåller länkar till externa webbplatser som tillhör tredje part och vars innehåll vi inte kan påverka. Vi kan därför inte ta något ansvar för detta externa innehåll. För innehållet på de länkade sidorna ansvarar alltid respektive leverantör eller operatör. De länkade sidorna kontrollerades vid länkningstillfället med avseende på eventuella lagöverträdelser; något olagligt innehåll kunde då inte konstateras. En fortlöpande kontroll av innehållet på de länkade sidorna är dock inte rimlig utan konkreta indikationer på en överträdelse. Så snart vi får kännedom om överträdelser tar vi omedelbart bort länkarna i fråga.',
@@ -3051,7 +3051,7 @@ export const ui = {
     'meta.privacy.description':
       'Як SimpleTime поводиться з вашими даними: усе залишається на пристрої, резервна копія в iCloud необовʼязкова та зашифрована, без аналітики й стеження.',
     'meta.imprint.description':
-      'Вихідні дані simple-time.app згідно з § 5 TMG: власник, контактні дані та відомості про відповідальність щодо застосунку й сайту SimpleTime.',
+      'Вихідні дані simple-time.app згідно з § 5 DDG: власник, контактні дані та відомості про відповідальність щодо застосунку й сайту SimpleTime.',
 
     'nav.features': 'Можливості',
     'nav.screenshots': 'Знімки екрана',
@@ -3200,13 +3200,13 @@ export const ui = {
 
     'imprint.title': 'Вихідні дані',
     'imprint.country': 'Німеччина',
-    'imprint.according': 'Відомості згідно з § 5 TMG',
+    'imprint.according': 'Відомості згідно з § 5 DDG',
     'imprint.contact': 'Контакти',
-    'imprint.responsible': 'Відповідальний за зміст згідно з § 55, абз. 2 RStV',
+    'imprint.responsible': 'Відповідальний за зміст згідно з § 18, абз. 2 MStV',
     'imprint.disclaimer.title': 'Відмова від відповідальності',
     'imprint.disclaimer.liability.title': 'Відповідальність за зміст',
     'imprint.disclaimer.liability.body':
-      'Як постачальник послуг ми відповідаємо за власні матеріали на цих сторінках відповідно до загальних норм права (§ 7, абз. 1 TMG). Проте згідно з §§ 8–10 TMG ми не зобовʼязані відстежувати передану або збережену чужу інформацію чи зʼясовувати обставини, що вказують на протиправну діяльність. Обовʼязки щодо видалення або блокування використання інформації відповідно до загальних норм права залишаються чинними. Відповідальність у цій частині виникає лише з моменту, коли нам стає відомо про конкретне порушення. Дізнавшись про такі порушення, ми негайно видалимо відповідні матеріали.',
+      'Як постачальник послуг ми відповідаємо за власні матеріали на цих сторінках відповідно до загальних норм права. Проте згідно зі ст. 8 DSA ми не зобовʼязані відстежувати передану або збережену чужу інформацію чи зʼясовувати обставини, що вказують на протиправну діяльність. Обовʼязки щодо видалення або блокування використання інформації відповідно до загальних норм права залишаються чинними. Відповідальність у цій частині виникає лише з моменту, коли нам стає відомо про конкретне порушення. Дізнавшись про такі порушення, ми негайно видалимо відповідні матеріали.',
     'imprint.disclaimer.links.title': 'Відповідальність за посилання',
     'imprint.disclaimer.links.body':
       'Наша пропозиція містить посилання на зовнішні сайти третіх осіб, на зміст яких ми не маємо впливу. Тому ми не можемо нести відповідальність за ці зовнішні матеріали. За зміст сторінок, на які ведуть посилання, завжди відповідає їхній постачальник або оператор. На момент розміщення посилань сторінки було перевірено на можливі порушення закону; протиправного змісту тоді не виявлено. Однак постійний контроль змісту сторінок, на які ведуть посилання, без конкретних ознак порушення не є доцільним. Дізнавшись про порушення, ми негайно видалимо відповідні посилання.',
@@ -3252,7 +3252,7 @@ export const ui = {
     'meta.privacy.description':
       'Πώς διαχειρίζεται το SimpleTime τα δεδομένα σας: όλα παραμένουν στη συσκευή σας, το αντίγραφο ασφαλείας στο iCloud είναι προαιρετικό και κρυπτογραφημένο, χωρίς αναλυτικά και χωρίς παρακολούθηση.',
     'meta.imprint.description':
-      'Νομικά στοιχεία του simple-time.app σύμφωνα με το § 5 TMG: κάτοχος, στοιχεία επικοινωνίας και πληροφορίες ευθύνης για την εφαρμογή και τον ιστότοπο SimpleTime.',
+      'Νομικά στοιχεία του simple-time.app σύμφωνα με το § 5 DDG: κάτοχος, στοιχεία επικοινωνίας και πληροφορίες ευθύνης για την εφαρμογή και τον ιστότοπο SimpleTime.',
 
     'nav.features': 'Δυνατότητες',
     'nav.screenshots': 'Στιγμιότυπα',
@@ -3401,13 +3401,13 @@ export const ui = {
 
     'imprint.title': 'Νομικά στοιχεία',
     'imprint.country': 'Γερμανία',
-    'imprint.according': 'Στοιχεία σύμφωνα με το § 5 TMG',
+    'imprint.according': 'Στοιχεία σύμφωνα με το § 5 DDG',
     'imprint.contact': 'Επικοινωνία',
-    'imprint.responsible': 'Υπεύθυνος για το περιεχόμενο σύμφωνα με το § 55, παρ. 2 RStV',
+    'imprint.responsible': 'Υπεύθυνος για το περιεχόμενο σύμφωνα με το § 18, παρ. 2 MStV',
     'imprint.disclaimer.title': 'Αποποίηση ευθύνης',
     'imprint.disclaimer.liability.title': 'Ευθύνη για το περιεχόμενο',
     'imprint.disclaimer.liability.body':
-      'Ως πάροχος υπηρεσιών ευθυνόμαστε για το δικό μας περιεχόμενο σε αυτές τις σελίδες σύμφωνα με τις γενικές διατάξεις (§ 7, παρ. 1 TMG). Ωστόσο, σύμφωνα με τα §§ 8 έως 10 TMG δεν υποχρεούμαστε να παρακολουθούμε πληροφορίες τρίτων που μεταδίδονται ή αποθηκεύονται, ούτε να ερευνούμε περιστάσεις που υποδεικνύουν παράνομη δραστηριότητα. Οι υποχρεώσεις αφαίρεσης ή φραγής της χρήσης πληροφοριών βάσει των γενικών διατάξεων παραμένουν ανεπηρέαστες. Ευθύνη ως προς αυτό προκύπτει μόνο από τη στιγμή που λαμβάνουμε γνώση συγκεκριμένης παράβασης. Μόλις λάβουμε γνώση τέτοιων παραβάσεων, αφαιρούμε αμέσως το σχετικό περιεχόμενο.',
+      'Ως πάροχος υπηρεσιών ευθυνόμαστε για το δικό μας περιεχόμενο σε αυτές τις σελίδες σύμφωνα με τις γενικές διατάξεις. Ωστόσο, σύμφωνα με το άρθρο 8 DSA δεν υποχρεούμαστε να παρακολουθούμε πληροφορίες τρίτων που μεταδίδονται ή αποθηκεύονται, ούτε να ερευνούμε περιστάσεις που υποδεικνύουν παράνομη δραστηριότητα. Οι υποχρεώσεις αφαίρεσης ή φραγής της χρήσης πληροφοριών βάσει των γενικών διατάξεων παραμένουν ανεπηρέαστες. Ευθύνη ως προς αυτό προκύπτει μόνο από τη στιγμή που λαμβάνουμε γνώση συγκεκριμένης παράβασης. Μόλις λάβουμε γνώση τέτοιων παραβάσεων, αφαιρούμε αμέσως το σχετικό περιεχόμενο.',
     'imprint.disclaimer.links.title': 'Ευθύνη για τους συνδέσμους',
     'imprint.disclaimer.links.body':
       'Η προσφορά μας περιέχει συνδέσμους προς εξωτερικούς ιστότοπους τρίτων, στο περιεχόμενο των οποίων δεν έχουμε επιρροή. Για τον λόγο αυτό δεν μπορούμε να αναλάβουμε καμία ευθύνη για αυτά τα εξωτερικά περιεχόμενα. Για το περιεχόμενο των συνδεδεμένων σελίδων ευθύνεται πάντοτε ο εκάστοτε πάροχος ή διαχειριστής τους. Οι συνδεδεμένες σελίδες ελέγχθηκαν κατά τη στιγμή της σύνδεσης για πιθανές παραβάσεις· παράνομο περιεχόμενο δεν ήταν τότε αναγνωρίσιμο. Ωστόσο, μόνιμος έλεγχος του περιεχομένου των συνδεδεμένων σελίδων δεν είναι εύλογος χωρίς συγκεκριμένες ενδείξεις παράβασης. Μόλις λάβουμε γνώση παραβάσεων, αφαιρούμε αμέσως τους σχετικούς συνδέσμους.',
@@ -3453,7 +3453,7 @@ export const ui = {
     'meta.privacy.description':
       'איך SimpleTime מטפלת בנתונים שלכם: הכול נשאר במכשיר, גיבוי ל‑iCloud הוא אופציונלי ומוצפן, בלי אנליטיקה ובלי מעקב.',
     'meta.imprint.description':
-      'פרטים משפטיים של simple-time.app לפי § 5 TMG: בעלים, פרטי התקשרות ומידע על אחריות עבור אפליקציית SimpleTime והאתר.',
+      'פרטים משפטיים של simple-time.app לפי § 5 DDG: בעלים, פרטי התקשרות ומידע על אחריות עבור אפליקציית SimpleTime והאתר.',
 
     'nav.features': 'תכונות',
     'nav.screenshots': 'צילומי מסך',
@@ -3602,13 +3602,13 @@ export const ui = {
 
     'imprint.title': 'פרטים משפטיים',
     'imprint.country': 'גרמניה',
-    'imprint.according': 'פרטים לפי § 5 TMG',
+    'imprint.according': 'פרטים לפי § 5 DDG',
     'imprint.contact': 'צור קשר',
-    'imprint.responsible': 'אחראי לתוכן לפי § 55 סעיף 2 RStV',
+    'imprint.responsible': 'אחראי לתוכן לפי § 18 סעיף 2 MStV',
     'imprint.disclaimer.title': 'הצהרת אחריות',
     'imprint.disclaimer.liability.title': 'אחריות לתוכן',
     'imprint.disclaimer.liability.body':
-      'כספק שירות אנו אחראים לתוכן שלנו בעמודים אלה לפי ההוראות הכלליות (§ 7 סעיף 1 TMG). עם זאת, לפי §§ 8 עד 10 TMG איננו מחויבים לפקח על מידע של צדדים שלישיים המועבר או מאוחסן אצלנו, או לחקור נסיבות המצביעות על פעילות בלתי חוקית. חובות להסרת מידע או לחסימת השימוש בו לפי ההוראות הכלליות נותרות בעינן. אחריות בעניין זה קמה רק ממועד היוודע הפרה קונקרטית. עם היוודע הפרות כאלה נסיר את התוכן הרלוונטי לאלתר.',
+      'כספק שירות אנו אחראים לתוכן שלנו בעמודים אלה לפי ההוראות הכלליות. עם זאת, לפי סעיף 8 ל‑DSA איננו מחויבים לפקח על מידע של צדדים שלישיים המועבר או מאוחסן אצלנו, או לחקור נסיבות המצביעות על פעילות בלתי חוקית. חובות להסרת מידע או לחסימת השימוש בו לפי ההוראות הכלליות נותרות בעינן. אחריות בעניין זה קמה רק ממועד היוודע הפרה קונקרטית. עם היוודע הפרות כאלה נסיר את התוכן הרלוונטי לאלתר.',
     'imprint.disclaimer.links.title': 'אחריות לקישורים',
     'imprint.disclaimer.links.body':
       'ההיצע שלנו כולל קישורים לאתרים חיצוניים של צדדים שלישיים, שעל תוכנם אין לנו כל השפעה. לכן איננו יכולים לקבל על עצמנו אחריות לתכנים חיצוניים אלה. לתוכן העמודים המקושרים אחראי תמיד הספק או המפעיל של אותם עמודים. העמודים המקושרים נבדקו במועד הקישור לאיתור הפרות אפשריות; תוכן בלתי חוקי לא היה ניתן לזיהוי באותה עת. עם זאת, פיקוח מתמיד על תוכן העמודים המקושרים אינו סביר ללא אינדיקציה קונקרטית להפרה. עם היוודע הפרות נסיר את הקישורים הרלוונטיים לאלתר.',
