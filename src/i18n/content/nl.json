@@ -1,0 +1,957 @@
+{
+  "store": {
+    "lead": "SimpleTime registreert waar je tijd naartoe gaat. Eén tik start, één tik stopt.",
+    "promise": "Geen account, geen aanmelding, geen advertenties. Je uren blijven op je apparaat en in je iCloud.",
+    "sections": [
+      {
+        "id": "tracking",
+        "title": "Registreren",
+        "points": [
+          "Eén tik start en stopt – in de app, vanaf het beginscherm, vanuit het bedieningspaneel, vanuit de zoekfunctie van de iPhone of met Siri",
+          "Taken met subtaken, zo diep genest als je werk is",
+          "Vergeten te starten? Voer tijd achteraf in en pas hem aan wanneer je wilt",
+          "Kleur, symbool, favorieten en een volgorde die jij bepaalt"
+        ]
+      },
+      {
+        "id": "day",
+        "title": "Je dag",
+        "points": [
+          "Een lijst of een tijdlijn van 0 tot 24 uur, met een markering op het huidige tijdstip",
+          "Notities bij elke registratie",
+          "De vergelijking met gisteren staat bovenaan"
+        ]
+      },
+      {
+        "id": "insights",
+        "title": "Analyseren",
+        "points": [
+          "Cirkeldiagrammen per taak en per productiviteit",
+          "Dag, week, maand, jaar",
+          "Statistieken: vergelijking met de vorige periode, verloop, verdeling over de dag, langste en kortste registratie",
+          "Elke taak met eigen cijfers – eerste registratie, langste, deze week, dit jaar",
+          "Deel elke grafiek als afbeelding"
+        ]
+      },
+      {
+        "id": "reports",
+        "title": "Rapporten en export",
+        "points": [
+          "Een pdf-rapport waarvan je de onderdelen zelf kiest en ordent",
+          "CSV voor Excel en Numbers",
+          "Back-ups in iCloud Drive, automatisch en desgewenst met wachtwoord versleuteld"
+        ]
+      },
+      {
+        "id": "widgets",
+        "title": "Widgets en Siri",
+        "points": [
+          "Vandaag, lopende taak en week op je beginscherm",
+          "De lopende tijd op het toegangsscherm en in het Dynamic Island",
+          "Een schakelaar in het bedieningspaneel die de registratie start en stopt",
+          "Siri en Opdrachten: starten, stoppen of vragen wat er loopt"
+        ]
+      },
+      {
+        "id": "devices",
+        "title": "Op al je apparaten",
+        "points": [
+          "iPhone, iPad en Mac, gesynchroniseerd via iCloud",
+          "40 talen, los van de taal van je apparaat",
+          "VoiceOver en dynamische tekst in de hele app"
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Je gegevens",
+        "points": [
+          "App-vergrendeling met Face ID, Touch ID of een eigen code",
+          "Privacy op één pagina: alle toestemmingen en je gegevens op een rij",
+          "Geen accounts, geen servers van ons, geen advertenties, geen tracking",
+          "Wis alles in één keer – op het apparaat, in iCloud en in de back-ups"
+        ]
+      }
+    ],
+    "pro": {
+      "title": "SimpleTime Pro",
+      "intro": "Alles hierboven blijft gratis. Pro voegt toe:",
+      "points": [
+        "Apple Watch: starten en stoppen vanaf je pols, eerder starten, je dag, week en doelen in één oogopslag – met de lopende tijd op je wijzerplaat",
+        "Terugblikken: je week, maand en jaar als kaarten – om door te bladeren en te delen",
+        "Locaties: taken starten vanzelf als je aankomt – desgewenst pas na een wachttijd",
+        "Het jaar in één beeld: elke dag van het jaar, met je reeksen",
+        "Doelen per taak – voor de dag, de week of de maand",
+        "Focusfilter: de werkfocus gaat aan, de lijst toont alleen werk en de klok loopt al",
+        "Een snelstart-widget die je zelf samenstelt",
+        "Zeven accentkleuren of een eigen, plus zestien app-symbolen",
+        "Extra onderdelen in het pdf-rapport: verloop, dagverdeling, vergelijking, doelen"
+      ],
+      "pricing": "Pro is er per maand, per jaar of eenmalig voor altijd. Nieuwe abonnees krijgen een week gratis, en met Delen met gezin kunnen maximaal zes personen Pro gebruiken. De prijzen staan in de app. Maand en jaar worden automatisch verlengd tot je opzegt; dat kan altijd in je App Store-instellingen. Wat er later bij komt, zit erbij."
+    },
+    "closing": "Voor iedereen die wil weten waar zijn tijd echt heen gaat – op het werk, bij de studie, tijdens het trainen of voor zichzelf."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Tijdregistratie voor iPhone, iPad en Mac",
+      "titleLead": "Eén tik",
+      "titleAccent": "start de klok.",
+      "cta": "Bekijk de functies",
+      "proof": [
+        "Gratis te downloaden",
+        "Geen account",
+        "Geen advertenties, geen tracking"
+      ]
+    },
+    "showcase": [
+      {
+        "id": "day",
+        "eyebrow": "Je dag",
+        "title": "Je hele dag in één oogopslag.",
+        "body": "Elke registratie met begin, einde en duur – als lijst of als tijdlijn van 0 tot 24 uur, met een markering op het huidige tijdstip. Notities leggen vast wat de cijfers niet zeggen, en bovenaan zie je hoe vandaag zich verhoudt tot gisteren.",
+        "points": [
+          "Een lijst of een tijdlijn van 0 tot 24 uur",
+          "Notities bij elke registratie",
+          "Vandaag vergeleken met gisteren"
+        ]
+      },
+      {
+        "id": "insights",
+        "eyebrow": "Analyseren",
+        "title": "Zie waar je uren echt heen gaan.",
+        "body": "Cirkeldiagrammen per taak en per productiviteit – voor een dag, een week, een maand of een jaar. De statistieken vergelijken elke periode met de vorige en tonen het verloop en de uren van de dag waarop je het meest registreert.",
+        "points": [
+          "Grafieken per taak en per productiviteit",
+          "Vergelijking met de vorige periode",
+          "Deel elke grafiek als afbeelding"
+        ]
+      },
+      {
+        "id": "reports",
+        "eyebrow": "Rapporten en export",
+        "title": "Een rapport in seconden.",
+        "body": "Kies een periode en de onderdelen die je nodig hebt, sleep ze in de juiste volgorde – en SimpleTime maakt er een pdf van, met elke taak en subtaak. Heb je de ruwe cijfers nodig? Een CSV-bestand open je in Excel en Numbers.",
+        "points": [
+          "Een pdf met de onderdelen die jij kiest",
+          "CSV voor Excel en Numbers",
+          "Automatische back-ups in iCloud Drive"
+        ]
+      }
+    ],
+    "features": {
+      "title": "Alles wat je nodig hebt. Gratis.",
+      "subtitle": "Elke functie in deze lijst hoort bij de gratis app."
+    },
+    "pro": {
+      "button": "Alles over SimpleTime Pro"
+    },
+    "gallery": {
+      "title": "Van dichterbij.",
+      "subtitle": "De schermen uit de App Store – precies zoals ze op je apparaat verschijnen."
+    },
+    "audience": {
+      "title": "Voor iedereen die wil weten waar zijn tijd heen gaat.",
+      "subtitle": "Op het werk, bij de studie, tijdens het trainen – of gewoon voor jezelf.",
+      "groups": [
+        {
+          "id": "work",
+          "title": "Werk & freelance",
+          "body": "Houd klanten en projecten gescheiden als taken en subtaken, en exporteer een net overzicht wanneer je er een nodig hebt."
+        },
+        {
+          "id": "study",
+          "title": "Studie & leren",
+          "body": "Zie hoeveel tijd een vak echt kost, en plan de volgende week met echte cijfers."
+        },
+        {
+          "id": "training",
+          "title": "Training & gewoonten",
+          "body": "Registreer trainingen, oefentijd of slaap, en zie week na week je regelmaat groeien."
+        },
+        {
+          "id": "everyday",
+          "title": "Dagelijks leven",
+          "body": "Ontdek waar de uren echt heen gaan – en bepaal zelf wat je wilt veranderen."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Veelgestelde vragen.",
+      "subtitle": "De belangrijkste antwoorden op een rij – en nog veel meer op de vragenpagina.",
+      "button": "Alle vragen en antwoorden"
+    },
+    "cta": {
+      "title": "Klaar om te beginnen?",
+      "subtitle": "Gratis op iPhone, iPad en Mac. Geen account, geen advertenties, geen tracking.",
+      "note": "De app voor Apple Watch hoort bij SimpleTime Pro."
+    }
+  },
+  "shots": [
+    {
+      "id": "tracking",
+      "title": "Bijhouden",
+      "caption": "Eén tik start de klok",
+      "alt": "Het tabblad Registratie met een lopende taak en bovenaan de favorieten"
+    },
+    {
+      "id": "day",
+      "title": "Je dag",
+      "caption": "Elke registratie, op de seconde",
+      "alt": "De dagweergave als lijst met registraties en hun tijden"
+    },
+    {
+      "id": "timeline",
+      "title": "Tijdlijn",
+      "caption": "De hele dag in één oogopslag",
+      "alt": "De dagweergave als tijdlijn van 0 tot 24 uur"
+    },
+    {
+      "id": "chart",
+      "title": "Analyseren",
+      "caption": "Waar je uren echt heen gaan",
+      "alt": "Een week als cirkeldiagram per taak"
+    },
+    {
+      "id": "statistics",
+      "title": "Statistieken",
+      "caption": "Vergelijk weken, zie de trend",
+      "alt": "Statistieken die deze week met de vorige vergelijken"
+    },
+    {
+      "id": "report",
+      "title": "Rapporten",
+      "caption": "Een uitgebreide PDF per taak",
+      "alt": "Een pagina van een pdf-rapport met elke taak"
+    },
+    {
+      "id": "pro",
+      "title": "Word Pro",
+      "caption": "Doelen, je jaar, je kleuren",
+      "alt": "De pagina van SimpleTime Pro in de app"
+    }
+  ],
+  "pro": {
+    "eyebrow": "SimpleTime Pro",
+    "title": "Meer uit de tijd die je registreert.",
+    "subtitle": "SimpleTime blijft gratis – alles wat de app zonder Pro kan, blijft dat ook. Pro voegt toe: je Apple Watch, locaties die taken vanzelf starten, terugblikken op je week, maand en jaar, doelen en meer.",
+    "featuresTitle": "Wat Pro toevoegt",
+    "features": [
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Starten en stoppen vanaf je pols, eerder starten, je dag, week en doelen in één oogopslag – met de lopende tijd op je wijzerplaat."
+      },
+      {
+        "id": "reviews",
+        "title": "Terugblikken",
+        "body": "Je week, maand en jaar als kaarten – om door te bladeren en te delen."
+      },
+      {
+        "id": "places",
+        "title": "Locaties",
+        "body": "Taken starten vanzelf als je aankomt – desgewenst pas na een wachttijd, zodat er niets start als je alleen voorbijkomt."
+      },
+      {
+        "id": "year",
+        "title": "Het jaar in één beeld",
+        "body": "Elke dag van het jaar als één afbeelding, met je lopende en je langste reeks."
+      },
+      {
+        "id": "goals",
+        "title": "Doelen",
+        "body": "Een streefwaarde per taak – voor de dag, de week of de maand. Subtaken tellen mee."
+      },
+      {
+        "id": "focus",
+        "title": "Focusfilter",
+        "body": "Je werkfocus gaat aan, de lijst toont alleen werk – en de registratie kan ermee beginnen en eindigen."
+      },
+      {
+        "id": "widget",
+        "title": "Snelstart-widget",
+        "body": "Jij bepaalt welke taken erop staan. Eén tik vanaf het beginscherm start ze."
+      },
+      {
+        "id": "style",
+        "title": "Kleuren en app-symbolen",
+        "body": "Zeven accentkleuren of een eigen kleur, die door de hele app loopt – plus zestien app-symbolen."
+      },
+      {
+        "id": "report",
+        "title": "Meer in het pdf-rapport",
+        "body": "Verloop, verdeling over de dag, vergelijking met de vorige periode en doelen – in de volgorde die jij kiest."
+      },
+      {
+        "id": "future",
+        "title": "Alles wat nog komt",
+        "body": "Wat er later bij komt, zit erbij – zonder extra aankoop."
+      }
+    ],
+    "plansTitle": "Drie wegen naar Pro",
+    "plansSubtitle": "De prijzen hangen af van je land en staan vóór de aankoop in je eigen valuta in de app.",
+    "plans": [
+      {
+        "id": "monthly",
+        "title": "Maandelijks",
+        "body": "Wordt elke maand afgerekend. Opzeggen kan altijd."
+      },
+      {
+        "id": "yearly",
+        "title": "Jaarlijks",
+        "body": "Wordt één keer per jaar afgerekend – de app laat zien hoeveel je bespaart ten opzichte van maandelijks betalen."
+      },
+      {
+        "id": "lifetime",
+        "title": "Levenslang",
+        "body": "Eén keer betalen en Pro voor altijd houden. Verloopt nooit."
+      }
+    ],
+    "notes": [
+      "Nieuwe abonnees kunnen Maandelijks of Jaarlijks een week gratis proberen.",
+      "Delen met gezin: één aankoop voor maximaal zes personen.",
+      "Wat er later bij komt, zit erbij – zonder extra aankoop."
+    ],
+    "legal": "Maand en jaar worden automatisch verlengd totdat je opzegt. Opzeggen kan altijd in de App Store-instellingen. Levenslang is een eenmalige betaling en verloopt nooit.",
+    "terms": "Gebruiksvoorwaarden (EULA)",
+    "privacy": "Privacybeleid",
+    "freeTitle": "Wat gratis blijft",
+    "freeBody": "Alles wat je nodig hebt om te registreren: taken en subtaken, de dagweergave en de tijdlijn, grafieken en statistieken, het pdf-rapport en de CSV-export, widgets, de Live activiteit, het bedieningspaneel en Siri, iCloud-synchronisatie en back-ups, en de app-vergrendeling – in 40 talen. Geen account, geen advertenties, geen tracking.",
+    "howTitle": "Zo krijg je Pro",
+    "how": [
+      "Open in SimpleTime Instellingen › SimpleTime Pro.",
+      "Kies Maandelijks, Jaarlijks of Levenslang – je betaalt via je Apple Account.",
+      "Pro is meteen ontgrendeld, op al je apparaten met hetzelfde Apple Account."
+    ],
+    "faqTitle": "Vragen over Pro",
+    "ctaTitle": "Begin gratis.",
+    "ctaSubtitle": "Download SimpleTime – en ontgrendel Pro in de app wanneer je wilt."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen.",
+    "subtitle": "Alles over SimpleTime – van de eerste tik tot SimpleTime Pro.",
+    "searchLabel": "Doorzoek de vragen",
+    "searchPlaceholder": "bijv. „back-up” of „Apple Watch”",
+    "results": "Gevonden vragen: {count}",
+    "noResults": "Geen vraag gevonden voor „{query}”.",
+    "noResultsHint": "Probeer een ander woord – of [schrijf ons](@contact).",
+    "topics": "Onderwerpen",
+    "moreTitle": "Nog een vraag?",
+    "moreBody": "Schrijf ons – elk bericht wordt gelezen en beantwoord.",
+    "moreButton": "Contact",
+    "categories": [
+      {
+        "id": "basics",
+        "title": "Aan de slag",
+        "items": [
+          {
+            "id": "what-is",
+            "q": "Wat is SimpleTime?",
+            "a": [
+              "SimpleTime is een app voor tijdregistratie op iPhone, iPad en Mac. Eén tik start de klok, één tik stopt hem. Daarna laat SimpleTime zien waar je tijd naartoe gaat – als daglijst of tijdlijn, in grafieken en statistieken, en als pdf-rapport of CSV-bestand. Geen account, geen advertenties, geen tracking."
+            ]
+          },
+          {
+            "id": "free",
+            "q": "Is SimpleTime gratis?",
+            "a": [
+              "Ja. SimpleTime downloaden is gratis, en alles wat je nodig hebt om te registreren ook: taken en subtaken, de dagweergave, grafieken en statistieken, rapporten en export, widgets, iCloud-synchronisatie en back-ups. SimpleTime Pro is optioneel; daarmee krijg je de app voor Apple Watch, terugblikken, locaties, doelen en meer. [Alles over SimpleTime Pro](@pro)"
+            ]
+          },
+          {
+            "id": "account",
+            "q": "Heb ik een account nodig?",
+            "a": [
+              "Nee. Je hoeft je nergens aan te melden en nergens in te loggen – je opent de app en begint. Gebruik je iCloud, dan loopt de synchronisatie via je eigen Apple Account, dat wij nooit te zien krijgen."
+            ]
+          },
+          {
+            "id": "devices",
+            "q": "Op welke apparaten werkt SimpleTime?",
+            "a": [
+              "Op iPhone en iPad met iOS 26 of iPadOS 26 of nieuwer, en op Mac-computers met Apple silicon. De app voor Apple Watch hoort bij SimpleTime Pro en vereist watchOS 26. Met hetzelfde Apple Account blijven je registraties op al deze apparaten gesynchroniseerd."
+            ]
+          },
+          {
+            "id": "languages",
+            "q": "Welke talen spreekt SimpleTime?",
+            "a": [
+              "40 – van Nederlands, Engels en Duits tot Arabisch, Hindi en Japans. Onder Instellingen › Taal kies je de taal van de app, los van de taal van je apparaat."
+            ]
+          },
+          {
+            "id": "first-steps",
+            "q": "Hoe begin ik?",
+            "a": [
+              "Tik in het tabblad Registratie op + om een taak aan te maken – met naam, kleur en symbool. Tik op het driehoekje ernaast en de klok loopt; met Stop beëindig je hem. Bij de eerste start laat een korte rondleiding je de belangrijkste knoppen zien. Je kunt die altijd nog eens doorlopen via Instellingen › Rondleiding opnieuw bekijken."
+            ]
+          },
+          {
+            "id": "offline",
+            "q": "Werkt SimpleTime offline?",
+            "a": [
+              "Ja, volledig. Registreren, de dagweergave, grafieken en rapporten werken allemaal zonder verbinding. Synchronisatie en back-ups halen alles in zodra je apparaat weer online is."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tracking",
+        "title": "Registreren",
+        "items": [
+          {
+            "id": "start-stop",
+            "q": "Hoe start en stop ik een registratie?",
+            "a": [
+              "Tik op het driehoekje naast een taak om hem te starten. De lopende taak staat bovenaan in het tabblad Registratie; met Stop beëindig je hem. Een tik op de naam van een taak opent de subtaken, naar links vegen laat je hem wijzigen, archiveren of verwijderen, en naar rechts vegen toont de info met alle cijfers."
+            ]
+          },
+          {
+            "id": "one-at-a-time",
+            "q": "Kunnen twee taken tegelijk lopen?",
+            "a": [
+              "Nee. Er loopt altijd hoogstens één registratie. Start je een andere taak, dan stopt de lopende registratie automatisch – zo overlappen je registraties nooit."
+            ]
+          },
+          {
+            "id": "add-later",
+            "q": "Ik ben vergeten te starten – kan ik tijd achteraf invoeren?",
+            "a": [
+              "Ja. Voeg in het tabblad Dag een nieuwe registratie toe met begin en einde, of tik op een bestaande om die te wijzigen. Registraties kunnen niet overlappen: SimpleTime laat het weten als een periode botst met een andere registratie. Bij een registratie die nog loopt, kun je de start ook terugzetten – tot het einde van de vorige registratie."
+            ]
+          },
+          {
+            "id": "subtasks",
+            "q": "Hoe werken subtaken?",
+            "a": [
+              "Tik op de naam van een taak om hem te openen en voeg daar met + subtaken toe. Je kunt ze zo diep nesten als je werk is – klant, project, fase. In grafieken, rapporten en doelen tellen subtaken mee bij de taak erboven."
+            ]
+          },
+          {
+            "id": "order",
+            "q": "Hoe houd ik mijn takenlijst overzichtelijk?",
+            "a": [
+              "Markeer de taken die je elke dag gebruikt als favoriet – die blijven bovenaan staan. De rest sorteer je alfabetisch, op meest gebruikt, op recent gebruikt of in een eigen volgorde. Een kleur en een symbool – of een emoji – maken elke taak makkelijk herkenbaar."
+            ]
+          },
+          {
+            "id": "archive-trash",
+            "q": "Wat is het verschil tussen archiveren en verwijderen?",
+            "a": [
+              "Archiveren verbergt een taak alleen: de registraties blijven en tellen in alle analyses gewoon mee. Verwijderen verplaatst de taak samen met de registraties naar de prullenmand. Van daaruit kun je beide herstellen – of definitief verwijderen."
+            ]
+          },
+          {
+            "id": "notes",
+            "q": "Kan ik notities bij registraties zetten?",
+            "a": [
+              "Ja, elke registratie kan een notitie hebben – waaraan je hebt gewerkt, of met wie je hebt afgesproken. Notities staan in de dagweergave en zitten in de CSV-export en in de back-ups."
+            ]
+          },
+          {
+            "id": "reminders",
+            "q": "Kan SimpleTime me herinneren?",
+            "a": [
+              "Ja. In de instellingen stel je onder Meldingen regels in – bijvoorbeeld een herinnering als een taak al 60 minuten loopt, voor alle taken of alleen voor gekozen taken, op de weekdagen die jij kiest. SimpleTime kan je ook herinneren als er een tijdje niets is geregistreerd."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "insights",
+        "title": "Dagweergave en analyses",
+        "items": [
+          {
+            "id": "day-view",
+            "q": "Wat laat de dagweergave zien?",
+            "a": [
+              "Elke registratie van een dag met begin, einde en duur – als lijst of als tijdlijn van 0 tot 24 uur, met een markering op het huidige tijdstip. Bovenaan zie je hoe vandaag zich verhoudt tot gisteren."
+            ]
+          },
+          {
+            "id": "charts",
+            "q": "Welke grafieken en statistieken zijn er?",
+            "a": [
+              "Cirkeldiagrammen per taak en per productiviteit, voor een dag, een week, een maand of een jaar. Onder Meer statistieken vind je de vergelijking met de vorige periode, het verloop, de verdeling van je tijd over de dag, je belangrijkste taken en de langste en kortste registratie. Elke taak heeft daarnaast een eigen infopagina – eerste registratie, langste registratie, deze week, dit jaar."
+            ]
+          },
+          {
+            "id": "productivity",
+            "q": "Wat is de productiviteitsscore?",
+            "a": [
+              "Je kunt elke taak een categorie geven: productief, onproductief, noodzakelijk – of niet meetellen. De score laat zien hoeveel van je geregistreerde tijd productief of noodzakelijk was: (productief + noodzakelijk) ÷ totale tijd × 100."
+            ]
+          },
+          {
+            "id": "share-chart",
+            "q": "Kan ik een grafiek delen?",
+            "a": [
+              "Ja, elke grafiek kun je als afbeelding delen of in Foto’s bewaren. Om te bewaren vraagt SimpleTime alleen toestemming om foto’s toe te voegen – je fotobibliotheek kan de app niet zien."
+            ]
+          },
+          {
+            "id": "pdf-report",
+            "q": "Hoe maak ik een pdf-rapport?",
+            "a": [
+              "Kies onder Instellingen › Rapport exporteren een periode (van vandaag tot de hele periode, of een eigen periode), zet de onderdelen aan die je wilt en sleep ze in de juiste volgorde. SimpleTime maakt de pdf met elke taak en subtaak, klaar om te delen of te bewaren. SimpleTime Pro voegt extra onderdelen toe: verloop, dagverdeling, vergelijking en doelen."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shortcuts",
+        "title": "Widgets, Siri en Focus",
+        "items": [
+          {
+            "id": "widgets",
+            "q": "Welke widgets zijn er?",
+            "a": [
+              "Voor het beginscherm: Vandaag, Lopende taak en Week. Voor het toegangsscherm: wat er loopt en hoe lang al. Daarnaast is er een schakelaar voor het bedieningspaneel. Loopt er een taak, dan zie je die als Live activiteit op het toegangsscherm en in het Dynamic Island. Met SimpleTime Pro krijg je er een snelstart-widget bij die je met je eigen taken vult."
+            ]
+          },
+          {
+            "id": "without-opening",
+            "q": "Kan ik registreren zonder de app te openen?",
+            "a": [
+              "Ja, op verschillende manieren. Houd het appsymbool ingedrukt om te stoppen wat er loopt of om een van je taken te starten. Typ de naam van een taak in de zoekfunctie van de iPhone en tik erop. Of gebruik de schakelaar in het bedieningspaneel, een widget, Siri – of, met SimpleTime Pro, je Apple Watch."
+            ]
+          },
+          {
+            "id": "siri",
+            "q": "Hoe werkt SimpleTime met Siri en Opdrachten?",
+            "a": [
+              "Zeg bijvoorbeeld „Start Work in SimpleTime”, „Stop tracking in SimpleTime”, „How much did I track today in SimpleTime?” of „What’s running in SimpleTime?”. Deze zinnen begrijpt Siri in het Engels en het Duits. In elke taal staan de acties klaar in de Opdrachten-app, waar je ze ook een eigen zin kunt geven."
+            ]
+          },
+          {
+            "id": "focus-filter",
+            "q": "Wat doet het focusfilter?",
+            "a": [
+              "Met een focusfilter volgt SimpleTime je focus: gaat „Werk” aan, dan toont de takenlijst alleen je werkcategorie – en de registratie kan met de focus beginnen en eindigen. Instellen doe je in de iOS-instellingen onder Focus › je focus › Focusfilters › Voeg filter toe › SimpleTime. Het focusfilter hoort bij SimpleTime Pro."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Synchronisatie, back-up en export",
+        "items": [
+          {
+            "id": "sync",
+            "q": "Synchroniseert SimpleTime tussen mijn apparaten?",
+            "a": [
+              "Ja, automatisch via iCloud – op elk apparaat dat met hetzelfde Apple Account is ingelogd. Wanneer de synchronisatie loopt, bepaalt het systeem; de instellingen laten zien wanneer die voor het laatst liep, en daar kun je die ook controleren."
+            ]
+          },
+          {
+            "id": "without-icloud",
+            "q": "Kan ik SimpleTime zonder iCloud gebruiken?",
+            "a": [
+              "Ja. Zonder iCloud blijven je gegevens op dit ene apparaat. De synchronisatie zet je aan of uit in de iOS-instellingen onder je naam › iCloud. Zonder iCloud zijn back-ups die je exporteert en ergens veilig bewaart des te belangrijker."
+            ]
+          },
+          {
+            "id": "backups",
+            "q": "Hoe werken back-ups?",
+            "a": [
+              "Onder Instellingen › Gegevens exporteren / importeren zet je automatische back-ups aan – elk uur, dagelijks, wekelijks of maandelijks. SimpleTime slaat ze op als JSON-bestanden in iCloud Drive, in de map „SimpleTime/Backups”, en bewaart de laatste 20. Je kunt ook altijd zelf een back-up exporteren."
+            ]
+          },
+          {
+            "id": "backup-password",
+            "q": "Kan ik mijn back-ups met een wachtwoord beveiligen?",
+            "a": [
+              "Ja. Met een wachtwoord wordt het back-upbestand op je apparaat versleuteld voordat het wordt opgeslagen. Bewaar het wachtwoord goed: zonder wachtwoord kan niemand de back-up herstellen – jij niet en wij ook niet. Er is geen omweg."
+            ]
+          },
+          {
+            "id": "restore",
+            "q": "Hoe herstel ik een back-up?",
+            "a": [
+              "Via Instellingen › Gegevens exporteren / importeren › Back-up uit JSON importeren. Je bestaande gegevens blijven behouden en wat ontbreekt, wordt aangevuld. Wacht op een nieuw apparaat eerst tot de iCloud-synchronisatie je gegevens heeft geleverd – anders kunnen taken dubbel verschijnen."
+            ]
+          },
+          {
+            "id": "export",
+            "q": "Kan ik mijn gegevens exporteren?",
+            "a": [
+              "Ja, altijd: als CSV-bestand met taak, notitie, duur, begin en einde (voor Excel, Numbers of elk ander analyseprogramma), als pdf-rapport of als volledige back-up in JSON."
+            ]
+          },
+          {
+            "id": "import",
+            "q": "Kan ik gegevens uit een andere app importeren?",
+            "a": [
+              "Niet direct. SimpleTime importeert zijn eigen back-ups (JSON); CSV-bestanden uit andere apps kunnen niet worden geïmporteerd."
+            ]
+          },
+          {
+            "id": "new-device",
+            "q": "Hoe stap ik over op een nieuwe iPhone?",
+            "a": [
+              "Log in met hetzelfde Apple Account en installeer SimpleTime – iCloud zet je registraties vanzelf terug. Gebruik je geen iCloud, exporteer dan op het oude apparaat een back-up en importeer die op het nieuwe. Locaties horen bij elk apparaat afzonderlijk en worden niet gesynchroniseerd."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "privacy",
+        "title": "Privacy en beveiliging",
+        "items": [
+          {
+            "id": "data-location",
+            "q": "Waar worden mijn gegevens bewaard?",
+            "a": [
+              "Op je apparaten en in je persoonlijke iCloud. Niemand anders kan ze lezen – ook wij niet. SimpleTime heeft geen eigen servers."
+            ]
+          },
+          {
+            "id": "tracking-me",
+            "q": "Volgt SimpleTime mij?",
+            "a": [
+              "Nee. Geen analysetools, geen advertenties, geen SDK’s van derden, geen gebruikersprofielen. De app stuurt je gegevens niet naar ons en ook niet naar iemand anders. De details vind je in ons [privacybeleid](@privacy)."
+            ]
+          },
+          {
+            "id": "permissions",
+            "q": "Om welke toestemmingen vraagt SimpleTime?",
+            "a": [
+              "Alleen wat een functie nodig heeft, en pas als je die gebruikt: meldingen voor herinneringen en locatiemeldingen, je locatie voor de functie Locaties, foto’s toevoegen om afbeeldingen te bewaren, en Face ID of Touch ID voor de app-vergrendeling. In de instellingen onder Privacy › Overzicht en toestemmingen zie je ze allemaal met hun huidige status."
+            ]
+          },
+          {
+            "id": "location",
+            "q": "Waarom wil SimpleTime mijn locatie?",
+            "a": [
+              "Alleen voor locaties, die bij SimpleTime Pro horen: zodat een taak kan starten als je ergens aankomt. iOS houdt de gebieden in de gaten die je instelt en laat de app weten wanneer je aankomt of vertrekt. Je locaties blijven op je apparaat, en SimpleTime houdt niet bij waar je bent geweest. Gebruik je geen locaties, dan heeft SimpleTime je locatie niet nodig."
+            ]
+          },
+          {
+            "id": "app-lock",
+            "q": "Hoe werkt de app-vergrendeling?",
+            "a": [
+              "Onder Instellingen › App-vergrendeling kies je of SimpleTime opent met je iPhone-toegangscode – inclusief Face ID of Touch ID – of met een eigen code. In de appkiezer blijft SimpleTime afgedekt, en taaknamen verschijnen niet meer in de zoekfunctie van de iPhone of bij het appsymbool. Belangrijk: vergeet je je eigen code, dan kom je alleen weer in de app door hem te verwijderen en opnieuw te installeren."
+            ]
+          },
+          {
+            "id": "delete-all",
+            "q": "Hoe verwijder ik al mijn gegevens?",
+            "a": [
+              "In de instellingen onder Privacy › Alle gegevens verwijderen. Daarmee verwijder je alles in één keer – alle registraties en taken, de prullenmand, herinneringen, de back-ups in iCloud Drive, exports en instellingen – op dit apparaat, in iCloud en, zodra ze online zijn, op je andere apparaten. Dit kan niet ongedaan worden gemaakt."
+            ]
+          },
+          {
+            "id": "diagnostics",
+            "q": "Wat staat er onder Diagnose?",
+            "a": [
+              "Als SimpleTime crasht of vastloopt, geeft iOS de app daar een rapport over. De rapporten blijven op je apparaat en bevatten geen taken en geen tijden – alleen de plek in het programma waar het gebeurde. Als je wilt, kun je er een met ons delen: zo vinden we de fout."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pro",
+        "title": "SimpleTime Pro",
+        "items": [
+          {
+            "id": "pro-includes",
+            "q": "Wat zit er in SimpleTime Pro?",
+            "a": [
+              "De app voor Apple Watch, terugblikken op je week, maand en jaar, locaties, het jaar in één beeld, doelen, het focusfilter, een snelstart-widget, zeven accentkleuren of een eigen plus zestien app-symbolen, en extra onderdelen in het pdf-rapport. Wat er later bij komt, zit erbij. [Alles over SimpleTime Pro](@pro)"
+            ]
+          },
+          {
+            "id": "pro-price",
+            "q": "Wat kost SimpleTime Pro?",
+            "a": [
+              "Pro is er per maand, per jaar of als eenmalige aankoop „Levenslang”. De prijzen hangen af van je land en valuta en staan vóór de aankoop in de app."
+            ]
+          },
+          {
+            "id": "trial",
+            "q": "Kan ik Pro eerst uitproberen?",
+            "a": [
+              "Ja. Nieuwe abonnees kunnen Maandelijks of Jaarlijks een week gratis proberen; de app laat zien of de proefperiode voor jou geldt. Zeg je niet uiterlijk 24 uur voor het einde op, dan wordt het abonnement verlengd tegen de getoonde prijs."
+            ]
+          },
+          {
+            "id": "family",
+            "q": "Kan mijn gezin Pro ook gebruiken?",
+            "a": [
+              "Ja. SimpleTime Pro werkt met Delen met gezin – één aankoop voor maximaal zes personen."
+            ]
+          },
+          {
+            "id": "restore-purchase",
+            "q": "Hoe krijg ik Pro op mijn andere apparaten?",
+            "a": [
+              "Pro hoort bij je Apple Account. Op je andere apparaten met hetzelfde account is het meestal vanzelf ontgrendeld. Zo niet, tik dan op de Pro-pagina onder Instellingen › SimpleTime Pro op Herstel aankopen."
+            ]
+          },
+          {
+            "id": "cancel",
+            "q": "Hoe zeg ik mijn abonnement op?",
+            "a": [
+              "In je App Store-instellingen – op de iPhone onder Instellingen › je naam › Abonnementen – of in de app op de Pro-pagina onder Abonnement beheren. Pro blijft actief tot het einde van de periode die je al hebt betaald."
+            ]
+          },
+          {
+            "id": "lifetime-switch",
+            "q": "Ik heb een abonnement – kan ik overstappen op „Levenslang”?",
+            "a": [
+              "Ja, direct op de Pro-pagina. Apple stopt het abonnement daarbij echter niet vanzelf: zeg het daarna op, zodat het niet wordt verlengd. De app herinnert je eraan."
+            ]
+          },
+          {
+            "id": "pro-ends",
+            "q": "Wat gebeurt er als Pro afloopt?",
+            "a": [
+              "Er gaat niets verloren. Je registraties, doelen en locaties blijven bewaard. De Pro-functies zijn weer vergrendeld – locaties starten dan bijvoorbeeld geen taken meer – en alles is terug zodra Pro weer actief is."
+            ]
+          },
+          {
+            "id": "pro-offline",
+            "q": "Heeft Pro een internetverbinding nodig?",
+            "a": [
+              "Nee. SimpleTime controleert je aankoop bij de App Store wanneer dat kan. Zonder verbinding blijft Pro werken – tot twee weken zonder contact."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "watch-places",
+        "title": "Apple Watch en locaties",
+        "items": [
+          {
+            "id": "watch-setup",
+            "q": "Hoe stel ik de app voor Apple Watch in?",
+            "a": [
+              "De app voor Apple Watch hoort bij SimpleTime Pro. Installeer hem op je horloge en open SimpleTime daarna één keer op je iPhone – na een paar seconden toont het horloge je taken. Je iPhone blijft de bron: wat het horloge start, wordt daar geregistreerd, met dezelfde Live activiteit en dezelfde widgets."
+            ]
+          },
+          {
+            "id": "watch-features",
+            "q": "Wat kan ik op mijn Apple Watch doen?",
+            "a": [
+              "Starten en stoppen vanaf je pols – je favorieten, wat je het laatst gebruikte of elke taak via zoeken. Eerder starten: 5, 15, 30 of 60 minuten geleden, of naadloos vanaf het einde van je laatste registratie. Stoppen met dubbeltikken. Je dag, week en doelen in één oogopslag, met de lopende tijd op je wijzerplaat en in de slimme stapel. Is je iPhone buiten bereik, dan worden je tikken met hun tijdstip onthouden en later doorgegeven."
+            ]
+          },
+          {
+            "id": "places-how",
+            "q": "Hoe werken locaties?",
+            "a": [
+              "Voeg een locatie toe – bijvoorbeeld je kantoor of je sportschool – met een straal van 50 m tot 10 km, en kies een taak. Kom je aan, dan start de taak vanzelf, of SimpleTime vraagt het eerst. Met een wachttijd start er niets als je alleen voorbijkomt. Bij vertrek kan de taak stoppen, en je kunt een locatie beperken tot bepaalde dagen en tijden."
+            ]
+          },
+          {
+            "id": "places-late",
+            "q": "Waarom start een locatie te laat of helemaal niet?",
+            "a": [
+              "Locaties hebben locatietoegang „Altijd” nodig, met „Nauwkeurige locatie” aan. Onder 100 m merkt iOS je aankomst vaak pas laat op, omdat je locatie op de achtergrond meestal van wifi en het mobiele netwerk komt, niet van gps – een grotere straal helpt. iOS bewaakt hoogstens 20 locaties per app, en op de Mac zijn er geen locaties."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "more",
+        "title": "Overig",
+        "items": [
+          {
+            "id": "look",
+            "q": "Kan ik het uiterlijk van SimpleTime aanpassen?",
+            "a": [
+              "Ja: licht, donker of volgens het systeem, en drie regelhoogtes voor de takenlijst. Met SimpleTime Pro krijg je er zeven accentkleuren of een eigen kleur bij – die loopt door knoppen, schakelaars en grafieken – en zestien app-symbolen."
+            ]
+          },
+          {
+            "id": "accessibility",
+            "q": "Is SimpleTime toegankelijk?",
+            "a": [
+              "Ja. SimpleTime ondersteunt VoiceOver en dynamische tekst in de hele app. Werkt iets niet goed voor jou, laat het ons dan weten."
+            ]
+          },
+          {
+            "id": "freelance",
+            "q": "Is SimpleTime geschikt voor freelancers?",
+            "a": [
+              "Om je tijd vast te leggen wel: houd klanten en projecten gescheiden als taken en subtaken, en exporteer een pdf-rapport of een CSV-bestand wanneer je een overzicht nodig hebt. Uurtarieven en facturen horen niet bij SimpleTime – neem daarvoor de export mee naar je facturatieprogramma."
+            ]
+          },
+          {
+            "id": "platforms",
+            "q": "Is er een versie voor Android, Windows of het web?",
+            "a": [
+              "Nee. SimpleTime is gemaakt voor iPhone, iPad, Mac en Apple Watch. Je gegevens kun je altijd als CSV exporteren."
+            ]
+          },
+          {
+            "id": "feedback",
+            "q": "Ik heb een fout gevonden of een idee – waar kan ik dat kwijt?",
+            "a": [
+              "Mail ons op [contact@simple-time.app](mailto:contact@simple-time.app). Vermeld bij een fout graag je apparaatmodel en iOS-versie. Is SimpleTime gecrasht, dan helpt een rapport uit Instellingen › Diagnose enorm. Elk bericht wordt gelezen."
+            ]
+          },
+          {
+            "id": "support-us",
+            "q": "Hoe kan ik SimpleTime steunen?",
+            "a": [
+              "SimpleTime wordt door één persoon gemaakt. Een beoordeling in de App Store helpt, net als anderen erover vertellen – en SimpleTime Pro houdt de ontwikkeling gaande."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "updated": "Laatst bijgewerkt",
+    "translationNote": "Dit is een vertaling van het Duitse privacybeleid. Bij twijfel geldt [de Duitse versie](@privacy-de).",
+    "summaryTitle": "In het kort",
+    "summary": [
+      "Jouw tijd is van jou. SimpleTime heeft geen account nodig, toont geen advertenties en volgt je niet.",
+      "Je registraties staan op je apparaten en in je persoonlijke iCloud – niemand anders kan ze lezen, ook wij niet. SimpleTime heeft geen eigen servers.",
+      "Deze website plaatst geen eigen cookies, gebruikt geen analysetools en laadt niets van derden."
+    ],
+    "sections": [
+      {
+        "id": "controller",
+        "title": "Wie is verantwoordelijk",
+        "paragraphs": [
+          "Verwerkingsverantwoordelijke in de zin van de Algemene Verordening Gegevensbescherming (AVG) voor de app SimpleTime en deze website is:"
+        ],
+        "address": true
+      },
+      {
+        "id": "app",
+        "title": "De app SimpleTime",
+        "paragraphs": [
+          "SimpleTime is zo gebouwd dat we je gegevens niet nodig hebben. Alles wat je invoert – taken, registraties met hun tijden en notities, doelen, herinneringen en instellingen – wordt op je apparaat opgeslagen. De app bevat geen analysetools, geen advertenties en geen SDK’s van derden, en stuurt je gegevens niet naar servers van ons: die zijn er niet. We hebben op geen enkel moment toegang tot je gegevens."
+        ],
+        "subsections": [
+          {
+            "title": "iCloud-synchronisatie",
+            "paragraphs": [
+              "Als je bij iCloud bent ingelogd, synchroniseert SimpleTime je gegevens tussen je apparaten via CloudKit van Apple, in de privédatabase van je iCloud-account. Apple verzendt en bewaart de gegevens versleuteld; het privacybeleid van Apple is van toepassing. Wij kunnen deze gegevens niet inzien en hebben er geen toegang toe. Je kunt de synchronisatie uitschakelen in de iOS-instellingen onder je naam › iCloud – je gegevens blijven dan op het apparaat."
+            ]
+          },
+          {
+            "title": "Back-ups",
+            "paragraphs": [
+              "Als je automatische back-ups aanzet of een back-up exporteert, slaat SimpleTime een bestand op met je taken, registraties en herinneringen – automatisch in je iCloud Drive (map „SimpleTime/Backups”) of op een plek die jij kiest. Als je een wachtwoord instelt, wordt het bestand op je apparaat versleuteld (AES-GCM) voordat het wordt opgeslagen; zonder het wachtwoord kan niemand het openen – ook wij niet. Van de automatische back-ups worden de laatste 20 bewaard."
+            ]
+          },
+          {
+            "title": "Locatie (locaties)",
+            "paragraphs": [
+              "Alleen als je locaties instelt – een functie van SimpleTime Pro – vraagt SimpleTime om toegang tot je locatie. iOS bewaakt dan de gebieden die je hebt vastgelegd en laat de app weten wanneer je aankomt of vertrekt; SimpleTime gebruikt dit uitsluitend om de bijbehorende taak te starten of te stoppen. Je locaties worden alleen op dit apparaat bewaard en niet gesynchroniseerd. SimpleTime houdt niet bij waar je bent geweest en geeft je locatie niet door.",
+              "Als je in de locatie-editor naar een adres zoekt of de kaart gebruikt, worden de zoekfunctie en de kaart geleverd door Apple Kaarten; het privacybeleid van Apple is van toepassing. Je kunt de toegang tot je locatie altijd intrekken in de iOS-instellingen."
+            ]
+          },
+          {
+            "title": "Meldingen",
+            "paragraphs": [
+              "Herinneringen en locatiemeldingen worden op je apparaat aangemaakt en daar als lokale meldingen afgeleverd. Om de synchronisatie actueel te houden, kan iCloud de app op de achtergrond wekken via de pushdienst van Apple; deze berichten bevatten geen inhoud van jou."
+            ]
+          },
+          {
+            "title": "Foto’s",
+            "paragraphs": [
+              "Om een grafiek of een terugblik als afbeelding te bewaren, vraagt SimpleTime toestemming om foto’s toe te voegen. De app kan alleen afbeeldingen toevoegen – je fotobibliotheek kan hij niet zien."
+            ]
+          },
+          {
+            "title": "App-vergrendeling, Face ID en Touch ID",
+            "paragraphs": [
+              "Als je de app-vergrendeling gebruikt, controleert iOS Face ID, Touch ID of de toegangscode van je apparaat; SimpleTime krijgt alleen te horen of de controle is gelukt. Je eigen code en het back-upwachtwoord worden bewaard in de sleutelhanger op je apparaat."
+            ]
+          },
+          {
+            "title": "Siri, Opdrachten, zoeken en widgets",
+            "paragraphs": [
+              "Als je Siri gebruikt, verwerkt Apple je verzoek; SimpleTime ontvangt alleen de herkende actie. Zodat je taken vanuit de zoekfunctie van de iPhone kunt starten, komen taaknamen in de zoekindex op je apparaat – maar niet zolang de app-vergrendeling aan staat. Widgets, de Live activiteit en de app voor Apple Watch krijgen hun gegevens van de app op je apparaten; het horloge ontvangt ze rechtstreeks van je iPhone."
+            ]
+          },
+          {
+            "title": "Diagnose",
+            "paragraphs": [
+              "Als SimpleTime crasht of vastloopt, geeft iOS de app een diagnoserapport. Dat blijft op je apparaat, bevat geen taken en geen tijden, en verlaat je apparaat alleen als je het zelf deelt – bijvoorbeeld per e-mail met ons. Los daarvan geldt: als je hebt toegestaan dat je apparaat analysegegevens deelt met appontwikkelaars (iOS-instellingen › Privacy en beveiliging › Analyse en verbeteringen), stelt Apple ons crashrapporten en statistieken ter beschikking die jou niet identificeren."
+            ]
+          },
+          {
+            "title": "Aankopen",
+            "paragraphs": [
+              "SimpleTime Pro wordt via de App Store gekocht. Apple handelt de betaling en het abonnement af; we ontvangen geen betaalgegevens en geen persoonsgegevens over jou. De app vraagt de App Store alleen of Pro actief is. Van Apple ontvangen we verkooprapporten zonder persoonsgegevens."
+            ]
+          },
+          {
+            "title": "Beoordelingen",
+            "paragraphs": [
+              "SimpleTime kan één keer om een beoordeling vragen, via het systeemvenster van Apple. We komen niet te weten of en hoe je hebt beoordeeld."
+            ]
+          },
+          {
+            "title": "Exporteren en delen",
+            "paragraphs": [
+              "CSV-bestanden, pdf-rapporten, back-ups en afbeeldingen worden op je apparaat aangemaakt. Waar ze naartoe gaan, bepaal jij – in het deelmenu."
+            ]
+          },
+          {
+            "title": "Je gegevens verwijderen",
+            "paragraphs": [
+              "In de instellingen van de app verwijder je onder Privacy › Alle gegevens verwijderen in één keer alles wat SimpleTime heeft bewaard – op dit apparaat, in iCloud en in de back-ups in iCloud Drive; via iCloud bereikt het verwijderen ook je andere apparaten. Als je de app verwijdert, verdwijnen de gegevens ervan van dat apparaat."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "website",
+        "title": "Deze website",
+        "subsections": [
+          {
+            "title": "Hosting en uitlevering",
+            "paragraphs": [
+              "simple-time.app wordt uitgeleverd door Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, VS. Als je een pagina opent, verstuurt je browser noodzakelijkerwijs technische gegevens – met name je IP-adres, de opgevraagde pagina, het tijdstip en de identificatie van je browser (user agent). Cloudflare verwerkt deze gegevens om de website uit te leveren en te beschermen tegen aanvallen en misbruik, en kan ze daarvoor kortstondig in logbestanden bewaren. De rechtsgrond is ons gerechtvaardigd belang bij een veilige en betrouwbare website (art. 6 lid 1 sub f AVG). Cloudflare is gecertificeerd onder het EU-U.S. Data Privacy Framework, en we hebben met Cloudflare een verwerkersovereenkomst gesloten. Meer informatie: [cloudflare.com/privacypolicy](https://www.cloudflare.com/privacypolicy/)"
+            ]
+          },
+          {
+            "title": "Foutrapporten",
+            "paragraphs": [
+              "Als een pagina niet kan worden geladen, kan je browser een kort technisch foutrapport naar Cloudflare sturen (Network Error Logging) – bijvoorbeeld het adres, het soort fout en je IP-adres. Dit dient uitsluitend om netwerkproblemen op te sporen."
+            ]
+          },
+          {
+            "title": "Cookies en lokale opslag",
+            "paragraphs": [
+              "We plaatsen geen cookies. In afzonderlijke gevallen kan Cloudflare een technisch noodzakelijke cookie (__cf_bm) plaatsen om mensen en bots van elkaar te onderscheiden; die wordt niet gebruikt voor tracking. Als je wisselt tussen de lichte en de donkere modus, bewaart je browser deze keuze in zijn lokale opslag – ze verlaat je apparaat nooit. De zoekfunctie op de vragenpagina werkt volledig in je browser."
+            ]
+          },
+          {
+            "title": "Geen analysetools, geen derden",
+            "paragraphs": [
+              "Deze website gebruikt geen analyse- of trackingtools, geen advertenties en geen plug-ins van sociale media, en laadt geen lettertypen of scripts van andere servers. Links naar de App Store brengen je naar Apple, waar het privacybeleid van Apple van toepassing is."
+            ]
+          },
+          {
+            "title": "E-mail",
+            "paragraphs": [
+              "Als je ons schrijft, gebruiken we je e-mailadres en je bericht om je te antwoorden (art. 6 lid 1 sub b en f AVG). Onze e-mail wordt in onze opdracht gehost door IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Duitsland. We verwijderen berichten zodra ze niet meer nodig zijn, tenzij we wettelijk verplicht zijn ze te bewaren."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rights",
+        "title": "Je rechten",
+        "paragraphs": [
+          "Je hebt het recht op inzage in je gegevens (art. 15 AVG), op rectificatie (art. 16) of wissing ervan (art. 17), op beperking van de verwerking (art. 18), op overdraagbaarheid van gegevens (art. 20) en om bezwaar te maken tegen verwerking op grond van gerechtvaardigde belangen (art. 21). Om deze rechten uit te oefenen, schrijf je ons gewoon. Omdat de app bij ons niets over jou opslaat, gaat een verzoek meestal over e-mails of deze website; je app-gegevens kun je altijd zelf inzien, exporteren en verwijderen.",
+          "Je hebt ook het recht om een klacht in te dienen bij een toezichthoudende autoriteit voor gegevensbescherming – bijvoorbeeld bij het Beierse staatsbureau voor toezicht op de gegevensbescherming (BayLDA), Promenade 18, 91522 Ansbach, Duitsland."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Wijzigingen",
+        "paragraphs": [
+          "We passen dit privacybeleid aan als de app, de website of de wet verandert. De datum bovenaan geeft de geldende versie aan."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+---
+import type { Lang } from '../i18n/ui';
+import { segments } from '../i18n/content';
+
+interface Props {
+  text: string;
+  lang: Lang;
+}
+
+// Renders the copy's one piece of markup – `[text](target)` – as real links,
+// without set:html: a translation can never inject anything else.
+const { text, lang } = Astro.props;
+const parts = segments(text, lang);
+---
+
+{
+  parts.map((part) =>
+    part.href ? (
+      <a
+        href={part.href}
+        class="font-medium text-accent underline decoration-accent/30 underline-offset-2 transition-colors hover:decoration-accent"
+        {...(part.external ? { target: '_blank', rel: 'noopener' } : {})}
+      >
+        {part.text}
+      </a>
+    ) : (
+      part.text
+    ),
+  )
+}

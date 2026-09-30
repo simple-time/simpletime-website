@@ -32,6 +32,11 @@ jobs:
       - name: Install
         run: npm ci --ignore-scripts
 
+      # Every language must carry every key English has – a missing one would
+      # silently show English or nothing on that language's pages.
+      - name: Check translations
+        run: node scripts/check-content.mjs
+
       - name: Build
         run: npm run build
 

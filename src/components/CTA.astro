@@ -1,14 +1,21 @@
 ---
 import type { Lang } from '../i18n/ui';
 import { useTranslations } from '../i18n/utils';
+import { getContent } from '../i18n/content';
 import AppStoreButton from './AppStoreButton.astro';
 
 interface Props {
   lang: Lang;
+  /** Defaults to the home page's closing words; the Pro page brings its own. */
+  title?: string;
+  subtitle?: string;
+  note?: string;
 }
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+const { cta } = getContent(lang).home;
+const { title = cta.title, subtitle = cta.subtitle, note = cta.note } = Astro.props;
 ---
 
 <section class="px-5 py-20 sm:px-8 sm:py-24">
@@ -30,14 +37,12 @@ const t = useTranslations(lang);
         height="64"
         class="mx-auto mb-7 h-16 w-16 rounded-[22%] shadow-lg ring-1 ring-white/15"
       />
-      <h2 class="text-display text-3xl font-bold sm:text-[2.75rem]">{t('cta.title')}</h2>
-      <p class="text-balance mx-auto mt-5 max-w-lg text-[17px] text-white/85">
-        {t('cta.subtitle')}
-      </p>
+      <h2 class="text-display text-3xl font-bold sm:text-[2.75rem]">{title}</h2>
+      <p class="text-balance mx-auto mt-5 max-w-lg text-[17px] text-white/85">{subtitle}</p>
       <div class="mt-9 flex justify-center">
-        <AppStoreButton label={t('cta.button')} variant="onAccent" size="lg" />
+        <AppStoreButton label={t('appstore.download')} variant="onAccent" size="lg" />
       </div>
-      <p class="mt-6 text-[13px] text-brand-100/85">{t('hero.availability')}</p>
+      {note && <p class="mt-6 text-[13px] text-brand-100/85">{note}</p>}
     </div>
   </div>
 </section>

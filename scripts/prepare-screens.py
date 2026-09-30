@@ -1,112 +1,89 @@
 #!/usr/bin/env python3
-"""Turn the App Store marketing images into clean device screens.
+"""Copy the app's own screenshots into the site, one set per language.
 
-The marketing exports in src/assets/appstore are 1320x2868 canvases that
-contain a blue background, a baked-in headline and a device mockup whose
-bottom runs off the canvas. This script:
+The website shows the same screens as the App Store: the raw simulator
+screenshots the App Store images are composed from (StoreShots in the app
+repository), in the visitor's language. They are already at the iPhone's
+true 1320:2868 ratio, so they only need to be scaled down and converted.
 
-  1. crops the app UI out of the device mockup,
-  2. extends it to the true iPhone screen ratio (1320:2868), fading the
-     last rows of content into the screen's own background colour so the
-     list reads as continuing below the fold,
-  3. draws the home indicator that the crop cut away.
+  src/assets/screens/<lang>/<name>.webp   iPhone, 720 px wide
+  src/assets/watch/<lang>/<name>.webp     Apple Watch, 416 x 496
+  src/assets/pro/                         the Pro mark and the app icons
 
-Run after replacing the App Store screenshots:
+Armenian has no App Store page and therefore no screenshots; the pages fall
+back to English (see src/i18n/screens.ts).
 
-    python3 scripts/prepare-screens.py
+Run after new App Store screenshots were taken:
+
+    python3 scripts/prepare-screens.py [path/to/SimpleTime-app-folder]
 """
 
-from collections import Counter
+import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "src/assets/appstore"
-OUT = ROOT / "src/assets/screens"
+APP = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.home() / "XcodeProjects/SimpleTime"
+PHONE_SRC = APP / "Screenshots-4.0"
+WATCH_SRC = APP / "SimpleTime/StoreShots/fertig/uhr"
+ASSETS_SRC = APP / "SimpleTime/SimpleTime/Assets.xcassets"
 
-# Screen ratio of the App Store canvas these exports were rendered at.
-SCREEN_RATIO = 1320 / 2868
+OUT = ROOT / "src/assets"
 
-# Where the app UI sits inside each single-device mockup. All five share
-# the same layout, so one rectangle covers them.
-SINGLE_CROP = (155, 966, 1163, 2868)
+# Website language -> folder name in the app repository.
+LANGS = {
+    "en": "en", "de": "de", "nl": "nl", "sv": "sv", "fr": "fr", "it": "it", "es": "es",
+    "pt": "pt", "ru": "ru", "uk": "uk", "el": "el", "tr": "tr", "ar": "ar", "he": "he",
+    "hi": "hi", "zh": "zh-Hans", "ja": "ja",
+}
 
-SOURCES = [
-    ("1.png", "track", SINGLE_CROP),
-    ("2.png", "customize", SINGLE_CROP),
-    ("3.png", "overview", SINGLE_CROP),
-    ("4.png", "timeline", SINGLE_CROP),
-    ("5.png", "analyze", SINGLE_CROP),
-    # 6.png stacks two devices; this is the front one.
-    ("6.png", "reports", (540, 1538, 1241, 2868)),
-]
+# The seven App Store images, in App Store order, plus the second report page.
+PHONE = {
+    "tracking": "01-tracking.png",
+    "day": "02-day-list.png",
+    "timeline": "03-day-timeline.png",
+    "chart": "04-chart-week.png",
+    "statistics": "05-statistics.png",
+    "report": "10-report-1.png",
+    "report-2": "11-report-2.png",
+    "pro": "08-pro.png",
+}
+WATCH = {"running": "1-laeuft.png", "start": "2-starten.png"}
+PHONE_WIDTH = 720
 
-# Home indicator geometry, in fractions of screen width (iPhone: 139x5pt
-# on a 440pt-wide screen, sitting 8pt above the bottom edge).
-INDICATOR_W = 139 / 440
-INDICATOR_H = 5 / 440
-INDICATOR_BOTTOM = 8 / 440
-
-
-def background_colour(img: Image.Image) -> tuple[int, int, int]:
-    """The most common colour in the lower third — the page background."""
-    w, h = img.size
-    lower = img.crop((0, int(h * 0.66), w, h))
-    pixels = list(lower.resize((w // 6, (h - int(h * 0.66)) // 6)).get_flattened_data())
-    return Counter(pixels).most_common(1)[0][0]
+# The eight colourways, each shown with the Pro star.
+ICONS = ["Standard", "Petrol", "Violet", "Slate", "Forest", "Burgundy", "Graphite", "Espresso"]
 
 
-def extend(img: Image.Image) -> Image.Image:
-    """Pad the bottom to the true screen ratio, fading content into the
-    background so the cut never reads as a broken image."""
-    w, h = img.size
-    target_h = round(w / SCREEN_RATIO)
-    if target_h <= h:
-        return img
-
-    bg = background_colour(img)
-    canvas = Image.new("RGB", (w, target_h), bg)
-    canvas.paste(img, (0, 0))
-
-    # Fade the final rows of real content into the background colour.
-    fade_h = round(w * 0.13)
-    overlay = Image.new("RGB", (w, fade_h), bg)
-    alpha = Image.new("L", (w, fade_h))
-    draw = ImageDraw.Draw(alpha)
-    for y in range(fade_h):
-        draw.line([(0, y), (w, y)], fill=round(255 * (y / (fade_h - 1)) ** 1.4))
-    canvas.paste(overlay, (0, h - fade_h), alpha)
-
-    return canvas
-
-
-def draw_indicator(img: Image.Image) -> None:
-    w, h = img.size
-    bar_w = round(w * INDICATOR_W)
-    bar_h = max(2, round(w * INDICATOR_H))
-    x0 = (w - bar_w) // 2
-    y0 = h - round(w * INDICATOR_BOTTOM) - bar_h
-
-    # Dark bar at ~30% on light backgrounds, matching iOS.
-    bar = Image.new("RGB", (w, h), (0, 0, 0))
-    mask = Image.new("L", (w, h), 0)
-    ImageDraw.Draw(mask).rounded_rectangle(
-        [x0, y0, x0 + bar_w, y0 + bar_h], radius=bar_h / 2, fill=77
-    )
-    img.paste(bar, (0, 0), mask)
+def save_webp(img: Image.Image, target: Path, quality: int = 84) -> int:
+    target.parent.mkdir(parents=True, exist_ok=True)
+    img.save(target, "WEBP", quality=quality, method=6)
+    return target.stat().st_size
 
 
 def main() -> None:
-    OUT.mkdir(parents=True, exist_ok=True)
-    for filename, name, box in SOURCES:
-        src = Image.open(SRC / filename).convert("RGB")
-        screen = extend(src.crop(box))
-        draw_indicator(screen)
-        target = OUT / f"{name}.png"
-        screen.save(target, optimize=True)
-        w, h = screen.size
-        print(f"{target.name:16} {w}x{h}  ratio={w / h:.4f}")
+    total = 0
+    for lang, folder in LANGS.items():
+        for name, file in PHONE.items():
+            src = PHONE_SRC / folder / file
+            img = Image.open(src).convert("RGB")
+            if img.size != (1320, 2868):
+                raise SystemExit(f"{src}: {img.size}, expected 1320 x 2868")
+            height = round(PHONE_WIDTH * img.height / img.width)
+            total += save_webp(img.resize((PHONE_WIDTH, height), Image.LANCZOS), OUT / f"screens/{lang}/{name}.webp")
+        for name, file in WATCH.items():
+            src = WATCH_SRC / folder / file
+            total += save_webp(Image.open(src).convert("RGB"), OUT / f"watch/{lang}/{name}.webp", quality=88)
+
+    mark = Image.open(ASSETS_SRC / "ProMark.imageset/ProMark.png").convert("RGB")
+    total += save_webp(mark, OUT / "pro/mark.webp", quality=90)
+    for icon in ICONS:
+        src = ASSETS_SRC / f"IconPreviewStar{icon}.imageset/IconPreviewStar{icon}.png"
+        img = Image.open(src).convert("RGB").resize((160, 160), Image.LANCZOS)
+        total += save_webp(img, OUT / f"pro/icon-{icon.lower()}.webp", quality=90)
+
+    print(f"{len(LANGS)} languages, {total / 1_000_000:.1f} MB written to {OUT.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

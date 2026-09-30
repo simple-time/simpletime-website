@@ -39,7 +39,9 @@ test('browser and accessibility baseline', async ({ page }, testInfo) => {
   await expect(page.locator('html')).toHaveAttribute('dir', dir);
   await expect(page.locator('h1')).toHaveCount(1);
   await expect(page.locator('main')).toHaveCount(1);
-  await expect(page.locator('nav')).toHaveCount(1);
+  // The site navigation, once. Pages may add their own labelled <nav> –
+  // the FAQ's topics, the privacy policy's contents.
+  await expect(page.locator('header nav')).toHaveCount(1);
   await expect(page.locator('footer')).toHaveCount(1);
 
   expect(pageErrors, `page errors on ${route}`).toEqual([]);

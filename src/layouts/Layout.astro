@@ -88,7 +88,7 @@ const appSchema = {
   '@type': 'SoftwareApplication',
   name: 'SimpleTime',
   applicationCategory: 'ProductivityApplication',
-  operatingSystem: 'iOS, iPadOS, macOS',
+  operatingSystem: 'iOS, iPadOS, macOS, watchOS',
   url: site.toString(),
   description: metaDescription,
   offers: {
@@ -140,7 +140,7 @@ const jsonLdPayload = JSON.stringify(schemas).replace(/</g, '\\u003c');
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="SimpleTime — time tracker for iOS" />
+    <meta property="og:image:alt" content={t('meta.title')} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={metaTitle} />
     <meta name="twitter:description" content={metaDescription} />

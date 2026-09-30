@@ -1,0 +1,229 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../PageHeader.astro';
+import FaqEntry from '../FaqEntry.astro';
+import RichText from '../RichText.astro';
+import type { Lang } from '../../i18n/ui';
+import { useTranslations, getLocalizedPath, langPrefix } from '../../i18n/utils';
+import { getContent, plain } from '../../i18n/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const { faq } = getContent(lang);
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  inLanguage: lang,
+  mainEntity: faq.categories.flatMap((category) =>
+    category.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a.map(plain).join('\n\n') },
+    })),
+  ),
+};
+---
+
+<Layout
+  lang={lang}
+  path={getLocalizedPath(lang, '/faq/')}
+  title={t('meta.faq.title')}
+  description={t('meta.faq.description')}
+  jsonLd={[faqSchema]}
+>
+  <PageHeader title={faq.title} subtitle={faq.subtitle} />
+
+  <div
+    class="faq mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-16"
+    data-faq
+    data-results={faq.results}
+    data-no-results={faq.noResults}
+  >
+    {/* Search needs JavaScript, so it only appears once the page knows it has it. */}
+    <div class="faq-search">
+      <label for="faq-search" class="mb-2 block text-[14px] font-medium text-muted">{faq.searchLabel}</label>
+      <div class="relative">
+        <svg
+          class="pointer-events-none absolute start-4 top-1/2 h-5 w-5 -translate-y-1/2 text-subtle"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          aria-hidden="true"
+        >
+          <circle cx="10.5" cy="10.5" r="6.5"></circle>
+          <path d="M15.5 15.5L20 20"></path>
+        </svg>
+        <input
+          id="faq-search"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          enterkeyhint="search"
+          placeholder={faq.searchPlaceholder}
+          aria-describedby="faq-status"
+          class="w-full rounded-2xl border border-line-strong bg-surface py-3.5 pe-4 ps-12 text-[16px] text-ink placeholder:text-subtle focus:border-accent focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2"
+        />
+      </div>
+      <p id="faq-status" class="mt-3 min-h-[1.5em] text-[14px] text-subtle" aria-live="polite"></p>
+    </div>
+
+    <nav class="faq-topics mt-4" aria-label={faq.topics}>
+      <ul class="flex flex-wrap gap-2">
+        {
+          faq.categories.map((category) => (
+            <li>
+              <a
+                href={`#topic-${category.id}`}
+                class="inline-block rounded-full border border-line bg-surface px-3.5 py-1.5 text-[14px] text-muted transition-colors hover:border-line-strong hover:text-ink"
+              >
+                {category.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    {
+      faq.categories.map((category) => (
+        <section id={`topic-${category.id}`} class="mt-12 scroll-mt-24" data-faq-group>
+          <h2 class="text-display mb-5 text-2xl font-bold sm:text-[1.75rem]">{category.title}</h2>
+          <div class="faq-list overflow-hidden rounded-3xl border border-line bg-surface">
+            {category.items.map((item) => (
+              <FaqEntry lang={lang} item={item} anchor />
+            ))}
+          </div>
+        </section>
+      ))
+    }
+
+    <div id="faq-empty" class="mt-10 rounded-3xl border border-line bg-surface p-8 text-center" hidden>
+      <p id="faq-empty-text" class="text-[17px] font-medium text-ink"></p>
+      <p class="mt-2 text-[15px] text-muted"><RichText text={faq.noResultsHint} lang={lang} /></p>
+    </div>
+
+    <div class="mt-16 rounded-3xl bg-canvas-alt p-8 text-center sm:p-10">
+      <h2 class="text-xl font-semibold text-ink">{faq.moreTitle}</h2>
+      <p class="mt-2 text-[15px] text-muted">{faq.moreBody}</p>
+      <a
+        href={`${langPrefix(lang)}/contact/`}
+        class="mt-6 inline-flex rounded-full bg-accent px-6 py-3 font-medium text-on-accent transition-opacity hover:opacity-90"
+      >
+        {faq.moreButton}
+      </a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .faq-search {
+    display: none;
+  }
+
+  :global(.js) .faq-search {
+    display: block;
+  }
+
+  /* The site-wide focus ring rounds to 4px; the field keeps its own corners. */
+  #faq-search:focus-visible {
+    border-radius: 1rem;
+  }
+
+  /* Hairlines between the entries that are shown – not above the first one
+     left over after a search hides the others. */
+  .faq-list > :global(details:not([hidden]) ~ details:not([hidden])) {
+    border-top: 1px solid var(--line);
+  }
+</style>
+
+<script>
+  // Filters the questions as you type. Runs entirely in the browser: nothing
+  // is sent anywhere, and without JavaScript the full list simply stays visible.
+  const root = document.querySelector<HTMLElement>('[data-faq]');
+  const input = root?.querySelector<HTMLInputElement>('#faq-search');
+
+  if (root && input) {
+    const status = root.querySelector<HTMLElement>('#faq-status');
+    const empty = root.querySelector<HTMLElement>('#faq-empty');
+    const emptyText = root.querySelector<HTMLElement>('#faq-empty-text');
+    const topics = root.querySelector<HTMLElement>('.faq-topics');
+    const groups = [...root.querySelectorAll<HTMLElement>('[data-faq-group]')];
+    const lang = document.documentElement.lang;
+
+    // Case- and accent-insensitive: "resume" finds "résumé". Only Latin, Greek
+    // and Cyrillic accents are folded – other scripts carry meaning in their marks.
+    const fold = (text: string) =>
+      text.toLocaleLowerCase(lang).normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+    const index = [...root.querySelectorAll<HTMLDetailsElement>('[data-faq-item]')].map((item) => ({
+      item,
+      text: fold(item.textContent ?? ''),
+    }));
+
+    // Entries opened by the search close again when it no longer needs them.
+    const openedBySearch = new Set<HTMLDetailsElement>();
+
+    const apply = () => {
+      const query = input.value.trim();
+      const terms = fold(query).split(/\s+/).filter(Boolean);
+      let count = 0;
+
+      for (const { item, text } of index) {
+        const match = terms.every((term) => text.includes(term));
+        item.hidden = !match;
+        if (match) count++;
+      }
+      for (const group of groups) {
+        group.hidden = !group.querySelector('[data-faq-item]:not([hidden])');
+      }
+
+      for (const item of openedBySearch) {
+        if (item.hidden || terms.length === 0 || count > 3) {
+          item.open = false;
+          openedBySearch.delete(item);
+        }
+      }
+      // A handful of hits is an answer, not a list – show them opened.
+      if (terms.length > 0 && count <= 3) {
+        for (const { item } of index) {
+          if (!item.hidden && !item.open) {
+            item.open = true;
+            openedBySearch.add(item);
+          }
+        }
+      }
+
+      const searching = terms.length > 0;
+      if (topics) topics.hidden = searching;
+      if (status) status.textContent = searching ? (root.dataset.results ?? '').replace('{count}', String(count)) : '';
+      if (empty) empty.hidden = !(searching && count === 0);
+      if (emptyText && searching && count === 0) {
+        emptyText.textContent = (root.dataset.noResults ?? '').replace('{query}', query);
+      }
+    };
+
+    input.addEventListener('input', apply);
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && input.value) {
+        input.value = '';
+        apply();
+      }
+    });
+  }
+
+  // A link to /faq/#sync opens that answer, so support mails can point at one.
+  const openFromHash = () => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    const target = id ? document.getElementById(id) : null;
+    if (target instanceof HTMLDetailsElement) target.open = true;
+  };
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+</script>

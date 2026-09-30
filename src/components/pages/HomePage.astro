@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../Hero.astro';
+import Showcase from '../Showcase.astro';
+import Features from '../Features.astro';
+import ProBand from '../ProBand.astro';
+import Gallery from '../Gallery.astro';
+import Audience from '../Audience.astro';
+import FAQ from '../FAQ.astro';
+import CTA from '../CTA.astro';
+import type { Lang } from '../../i18n/ui';
+import { getLocalizedPath } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<Layout lang={lang} path={getLocalizedPath(lang, '/')}>
+  <Hero lang={lang} />
+  <Showcase lang={lang} />
+  <Features lang={lang} />
+  <ProBand lang={lang} />
+  <Gallery lang={lang} />
+  <Audience lang={lang} />
+  <FAQ lang={lang} />
+  <CTA lang={lang} />
+</Layout>

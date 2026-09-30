@@ -13,6 +13,8 @@ const year = new Date().getFullYear();
 const prefix = langPrefix(lang);
 const links = {
   home: `${prefix}/`,
+  pro: `${prefix}/pro/`,
+  faq: `${prefix}/faq/`,
   contact: `${prefix}/contact/`,
   imprint: `${prefix}/imprint/`,
   privacy: `${prefix}/privacy/`,
@@ -44,7 +46,12 @@ const links = {
             >
           </li>
           <li>
-            <a href={`${links.home}#faq`} class="inline-block py-1 text-muted transition-colors hover:text-ink"
+            <a href={links.pro} class="inline-block py-1 text-muted transition-colors hover:text-ink"
+              >{t('footer.pro')}</a
+            >
+          </li>
+          <li>
+            <a href={links.faq} class="inline-block py-1 text-muted transition-colors hover:text-ink"
               >{t('nav.faq')}</a
             >
           </li>

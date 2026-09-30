@@ -19,11 +19,17 @@ disconnected letters in the wrong order:
 
     pip install arabic-reshaper python-bidi
 
-Run after changing any hero copy:
+The copy is the home page's hero in each language – headline, eyebrow and
+the three promises under the buttons – read from src/i18n/content/<lang>.json,
+so the card says what the page says. The phone shows that language's
+Tracking screen.
+
+Run after changing any hero copy or the screenshots:
 
     python3 scripts/og-images.py
 """
 
+import json
 import re
 from pathlib import Path
 
@@ -38,7 +44,8 @@ HEBREW = ROOT / "node_modules/@fontsource/noto-sans-hebrew"
 JAPANESE = ROOT / "node_modules/@fontsource-variable/noto-sans-jp"
 CHINESE = ROOT / "node_modules/@fontsource-variable/noto-sans-sc"
 PUBLIC = ROOT / "public"
-SCREEN = ROOT / "src/assets/screens/track.png"
+SCREENS = ROOT / "src/assets/screens"
+CONTENT = ROOT / "src/i18n/content"
 
 W, H = 1200, 630
 
@@ -70,26 +77,23 @@ SUBSETS = [
     ),
 ]
 
-COPY = {
-    "en": ("Track time", "effortlessly.", "A clean time tracker for iPhone, iPad and Mac.", "Free · No account · No tracking"),
-    "nl": ("Jouw tijd,", "moeiteloos.", "Een heldere tijdregistratie voor iPhone, iPad en Mac.", "Gratis · Geen account · Geen tracking"),
-    "sv": ("Din tid,", "utan möda.", "En tydlig tidrapportering för iPhone, iPad och Mac.", "Gratis · Inget konto · Ingen spårning"),
-    "uk": ("Ваш час —", "без зусиль.", "Зрозумілий трекер часу для iPhone, iPad і Mac.", "Безкоштовно · Без акаунта · Без стеження"),
-    "el": ("Ο χρόνος σας,", "χωρίς κόπο.", "Καθαρή καταγραφή χρόνου για iPhone, iPad και Mac.", "Δωρεάν · Χωρίς λογαριασμό · Χωρίς παρακολούθηση"),
-    "he": ("הזמן שלכם,", "בלי מאמץ.", "מעקב זמן ברור עבור iPhone, iPad ו-Mac.", "חינם · בלי חשבון · בלי מעקב"),
-    "de": ("Zeit erfassen,", "ganz einfach.", "Zeiterfassung für iPhone, iPad und Mac.", "Kostenlos · Kein Konto · Keine Werbung"),
-    "fr": ("Votre temps,", "sans effort.", "Un suivi du temps clair pour iPhone, iPad et Mac.", "Gratuit · Sans compte · Sans pistage"),
-    "es": ("Tu tiempo,", "sin esfuerzo.", "Un registro de tiempo claro para iPhone, iPad y Mac.", "Gratis · Sin cuenta · Sin rastreo"),
-    "it": ("Il tuo tempo,", "senza sforzo.", "Un tracker del tempo chiaro per iPhone, iPad e Mac.", "Gratis · Nessun account · Nessun tracciamento"),
-    "ru": ("Ваше время,", "без усилий.", "Понятный трекер времени для iPhone, iPad и Mac.", "Бесплатно · Без аккаунта · Без слежки"),
-    "hy": ("Ժամանակը՝", "առանց ջանքի։", "Պարզ ժամանակի հաշվառում iPhone-ի, iPad-ի և Mac-ի համար։", "Անվճար · Առանց հաշվի · Առանց հետագծման"),
-    "pt": ("O seu tempo,", "sem esforço.", "Um registo de tempo claro para iPhone, iPad e Mac.", "Gratuito · Sem conta · Sem rastreio"),
-    "tr": ("Zamanın,", "zahmetsizce.", "iPhone, iPad ve Mac için sade bir zaman takibi.", "Ücretsiz · Hesap yok · İzleme yok"),
-    "ar": ("وقتك،", "دون عناء.", "تتبّع واضح للوقت على iPhone وiPad وMac.", "مجاني · بلا حساب · بلا تتبّع"),
-    "ja": ("あなたの時間を、", "手軽に。", "iPhone、iPad、Mac 向けのシンプルな時間記録アプリ。", "無料 · アカウント不要 · トラッキングなし"),
-    "zh": ("你的时间，", "轻松掌握。", "为 iPhone、iPad 和 Mac 打造的清晰时间记录应用。", "免费 · 无需账户 · 没有追踪"),
-    "hi": ("आपका समय,", "बिना मेहनत।", "iPhone, iPad और Mac के लिए सरल समय ट्रैकर।", "निःशुल्क · खाता नहीं · ट्रैकिंग नहीं"),
-}
+def copy_for(lang: str) -> tuple[str, str, str, str]:
+    """Headline (two lines), subtitle and the promises line, as on the page."""
+    hero = json.loads((CONTENT / f"{lang}.json").read_text(encoding="utf-8"))["home"]["hero"]
+    lines = hero["titleLead"], hero["titleAccent"], hero["eyebrow"], " · ".join(hero["proof"])
+    return tuple(drawable(line) for line in lines)
+
+
+def drawable(text: str) -> str:
+    """What the page gets right through font fallback, a single font file cannot:
+    the Hebrew copy binds prefixes to Latin names with a non-breaking hyphen
+    (ל‑iPhone), which none of the subsets carry – it drew a NO GLYPH box. The
+    direction marks are invisible on the page and only in the way here."""
+    return text.replace("\u2011", "-").replace("\u200e", "").replace("\u200f", "")
+
+
+# Every site language, in the order of the language menu.
+LANGS = ["en", "de", "nl", "sv", "fr", "it", "es", "pt", "ru", "uk", "el", "tr", "hy", "ar", "he", "hi", "zh", "ja"]
 
 RTL = {"ar", "he"}
 
@@ -396,7 +400,8 @@ def build(lang: str, out: Path) -> None:
     ImageDraw.Draw(glow).ellipse([620, -220, 1320, 380], fill="#4f76d8")
     base = Image.blend(gradient, Image.blend(gradient, glow.filter(ImageFilter.GaussianBlur(150)), 0.55), 0.55)
 
-    screen = Image.open(SCREEN).convert("RGB")
+    own = SCREENS / lang / "tracking.webp"
+    screen = Image.open(own if own.exists() else SCREENS / "en" / "tracking.webp").convert("RGB")
     dev_w = 330
     sc_w = int(dev_w * 0.93)
     sc_h = int(screen.height * sc_w / screen.width)
@@ -416,7 +421,7 @@ def build(lang: str, out: Path) -> None:
     base.paste(logo, (80, 74), rounded((60, 60), 16))
     draw.text((156, 88), "SimpleTime", font=font("latin", 600, 30), fill="#ffffff")
 
-    line1, line2, subtitle, meta = (shape(t, lang) for t in COPY[lang])
+    line1, line2, subtitle, meta = (shape(t, lang) for t in copy_for(lang))
     rtl = lang in RTL
 
     # In RTL the text block is mirrored: it starts at the right edge of the
@@ -456,7 +461,7 @@ def build(lang: str, out: Path) -> None:
 
 
 def main() -> None:
-    for lang in COPY:
+    for lang in LANGS:
         build(lang, PUBLIC / ("og.png" if lang == "en" else f"og-{lang}.png"))
 
 

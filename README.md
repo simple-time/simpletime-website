@@ -2,38 +2,55 @@
 
 Marketing website for [SimpleTime](https://apps.apple.com/us/app/simpletime-time-tracker/id6755532037), available at [simple-time.app](https://simple-time.app).
 
-Built with [Astro](https://astro.build) and [Tailwind CSS v4](https://tailwindcss.com). Multilingual (English default, German at `/de/`). No analytics, no tracking, self-hosted fonts.
+Built with [Astro](https://astro.build) and [Tailwind CSS v4](https://tailwindcss.com). 18 languages (English at `/`, every other language under `/<lang>/`). No analytics, no tracking, self-hosted fonts.
 
 ## Development
 
 ```bash
 npm install
-npm run dev      # http://localhost:4321
-npm run build    # output to dist/
-npm run preview  # preview built site
+npm run dev              # http://localhost:4321
+npm run build            # output to dist/, then CSP hashes into dist/_headers
+npm run check:content    # every language has every key English has
+npm run test:browser     # Playwright + axe against the built site
 ```
 
-## Project structure
+## Pages
 
+Every language has the same six pages: home, `/pro/`, `/faq/`, `/contact/`, `/privacy/` and `/imprint/`.
+The files in `src/pages/` are one-line wrappers around `src/components/pages/*`.
+
+## Where the words live
+
+- `src/i18n/content/<lang>.json` – everything a visitor reads about the app:
+  - `store` is the App Store description of that language, split into its parts. The home page and the
+    Pro section show it word for word, so the website and the App Store say the same thing.
+  - `shots` are the headlines of the App Store screenshots.
+  - `home`, `pro`, `faq` (with search on `/faq/`) and `privacy`.
+  - Links inside the copy are written `[text](@pro)` – `@home`, `@pro`, `@faq`, `@contact`, `@privacy`,
+    `@privacy-de`, `mailto:` or `https://`. Nothing else is rendered as markup.
+- `src/i18n/ui.ts` – navigation, page titles, the contact page and the imprint.
+
+The rules behind the wording (claim, register per language, terms) are in `MARKETING.md` in the app repository.
+
+## Screenshots and social images
+
+```bash
+python3 scripts/prepare-screens.py   # app screenshots per language, from the app repository
+python3 scripts/og-images.py          # the social preview card per language, from the hero copy
 ```
-src/
-├── components/   Reusable UI blocks
-├── i18n/         Translation strings and helpers
-├── layouts/      Base page layout
-├── pages/        Routes (index.astro, de/index.astro, etc.)
-└── styles/       Global CSS + Tailwind config
-public/
-├── logo.png      App icon
-├── screenshots/  App Store screenshots
-└── CNAME         simple-time.app
-```
+
+`prepare-screens.py` copies the raw screenshots the App Store images are made from, one set per language
+(Armenian falls back to English). `og-images.py` needs `arabic-reshaper`, `python-bidi` and `uharfbuzz`
+for Arabic, Hebrew and Hindi.
 
 ## Adding a language
 
-1. Add the locale to `src/i18n/ui.ts` and `astro.config.mjs`
-2. Create page files under `src/pages/<locale>/`
-3. Update navbar/footer link helpers in components
+1. Add the locale to `src/i18n/ui.ts` (`languages` and a block in `ui`) and `astro.config.mjs`
+2. Add `src/i18n/content/<lang>.json` and the page wrappers under `src/pages/<lang>/`
+3. Run `npm run check:content`
 
-## Deployment
+## Hosting
 
-Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds the site and deploys it to GitHub Pages. The `CNAME` file maps the Pages site to `simple-time.app`.
+`dist/` is served by Cloudflare (`wrangler.jsonc`). `public/_headers` holds the security headers; the build
+replaces `'unsafe-inline'` in its CSP with hashes of the inline code (`scripts/csp-headers.mjs`), and CI
+verifies the result (`scripts/check-headers.mjs`).
