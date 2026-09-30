@@ -1,0 +1,957 @@
+{
+  "store": {
+    "lead": "SimpleTime registrerar vad din tid går till. En tryckning startar, en tryckning stoppar.",
+    "promise": "Inget konto, ingen registrering, inga annonser. Dina timmar stannar på din enhet och i ditt iCloud.",
+    "sections": [
+      {
+        "id": "tracking",
+        "title": "Registrera",
+        "points": [
+          "En tryckning startar och stoppar – i appen, från hemskärmen, från kontrollcenter, från sökningen på iPhone eller med Siri",
+          "Uppgifter med deluppgifter, så djupt nästlade som ditt arbete är",
+          "Glömde du starta? Fyll i tiden i efterhand och ändra den när du vill",
+          "Färg, symbol, favoriter och en ordning som du bestämmer"
+        ]
+      },
+      {
+        "id": "day",
+        "title": "Din dag",
+        "points": [
+          "En lista eller en tidsaxel från 0 till 24, med en markering på aktuell tid",
+          "Anteckningar på varje post",
+          "Jämförelsen med i går står högst upp"
+        ]
+      },
+      {
+        "id": "insights",
+        "title": "Analysera",
+        "points": [
+          "Cirkeldiagram per uppgift och per produktivitet",
+          "Dag, vecka, månad, år",
+          "Statistik: jämförelse med föregående period, förlopp, fördelning över dygnet, längsta och kortaste post",
+          "Varje uppgift med egna siffror – första posten, den längsta, denna vecka, i år",
+          "Dela vilket diagram som helst som bild"
+        ]
+      },
+      {
+        "id": "reports",
+        "title": "Rapporter och export",
+        "points": [
+          "En PDF-rapport där du väljer och ordnar avsnitten själv",
+          "CSV för Excel och Numbers",
+          "Säkerhetskopior i iCloud Drive, automatiska och krypterade med lösenord om du vill"
+        ]
+      },
+      {
+        "id": "widgets",
+        "title": "Widgetar och Siri",
+        "points": [
+          "I dag, pågående uppgift och vecka på hemskärmen",
+          "Tiden som går på låsskärmen och i Dynamic Island",
+          "Ett reglage i kontrollcenter som startar och stoppar registreringen",
+          "Siri och Genvägar: starta, stoppa eller fråga vad som pågår"
+        ]
+      },
+      {
+        "id": "devices",
+        "title": "På alla dina enheter",
+        "points": [
+          "iPhone, iPad och Mac, synkade via iCloud",
+          "40 språk, oberoende av enhetens språk",
+          "VoiceOver och dynamisk text i hela appen"
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Dina data",
+        "points": [
+          "Applås med Face ID, Touch ID eller en egen kod",
+          "Integritet på en sida: överblick över alla behörigheter och dina data",
+          "Inga konton, inga servrar hos oss, inga annonser, ingen spårning",
+          "Radera allt på en gång – på enheten, i iCloud och i säkerhetskopiorna"
+        ]
+      }
+    ],
+    "pro": {
+      "title": "SimpleTime Pro",
+      "intro": "Allt ovanstående förblir gratis. Pro lägger till:",
+      "points": [
+        "Apple Watch: starta och stoppa från handleden, starta tidigare, din dag, vecka och dina mål i en blick – med tiden som går på urtavlan",
+        "Tillbakablickar: din vecka, din månad och ditt år som kort – att bläddra i och dela",
+        "Platser: uppgifter startar av sig själva när du kommer fram – efter en väntetid, om du vill",
+        "Året på en gång: varje dag på året som en bild, med dina serier",
+        "Mål per uppgift – för dagen, veckan eller månaden",
+        "Fokusfilter: arbetsfokus slås på, listan visar bara arbetet och klockan går redan",
+        "En snabbstartswidget som du fyller själv",
+        "Sju dekorfärger eller en egen, plus sexton appsymboler",
+        "Fler avsnitt i PDF-rapporten: förlopp, dygnsfördelning, jämförelse, mål"
+      ],
+      "pricing": "Pro finns per månad, per år eller en gång för alltid. Nya prenumeranter får en vecka gratis, och med Familjedelning kan upp till sex personer använda Pro. Priserna visas i appen. Månad och år förnyas automatiskt tills du säger upp, vilket går när som helst i inställningarna för App Store. Det som tillkommer senare ingår."
+    },
+    "closing": "För alla som vill veta vart tiden faktiskt tar vägen – på jobbet, i studierna, på träningen eller för sin egen skull."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Tidrapportering för iPhone, iPad och Mac",
+      "titleLead": "Ett tryck",
+      "titleAccent": "startar klockan.",
+      "cta": "Se funktionerna",
+      "proof": [
+        "Gratis att hämta",
+        "Inget konto",
+        "Inga annonser, ingen spårning"
+      ]
+    },
+    "showcase": [
+      {
+        "id": "day",
+        "eyebrow": "Din dag",
+        "title": "Hela din dag i en blick.",
+        "body": "Varje post med start, slut och längd – som lista eller som tidsaxel från 0 till 24, med en markering på aktuell tid. Anteckningar fångar det som siffrorna inte säger, och högst upp ser du hur i dag står sig jämfört med i går.",
+        "points": [
+          "En lista eller en tidsaxel från 0 till 24",
+          "Anteckningar på varje post",
+          "I dag jämfört med i går"
+        ]
+      },
+      {
+        "id": "insights",
+        "eyebrow": "Analysera",
+        "title": "Se vart timmarna faktiskt tar vägen.",
+        "body": "Cirkeldiagram per uppgift och per produktivitet – för en dag, en vecka, en månad eller ett år. Statistiken jämför varje period med den föregående och visar förloppet och när på dygnet du registrerar mest.",
+        "points": [
+          "Diagram per uppgift och per produktivitet",
+          "Jämförelse med föregående period",
+          "Dela vilket diagram som helst som bild"
+        ]
+      },
+      {
+        "id": "reports",
+        "eyebrow": "Rapporter och export",
+        "title": "En rapport på några sekunder.",
+        "body": "Välj en period och de avsnitt du behöver, dra dem i rätt ordning – så sätter SimpleTime ihop en PDF med varje uppgift och deluppgift. Behöver du de råa siffrorna? En CSV-fil öppnar du i Excel och Numbers.",
+        "points": [
+          "En PDF med de avsnitt du väljer",
+          "CSV för Excel och Numbers",
+          "Automatiska säkerhetskopior i iCloud Drive"
+        ]
+      }
+    ],
+    "features": {
+      "title": "Allt du behöver. Gratis.",
+      "subtitle": "Varje funktion i listan ingår i den kostnadsfria appen."
+    },
+    "pro": {
+      "button": "Allt om SimpleTime Pro"
+    },
+    "gallery": {
+      "title": "Närmare inpå.",
+      "subtitle": "Skärmarna från App Store – precis som de ser ut på din enhet."
+    },
+    "audience": {
+      "title": "För alla som vill veta vart tiden tar vägen.",
+      "subtitle": "På jobbet, i studierna, på träningen – eller bara för din egen skull.",
+      "groups": [
+        {
+          "id": "work",
+          "title": "Arbete & frilans",
+          "body": "Håll isär kunder och projekt som uppgifter och deluppgifter, och exportera ett tydligt underlag när du behöver ett."
+        },
+        {
+          "id": "study",
+          "title": "Studier & lärande",
+          "body": "Se hur mycket tid ett ämne faktiskt tar, och planera nästa vecka utifrån verkliga siffror."
+        },
+        {
+          "id": "training",
+          "title": "Träning & vanor",
+          "body": "Registrera träningspass, övning eller sömn och se hur regelbundenheten växer fram vecka för vecka."
+        },
+        {
+          "id": "everyday",
+          "title": "Vardagen",
+          "body": "Ta reda på vart timmarna faktiskt tar vägen – och bestäm själv vad du vill ändra."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Vanliga frågor.",
+      "subtitle": "De viktigaste svaren i korthet – och många fler på frågesidan.",
+      "button": "Alla frågor och svar"
+    },
+    "cta": {
+      "title": "Redo att sätta igång?",
+      "subtitle": "Gratis på iPhone, iPad och Mac. Inget konto, inga annonser, ingen spårning.",
+      "note": "Appen för Apple Watch hör till SimpleTime Pro."
+    }
+  },
+  "shots": [
+    {
+      "id": "tracking",
+      "title": "Tidta",
+      "caption": "Ett tryck startar klockan",
+      "alt": "Fliken Registrering med en pågående uppgift och favoriterna högst upp"
+    },
+    {
+      "id": "day",
+      "title": "Din dag",
+      "caption": "Varje post, på sekunden",
+      "alt": "Dagsvyn som en lista med poster och deras tider"
+    },
+    {
+      "id": "timeline",
+      "title": "Tidslinje",
+      "caption": "Hela dagen på en gång",
+      "alt": "Dagsvyn som tidslinje från 0 till 24"
+    },
+    {
+      "id": "chart",
+      "title": "Analysera",
+      "caption": "Vart timmarna faktiskt tar vägen",
+      "alt": "En vecka som cirkeldiagram per uppgift"
+    },
+    {
+      "id": "statistics",
+      "title": "Statistik",
+      "caption": "Jämför veckor, se trenden",
+      "alt": "Statistik som jämför den här veckan med den förra"
+    },
+    {
+      "id": "report",
+      "title": "Rapporter",
+      "caption": "En utförlig PDF per uppgift",
+      "alt": "En sida ur en PDF-rapport med varje uppgift"
+    },
+    {
+      "id": "pro",
+      "title": "Skaffa Pro",
+      "caption": "Mål, ditt år, dina färger",
+      "alt": "Sidan för SimpleTime Pro i appen"
+    }
+  ],
+  "pro": {
+    "eyebrow": "SimpleTime Pro",
+    "title": "Få ut mer av tiden du registrerar.",
+    "subtitle": "SimpleTime förblir gratis – allt appen kan utan Pro förblir det också. Pro lägger till: din Apple Watch, platser där uppgifter startar av sig själva, tillbakablickar på din vecka, din månad och ditt år, mål och mer.",
+    "featuresTitle": "Det här lägger Pro till",
+    "features": [
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Starta och stoppa från handleden, starta tidigare, din dag, vecka och dina mål i en blick – med tiden som går på urtavlan."
+      },
+      {
+        "id": "reviews",
+        "title": "Tillbakablickar",
+        "body": "Din vecka, din månad och ditt år som kort – att bläddra i och dela."
+      },
+      {
+        "id": "places",
+        "title": "Platser",
+        "body": "Uppgifter startar av sig själva när du kommer fram – efter en väntetid, om du vill, så att inget drar i gång när du bara passerar förbi."
+      },
+      {
+        "id": "year",
+        "title": "Året på en gång",
+        "body": "Varje dag på året som en bild, med din pågående och din längsta serie."
+      },
+      {
+        "id": "goals",
+        "title": "Mål",
+        "body": "Ett mål per uppgift – för dagen, veckan eller månaden. Deluppgifter räknas med."
+      },
+      {
+        "id": "focus",
+        "title": "Fokusfilter",
+        "body": "Ditt arbetsfokus slås på, listan visar bara arbetet – och registreringen kan starta och sluta med det."
+      },
+      {
+        "id": "widget",
+        "title": "Snabbstartswidget",
+        "body": "Du bestämmer vilka uppgifter som ligger på den. En tryckning från hemskärmen startar dem."
+      },
+      {
+        "id": "style",
+        "title": "Färger och appsymboler",
+        "body": "Sju dekorfärger eller en egen, som går genom hela appen – plus sexton appsymboler."
+      },
+      {
+        "id": "report",
+        "title": "Mer i PDF-rapporten",
+        "body": "Förlopp, fördelning över dygnet, jämförelse med föregående period och mål – i den ordning du väljer."
+      },
+      {
+        "id": "future",
+        "title": "Allt som kommer framöver",
+        "body": "Det som tillkommer senare ingår – utan extra köp."
+      }
+    ],
+    "plansTitle": "Tre vägar till Pro",
+    "plansSubtitle": "Priserna beror på ditt land och visas i appen i din valuta innan du köper.",
+    "plans": [
+      {
+        "id": "monthly",
+        "title": "Månadsvis",
+        "body": "Debiteras varje månad. Du kan säga upp när som helst."
+      },
+      {
+        "id": "yearly",
+        "title": "Årsvis",
+        "body": "Debiteras en gång om året – appen visar hur mycket du sparar jämfört med att betala per månad."
+      },
+      {
+        "id": "lifetime",
+        "title": "Livstid",
+        "body": "Betala en gång och behåll Pro för alltid. Löper aldrig ut."
+      }
+    ],
+    "notes": [
+      "Nya prenumeranter kan prova Månadsvis eller Årsvis gratis i en vecka.",
+      "Familjedelning: ett köp för upp till sex personer.",
+      "Det som tillkommer senare ingår – utan extra köp."
+    ],
+    "legal": "Månad och år förnyas automatiskt tills du säger upp. Du kan säga upp när som helst i App Store-inställningarna. Livstid är en engångsbetalning och löper aldrig ut.",
+    "terms": "Användarvillkor (EULA)",
+    "privacy": "Integritetspolicy",
+    "freeTitle": "Det här förblir gratis",
+    "freeBody": "Allt du behöver för att registrera: uppgifter och deluppgifter, dagsvyn och tidsaxeln, diagram och statistik, PDF-rapporten och CSV-exporten, widgetar, liveaktiviteten, Kontrollcenter och Siri, iCloud-synk och säkerhetskopior samt applåset – på 40 språk. Inget konto, inga annonser, ingen spårning.",
+    "howTitle": "Så får du Pro",
+    "how": [
+      "Öppna Inställningar › SimpleTime Pro i SimpleTime.",
+      "Välj Månadsvis, Årsvis eller Livstid – du betalar via ditt Apple-konto.",
+      "Pro låses upp direkt, på alla dina enheter med samma Apple-konto."
+    ],
+    "faqTitle": "Frågor om Pro",
+    "ctaTitle": "Börja gratis.",
+    "ctaSubtitle": "Hämta SimpleTime – och lås upp Pro i appen när du vill."
+  },
+  "faq": {
+    "title": "Vanliga frågor.",
+    "subtitle": "Allt om SimpleTime – från första tryckningen till SimpleTime Pro.",
+    "searchLabel": "Sök bland frågorna",
+    "searchPlaceholder": "t.ex. ”säkerhetskopia” eller ”Siri”",
+    "results": "Frågor som matchar: {count}",
+    "noResults": "Ingen fråga matchar ”{query}”.",
+    "noResultsHint": "Prova ett annat ord – eller [skriv till oss](@contact).",
+    "topics": "Ämnen",
+    "moreTitle": "Fler frågor?",
+    "moreBody": "Skriv till oss – varje meddelande blir läst och besvarat.",
+    "moreButton": "Kontakt",
+    "categories": [
+      {
+        "id": "basics",
+        "title": "Kom igång",
+        "items": [
+          {
+            "id": "what-is",
+            "q": "Vad är SimpleTime?",
+            "a": [
+              "SimpleTime är en app för tidrapportering på iPhone, iPad och Mac. En tryckning startar tiden, en tryckning stoppar den. Sedan visar SimpleTime vad din tid går till – som daglista eller tidsaxel, i diagram och statistik och som PDF-rapport eller CSV-fil. Inget konto, inga annonser, ingen spårning."
+            ]
+          },
+          {
+            "id": "free",
+            "q": "Är SimpleTime gratis?",
+            "a": [
+              "Ja. SimpleTime är gratis att hämta, och det är allt du behöver för att registrera också: uppgifter och deluppgifter, dagsvyn, diagram och statistik, rapporter och export, widgetar, iCloud-synk och säkerhetskopior. SimpleTime Pro är frivilligt och lägger till appen för Apple Watch, tillbakablickar, platser, mål och mer. [Allt om SimpleTime Pro](@pro)"
+            ]
+          },
+          {
+            "id": "account",
+            "q": "Behöver jag ett konto?",
+            "a": [
+              "Nej. Du behöver varken registrera dig eller logga in – du öppnar appen och sätter igång. Om du använder iCloud sker synken via ditt eget Apple-konto, som vi aldrig ser."
+            ]
+          },
+          {
+            "id": "devices",
+            "q": "Vilka enheter fungerar SimpleTime på?",
+            "a": [
+              "På iPhone och iPad med iOS 26 eller iPadOS 26 eller senare, och på Mac-datorer med Apple-chip. Appen för Apple Watch hör till SimpleTime Pro och kräver watchOS 26. Med samma Apple-konto hålls dina poster synkade på alla dessa enheter."
+            ]
+          },
+          {
+            "id": "languages",
+            "q": "Vilka språk talar SimpleTime?",
+            "a": [
+              "40 – från svenska, engelska och tyska till arabiska, hindi och japanska. Under Inställningar › Språk väljer du appens språk oberoende av enhetens språk."
+            ]
+          },
+          {
+            "id": "first-steps",
+            "q": "Hur kommer jag igång?",
+            "a": [
+              "Tryck på + på fliken Registrering för att skapa en uppgift – med namn, färg och symbol. Tryck på triangeln bredvid så går tiden; tryck på Stoppa för att avsluta. Vid första starten visar en kort rundtur de viktigaste knapparna. Du kan gå igenom den igen när som helst under Inställningar › Visa rundturen igen."
+            ]
+          },
+          {
+            "id": "offline",
+            "q": "Fungerar SimpleTime offline?",
+            "a": [
+              "Ja, helt och hållet. Registrering, dagsvyn, diagram och rapporter fungerar utan anslutning. Synk och säkerhetskopior kommer i kapp så snart enheten är online igen."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tracking",
+        "title": "Registrera",
+        "items": [
+          {
+            "id": "start-stop",
+            "q": "Hur startar och stoppar jag en registrering?",
+            "a": [
+              "Tryck på triangeln bredvid en uppgift för att starta den. Den pågående uppgiften visas högst upp på fliken Registrering; tryck på Stoppa för att avsluta den. Trycker du på en uppgifts namn öppnas dess deluppgifter, sveper du åt vänster kan du redigera, arkivera eller radera den, och sveper du åt höger visas info med alla siffror."
+            ]
+          },
+          {
+            "id": "one-at-a-time",
+            "q": "Kan två uppgifter pågå samtidigt?",
+            "a": [
+              "Nej. Högst en registrering pågår åt gången. När du startar en annan uppgift avslutas den pågående posten automatiskt – så överlappar dina poster aldrig."
+            ]
+          },
+          {
+            "id": "add-later",
+            "q": "Jag glömde att starta – kan jag fylla i tid i efterhand?",
+            "a": [
+              "Ja. På fliken Dag lägger du till en ny post med start och slut, eller trycker på en befintlig post för att ändra den. Poster kan inte överlappa: SimpleTime säger till om en period krockar med en annan post. För en registrering som fortfarande pågår kan du också flytta starten bakåt – till slutet av föregående post."
+            ]
+          },
+          {
+            "id": "subtasks",
+            "q": "Hur fungerar deluppgifter?",
+            "a": [
+              "Tryck på en uppgifts namn för att öppna den och lägg sedan till deluppgifter där med +. Du kan nästla dem så djupt som ditt arbete är – kund, projekt, fas. I diagram, rapporter och mål räknas deluppgifter till uppgiften ovanför."
+            ]
+          },
+          {
+            "id": "order",
+            "q": "Hur håller jag ordning på min uppgiftslista?",
+            "a": [
+              "Markera de uppgifter du använder varje dag som favoriter – de ligger kvar högst upp. Resten kan sorteras alfabetiskt, efter mest använda, efter senast använda eller i egen ordning. En färg och en symbol – eller en emoji – gör varje uppgift lätt att känna igen."
+            ]
+          },
+          {
+            "id": "archive-trash",
+            "q": "Vad är skillnaden mellan att arkivera och att radera?",
+            "a": [
+              "Att arkivera döljer bara en uppgift: dess poster finns kvar och räknas fortfarande i alla analyser. Att radera flyttar uppgiften och dess poster till papperskorgen. Därifrån kan du återställa båda – eller radera dem permanent."
+            ]
+          },
+          {
+            "id": "notes",
+            "q": "Kan jag lägga till anteckningar på poster?",
+            "a": [
+              "Ja, varje post kan ha en anteckning – vad du arbetade med eller vem du träffade. Anteckningar visas i dagsvyn och följer med i CSV-exporten och i säkerhetskopiorna."
+            ]
+          },
+          {
+            "id": "reminders",
+            "q": "Kan SimpleTime påminna mig?",
+            "a": [
+              "Ja. I inställningarna under Notiser ställer du in regler – till exempel en påminnelse när en uppgift har pågått i 60 minuter, för alla uppgifter eller bara utvalda, på de veckodagar du väljer. SimpleTime kan också påminna dig när inget har registrerats på ett tag."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "insights",
+        "title": "Dagsvy och analys",
+        "items": [
+          {
+            "id": "day-view",
+            "q": "Vad visar dagsvyn?",
+            "a": [
+              "Varje post under en dag med start, slut och längd – som lista eller som tidsaxel från 0 till 24, med en markering på aktuell tid. Högst upp ser du hur i dag står sig jämfört med i går."
+            ]
+          },
+          {
+            "id": "charts",
+            "q": "Vilka diagram och vilken statistik finns det?",
+            "a": [
+              "Cirkeldiagram per uppgift och per produktivitet, för en dag, en vecka, en månad eller ett år. Under Mer statistik hittar du jämförelsen med föregående period, förloppet, hur din tid fördelar sig över dygnet, dina främsta uppgifter och den längsta och kortaste posten. Varje uppgift har dessutom en egen infosida – första posten, längsta posten, denna vecka, i år."
+            ]
+          },
+          {
+            "id": "productivity",
+            "q": "Vad är produktivitetspoängen?",
+            "a": [
+              "Du kan ge varje uppgift en kategori: produktiv, improduktiv, nödvändig – eller låta den inte räknas med. Poängen visar hur mycket av din registrerade tid som var produktiv eller nödvändig: (produktiv + nödvändig) ÷ total tid × 100."
+            ]
+          },
+          {
+            "id": "share-chart",
+            "q": "Kan jag dela ett diagram?",
+            "a": [
+              "Ja, varje diagram kan delas som bild eller sparas i Bilder. För att spara frågar SimpleTime bara om behörighet att lägga till bilder – ditt bildbibliotek kan appen inte se."
+            ]
+          },
+          {
+            "id": "pdf-report",
+            "q": "Hur skapar jag en PDF-rapport?",
+            "a": [
+              "Under Inställningar › Exportera rapport väljer du en period (från i dag till hela perioden, eller en egen), slår på de avsnitt du vill ha och drar dem i rätt ordning. SimpleTime skapar PDF:en med varje uppgift och deluppgift, redo att dela eller spara. SimpleTime Pro lägger till fler avsnitt: förlopp, dygnsfördelning, jämförelse och mål."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shortcuts",
+        "title": "Widgetar, Siri och Fokus",
+        "items": [
+          {
+            "id": "widgets",
+            "q": "Vilka widgetar finns det?",
+            "a": [
+              "För hemskärmen: Idag, Pågående uppgift och Vecka. För låsskärmen: vad som pågår och hur länge. Dessutom finns ett reglage för Kontrollcenter. Medan en uppgift pågår visas den som liveaktivitet på låsskärmen och i Dynamic Island. Med SimpleTime Pro får du också en snabbstartswidget som du fyller med dina egna uppgifter."
+            ]
+          },
+          {
+            "id": "without-opening",
+            "q": "Kan jag starta en registrering utan att öppna appen?",
+            "a": [
+              "Ja, på flera sätt. Håll fingret på appsymbolen för att stoppa det som pågår eller starta en av dina uppgifter. Skriv en uppgifts namn i sökningen på iPhone och tryck på den. Eller använd reglaget i Kontrollcenter, en widget, Siri – eller, med SimpleTime Pro, din Apple Watch."
+            ]
+          },
+          {
+            "id": "siri",
+            "q": "Hur fungerar SimpleTime med Siri och Genvägar?",
+            "a": [
+              "Säg till exempel ”Start Work in SimpleTime”, ”Stop tracking in SimpleTime”, ”How much did I track today in SimpleTime?” eller ”What’s running in SimpleTime?”. Siri förstår de här fraserna på engelska och tyska. På alla språk finns åtgärderna i appen Genvägar, där du också kan ge dem en egen fras."
+            ]
+          },
+          {
+            "id": "focus-filter",
+            "q": "Vad gör fokusfiltret?",
+            "a": [
+              "Med ett fokusfilter följer SimpleTime ditt fokus: när ”Arbete” slås på visar uppgiftslistan bara din arbetskategori – och registreringen kan starta och sluta med fokuset. Du ställer in det i iOS-inställningarna under Fokus › ditt fokus › Fokusfilter › Lägg till filter › SimpleTime. Fokusfiltret hör till SimpleTime Pro."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Synk, säkerhetskopiering och export",
+        "items": [
+          {
+            "id": "sync",
+            "q": "Synkar SimpleTime mellan mina enheter?",
+            "a": [
+              "Ja, automatiskt via iCloud – på varje enhet som är inloggad med samma Apple-konto. När synken körs bestämmer systemet; inställningarna visar när den senast kördes, och där kan du också kontrollera den."
+            ]
+          },
+          {
+            "id": "without-icloud",
+            "q": "Kan jag använda SimpleTime utan iCloud?",
+            "a": [
+              "Ja. Utan iCloud stannar dina data på den här enheten. Du slår på eller av synken i iOS-inställningarna under ditt namn › iCloud. Utan iCloud är säkerhetskopior som du exporterar och förvarar på ett säkert ställe desto viktigare."
+            ]
+          },
+          {
+            "id": "backups",
+            "q": "Hur fungerar säkerhetskopior?",
+            "a": [
+              "Under Inställningar › Exportera / importera data slår du på automatiska säkerhetskopior – varje timme, dagligen, varje vecka eller varje månad. SimpleTime sparar dem som JSON-filer i iCloud Drive, i mappen ”SimpleTime/Backups”, och behåller de 20 senaste. Du kan också exportera en säkerhetskopia själv när som helst."
+            ]
+          },
+          {
+            "id": "backup-password",
+            "q": "Kan jag skydda mina säkerhetskopior med ett lösenord?",
+            "a": [
+              "Ja. Med ett lösenord krypteras säkerhetskopian på din enhet innan den sparas. Förvara lösenordet väl: utan det kan ingen återställa säkerhetskopian – varken du eller vi. Det finns ingen väg runt."
+            ]
+          },
+          {
+            "id": "restore",
+            "q": "Hur återställer jag en säkerhetskopia?",
+            "a": [
+              "Under Inställningar › Exportera / importera data › Importera säkerhetskopia från JSON. Befintliga data behålls och det som saknas fylls på. På en ny enhet väntar du först tills iCloud-synken har levererat dina data – annars kan uppgifter skapas två gånger."
+            ]
+          },
+          {
+            "id": "export",
+            "q": "Kan jag exportera mina data?",
+            "a": [
+              "Ja, när som helst: som CSV-fil med uppgift, anteckning, längd, start och slut (för Excel, Numbers eller vilket analysverktyg som helst), som PDF-rapport eller som fullständig säkerhetskopia i JSON."
+            ]
+          },
+          {
+            "id": "import",
+            "q": "Kan jag importera data från en annan app?",
+            "a": [
+              "Inte direkt. SimpleTime importerar sina egna säkerhetskopior (JSON); CSV-filer från andra appar går inte att importera."
+            ]
+          },
+          {
+            "id": "new-device",
+            "q": "Hur flyttar jag till en ny iPhone?",
+            "a": [
+              "Logga in med samma Apple-konto och installera SimpleTime – iCloud hämtar tillbaka dina poster av sig själv. Om du inte använder iCloud exporterar du en säkerhetskopia på den gamla enheten och importerar den på den nya. Platser hör till varje enhet och synkas inte."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "privacy",
+        "title": "Integritet och säkerhet",
+        "items": [
+          {
+            "id": "data-location",
+            "q": "Var lagras mina data?",
+            "a": [
+              "På dina enheter och i din privata iCloud. Ingen annan kan läsa dem – inte ens vi. SimpleTime har inga egna servrar."
+            ]
+          },
+          {
+            "id": "tracking-me",
+            "q": "Spårar SimpleTime mig?",
+            "a": [
+              "Nej. Inga analysverktyg, inga annonser, inga SDK:er från tredje part, inga användarprofiler. Appen skickar inte dina data till oss eller till någon annan. Detaljerna finns i vår [integritetspolicy](@privacy)."
+            ]
+          },
+          {
+            "id": "permissions",
+            "q": "Vilka behörigheter ber SimpleTime om?",
+            "a": [
+              "Bara det som en funktion behöver, och först när du använder den: notiser för påminnelser och platsnotiser, din plats för funktionen Platser, att lägga till i Bilder när du sparar en bild, och Face ID eller Touch ID för applåset. I inställningarna under Integritet › Översikt och behörigheter ser du var och en med sin aktuella status."
+            ]
+          },
+          {
+            "id": "location",
+            "q": "Varför vill SimpleTime veta min plats?",
+            "a": [
+              "Bara för platser, som hör till SimpleTime Pro: så att en uppgift kan starta när du kommer fram någonstans. iOS bevakar de områden du ställer in och meddelar appen när du kommer fram eller går därifrån. Dina platser stannar på din enhet, och SimpleTime sparar ingen historik över var du har varit. Använder du inte platser behöver SimpleTime inte veta var du är."
+            ]
+          },
+          {
+            "id": "app-lock",
+            "q": "Hur fungerar applåset?",
+            "a": [
+              "Under Inställningar › Applås väljer du om SimpleTime ska öppnas med din iPhone-lösenkod – inklusive Face ID eller Touch ID – eller med en egen kod. I appväxlaren förblir SimpleTime övertäckt, och uppgiftsnamn visas inte längre i sökningen på iPhone eller vid appsymbolen. Viktigt: glömmer du din egen kod kommer du bara tillbaka in i appen genom att radera appen och installera om den."
+            ]
+          },
+          {
+            "id": "delete-all",
+            "q": "Hur raderar jag alla mina data?",
+            "a": [
+              "I inställningarna under Integritet › Radera alla data. Där tar du bort allt på en gång – alla poster och uppgifter, papperskorgen, påminnelser, säkerhetskopiorna i iCloud Drive, exporter och inställningar – på den här enheten, i iCloud och, så snart de är online, på dina andra enheter. Det går inte att ångra."
+            ]
+          },
+          {
+            "id": "diagnostics",
+            "q": "Vad finns under Diagnostik?",
+            "a": [
+              "Om SimpleTime kraschar eller hänger sig ger iOS appen en rapport om det. Rapporterna stannar på din enhet och innehåller inga uppgifter och inga tider – bara stället i programmet där det hände. Om du vill kan du dela en med oss: det hjälper oss att hitta felet."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pro",
+        "title": "SimpleTime Pro",
+        "items": [
+          {
+            "id": "pro-includes",
+            "q": "Vad ingår i SimpleTime Pro?",
+            "a": [
+              "Appen för Apple Watch, tillbakablickar på din vecka, din månad och ditt år, platser, året på en gång, mål, fokusfiltret, en snabbstartswidget, sju dekorfärger eller en egen plus sexton appsymboler, och fler avsnitt i PDF-rapporten. Det som tillkommer senare ingår. [Allt om SimpleTime Pro](@pro)"
+            ]
+          },
+          {
+            "id": "pro-price",
+            "q": "Vad kostar SimpleTime Pro?",
+            "a": [
+              "Pro finns per månad, per år eller som engångsköpet ”Livstid”. Priserna beror på ditt land och din valuta och visas i appen innan du köper."
+            ]
+          },
+          {
+            "id": "trial",
+            "q": "Kan jag prova Pro först?",
+            "a": [
+              "Ja. Nya prenumeranter kan prova Månadsvis eller Årsvis gratis i en vecka; appen visar om provperioden gäller dig. Om du inte säger upp senast 24 timmar innan den tar slut förnyas prenumerationen till det pris som visas."
+            ]
+          },
+          {
+            "id": "family",
+            "q": "Kan min familj också använda Pro?",
+            "a": [
+              "Ja. SimpleTime Pro fungerar med Familjedelning – ett köp för upp till sex personer."
+            ]
+          },
+          {
+            "id": "restore-purchase",
+            "q": "Hur får jag Pro på mina andra enheter?",
+            "a": [
+              "Pro hör till ditt Apple-konto. På dina andra enheter med samma konto låses det oftast upp av sig självt. Om inte, tryck på Återställ köp på Pro-sidan under Inställningar › SimpleTime Pro."
+            ]
+          },
+          {
+            "id": "cancel",
+            "q": "Hur säger jag upp min prenumeration?",
+            "a": [
+              "I dina App Store-inställningar – på iPhone under Inställningar › ditt namn › Abonnemang – eller i appen på Pro-sidan under Hantera prenumerationen. Pro förblir aktivt till slutet av den period du redan har betalat för."
+            ]
+          },
+          {
+            "id": "lifetime-switch",
+            "q": "Jag har en prenumeration – kan jag byta till ”Livstid”?",
+            "a": [
+              "Ja, direkt på Pro-sidan. Apple avslutar dock inte prenumerationen av sig själv: säg upp den efteråt så att den inte förnyas. Appen påminner dig."
+            ]
+          },
+          {
+            "id": "pro-ends",
+            "q": "Vad händer när Pro upphör?",
+            "a": [
+              "Inget går förlorat. Dina poster, mål och platser finns kvar. Pro-funktionerna låses igen – platser startar till exempel inga uppgifter längre – och allt är tillbaka så snart Pro är aktivt igen."
+            ]
+          },
+          {
+            "id": "pro-offline",
+            "q": "Behöver Pro en internetanslutning?",
+            "a": [
+              "Nej. SimpleTime kontrollerar ditt köp hos App Store när det går. Utan anslutning fortsätter Pro att fungera – i upp till två veckor utan kontakt."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "watch-places",
+        "title": "Apple Watch och platser",
+        "items": [
+          {
+            "id": "watch-setup",
+            "q": "Hur ställer jag in appen för Apple Watch?",
+            "a": [
+              "Appen för Apple Watch hör till SimpleTime Pro. Installera den på klockan och öppna sedan SimpleTime en gång på din iPhone – efter några sekunder visar klockan dina uppgifter. Din iPhone är fortfarande källan: det klockan startar registreras där, med samma liveaktivitet och samma widgetar."
+            ]
+          },
+          {
+            "id": "watch-features",
+            "q": "Vad kan jag göra på min Apple Watch?",
+            "a": [
+              "Starta och stoppa från handleden – dina favoriter, det du använde senast eller vilken uppgift som helst via sökning. Starta tidigare: för 5, 15, 30 eller 60 minuter sedan, eller sömlöst från slutet av din senaste post. Stoppa med ett dubbeltryck. Din dag, vecka och dina mål i en blick, med tiden som går på urtavlan och i den smarta traven. Om din iPhone är utom räckhåll sparas dina tryckningar med sin tid och levereras senare."
+            ]
+          },
+          {
+            "id": "places-how",
+            "q": "Hur fungerar platser?",
+            "a": [
+              "Lägg till en plats – till exempel ditt kontor eller ditt gym – med en radie från 50 m till 10 km, och välj en uppgift. När du kommer fram startar uppgiften av sig själv, eller så frågar SimpleTime först. Med en väntetid startar inget om du bara passerar förbi. När du går därifrån kan uppgiften stoppas, och du kan begränsa en plats till vissa dagar och tider."
+            ]
+          },
+          {
+            "id": "places-late",
+            "q": "Varför startar en plats sent eller inte alls?",
+            "a": [
+              "Platser behöver platsåtkomsten ”Alltid” och att ”Exakt plats” är på. Under 100 m märker iOS ofta ankomsten sent, eftersom platsen i bakgrunden oftast kommer från wifi och mobilnät, inte från GPS – en större radie hjälper. iOS bevakar högst 20 platser per app, och på Mac finns inga platser."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "more",
+        "title": "Övrigt",
+        "items": [
+          {
+            "id": "look",
+            "q": "Kan jag ändra hur SimpleTime ser ut?",
+            "a": [
+              "Ja: ljust, mörkt eller enligt systemet, och tre radhöjder för uppgiftslistan. Med SimpleTime Pro får du också sju dekorfärger eller en egen – den går genom knappar, reglage och diagram – och sexton appsymboler."
+            ]
+          },
+          {
+            "id": "accessibility",
+            "q": "Är SimpleTime tillgänglighetsanpassad?",
+            "a": [
+              "Ja. SimpleTime har stöd för VoiceOver och dynamisk text i hela appen. Om något inte fungerar för dig får du gärna säga till."
+            ]
+          },
+          {
+            "id": "freelance",
+            "q": "Passar SimpleTime för frilansare?",
+            "a": [
+              "För att registrera din tid, ja: håll isär kunder och projekt som uppgifter och deluppgifter, och exportera en PDF-rapport eller en CSV-fil när du behöver ett underlag. Timpriser och fakturor ingår inte i SimpleTime – för det tar du med exporten till ditt faktureringsprogram."
+            ]
+          },
+          {
+            "id": "platforms",
+            "q": "Finns det en version för Android, Windows eller webben?",
+            "a": [
+              "Nej. SimpleTime är gjord för iPhone, iPad, Mac och Apple Watch. Du kan när som helst exportera dina data som CSV."
+            ]
+          },
+          {
+            "id": "feedback",
+            "q": "Jag har hittat ett fel eller har en idé – vart skickar jag det?",
+            "a": [
+              "Skriv till oss på [contact@simple-time.app](mailto:contact@simple-time.app). Vid ett fel, ange gärna enhetsmodell och iOS-version. Om SimpleTime har kraschat hjälper en rapport från Inställningar › Diagnostik mycket. Vi läser varje meddelande."
+            ]
+          },
+          {
+            "id": "support-us",
+            "q": "Hur kan jag stötta SimpleTime?",
+            "a": [
+              "SimpleTime görs av en person. Ett betyg i App Store hjälper, liksom att berätta om appen för andra – och SimpleTime Pro håller utvecklingen igång."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "updated": "Senast uppdaterad",
+    "translationNote": "Detta är en översättning av den tyska integritetspolicyn. Vid tveksamhet gäller [den tyska versionen](@privacy-de).",
+    "summaryTitle": "I korthet",
+    "summary": [
+      "Din tid är din. SimpleTime behöver inget konto, visar inga annonser och spårar dig inte.",
+      "Dina tidposter finns på dina enheter och i din privata iCloud – ingen annan kan läsa dem, inte ens vi. SimpleTime har inga egna servrar.",
+      "Den här webbplatsen sätter inga egna cookies, använder inga analysverktyg och laddar inget från tredje part."
+    ],
+    "sections": [
+      {
+        "id": "controller",
+        "title": "Vem är ansvarig",
+        "paragraphs": [
+          "Personuppgiftsansvarig enligt den allmänna dataskyddsförordningen (GDPR) för appen SimpleTime och den här webbplatsen är:"
+        ],
+        "address": true
+      },
+      {
+        "id": "app",
+        "title": "Appen SimpleTime",
+        "paragraphs": [
+          "SimpleTime är byggd så att vi inte behöver dina data. Allt du matar in – uppgifter, poster med sina tider och anteckningar, mål, påminnelser och inställningar – sparas på din enhet. Appen innehåller inga analysverktyg, ingen reklam och inga SDK:er från tredje part, och den skickar inte dina data till servrar hos oss: det finns inga. Vi har vid ingen tidpunkt tillgång till dina data."
+        ],
+        "subsections": [
+          {
+            "title": "iCloud-synkronisering",
+            "paragraphs": [
+              "Om du är inloggad på iCloud synkroniserar SimpleTime dina data mellan dina enheter med Apples CloudKit, i den privata databasen för ditt iCloud-konto. Apple överför och lagrar data i krypterad form; Apples integritetspolicy gäller. Vi kan varken se dessa data eller komma åt dem. Du kan stänga av synken i iOS-inställningarna under ditt namn › iCloud – dina data stannar då på enheten."
+            ]
+          },
+          {
+            "title": "Säkerhetskopior",
+            "paragraphs": [
+              "Om du slår på automatiska säkerhetskopior eller exporterar en säkerhetskopia sparar SimpleTime en fil med dina uppgifter, poster och påminnelser – automatiskt i din iCloud Drive (mappen ”SimpleTime/Backups”) eller där du själv väljer. Om du anger ett lösenord krypteras filen på din enhet (AES-GCM) innan den sparas; utan lösenordet kan ingen öppna den – inte heller vi. Av de automatiska säkerhetskopiorna behålls de 20 senaste."
+            ]
+          },
+          {
+            "title": "Plats (platser)",
+            "paragraphs": [
+              "Endast om du ställer in platser – en funktion i SimpleTime Pro – ber SimpleTime om åtkomst till din plats. iOS bevakar då de områden du har angett och meddelar appen när du kommer fram eller går därifrån; SimpleTime använder detta enbart för att starta eller stoppa den tillhörande uppgiften. Dina platser sparas bara på den här enheten och synkas inte. SimpleTime sparar ingen historik över var du har varit och lämnar inte ut din plats.",
+              "När du söker efter en adress eller använder kartan i platsredigeraren tillhandahålls sökningen och kartan av Apple Kartor; Apples integritetspolicy gäller. Du kan när som helst dra tillbaka åtkomsten till din plats i iOS-inställningarna."
+            ]
+          },
+          {
+            "title": "Notiser",
+            "paragraphs": [
+              "Påminnelser och platsnotiser skapas på din enhet och levereras där som lokala notiser. För att hålla synken aktuell kan iCloud väcka appen i bakgrunden via Apples pushtjänst; dessa meddelanden innehåller inget av ditt innehåll."
+            ]
+          },
+          {
+            "title": "Bilder",
+            "paragraphs": [
+              "För att spara ett diagram eller en tillbakablick som bild ber SimpleTime om behörighet att lägga till bilder. Appen kan bara lägga till bilder – den kan inte se ditt bildbibliotek."
+            ]
+          },
+          {
+            "title": "Applås, Face ID och Touch ID",
+            "paragraphs": [
+              "Om du använder applåset kontrollerar iOS Face ID, Touch ID eller enhetens lösenkod; SimpleTime får bara veta om kontrollen lyckades. Din egen kod och lösenordet för säkerhetskopior sparas i nyckelringen på din enhet."
+            ]
+          },
+          {
+            "title": "Siri, Genvägar, sökning och widgetar",
+            "paragraphs": [
+              "Om du använder Siri behandlar Apple din förfrågan; SimpleTime tar bara emot den igenkända åtgärden. För att du ska kunna starta uppgifter från sökningen på iPhone läggs uppgiftsnamn till i sökindexet på din enhet – men inte medan applåset är på. Widgetar, liveaktiviteten och appen för Apple Watch får sina data från appen på dina enheter; klockan får dem direkt från din iPhone."
+            ]
+          },
+          {
+            "title": "Diagnostik",
+            "paragraphs": [
+              "Om SimpleTime kraschar eller hänger sig ger iOS appen en diagnosrapport. Den stannar på din enhet, innehåller inga uppgifter och inga tider och lämnar din enhet bara om du själv delar den – till exempel via mejl till oss. Oberoende av detta gäller: om du har tillåtit att din enhet delar analysdata med apputvecklare (iOS-inställningar › Integritet och säkerhet › Analys och förbättringar) ger Apple oss kraschrapporter och statistik som inte identifierar dig."
+            ]
+          },
+          {
+            "title": "Köp",
+            "paragraphs": [
+              "SimpleTime Pro köps via App Store. Apple sköter betalningen och prenumerationen; vi får inga betalningsuppgifter och inga personuppgifter om dig. Appen frågar bara App Store om Pro är aktivt. Från Apple får vi försäljningsrapporter utan personuppgifter."
+            ]
+          },
+          {
+            "title": "Betyg",
+            "paragraphs": [
+              "SimpleTime kan be om ett betyg en gång, via Apples systemdialog. Vi får inte veta om eller hur du har betygsatt appen."
+            ]
+          },
+          {
+            "title": "Export och delning",
+            "paragraphs": [
+              "CSV-filer, PDF-rapporter, säkerhetskopior och bilder skapas på din enhet. Vart de tar vägen bestämmer du – i delningsmenyn."
+            ]
+          },
+          {
+            "title": "Radera dina data",
+            "paragraphs": [
+              "I appens inställningar under Integritet › Radera alla data tar du bort allt som SimpleTime har sparat på en gång – på den här enheten, i iCloud och i säkerhetskopiorna i iCloud Drive; via iCloud når raderingen även dina andra enheter. Om du raderar appen försvinner dess data från den enheten."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "website",
+        "title": "Den här webbplatsen",
+        "subsections": [
+          {
+            "title": "Webbhotell och leverans",
+            "paragraphs": [
+              "simple-time.app levereras av Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. När du öppnar en sida överför din webbläsare nödvändigtvis tekniska data – särskilt din IP-adress, den begärda sidan, tidpunkten och din webbläsares identifiering (user agent). Cloudflare behandlar dessa data för att leverera webbplatsen och skydda den mot angrepp och missbruk, och kan för detta ändamål spara dem kortvarigt i loggfiler. Den rättsliga grunden är vårt berättigade intresse av en säker och tillförlitlig webbplats (art. 6.1 f GDPR). Cloudflare är certifierat enligt EU-U.S. Data Privacy Framework, och vi har ingått ett personuppgiftsbiträdesavtal med Cloudflare. Mer information: [cloudflare.com/privacypolicy](https://www.cloudflare.com/privacypolicy/)"
+            ]
+          },
+          {
+            "title": "Felrapporter",
+            "paragraphs": [
+              "Om en sida inte kan läsas in kan din webbläsare skicka en kort teknisk felrapport till Cloudflare (Network Error Logging) – till exempel adressen, typen av fel och din IP-adress. Den används enbart för att upptäcka nätverksproblem."
+            ]
+          },
+          {
+            "title": "Cookies och lokal lagring",
+            "paragraphs": [
+              "Vi sätter inga cookies. I enskilda fall kan Cloudflare sätta en tekniskt nödvändig cookie (__cf_bm) för att skilja människor från bottar; den används inte för spårning. Om du växlar mellan ljust och mörkt läge sparar din webbläsare valet i sin lokala lagring – det lämnar aldrig din enhet. Sökningen på frågesidan körs helt i din webbläsare."
+            ]
+          },
+          {
+            "title": "Inga analysverktyg, ingen tredje part",
+            "paragraphs": [
+              "Den här webbplatsen använder inga analys- eller spårningsverktyg, ingen reklam och inga plugin-program för sociala medier, och den laddar inga typsnitt eller skript från andra servrar. Länkar till App Store leder dig till Apple, där Apples integritetspolicy gäller."
+            ]
+          },
+          {
+            "title": "E-post",
+            "paragraphs": [
+              "Om du skriver till oss använder vi din e-postadress och ditt meddelande för att svara dig (art. 6.1 b och f GDPR). Vår e-post lagras för vår räkning hos IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Tyskland. Vi raderar meddelanden så snart de inte längre behövs, om vi inte är skyldiga enligt lag att spara dem."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rights",
+        "title": "Dina rättigheter",
+        "paragraphs": [
+          "Du har rätt att få tillgång till dina data (art. 15 GDPR), att få dem rättade (art. 16) eller raderade (art. 17), att begränsa behandlingen av dem (art. 18), till dataportabilitet (art. 20) och att invända mot behandling som grundar sig på berättigade intressen (art. 21). För att utöva dessa rättigheter skriver du helt enkelt till oss. Eftersom appen inte sparar något om dig hos oss gäller en begäran oftast e-post eller den här webbplatsen; dina data i appen kan du själv visa, exportera och radera när som helst.",
+          "Du har också rätt att lämna in ett klagomål till en tillsynsmyndighet för dataskydd – till exempel Bayerns delstatliga myndighet för tillsyn över dataskydd (BayLDA), Promenade 18, 91522 Ansbach, Tyskland."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Ändringar",
+        "paragraphs": [
+          "Vi uppdaterar den här integritetspolicyn när appen, webbplatsen eller lagen ändras. Datumet högst upp visar vilken version som gäller."
+        ]
+      }
+    ]
+  }
+}

@@ -1,54 +1,52 @@
 ---
 import type { Lang } from '../i18n/ui';
-import { useTranslations } from '../i18n/utils';
-import { FAQ_KEYS } from '../i18n/faq';
+import { langPrefix } from '../i18n/utils';
+import { getContent, faqById, HOME_FAQ } from '../i18n/content';
+import FaqEntry from './FaqEntry.astro';
 
 interface Props {
   lang: Lang;
 }
 
+// The six questions people ask before downloading. The full list is on /faq/;
+// `#faq` stays here because the app links to it (Website.faq).
 const { lang } = Astro.props;
-const t = useTranslations(lang);
+const { faq } = getContent(lang).home;
+const entries = faqById(lang);
+const items = HOME_FAQ.map((id) => entries.get(id)).filter((item) => item !== undefined);
 ---
 
 <section id="faq" class="scroll-mt-20 bg-canvas-alt py-20 sm:py-28">
   <div class="mx-auto max-w-3xl px-5 sm:px-8">
     <div class="reveal mb-12 text-center">
-      <h2 class="text-display text-3xl font-bold sm:text-[2.5rem]">{t('faq.title')}</h2>
-      <p class="mt-4 text-[17px] text-muted">{t('faq.subtitle')}</p>
+      <h2 class="text-display text-3xl font-bold sm:text-[2.5rem]">{faq.title}</h2>
+      <p class="text-balance mt-4 text-[17px] text-muted">{faq.subtitle}</p>
     </div>
 
     <div class="reveal divide-y divide-line overflow-hidden rounded-3xl border border-line bg-surface">
-      {
-        FAQ_KEYS.map((k) => (
-          <details class="group">
-            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-[16px] font-medium transition-colors hover:bg-surface-2">
-              {t(`faq.${k}.q` as any)}
-              <svg
-                class="h-4 w-4 shrink-0 text-subtle transition-transform duration-200 group-open:rotate-45"
-                viewBox="0 0 16 16"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                aria-hidden="true"
-              >
-                <path d="M8 3v10M3 8h10" />
-              </svg>
-            </summary>
-            <p class="px-6 pb-6 text-[15px] leading-relaxed text-muted">
-              {t(`faq.${k}.a` as any)}
-            </p>
-          </details>
-        ))
-      }
+      {items.map((item) => <FaqEntry lang={lang} item={item} />)}
+    </div>
+
+    <div class="reveal mt-10 flex justify-center">
+      <a
+        href={`${langPrefix(lang)}/faq/`}
+        class="inline-flex items-center gap-2 rounded-full border border-line-strong bg-surface px-6 py-3 font-medium text-ink transition-colors hover:bg-surface-2"
+      >
+        {faq.button}
+        <svg
+          class="h-3.5 w-3.5 rtl:-scale-x-100"
+          viewBox="0 0 14 14"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M3 7h8"></path>
+          <path d="M7 3l4 4-4 4"></path>
+        </svg>
+      </a>
     </div>
   </div>
 </section>
-
-<style>
-  /* Safari still renders the default disclosure triangle without this. */
-  summary::-webkit-details-marker {
-    display: none;
-  }
-</style>

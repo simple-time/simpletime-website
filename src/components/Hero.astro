@@ -1,9 +1,10 @@
 ---
 import type { Lang } from '../i18n/ui';
 import { useTranslations } from '../i18n/utils';
+import { getContent } from '../i18n/content';
+import { phoneScreen } from '../i18n/screens';
 import AppStoreButton from './AppStoreButton.astro';
 import DeviceFrame from './DeviceFrame.astro';
-import trackScreen from '../assets/screens/track.png';
 
 interface Props {
   lang: Lang;
@@ -11,21 +12,19 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+const { home, store, shots } = getContent(lang);
+const hero = home.hero;
 
-const proof = [
-  {
-    label: t('hero.proof.price'),
-    icon: '<path d="M12 3v18"/><path d="M16.5 7.5C15.7 6.4 14 6 12 6c-2.5 0-4 1.1-4 2.9 0 4.2 8.4 2 8.4 6.2 0 1.9-1.7 3-4.4 3-2.2 0-3.9-.5-4.7-1.7"/>',
-  },
-  {
-    label: t('hero.proof.account'),
-    icon: '<circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/>',
-  },
-  {
-    label: t('hero.proof.private'),
-    icon: '<path d="M12 3l7.5 3.5v5c0 4.6-3.2 7.8-7.5 9.2-4.3-1.4-7.5-4.6-7.5-9.2v-5L12 3z"/><path d="M9.3 12.2l1.9 1.9 3.6-3.7"/>',
-  },
+// Price, account, privacy – the three things people check before downloading.
+const proofIcons = [
+  '<path d="M12 3v18"/><path d="M16.5 7.5C15.7 6.4 14 6 12 6c-2.5 0-4 1.1-4 2.9 0 4.2 8.4 2 8.4 6.2 0 1.9-1.7 3-4.4 3-2.2 0-3.9-.5-4.7-1.7"/>',
+  '<circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/>',
+  '<path d="M12 3l7.5 3.5v5c0 4.6-3.2 7.8-7.5 9.2-4.3-1.4-7.5-4.6-7.5-9.2v-5L12 3z"/><path d="M9.3 12.2l1.9 1.9 3.6-3.7"/>',
 ];
+const proof = hero.proof.map((label, i) => ({ label, icon: proofIcons[i] }));
+
+// Chinese and Japanese run sentences together; everywhere else they are spaced.
+const sentenceGap = lang === 'ja' || lang === 'zh' ? '' : ' ';
 ---
 
 <section class="relative overflow-hidden">
@@ -48,33 +47,34 @@ const proof = [
           class="inline-flex items-center gap-2 rounded-full border border-line bg-surface/70 px-3.5 py-1.5 text-[13px] font-medium text-muted backdrop-blur"
         >
           <span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span>
-          {t('hero.eyebrow')}
+          {hero.eyebrow}
         </p>
 
         <h1 class="text-display mt-6 text-[2.75rem] font-bold sm:text-6xl lg:text-[4.25rem]">
-          {t('hero.title.part1')}<br />
+          {hero.titleLead}<br />
           <span
             class="bg-gradient-to-br from-brand-700 via-brand-500 to-brand-400 bg-clip-text text-transparent dark:from-brand-200 dark:via-brand-300 dark:to-brand-400"
           >
-            {t('hero.title.part2')}
+            {hero.titleAccent}
           </span>
         </h1>
 
+        {/* The first two paragraphs of the App Store description, word for word. */}
         <p
           class="text-balance mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-muted sm:text-lg lg:mx-0"
         >
-          {t('hero.subtitle')}
+          {`${store.lead}${sentenceGap}${store.promise}`}
         </p>
 
         <div
           class="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start"
         >
-          <AppStoreButton label={t('hero.cta.appstore')} size="lg" />
+          <AppStoreButton label={t('appstore.download')} size="lg" />
           <a
             href="#features"
             class="group inline-flex items-center gap-1.5 rounded-2xl px-5 py-3.5 font-medium text-ink transition-colors hover:bg-surface-2"
           >
-            {t('hero.cta.features')}
+            {hero.cta}
             <svg
               class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 rtl:-scale-x-100"
               viewBox="0 0 14 14"
@@ -123,8 +123,8 @@ const proof = [
         >
         </div>
         <DeviceFrame
-          image={trackScreen}
-          alt="SimpleTime tracking screen with favorites and activities"
+          image={phoneScreen(lang, 'tracking')}
+          alt={shots[0].alt}
           loading="eager"
           sizes="(min-width: 640px) 320px, 280px"
           widths={[280, 320, 560, 640]}

@@ -1,0 +1,957 @@
+{
+  "store": {
+    "lead": "SimpleTime zamanının nereye gittiğini kaydeder. Tek dokunuş başlatır, tek dokunuş durdurur.",
+    "promise": "Hesap yok, kayıt yok, reklam yok. Saatlerin cihazında ve kendi iCloud'unda kalır.",
+    "sections": [
+      {
+        "id": "tracking",
+        "title": "Kayıt",
+        "points": [
+          "Tek dokunuş başlatır ve durdurur – uygulamada, ana ekrandan, Denetim Merkezi'nden, iPhone aramasından ya da Siri ile",
+          "Alt görevleriyle birlikte görevler, işin kadar derin",
+          "Başlatmayı unuttun mu? Zamanı sonradan gir ve istediğin an değiştir",
+          "Renk, simge, favoriler ve senin belirlediğin bir sıra"
+        ]
+      },
+      {
+        "id": "day",
+        "title": "Günün",
+        "points": [
+          "Liste ya da 0'dan 24'e bir zaman çizelgesi, şu anki saati gösteren bir işaretle",
+          "Her kayda not",
+          "Dünle karşılaştırma en üstte"
+        ]
+      },
+      {
+        "id": "insights",
+        "title": "Değerlendirme",
+        "points": [
+          "Göreve ve verimliliğe göre pasta grafikler",
+          "Gün, hafta, ay, yıl",
+          "İstatistikler: önceki dönemle karşılaştırma, gelişim, gün içine dağılım, en uzun ve en kısa kayıt",
+          "Her görevin kendi sayıları – ilk kayıt, en uzunu, bu hafta, bu yıl",
+          "Her grafiği görsel olarak paylaş"
+        ]
+      },
+      {
+        "id": "reports",
+        "title": "Raporlar ve dışa aktarma",
+        "points": [
+          "Bölümlerini kendin seçip sıraladığın bir PDF rapor",
+          "Excel ve Numbers için CSV",
+          "iCloud Drive'da yedekler, otomatik ve istersen parolayla şifreli"
+        ]
+      },
+      {
+        "id": "widgets",
+        "title": "Widget'lar ve Siri",
+        "points": [
+          "Ana ekranında Bugün, Çalışan görev ve Hafta",
+          "Süren zaman kilitli ekranda ve Dynamic Island'da",
+          "Denetim Merkezi'nde kaydı başlatıp durduran bir anahtar",
+          "Siri ve Kestirmeler: başlat, durdur ya da şu an ne çalıştığını sor"
+        ]
+      },
+      {
+        "id": "devices",
+        "title": "Tüm cihazlarında",
+        "points": [
+          "iPhone, iPad ve Mac, iCloud üzerinden eşzamanlı",
+          "Cihazının dilinden bağımsız 40 dil",
+          "Uygulamanın tamamında VoiceOver ve dinamik yazı tipi"
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Verilerin",
+        "points": [
+          "Face ID, Touch ID ya da kendi kodunla uygulama kilidi",
+          "Gizlilik tek sayfada: tüm izinlere ve verilerine genel bakış",
+          "Hesap yok, bize ait sunucu yok, reklam yok, takip yok",
+          "Her şeyi tek seferde sil – cihazda, iCloud'da ve yedeklerde"
+        ]
+      }
+    ],
+    "pro": {
+      "title": "SimpleTime Pro",
+      "intro": "Yukarıdakilerin tamamı ücretsiz kalır. Pro şunları ekler:",
+      "points": [
+        "Apple Watch: bileğinden başlat ve durdur, erken başlat, günün, haftan ve hedeflerin bir bakışta – süren zaman saat kadranında",
+        "Özetler: haftan, ayın ve yılın kartlarda – göz atmak ve paylaşmak için",
+        "Yerler: görevler vardığında kendiliğinden başlar – istersen bir bekleme süresinden sonra",
+        "Yıl tek bakışta: yılın her günü tek bir görselde, serilerinle",
+        "Görev başına hedefler – gün, hafta ya da ay için",
+        "Odak filtresi: iş odağı açılır, liste yalnızca işi gösterir, saat çoktan işlemektedir",
+        "Kendi doldurduğun bir hızlı başlat widget'ı",
+        "Yedi vurgu rengi ya da kendi rengin, ayrıca on altı uygulama simgesi",
+        "PDF raporda ek bölümler: gelişim, gün içi dağılım, karşılaştırma, hedefler"
+      ],
+      "pricing": "Pro aylık, yıllık ya da tek seferde sonsuza dek alınabilir. Yeni abonelere ilk hafta ücretsiz, Aile Paylaşımı ile de Pro'yu en fazla altı kişi kullanabilir. Fiyatlar uygulamada gösterilir. Aylık ve yıllık, sen iptal edene dek otomatik yenilenir; bunu istediğin an App Store ayarlarından yapabilirsin. Sonradan eklenenler dahildir."
+    },
+    "closing": "Zamanının gerçekte nereye gittiğini bilmek isteyen herkes için – işte, okulda, antrenmanda ya da kendisi için."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "iPhone, iPad ve Mac için zaman takibi",
+      "titleLead": "Tek dokunuş",
+      "titleAccent": "saati başlatır.",
+      "cta": "Özellikleri gör",
+      "proof": [
+        "Ücretsiz indir",
+        "Hesap yok",
+        "Reklam yok, takip yok"
+      ]
+    },
+    "showcase": [
+      {
+        "id": "day",
+        "eyebrow": "Günün",
+        "title": "Tüm günün tek bakışta.",
+        "body": "Her kayıt başlangıcı, bitişi ve süresiyle – liste olarak ya da şu anki saati gösteren bir işaretle 0'dan 24'e bir zaman çizelgesi olarak. Notlar sayıların anlatamadığını saklar; en üstte de bugünün dünle karşılaştırmasını görürsün.",
+        "points": [
+          "Liste ya da 0'dan 24'e zaman çizelgesi",
+          "Her kayda not",
+          "Bugün, dünle karşılaştırmalı"
+        ]
+      },
+      {
+        "id": "insights",
+        "eyebrow": "Değerlendirme",
+        "title": "Saatlerinin gerçekte nereye gittiğini gör.",
+        "body": "Göreve ve verimliliğe göre pasta grafikler – bir gün, bir hafta, bir ay ya da bir yıl için. İstatistikler her dönemi bir öncekiyle karşılaştırır; gelişimi ve günün hangi saatlerinde en çok kayıt yaptığını gösterir.",
+        "points": [
+          "Göreve ve verimliliğe göre grafikler",
+          "Önceki dönemle karşılaştırma",
+          "Her grafiği görsel olarak paylaş"
+        ]
+      },
+      {
+        "id": "reports",
+        "eyebrow": "Raporlar ve dışa aktarma",
+        "title": "Saniyeler içinde bir rapor.",
+        "body": "Bir dönem ve gereken bölümleri seç, sürükleyerek sırala – SimpleTime her görev ve alt görevle bir PDF hazırlar. Ham sayılar mı lazım? Bir CSV dosyası Excel ve Numbers'ta açılır.",
+        "points": [
+          "Seçtiğin bölümlerle bir PDF",
+          "Excel ve Numbers için CSV",
+          "iCloud Drive'da otomatik yedekler"
+        ]
+      }
+    ],
+    "features": {
+      "title": "İhtiyacın olan her şey. Ücretsiz.",
+      "subtitle": "Bu listedeki her özellik ücretsiz uygulamanın parçası."
+    },
+    "pro": {
+      "button": "SimpleTime Pro hakkında her şey"
+    },
+    "gallery": {
+      "title": "Daha yakından.",
+      "subtitle": "App Store'daki ekranlar – cihazında göründükleri gibi."
+    },
+    "audience": {
+      "title": "Zamanının nereye gittiğini bilmek isteyen herkes için.",
+      "subtitle": "İşte, okulda, antrenmanda – ya da sadece kendin için.",
+      "groups": [
+        {
+          "id": "work",
+          "title": "İş ve serbest çalışma",
+          "body": "Müşterileri ve projeleri görevler ve alt görevler olarak ayrı tut, gerektiğinde temiz bir döküm dışa aktar."
+        },
+        {
+          "id": "study",
+          "title": "Okul ve öğrenme",
+          "body": "Bir dersin gerçekte ne kadar zaman aldığını gör ve sonraki haftayı gerçek sayılarla planla."
+        },
+        {
+          "id": "training",
+          "title": "Antrenman ve alışkanlıklar",
+          "body": "Antrenmanlarını, pratiğini ya da uykunu kaydet ve haftalar içinde düzenin nasıl oturduğunu izle."
+        },
+        {
+          "id": "everyday",
+          "title": "Gündelik hayat",
+          "body": "Saatlerin gerçekte nereye gittiğini öğren – ve neyi değiştirmek istediğine kendin karar ver."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Sık sorulan sorular.",
+      "subtitle": "En önemli yanıtlar tek bakışta – çok daha fazlası SSS sayfasında.",
+      "button": "Tüm sorular ve yanıtlar"
+    },
+    "cta": {
+      "title": "Kayda başlamaya hazır mısın?",
+      "subtitle": "iPhone, iPad ve Mac'te ücretsiz. Hesap yok, reklam yok, takip yok.",
+      "note": "Apple Watch uygulaması SimpleTime Pro'nun parçasıdır."
+    }
+  },
+  "shots": [
+    {
+      "id": "tracking",
+      "title": "Takip et",
+      "caption": "Tek dokunuş saati başlatır",
+      "alt": "Çalışan bir görev ve en üstte favorilerle Kayıt sekmesi"
+    },
+    {
+      "id": "day",
+      "title": "Günün",
+      "caption": "Her kayıt, saniyesine kadar",
+      "alt": "Kayıtların saatleriyle listelendiği gün görünümü"
+    },
+    {
+      "id": "timeline",
+      "title": "Zaman akışı",
+      "caption": "Tüm gün tek bakışta",
+      "alt": "0'dan 24'e zaman çizelgesi olarak gün görünümü"
+    },
+    {
+      "id": "chart",
+      "title": "Analiz et",
+      "caption": "Saatlerin gerçekte nereye gidiyor",
+      "alt": "Göreve göre pasta grafikte bir hafta"
+    },
+    {
+      "id": "statistics",
+      "title": "İstatistik",
+      "caption": "Haftaları karşılaştır, eğilimi gör",
+      "alt": "Bu haftayı bir öncekiyle karşılaştıran istatistikler"
+    },
+    {
+      "id": "report",
+      "title": "Raporlar",
+      "caption": "Her görev için ayrıntılı PDF",
+      "alt": "Her görevi içeren bir PDF raporundan bir sayfa"
+    },
+    {
+      "id": "pro",
+      "title": "Pro'ya geç",
+      "caption": "Hedefler, yılın, renklerin",
+      "alt": "Uygulamadaki SimpleTime Pro sayfası"
+    }
+  ],
+  "pro": {
+    "eyebrow": "SimpleTime Pro",
+    "title": "Kaydettiğin zamandan daha fazlası.",
+    "subtitle": "SimpleTime ücretsiz kalır – Pro olmadan yapabildiği her şey de öyle kalır. Pro; Apple Watch'unu, görevleri kendiliğinden başlatan yerleri, haftana, ayına ve yılına dair özetleri, hedefleri ve dahasını ekler.",
+    "featuresTitle": "Pro neler ekler",
+    "features": [
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Bileğinden başlat ve durdur, erken başlat, günün, haftan ve hedeflerin bir bakışta – süren zaman saat kadranında."
+      },
+      {
+        "id": "reviews",
+        "title": "Özetler",
+        "body": "Haftan, ayın ve yılın kartlarda – göz atmak ve paylaşmak için."
+      },
+      {
+        "id": "places",
+        "title": "Yerler",
+        "body": "Görevler vardığında kendiliğinden başlar – istersen bir bekleme süresinden sonra; böylece yalnızca yanından geçerken hiçbir şey başlamaz."
+      },
+      {
+        "id": "year",
+        "title": "Yıla bir bakışta",
+        "body": "Yılın her günü tek bir görselde, süren serinle ve en uzun serinle."
+      },
+      {
+        "id": "goals",
+        "title": "Hedefler",
+        "body": "Görev başına bir hedef – gün, hafta ya da ay için. Alt görevler de sayılır."
+      },
+      {
+        "id": "focus",
+        "title": "Odak filtresi",
+        "body": "İş odağı açılır, liste yalnızca işi gösterir – ve kayıt onunla başlayıp onunla bitebilir."
+      },
+      {
+        "id": "widget",
+        "title": "Hızlı başlat widget'ı",
+        "body": "Üzerinde hangi görevlerin duracağına sen karar verirsin. Ana ekrandan tek dokunuş onları başlatır."
+      },
+      {
+        "id": "style",
+        "title": "Renkler ve uygulama simgeleri",
+        "body": "Yedi vurgu rengi ya da kendi rengin, uygulamanın tamamında – ayrıca on altı uygulama simgesi."
+      },
+      {
+        "id": "report",
+        "title": "PDF raporda daha fazlası",
+        "body": "Gelişim, gün içine dağılım, önceki dönemle karşılaştırma ve hedefler – seçtiğin sırayla."
+      },
+      {
+        "id": "future",
+        "title": "Gelecek olan her şey",
+        "body": "Sonradan eklenenler dahildir – ek satın alma olmadan."
+      }
+    ],
+    "plansTitle": "Pro'ya üç yol",
+    "plansSubtitle": "Fiyatlar ülkene göre değişir ve satın almadan önce uygulamada kendi para biriminle gösterilir.",
+    "plans": [
+      {
+        "id": "monthly",
+        "title": "Aylık",
+        "body": "Her ay faturalandırılır. İstediğin zaman iptal edebilirsin."
+      },
+      {
+        "id": "yearly",
+        "title": "Yıllık",
+        "body": "Yılda bir kez faturalandırılır – uygulama, aylık ödemeye göre ne kadar tasarruf ettiğini gösterir."
+      },
+      {
+        "id": "lifetime",
+        "title": "Ömür boyu",
+        "body": "Bir kez öde, Pro sonsuza dek senin olsun. Hiç sona ermez."
+      }
+    ],
+    "notes": [
+      "Yeni aboneler Aylık ya da Yıllık planı bir hafta ücretsiz deneyebilir.",
+      "Aile Paylaşımı: tek satın alma, altı kişiye kadar.",
+      "Sonradan eklenenler dahildir – ek satın alma olmadan."
+    ],
+    "legal": "Aylık ve yıllık, sen iptal edene kadar otomatik yenilenir. İstediğin zaman App Store ayarlarından iptal edebilirsin. Ömür boyu tek seferlik bir ödemedir ve hiç sona ermez.",
+    "terms": "Kullanım koşulları (EULA)",
+    "privacy": "Gizlilik politikası",
+    "freeTitle": "Ücretsiz kalanlar",
+    "freeBody": "Kayıt için ihtiyacın olan her şey: görevler ve alt görevler, gün görünümü ve zaman çizelgesi, grafikler ve istatistikler, PDF rapor ve CSV dışa aktarma, widget'lar, Canlı Etkinlik, Denetim Merkezi ve Siri, iCloud eşitlemesi ve yedekler, uygulama kilidi – 40 dilde. Hesap yok, reklam yok, takip yok.",
+    "howTitle": "Pro'yu nasıl alırsın",
+    "how": [
+      "SimpleTime'da Ayarlar › SimpleTime Pro'yu aç.",
+      "Aylık, Yıllık ya da Ömür boyu seçeneğini seç – ödemeyi Apple Hesabın üzerinden yaparsın.",
+      "Pro hemen açılır – aynı Apple Hesabı'nı kullanan tüm cihazlarında."
+    ],
+    "faqTitle": "Pro hakkında sorular",
+    "ctaTitle": "Ücretsiz başla.",
+    "ctaSubtitle": "SimpleTime'ı indir – Pro'yu da istediğin zaman uygulamada aç."
+  },
+  "faq": {
+    "title": "Sık sorulan sorular.",
+    "subtitle": "SimpleTime hakkında her şey – ilk dokunuştan SimpleTime Pro'ya.",
+    "searchLabel": "Sorularda ara",
+    "searchPlaceholder": "örn. “yedek” ya da “Apple Watch”",
+    "results": "Eşleşen sorular: {count}",
+    "noResults": "“{query}” ile eşleşen soru yok.",
+    "noResultsHint": "Başka bir sözcük dene – ya da [bize yaz](@contact).",
+    "topics": "Konular",
+    "moreTitle": "Aradığın yanıtı bulamadın mı?",
+    "moreBody": "Bize yaz – her mesaj okunur ve yanıtlanır.",
+    "moreButton": "İletişim",
+    "categories": [
+      {
+        "id": "basics",
+        "title": "İlk adımlar",
+        "items": [
+          {
+            "id": "what-is",
+            "q": "SimpleTime nedir?",
+            "a": [
+              "SimpleTime; iPhone, iPad ve Mac için bir zaman takip uygulamasıdır. Tek dokunuş saati başlatır, tek dokunuş durdurur. Ardından SimpleTime sana zamanının nereye gittiğini gösterir – günlük liste ya da zaman çizelgesi olarak, grafiklerde ve istatistiklerde, PDF rapor ya da CSV dosyası olarak. Hesap yok, reklam yok, takip yok."
+            ]
+          },
+          {
+            "id": "free",
+            "q": "SimpleTime ücretsiz mi?",
+            "a": [
+              "Evet. SimpleTime'ı indirmek ücretsizdir; kayıt için gereken her şey de öyle: görevler ve alt görevler, gün görünümü, grafikler ve istatistikler, raporlar ve dışa aktarma, widget'lar, iCloud eşitlemesi ve yedekler. SimpleTime Pro isteğe bağlıdır ve Apple Watch uygulamasını, özetleri, yerleri, hedefleri ve dahasını ekler. [SimpleTime Pro hakkında her şey](@pro)"
+            ]
+          },
+          {
+            "id": "account",
+            "q": "Hesap gerekiyor mu?",
+            "a": [
+              "Hayır. Üyelik de oturum açma da yok – uygulamayı açar ve başlarsın. iCloud kullanıyorsan eşitleme kendi Apple Hesabın üzerinden yapılır; biz onu hiç görmeyiz."
+            ]
+          },
+          {
+            "id": "devices",
+            "q": "SimpleTime hangi cihazlarda çalışır?",
+            "a": [
+              "iOS 26 veya iPadOS 26 ya da sonraki bir sürümün yüklü olduğu iPhone ve iPad'de, ayrıca Apple çipli Mac'lerde. Apple Watch uygulaması SimpleTime Pro'nun parçasıdır ve watchOS 26 gerektirir. Aynı Apple Hesabı ile kayıtların tüm cihazlarında eşitlenir."
+            ]
+          },
+          {
+            "id": "languages",
+            "q": "SimpleTime hangi dilleri konuşuyor?",
+            "a": [
+              "40 dil – Türkçe ve İngilizceden Arapçaya, Hintçeye ve Japoncaya. Ayarlar › Dil bölümünde uygulamanın dilini cihazının dilinden bağımsız olarak seçebilirsin."
+            ]
+          },
+          {
+            "id": "first-steps",
+            "q": "Nasıl başlarım?",
+            "a": [
+              "Bir görev oluşturmak için Kayıt sekmesinde +'ya dokun – ad, renk ve simgeyle. Yanındaki üçgene dokun, saat işlemeye başlar; durdurmak için Durdur'a dokun. İlk açılışta kısa bir tur sana en önemli düğmeleri gösterir. Turu istediğin zaman Ayarlar › Turu yeniden göster ile tekrar izleyebilirsin."
+            ]
+          },
+          {
+            "id": "offline",
+            "q": "SimpleTime çevrimdışı çalışır mı?",
+            "a": [
+              "Evet, tamamen. Kayıt, gün görünümü, grafikler ve raporlar bağlantı olmadan da çalışır. Eşitleme ve yedekler, cihazın yeniden çevrimiçi olur olmaz eksikleri tamamlar."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tracking",
+        "title": "Kayıt",
+        "items": [
+          {
+            "id": "start-stop",
+            "q": "Kaydı nasıl başlatıp durdururum?",
+            "a": [
+              "Bir görevi başlatmak için yanındaki üçgene dokun. Çalışan görev, Kayıt sekmesinin en üstünde görünür; durdurmak için Durdur'a dokun. Görevin adına dokunursan alt görevleri açılır. Sola kaydırırsan onu düzenleyebilir, arşivleyebilir ya da silebilirsin; sağa kaydırırsan tüm sayılarıyla bilgilerini görürsün."
+            ]
+          },
+          {
+            "id": "one-at-a-time",
+            "q": "İki görev aynı anda çalışabilir mi?",
+            "a": [
+              "Hayır. Aynı anda en fazla bir kayıt çalışır. Başka bir görevi başlattığında süren kayıt kendiliğinden biter – böylece kayıtların asla çakışmaz."
+            ]
+          },
+          {
+            "id": "add-later",
+            "q": "Başlatmayı unuttum – zamanı sonradan ekleyebilir miyim?",
+            "a": [
+              "Evet. Gün sekmesinde başlangıcı ve bitişiyle yeni bir kayıt ekle ya da değiştirmek için mevcut bir kayda dokun. Kayıtlar çakışamaz: bir zaman aralığı başka bir kayıtla çakışırsa SimpleTime sana bunu söyler. Hâlâ süren bir kayıtta başlangıcı geriye de alabilirsin – önceki kaydın bitişine kadar."
+            ]
+          },
+          {
+            "id": "subtasks",
+            "q": "Alt görevler nasıl çalışır?",
+            "a": [
+              "Açmak için bir görevin adına dokun, sonra orada + ile alt görevler ekle. Alt görevleri, işin ne kadar derinse o kadar iç içe yerleştirebilirsin – müşteri, proje, aşama. Grafiklerde, raporlarda ve hedeflerde alt görevler, üstlerindeki göreve sayılır."
+            ]
+          },
+          {
+            "id": "order",
+            "q": "Görev listemi nasıl düzenli tutarım?",
+            "a": [
+              "Her gün kullandığın görevleri favori olarak işaretle – en üstte kalırlar. Geri kalanları alfabetik, en çok kullanılana ya da son kullanılana göre veya kendi sıralamanla dizebilirsin. Bir renk ve bir simge – ya da bir emoji – her görevi kolayca tanınır kılar."
+            ]
+          },
+          {
+            "id": "archive-trash",
+            "q": "Arşivlemek ile silmek arasındaki fark ne?",
+            "a": [
+              "Arşivlemek bir görevi yalnızca gizler: kayıtları kalır ve tüm değerlendirmelerde sayılmaya devam eder. Silmek, görevi kayıtlarıyla birlikte çöpe taşır. Oradan ikisini de geri yükleyebilir – ya da kalıcı olarak silebilirsin."
+            ]
+          },
+          {
+            "id": "notes",
+            "q": "Kayıtlara not ekleyebilir miyim?",
+            "a": [
+              "Evet, her kayıt bir not taşıyabilir – ne üzerinde çalıştığın ya da kiminle buluştuğun. Notlar gün görünümünde gösterilir; CSV dışa aktarımına ve yedeklere de dahildir."
+            ]
+          },
+          {
+            "id": "reminders",
+            "q": "SimpleTime bana hatırlatabilir mi?",
+            "a": [
+              "Evet. Ayarlarda Bildirimler bölümünde kurallar belirlersin – örneğin bir görev 60 dakikadır çalışıyorsa bir hatırlatma; tüm görevler ya da yalnızca seçtiklerin için, seçtiğin günlerde. SimpleTime, bir süredir hiçbir şey kaydedilmediğinde de sana hatırlatabilir."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "insights",
+        "title": "Gün görünümü ve değerlendirme",
+        "items": [
+          {
+            "id": "day-view",
+            "q": "Gün görünümü neyi gösterir?",
+            "a": [
+              "Bir günün her kaydını başlangıcı, bitişi ve süresiyle – liste olarak ya da şu anki saati gösteren bir işaretle 0'dan 24'e zaman çizelgesi olarak. En üstte bugünün dünle karşılaştırmasını görürsün."
+            ]
+          },
+          {
+            "id": "charts",
+            "q": "Hangi grafikler ve istatistikler var?",
+            "a": [
+              "Bir gün, bir hafta, bir ay ya da bir yıl için göreve ve verimliliğe göre pasta grafikler. Daha fazla istatistik bölümünde önceki dönemle karşılaştırmayı, gelişimi, zamanının gün içine dağılımını, en çok kullandığın görevleri, en uzun ve en kısa kaydı bulursun. Her görevin ayrıca kendi bilgi sayfası vardır – ilk kayıt, en uzun kayıt, bu hafta, bu yıl."
+            ]
+          },
+          {
+            "id": "productivity",
+            "q": "Verimlilik puanı nedir?",
+            "a": [
+              "Her göreve bir kategori verebilirsin: verimli, verimsiz, zorunlu – ya da onu verimlilik hesabına katmayabilirsin. Puan, kaydettiğin sürenin ne kadarının verimli ya da zorunlu olduğunu gösterir: (verimli etkinlikler + zorunlu yükümlülükler) ÷ toplam süre × 100."
+            ]
+          },
+          {
+            "id": "share-chart",
+            "q": "Bir grafiği paylaşabilir miyim?",
+            "a": [
+              "Evet, her grafiği görsel olarak paylaşabilir ya da Fotoğraflar'a kaydedebilirsin. Kaydetmek için SimpleTime yalnızca fotoğraf ekleme izni ister – fotoğraf arşivini göremez."
+            ]
+          },
+          {
+            "id": "pdf-report",
+            "q": "PDF raporu nasıl oluştururum?",
+            "a": [
+              "Ayarlar › Raporu dışa aktar bölümünde bir dönem seç – bugünden tüm zamanlara ya da kendi belirlediğin bir aralık –, istediğin bölümleri seç ve sürükleyerek sırala. SimpleTime her görev ve alt görevle PDF'i oluşturur; paylaşmaya ya da kaydetmeye hazırdır. SimpleTime Pro ek bölümler getirir: gelişim, gün içi dağılım, karşılaştırma ve hedefler."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shortcuts",
+        "title": "Widget'lar, Siri ve Odak",
+        "items": [
+          {
+            "id": "widgets",
+            "q": "Hangi widget'lar var?",
+            "a": [
+              "Ana ekran için: Bugün, Çalışan görev ve Hafta. Kilitli ekran için: ne çalışıyor ve ne kadar süredir. Ayrıca Denetim Merkezi için bir anahtar. Bir görev çalışırken Canlı Etkinlik onu kilitli ekranda ve Dynamic Island'da gösterir. SimpleTime Pro ile kendi görevlerinle doldurduğun bir hızlı başlat widget'ı da gelir."
+            ]
+          },
+          {
+            "id": "without-opening",
+            "q": "Uygulamayı açmadan kaydı başlatabilir miyim?",
+            "a": [
+              "Evet, birkaç yolla. Çalışanı durdurmak ya da görevlerinden birini başlatmak için uygulama simgesine basılı tut. Bir görevin adını iPhone aramasına yaz ve ona dokun. Ya da Denetim Merkezi'ndeki anahtarı, bir widget'ı, Siri'yi – veya SimpleTime Pro ile Apple Watch'unu kullan."
+            ]
+          },
+          {
+            "id": "siri",
+            "q": "SimpleTime, Siri ve Kestirmeler ile nasıl çalışır?",
+            "a": [
+              "Örneğin “Start Work in SimpleTime”, “Stop tracking in SimpleTime”, “How much did I track today in SimpleTime?” ya da “What’s running in SimpleTime?” de. Siri bu ifadeleri İngilizce ve Almanca anlar. Eylemler her dilde Kestirmeler uygulamasında hazırdır; orada onlara kendi ifadeni de verebilirsin."
+            ]
+          },
+          {
+            "id": "focus-filter",
+            "q": "Odak filtresi ne işe yarar?",
+            "a": [
+              "Odak filtresiyle SimpleTime odağını takip eder: “İş” odağı açıldığında görev listesi yalnızca iş kategorini gösterir – ve kayıt odakla birlikte başlayıp bitebilir. Bunu iOS ayarlarında Odak › odağın › Odak filtreleri › Filtre Ekle › SimpleTime yoluyla kurarsın. Odak filtresi SimpleTime Pro'nun parçasıdır."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Eşitleme, yedekleme ve dışa aktarma",
+        "items": [
+          {
+            "id": "sync",
+            "q": "SimpleTime cihazlarım arasında eşitleniyor mu?",
+            "a": [
+              "Evet, iCloud üzerinden otomatik olarak – aynı Apple Hesabı ile oturum açılmış her cihazda. Eşitlemenin ne zaman yapılacağına sistem karar verir; ayarlar son eşitlemenin ne zaman olduğunu gösterir ve orada eşitlemeyi denetleyebilirsin."
+            ]
+          },
+          {
+            "id": "without-icloud",
+            "q": "SimpleTime'ı iCloud olmadan kullanabilir miyim?",
+            "a": [
+              "Evet. iCloud olmadan verilerin yalnızca bu cihazda kalır. Eşitlemeyi iOS ayarlarında, adın › iCloud bölümünden açıp kapatabilirsin. iCloud olmadan, dışa aktarıp güvenli bir yerde sakladığın yedekler daha da önemlidir."
+            ]
+          },
+          {
+            "id": "backups",
+            "q": "Yedekleme nasıl çalışır?",
+            "a": [
+              "Ayarlar › Verileri dışa/içe aktar bölümünde otomatik yedeklemeyi açabilirsin – saatlik, günlük, haftalık ya da aylık. SimpleTime yedekleri iCloud Drive'da “SimpleTime/Backups” klasörüne JSON dosyaları olarak kaydeder ve en yeni 20 tanesini saklar. İstediğin zaman kendin de bir yedek dışa aktarabilirsin."
+            ]
+          },
+          {
+            "id": "backup-password",
+            "q": "Yedeklerimi parolayla koruyabilir miyim?",
+            "a": [
+              "Evet. Parola verirsen yedek dosyası kaydedilmeden önce cihazında şifrelenir. Parolayı iyi sakla: o olmadan yedeği kimse geri yükleyemez – ne sen ne de biz. Bunun bir yolu yok."
+            ]
+          },
+          {
+            "id": "restore",
+            "q": "Bir yedeği nasıl geri yüklerim?",
+            "a": [
+              "Ayarlar › Verileri dışa/içe aktar › JSON'dan yedek içe aktar. Mevcut verilerin kalır, eksikler tamamlanır. Yeni bir cihazda önce iCloud eşitlemesinin verilerini getirmesini bekle – yoksa görevler iki kez görünebilir."
+            ]
+          },
+          {
+            "id": "export",
+            "q": "Verilerimi dışa aktarabilir miyim?",
+            "a": [
+              "Evet, istediğin zaman: görev, not, süre, başlangıç ve bitiş içeren bir CSV dosyası olarak – Excel, Numbers ya da herhangi bir analiz aracı için –, PDF rapor olarak ya da JSON biçiminde eksiksiz bir yedek olarak."
+            ]
+          },
+          {
+            "id": "import",
+            "q": "Başka bir uygulamadan veri aktarabilir miyim?",
+            "a": [
+              "Doğrudan değil. SimpleTime kendi yedeklerini (JSON) içe aktarır; diğer uygulamalardan gelen CSV dosyaları içe aktarılamaz."
+            ]
+          },
+          {
+            "id": "new-device",
+            "q": "Yeni bir iPhone'a nasıl geçerim?",
+            "a": [
+              "Aynı Apple Hesabı ile oturum aç ve SimpleTime'ı yükle – iCloud kayıtlarını kendiliğinden geri getirir. iCloud kullanmıyorsan eski cihazda bir yedek dışa aktar ve yenisinde içe aktar. Yerler her cihazın kendisine aittir ve eşitlenmez."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "privacy",
+        "title": "Gizlilik ve güvenlik",
+        "items": [
+          {
+            "id": "data-location",
+            "q": "Verilerim nerede saklanıyor?",
+            "a": [
+              "Cihazlarında ve sana özel iCloud alanında. Onları başka kimse okuyamaz – biz bile. SimpleTime'ın kendi sunucuları yoktur."
+            ]
+          },
+          {
+            "id": "tracking-me",
+            "q": "SimpleTime beni takip ediyor mu?",
+            "a": [
+              "Hayır. Analiz yok, reklam yok, üçüncü taraf SDK'ları yok, kullanıcı profili yok. Uygulama verilerini ne bize ne de başka birine gönderir. Ayrıntıları [gizlilik politikamızda](@privacy) bulabilirsin."
+            ]
+          },
+          {
+            "id": "permissions",
+            "q": "SimpleTime hangi izinleri ister?",
+            "a": [
+              "Yalnızca bir özelliğin ihtiyaç duyduklarını ve yalnızca onu kullandığında: hatırlatmalar ve Yerler bildirimleri için bildirimler, yerler için konumun, görselleri kaydetmek için fotoğraf ekleme ve uygulama kilidi için Face ID ya da Touch ID. Ayarlarda Gizlilik › Genel bakış ve izinler bölümünde her birini güncel durumuyla görürsün."
+            ]
+          },
+          {
+            "id": "location",
+            "q": "SimpleTime konumumu neden istiyor?",
+            "a": [
+              "Yalnızca SimpleTime Pro'nun parçası olan yerler için: bir yere vardığında bir görevin başlayabilmesi için. iOS belirlediğin alanları izler ve vardığında ya da ayrıldığında uygulamaya haber verir. Yerlerin cihazında kalır ve SimpleTime nerelerde bulunduğunun kaydını tutmaz. Yerler olmadan SimpleTime'ın konumuna ihtiyacı yoktur."
+            ]
+          },
+          {
+            "id": "app-lock",
+            "q": "Uygulama kilidi nasıl çalışır?",
+            "a": [
+              "Ayarlar › Uygulama kilidi bölümünde SimpleTime'ın iPhone kodunla – Face ID ya da Touch ID dahil – mı yoksa kendi kodunla mı açılacağını seçersin. Uygulama değiştiricide SimpleTime'ın üzeri örtülü kalır; görev adları da artık ne iPhone aramasında ne de uygulama simgesinde görünür. Önemli: kendi kodunu unutursan uygulamaya geri dönmenin tek yolu onu silip yeniden yüklemektir."
+            ]
+          },
+          {
+            "id": "delete-all",
+            "q": "Tüm verilerimi nasıl silerim?",
+            "a": [
+              "Ayarlarda Gizlilik › Tüm verileri sil bölümünden. Bu, her şeyi tek seferde kaldırır – tüm kayıtları ve görevleri, çöpü, hatırlatıcıları, iCloud Drive'daki yedekleri, dışa aktarımları ve ayarları – bu cihazda, iCloud'da ve çevrimiçi olur olmaz diğer cihazlarında. Bu işlem geri alınamaz."
+            ]
+          },
+          {
+            "id": "diagnostics",
+            "q": "Tanılama bölümünde neler var?",
+            "a": [
+              "SimpleTime çökerse veya donarsa iOS bunu uygulamaya bir raporla bildirir. Raporlar cihazında kalır; içlerinde görev ya da süre yoktur – yalnızca programda sorunun oluştuğu yer bulunur. İstersen birini bizimle paylaş: hatayı bulmamıza yardımcı olur."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pro",
+        "title": "SimpleTime Pro",
+        "items": [
+          {
+            "id": "pro-includes",
+            "q": "SimpleTime Pro neleri içerir?",
+            "a": [
+              "Apple Watch uygulaması, haftana, ayına ve yılına dair özetler, yerler, yıl görünümü, hedefler, odak filtresi, bir hızlı başlat widget'ı, yedi vurgu rengi ya da kendi rengin ile on altı uygulama simgesi ve PDF raporda ek bölümler. Sonradan eklenenler dahildir. [SimpleTime Pro hakkında her şey](@pro)"
+            ]
+          },
+          {
+            "id": "pro-price",
+            "q": "SimpleTime Pro ne kadar?",
+            "a": [
+              "Pro aylık, yıllık ya da tek seferlik “Ömür boyu” satın alımı olarak sunulur. Fiyatlar ülkene ve para birimine göre değişir ve satın almadan önce uygulamada gösterilir."
+            ]
+          },
+          {
+            "id": "trial",
+            "q": "Pro'yu önce deneyebilir miyim?",
+            "a": [
+              "Evet. Yeni aboneler Aylık ya da Yıllık planı bir hafta ücretsiz deneyebilir; denemenin senin için geçerli olup olmadığını uygulama gösterir. Bitmesine en az 24 saat kala iptal etmezsen abonelik gösterilen fiyattan yenilenir."
+            ]
+          },
+          {
+            "id": "family",
+            "q": "Ailem de Pro'yu kullanabilir mi?",
+            "a": [
+              "Evet. SimpleTime Pro, Aile Paylaşımı ile çalışır – tek satın alma, altı kişiye kadar."
+            ]
+          },
+          {
+            "id": "restore-purchase",
+            "q": "Pro'yu diğer cihazlarıma nasıl alırım?",
+            "a": [
+              "Pro, Apple Hesabına bağlıdır. Aynı hesabı kullanan diğer cihazlarında genellikle kendiliğinden açılır. Açılmazsa Ayarlar › SimpleTime Pro altındaki Pro sayfasında Geri yükle'ye dokun."
+            ]
+          },
+          {
+            "id": "cancel",
+            "q": "Aboneliğimi nasıl iptal ederim?",
+            "a": [
+              "App Store ayarlarında – iPhone'da Ayarlar › adın › Abonelikler bölümünde – ya da uygulamada, Pro sayfasındaki Aboneliği yönet düğmesiyle. Pro, ödemesini yaptığın dönemin sonuna kadar etkin kalır."
+            ]
+          },
+          {
+            "id": "lifetime-switch",
+            "q": "Aboneliğim var – “Ömür boyu”na geçebilir miyim?",
+            "a": [
+              "Evet, doğrudan Pro sayfasında. Ancak Apple aboneliği kendiliğinden bitirmez: yenilenmemesi için ardından iptal et. Uygulama sana bunu hatırlatır."
+            ]
+          },
+          {
+            "id": "pro-ends",
+            "q": "Pro sona erince ne olur?",
+            "a": [
+              "Hiçbir şey kaybolmaz. Kayıtların, hedeflerin ve yerlerin saklı kalır. Pro özellikleri yeniden kilitlenir – örneğin yerler artık görev başlatmaz – ve Pro yeniden etkin olur olmaz her şey geri gelir."
+            ]
+          },
+          {
+            "id": "pro-offline",
+            "q": "Pro internet bağlantısı gerektirir mi?",
+            "a": [
+              "Hayır. SimpleTime satın alımını her fırsatta App Store üzerinden doğrular. Bağlantı yokken Pro çalışmaya devam eder – iki haftaya kadar hiç bağlantı kurulmasa bile."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "watch-places",
+        "title": "Apple Watch ve yerler",
+        "items": [
+          {
+            "id": "watch-setup",
+            "q": "Apple Watch uygulamasını nasıl kurarım?",
+            "a": [
+              "Apple Watch uygulaması SimpleTime Pro'nun parçasıdır. Onu saatine yükle, ardından SimpleTime'ı iPhone'unda bir kez aç – birkaç saniye sonra saat görevlerini gösterir. Kaynak yine iPhone'dur: saatin başlattığı her şey orada kaydedilir – aynı Canlı Etkinlik ve aynı widget'larla."
+            ]
+          },
+          {
+            "id": "watch-features",
+            "q": "Apple Watch'ta neler yapabilirim?",
+            "a": [
+              "Bileğinden başlat ve durdur – favorilerin, son kullandıkların ya da aramayla herhangi bir görev. Erken başlat: 5, 15, 30 veya 60 dakika önce ya da son kaydının bittiği andan kesintisiz. Çift dokunarak durdur. Günün, haftan ve hedeflerin bir bakışta; süren zaman saat kadranında ve Akıllı Gruplama'da. iPhone'un menzil dışındaysa dokunuşların yaptığın saatle birlikte saklanır ve sonra doğru yere işlenir."
+            ]
+          },
+          {
+            "id": "places-how",
+            "q": "Yerler nasıl çalışır?",
+            "a": [
+              "Bir yer ekle – örneğin ofisini ya da spor salonunu – 50 m'den 10 km'ye kadar bir yarıçapla ve bir görev seç. Vardığında görev kendiliğinden başlar ya da SimpleTime önce sorar. Bekleme süresi varsa, yalnızca yanından geçtiğinde hiçbir şey başlamaz. Ayrıldığında görev durabilir; bir yeri belirli gün ve saatlerle de sınırlayabilirsin."
+            ]
+          },
+          {
+            "id": "places-late",
+            "q": "Bir yer neden geç başlıyor ya da hiç başlamıyor?",
+            "a": [
+              "Yerler için konum izninin “Her Zaman” olması ve Kesin Konum'un açık olması gerekir. 100 m'nin altında iOS varışını çoğu zaman geç fark eder, çünkü arka planda konum genellikle GPS'ten değil, Wi-Fi ve hücresel ağdan gelir – daha büyük bir yarıçap yardımcı olur. iOS uygulama başına en fazla 20 yeri izler; Mac'te ise yerler yoktur."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "more",
+        "title": "Diğer",
+        "items": [
+          {
+            "id": "look",
+            "q": "SimpleTime'ın görünümünü değiştirebilir miyim?",
+            "a": [
+              "Evet: açık, koyu ya da sisteme uyan görünüm ve görev listesi için üç satır yüksekliği. SimpleTime Pro ile yedi vurgu rengi ya da kendi rengin – düğmelerde, anahtarlarda ve grafiklerde – ve on altı uygulama simgesi de gelir."
+            ]
+          },
+          {
+            "id": "accessibility",
+            "q": "SimpleTime erişilebilir mi?",
+            "a": [
+              "Evet. SimpleTime, uygulamanın tamamında VoiceOver'ı ve Dynamic Type'ı destekler. Senin için çalışmayan bir şey olursa lütfen bize haber ver."
+            ]
+          },
+          {
+            "id": "freelance",
+            "q": "SimpleTime serbest çalışanlar için uygun mu?",
+            "a": [
+              "Zamanını kaydetmek için evet: müşterileri ve projeleri görevler ve alt görevler olarak ayrı tut, döküme ihtiyacın olduğunda bir PDF rapor ya da CSV dosyası dışa aktar. Saatlik ücretler ve faturalar SimpleTime'ın parçası değildir – bunun için dışa aktardığın dosyayı fatura programında kullan."
+            ]
+          },
+          {
+            "id": "platforms",
+            "q": "Android, Windows ya da web için bir sürüm var mı?",
+            "a": [
+              "Hayır. SimpleTime; iPhone, iPad, Mac ve Apple Watch için yapıldı. Verilerini istediğin zaman CSV olarak dışa aktarabilirsin."
+            ]
+          },
+          {
+            "id": "feedback",
+            "q": "Bir hata buldum ya da bir fikrim var – nereye göndereyim?",
+            "a": [
+              "Bize [contact@simple-time.app](mailto:contact@simple-time.app) adresinden yaz. Bir hata için lütfen cihaz modelini ve iOS sürümünü belirt. SimpleTime çöktüyse Ayarlar › Tanılama bölümünden bir rapor çok yardımcı olur. Her mesaj okunur."
+            ]
+          },
+          {
+            "id": "support-us",
+            "q": "SimpleTime'ı nasıl destekleyebilirim?",
+            "a": [
+              "SimpleTime'ı tek bir kişi yapıyor. App Store'da bir değerlendirme de, başkalarına anlatmak da yardımcı olur – SimpleTime Pro ise geliştirmenin sürmesini sağlar."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Gizlilik politikası",
+    "updated": "Son güncelleme",
+    "translationNote": "Bu, Almanca gizlilik politikasının bir çevirisidir. Şüphe durumunda [Almanca sürüm](@privacy-de) geçerlidir.",
+    "summaryTitle": "Kısaca",
+    "summary": [
+      "Zamanın sana ait. SimpleTime hesap gerektirmez, reklam göstermez ve seni takip etmez.",
+      "Kayıtların cihazlarında ve sana özel iCloud alanında durur – onları başka kimse okuyamaz, biz bile. SimpleTime'ın kendi sunucuları yoktur.",
+      "Bu web sitesi kendine ait çerez yerleştirmez, analiz aracı kullanmaz ve üçüncü taraflardan hiçbir şey yüklemez."
+    ],
+    "sections": [
+      {
+        "id": "controller",
+        "title": "Veri sorumlusu",
+        "paragraphs": [
+          "SimpleTime uygulaması ve bu web sitesi için Genel Veri Koruma Tüzüğü (GDPR) anlamında veri sorumlusu:"
+        ],
+        "address": true
+      },
+      {
+        "id": "app",
+        "title": "SimpleTime uygulaması",
+        "paragraphs": [
+          "SimpleTime, verilerine ihtiyaç duymayacağımız şekilde tasarlanmıştır. Girdiğin her şey – görevler, süreleri ve notlarıyla kayıtlar, hedefler, hatırlatıcılar ve ayarlar – cihazında saklanır. Uygulama analiz aracı, reklam ya da üçüncü taraf SDK'sı içermez ve verilerini bize ait sunuculara göndermez: böyle sunucular yoktur. Verilerine hiçbir zaman erişimimiz yoktur."
+        ],
+        "subsections": [
+          {
+            "title": "iCloud eşitlemesi",
+            "paragraphs": [
+              "iCloud'da oturum açtıysan SimpleTime, verilerini Apple'ın CloudKit hizmetiyle, iCloud hesabının özel veritabanında cihazların arasında eşitler. Apple verileri şifreli olarak iletir ve saklar; Apple'ın gizlilik politikası geçerlidir. Bu verileri göremeyiz ve onlara erişemeyiz. Eşitlemeyi iOS ayarlarında, adın › iCloud bölümünden kapatabilirsin – verilerin o zaman cihazda kalır."
+            ]
+          },
+          {
+            "title": "Yedekler",
+            "paragraphs": [
+              "Otomatik yedeklemeyi açarsan ya da bir yedeği dışa aktarırsan SimpleTime görevlerini, kayıtlarını ve hatırlatıcılarını içeren bir dosya kaydeder – otomatik olarak iCloud Drive'ına (“SimpleTime/Backups” klasörü) ya da seçtiğin bir yere. Parola belirlersen dosya kaydedilmeden önce cihazında şifrelenir (AES-GCM); parola olmadan onu kimse açamaz – biz de. Otomatik yedeklerden en yeni 20 tanesi saklanır."
+            ]
+          },
+          {
+            "title": "Konum (yerler)",
+            "paragraphs": [
+              "SimpleTime yalnızca yerler ayarladığında konumuna erişim ister; yerler bir SimpleTime Pro özelliğidir. iOS o zaman belirlediğin alanları izler ve vardığında ya da ayrıldığında uygulamaya haber verir; SimpleTime bunu yalnızca ilgili görevi başlatmak ya da durdurmak için kullanır. Yerlerin yalnızca bu cihazda saklanır ve eşitlenmez. SimpleTime nerelerde bulunduğunun kaydını tutmaz ve konumunu başkalarına aktarmaz.",
+              "Yer düzenleme ekranında bir adres aradığında ya da haritayı kullandığında arama ve harita Apple Haritalar tarafından sağlanır; Apple'ın gizlilik politikası geçerlidir. Konumuna erişim iznini iOS ayarlarından istediğin zaman geri alabilirsin."
+            ]
+          },
+          {
+            "title": "Bildirimler",
+            "paragraphs": [
+              "Hatırlatıcılar ve Yerler bildirimleri cihazında oluşturulur ve orada yerel bildirimler olarak iletilir. Eşitlemenin güncel kalması için iCloud, Apple'ın anlık bildirim hizmeti üzerinden uygulamayı arka planda uyandırabilir; bu mesajlarda senin içeriklerinden hiçbiri bulunmaz."
+            ]
+          },
+          {
+            "title": "Fotoğraflar",
+            "paragraphs": [
+              "Bir grafiği ya da bir özeti görsel olarak kaydetmek için SimpleTime fotoğraf ekleme izni ister. Yalnızca görsel ekleyebilir – fotoğraf arşivini göremez."
+            ]
+          },
+          {
+            "title": "Uygulama kilidi, Face ID ve Touch ID",
+            "paragraphs": [
+              "Uygulama kilidini kullanırsan Face ID'yi, Touch ID'yi ya da cihaz kodunu iOS denetler; SimpleTime yalnızca denetimin başarılı olup olmadığını öğrenir. Kendi kodun ve yedek parolası cihazındaki anahtar zincirinde saklanır."
+            ]
+          },
+          {
+            "title": "Siri, Kestirmeler, arama ve widget'lar",
+            "paragraphs": [
+              "Siri'yi kullanırsan isteğini Apple işler; SimpleTime yalnızca tanınan eylemi alır. Görevleri iPhone aramasından başlatabilmen için görev adları cihazındaki arama dizinine eklenir – ancak uygulama kilidi açıkken eklenmez. Widget'lar, Canlı Etkinlik ve Apple Watch uygulaması verilerini cihazlarındaki uygulamadan alır; saat bunları doğrudan iPhone'undan alır."
+            ]
+          },
+          {
+            "title": "Tanılama",
+            "paragraphs": [
+              "SimpleTime çökerse veya donarsa iOS uygulamaya bir tanılama raporu verir. Bu rapor cihazında kalır, görev ya da süre içermez ve yalnızca sen paylaşırsan cihazından çıkar – örneğin bize e-postayla. Bundan bağımsız olarak, cihazının analiz verilerini uygulama geliştiricileriyle paylaşmasına izin verdiysen (iOS'ta Ayarlar › Gizlilik ve Güvenlik › Analizler ve İyileştirmeler), Apple bize seni tanımlamayan çökme raporları ve istatistikler sağlar."
+            ]
+          },
+          {
+            "title": "Satın almalar",
+            "paragraphs": [
+              "SimpleTime Pro, App Store üzerinden satın alınır. Ödemeyi ve aboneliği Apple yürütür; biz hiçbir ödeme bilgisi ve senin hakkında hiçbir kişisel veri almayız. Uygulama App Store'a yalnızca Pro'nun etkin olup olmadığını sorar. Apple'dan kişisel veri içermeyen satış raporları alırız."
+            ]
+          },
+          {
+            "title": "Değerlendirmeler",
+            "paragraphs": [
+              "SimpleTime, Apple'ın sistem iletişim kutusuyla bir kez değerlendirme isteyebilir. Değerlendirme yapıp yapmadığını ya da nasıl değerlendirdiğini öğrenmeyiz."
+            ]
+          },
+          {
+            "title": "Dışa aktarma ve paylaşma",
+            "paragraphs": [
+              "CSV dosyaları, PDF raporlar, yedekler ve görseller cihazında oluşturulur. Nereye gideceklerine sen karar verirsin – paylaşma menüsünde."
+            ]
+          },
+          {
+            "title": "Verilerinin silinmesi",
+            "paragraphs": [
+              "Uygulamanın ayarlarında Gizlilik › Tüm verileri sil ile SimpleTime'ın sakladığı her şeyi tek seferde kaldırırsın – bu cihazda, iCloud'da ve iCloud Drive'daki yedeklerde; silme işlemi iCloud üzerinden diğer cihazlarına da ulaşır. Uygulamayı silmek, onun verilerini o cihazdan kaldırır."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "website",
+        "title": "Bu web sitesi",
+        "subsections": [
+          {
+            "title": "Barındırma ve sunum",
+            "paragraphs": [
+              "simple-time.app, Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, ABD tarafından sunulur. Bir sayfayı açtığında tarayıcın zorunlu olarak teknik veriler iletir – özellikle IP adresini, istenen sayfayı, zamanı ve tarayıcının kimliğini (user agent). Cloudflare bu verileri web sitesini sunmak ve onu saldırılara ve kötüye kullanıma karşı korumak için işler ve bu amaçla kısa süreliğine günlük dosyalarında saklayabilir. Hukuki dayanak, güvenli ve güvenilir bir web sitesine ilişkin meşru menfaatimizdir (GDPR m. 6/1-f). Cloudflare, EU-U.S. Data Privacy Framework kapsamında sertifikalıdır ve Cloudflare ile bir veri işleme sözleşmesi yaptık. Daha fazla bilgi: [cloudflare.com/privacypolicy](https://www.cloudflare.com/tr-tr/privacypolicy/)"
+            ]
+          },
+          {
+            "title": "Hata raporları",
+            "paragraphs": [
+              "Bir sayfa yüklenemezse tarayıcın Cloudflare'e kısa bir teknik hata raporu gönderebilir (Network Error Logging) – örneğin adres, hatanın türü ve IP adresin. Bu rapor yalnızca ağ sorunlarını tespit etmeye yarar."
+            ]
+          },
+          {
+            "title": "Çerezler ve yerel depolama",
+            "paragraphs": [
+              "Çerez yerleştirmiyoruz. Cloudflare bazı durumlarda insanları botlardan ayırt etmek için teknik olarak gerekli bir çerez (__cf_bm) yerleştirebilir; bu çerez takip için kullanılmaz. Açık ve koyu görünüm arasında geçiş yaparsan tarayıcın bu tercihi kendi yerel depolamasında saklar – bu bilgi cihazından hiç çıkmaz. SSS sayfasındaki arama tamamen tarayıcında çalışır."
+            ]
+          },
+          {
+            "title": "Analiz yok, üçüncü taraflar yok",
+            "paragraphs": [
+              "Bu web sitesi analiz ya da takip araçları, reklam ve sosyal medya eklentileri kullanmaz; başka sunuculardan yazı tipi ya da betik yüklemez. App Store bağlantıları seni Apple'a götürür; orada Apple'ın gizlilik politikası geçerlidir."
+            ]
+          },
+          {
+            "title": "E-posta",
+            "paragraphs": [
+              "Bize yazarsan e-posta adresini ve mesajını sana yanıt vermek için kullanırız (GDPR m. 6/1-b ve f). E-postalarımız bizim adımıza IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Almanya tarafından barındırılır. Mesajları artık gerekmediklerinde sileriz; yasal olarak saklamakla yükümlü olduğumuz durumlar bunun dışındadır."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rights",
+        "title": "Hakların",
+        "paragraphs": [
+          "Verilerine erişim hakkına (GDPR m. 15), verilerinin düzeltilmesini (m. 16) ya da silinmesini (m. 17) ve işlenmesinin kısıtlanmasını (m. 18) isteme hakkına, veri taşınabilirliği hakkına (m. 20) ve meşru menfaatlere dayanan işlemeye itiraz etme hakkına (m. 21) sahipsin. Bu hakları kullanmak için bize yazman yeterli. Uygulama bizde senin hakkında hiçbir şey saklamadığı için bir talep genellikle e-postalarla ya da bu web sitesiyle ilgilidir; uygulamadaki verilerini istediğin zaman kendin görüntüleyebilir, dışa aktarabilir ve silebilirsin.",
+          "Ayrıca bir veri koruma denetim makamına şikâyette bulunma hakkın vardır – örneğin Bavyera Eyaleti Veri Koruma Denetim Dairesi'ne (BayLDA), Promenade 18, 91522 Ansbach, Almanya."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Değişiklikler",
+        "paragraphs": [
+          "Uygulama, web sitesi ya da mevzuat değiştiğinde bu gizlilik politikasını güncelleriz. En üstteki tarih geçerli sürümü gösterir."
+        ]
+      }
+    ]
+  }
+}

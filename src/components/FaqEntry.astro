@@ -1,0 +1,53 @@
+---
+import type { Lang } from '../i18n/ui';
+import type { FaqItem } from '../i18n/content';
+import RichText from './RichText.astro';
+
+interface Props {
+  lang: Lang;
+  item: FaqItem;
+  /** Give the entry its id as an anchor – only once per page, on /faq/. */
+  anchor?: boolean;
+}
+
+const { lang, item, anchor = false } = Astro.props;
+---
+
+<details
+  class="faq-entry group scroll-mt-24"
+  id={anchor ? item.id : undefined}
+  data-faq-item={anchor ? '' : undefined}
+>
+  <summary
+    class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-[16px] font-medium transition-colors hover:bg-surface-2"
+  >
+    <span>{item.q}</span>
+    <svg
+      class="h-4 w-4 shrink-0 text-subtle transition-transform duration-200 group-open:rotate-45"
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      aria-hidden="true"
+    >
+      <path d="M8 3v10M3 8h10"></path>
+    </svg>
+  </summary>
+  <div class="space-y-3 px-6 pb-6 text-[15px] leading-relaxed text-muted">
+    {
+      item.a.map((paragraph) => (
+        <p>
+          <RichText text={paragraph} lang={lang} />
+        </p>
+      ))
+    }
+  </div>
+</details>
+
+<style>
+  /* Safari still renders the default disclosure triangle without this. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

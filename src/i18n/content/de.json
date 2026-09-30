@@ -1,0 +1,957 @@
+{
+  "store": {
+    "lead": "SimpleTime erfasst, womit du deine Zeit verbringst. Ein Tipp startet, ein Tipp stoppt.",
+    "promise": "Kein Konto, keine Anmeldung, keine Werbung. Deine Zeiten bleiben auf deinem Gerät und in deiner iCloud.",
+    "sections": [
+      {
+        "id": "tracking",
+        "title": "Erfassen",
+        "points": [
+          "Ein Tipp startet und stoppt – in der App, vom Home-Bildschirm, aus dem Kontrollzentrum, aus der iPhone-Suche oder per Siri",
+          "Aufgaben mit Unteraufgaben, so tief verschachtelt, wie deine Arbeit es ist",
+          "Vergessen zu starten? Trage Zeiten nachträglich ein und ändere sie jederzeit",
+          "Farbe, Symbol, Favoriten und eine Reihenfolge, die du selbst bestimmst"
+        ]
+      },
+      {
+        "id": "day",
+        "title": "Dein Tag",
+        "points": [
+          "Liste oder Zeitachse von 0 bis 24 Uhr, mit einer Marke für die aktuelle Uhrzeit",
+          "Notizen an jedem Eintrag",
+          "Der Vergleich mit gestern steht mit im Kopf"
+        ]
+      },
+      {
+        "id": "insights",
+        "title": "Auswerten",
+        "points": [
+          "Kuchendiagramme nach Aufgabe und nach Produktivität",
+          "Tag, Woche, Monat, Jahr",
+          "Statistiken: Vergleich zum vorherigen Zeitraum, Verlauf, Verteilung über den Tag, längster und kürzester Eintrag",
+          "Jede Aufgabe mit ihren eigenen Zahlen – erster Eintrag, längster, diese Woche, dieses Jahr",
+          "Jedes Diagramm als Bild teilen"
+        ]
+      },
+      {
+        "id": "reports",
+        "title": "Berichte und Export",
+        "points": [
+          "PDF-Bericht, dessen Abschnitte du selbst zusammenstellst und ordnest",
+          "CSV für Excel und Numbers",
+          "Backups in iCloud Drive, automatisch und auf Wunsch mit Passwort verschlüsselt"
+        ]
+      },
+      {
+        "id": "widgets",
+        "title": "Widgets und Siri",
+        "points": [
+          "Heute, laufende Aufgabe und Woche auf dem Home-Bildschirm",
+          "Die laufende Zeit auf dem Sperrbildschirm und in der Dynamic Island",
+          "Ein Schalter im Kontrollzentrum, der die Erfassung startet und stoppt",
+          "Siri und Kurzbefehle: starten, stoppen oder fragen, was gerade läuft"
+        ]
+      },
+      {
+        "id": "devices",
+        "title": "Auf allen Geräten",
+        "points": [
+          "iPhone, iPad und Mac, über iCloud synchron",
+          "40 Sprachen, unabhängig von der Sprache deines Geräts",
+          "VoiceOver und Dynamic Type in der ganzen App"
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Deine Daten",
+        "points": [
+          "App-Sperre mit Face ID, Touch ID oder eigenem Code",
+          "Datenschutz auf einer Seite: jede Berechtigung und deine Daten im Überblick",
+          "Keine Konten, keine eigenen Server, keine Werbung, kein Tracking",
+          "Alles auf einmal löschen – auf dem Gerät, in iCloud und in den Backups"
+        ]
+      }
+    ],
+    "pro": {
+      "title": "SimpleTime Pro",
+      "intro": "Alles oben Genannte bleibt kostenlos. Pro kommt hinzu:",
+      "points": [
+        "Apple Watch: starten und stoppen am Handgelenk, früher starten, Tag, Woche und Ziele im Blick – mit der laufenden Zeit auf dem Zifferblatt",
+        "Rückblicke: Woche, Monat und Jahr als Karten – zum Durchblättern und Teilen",
+        "Orte: Aufgaben starten von selbst, wenn du ankommst – auf Wunsch erst nach einer Wartezeit",
+        "Jahresübersicht: jeder Tag des Jahres als ein Bild, mit deinen Serien",
+        "Ziele je Aufgabe – für den Tag, die Woche oder den Monat",
+        "Fokusfilter: Der Arbeitsfokus geht an, die Liste zeigt nur die Arbeit, die Uhr läuft",
+        "Schnellstart-Widget, das du selbst bestückst",
+        "Sieben Akzentfarben oder eine eigene, dazu sechzehn App-Symbole",
+        "Zusätzliche Abschnitte im PDF-Bericht: Verlauf, Tagesverteilung, Vergleich, Ziele"
+      ],
+      "pricing": "Pro gibt es im Monat, im Jahr oder einmalig für immer. Wer neu abonniert, bekommt eine Gratiswoche, und mit der Familienfreigabe können bis zu sechs Personen Pro nutzen. Die Preise stehen in der App. Monat und Jahr verlängern sich automatisch, bis du kündigst; das geht jederzeit in den Einstellungen des App Store. Was künftig dazukommt, ist enthalten."
+    },
+    "closing": "Gemacht für alle, die wissen wollen, wofür ihre Zeit draufgeht – im Beruf, im Studium, im Training oder für sich selbst."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Zeiterfassung für iPhone, iPad und Mac",
+      "titleLead": "Ein Tipp",
+      "titleAccent": "startet die Uhr.",
+      "cta": "Funktionen ansehen",
+      "proof": [
+        "Kostenlos laden",
+        "Kein Konto",
+        "Keine Werbung, kein Tracking"
+      ]
+    },
+    "showcase": [
+      {
+        "id": "day",
+        "eyebrow": "Dein Tag",
+        "title": "Dein ganzer Tag auf einen Blick.",
+        "body": "Jeder Eintrag mit Start, Ende und Dauer – als Liste oder als Zeitachse von 0 bis 24 Uhr, mit einer Marke für die aktuelle Uhrzeit. Notizen halten fest, was die Zahlen nicht sagen, und ganz oben siehst du, wie heute im Vergleich zu gestern läuft.",
+        "points": [
+          "Liste oder Zeitachse von 0 bis 24 Uhr",
+          "Notizen an jedem Eintrag",
+          "Heute im Vergleich zu gestern"
+        ]
+      },
+      {
+        "id": "insights",
+        "eyebrow": "Auswerten",
+        "title": "Sieh, wohin deine Stunden wirklich gehen.",
+        "body": "Kuchendiagramme nach Aufgabe und nach Produktivität – für einen Tag, eine Woche, einen Monat oder ein Jahr. Die Statistiken vergleichen jeden Zeitraum mit dem vorherigen und zeigen den Verlauf und die Zeiten des Tages, zu denen du am meisten erfasst.",
+        "points": [
+          "Diagramme nach Aufgabe und Produktivität",
+          "Vergleich zum vorherigen Zeitraum",
+          "Jedes Diagramm als Bild teilen"
+        ]
+      },
+      {
+        "id": "reports",
+        "eyebrow": "Berichte und Export",
+        "title": "Ein Bericht in Sekunden.",
+        "body": "Zeitraum wählen, Abschnitte zusammenstellen, in die richtige Reihenfolge ziehen – und SimpleTime setzt ein PDF mit jeder Aufgabe und Unteraufgabe. Du brauchst die reinen Zahlen? Eine CSV-Datei öffnet sich in Excel und Numbers.",
+        "points": [
+          "PDF mit den Abschnitten, die du wählst",
+          "CSV für Excel und Numbers",
+          "Automatische Backups in iCloud Drive"
+        ]
+      }
+    ],
+    "features": {
+      "title": "Alles, was du brauchst. Kostenlos.",
+      "subtitle": "Jede Funktion auf dieser Liste gehört zur kostenlosen App."
+    },
+    "pro": {
+      "button": "Alles über SimpleTime Pro"
+    },
+    "gallery": {
+      "title": "Aus der Nähe.",
+      "subtitle": "Die Bildschirme aus dem App Store – genau so, wie sie auf deinem Gerät aussehen."
+    },
+    "audience": {
+      "title": "Für alle, die wissen wollen, wohin ihre Zeit geht.",
+      "subtitle": "Im Beruf, im Studium, im Training – oder einfach für dich selbst.",
+      "groups": [
+        {
+          "id": "work",
+          "title": "Beruf & Freelance",
+          "body": "Trenne Kunden und Projekte als Aufgaben und Unteraufgaben und exportiere bei Bedarf einen sauberen Nachweis."
+        },
+        {
+          "id": "study",
+          "title": "Studium & Lernen",
+          "body": "Sieh, wie viel Zeit ein Fach wirklich kostet, und plane die nächste Woche mit echten Zahlen."
+        },
+        {
+          "id": "training",
+          "title": "Training & Gewohnheiten",
+          "body": "Erfasse Einheiten, Übungszeit oder Schlaf und beobachte, wie über die Wochen Konstanz entsteht."
+        },
+        {
+          "id": "everyday",
+          "title": "Alltag",
+          "body": "Finde heraus, wohin die Stunden tatsächlich gehen – und entscheide selbst, was du ändern willst."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufige Fragen.",
+      "subtitle": "Die wichtigsten Antworten auf einen Blick – und viele weitere auf der Fragen-Seite.",
+      "button": "Alle Fragen und Antworten"
+    },
+    "cta": {
+      "title": "Bereit loszulegen?",
+      "subtitle": "Kostenlos auf iPhone, iPad und Mac. Ohne Konto, ohne Werbung, ohne Tracking.",
+      "note": "Die App für die Apple Watch gehört zu SimpleTime Pro."
+    }
+  },
+  "shots": [
+    {
+      "id": "tracking",
+      "title": "Tracken",
+      "caption": "Ein Tipp startet die Uhr",
+      "alt": "Der Tracking-Tab mit einer laufenden Aufgabe und den Favoriten oben"
+    },
+    {
+      "id": "day",
+      "title": "Dein Tag",
+      "caption": "Jeder Eintrag, auf die Sekunde",
+      "alt": "Die Tagesansicht als Liste der Einträge mit ihren Zeiten"
+    },
+    {
+      "id": "timeline",
+      "title": "Zeitachse",
+      "caption": "Der ganze Tag auf einen Blick",
+      "alt": "Die Tagesansicht als Zeitachse von 0 bis 24 Uhr"
+    },
+    {
+      "id": "chart",
+      "title": "Auswerten",
+      "caption": "Wohin deine Stunden wirklich gehen",
+      "alt": "Eine Woche als Kuchendiagramm nach Aufgaben"
+    },
+    {
+      "id": "statistics",
+      "title": "Statistik",
+      "caption": "Wochen vergleichen, Trends erkennen",
+      "alt": "Statistiken im Vergleich zur Vorwoche"
+    },
+    {
+      "id": "report",
+      "title": "Berichte",
+      "caption": "Ein PDF mit jeder Aufgabe",
+      "alt": "Eine Seite eines PDF-Berichts mit jeder Aufgabe"
+    },
+    {
+      "id": "pro",
+      "title": "Pro holen",
+      "caption": "Ziele, dein Jahr, deine Farben",
+      "alt": "Die Seite von SimpleTime Pro in der App"
+    }
+  ],
+  "pro": {
+    "eyebrow": "SimpleTime Pro",
+    "title": "Mehr aus der Zeit, die du erfasst.",
+    "subtitle": "SimpleTime bleibt kostenlos – alles, was die App ohne Pro kann, bleibt es auch. Pro bringt deine Apple Watch dazu, Orte, an denen Aufgaben von selbst starten, Rückblicke auf Woche, Monat und Jahr, Ziele und mehr.",
+    "featuresTitle": "Was Pro dazubringt",
+    "features": [
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Starten und stoppen am Handgelenk, früher starten, Tag, Woche und Ziele im Blick – mit der laufenden Zeit auf dem Zifferblatt."
+      },
+      {
+        "id": "reviews",
+        "title": "Rückblicke",
+        "body": "Deine Woche, dein Monat und dein Jahr als Karten – zum Durchblättern und Teilen."
+      },
+      {
+        "id": "places",
+        "title": "Orte",
+        "body": "Aufgaben starten von selbst, wenn du ankommst – auf Wunsch erst nach einer Wartezeit, damit beim Vorbeifahren nichts startet."
+      },
+      {
+        "id": "year",
+        "title": "Jahr im Überblick",
+        "body": "Jeder Tag des Jahres als ein Bild, mit deiner laufenden und deiner längsten Serie."
+      },
+      {
+        "id": "goals",
+        "title": "Ziele",
+        "body": "Ein Soll je Aufgabe – für den Tag, die Woche oder den Monat. Unteraufgaben zählen mit."
+      },
+      {
+        "id": "focus",
+        "title": "Fokusfilter",
+        "body": "Der Arbeitsfokus geht an, die Liste zeigt nur die Arbeit – und die Erfassung kann mit ihm beginnen und enden."
+      },
+      {
+        "id": "widget",
+        "title": "Schnellstart-Widget",
+        "body": "Du bestimmst, welche Aufgaben daraufliegen. Ein Tipp auf dem Home-Bildschirm startet sie."
+      },
+      {
+        "id": "style",
+        "title": "Farben und App-Symbole",
+        "body": "Sieben Akzentfarben oder eine eigene, die sich durch die ganze App zieht – dazu sechzehn App-Symbole."
+      },
+      {
+        "id": "report",
+        "title": "Mehr im PDF-Bericht",
+        "body": "Verlauf, Verteilung über den Tag, Vergleich zum vorherigen Zeitraum und Ziele – in der Reihenfolge, die du wählst."
+      },
+      {
+        "id": "future",
+        "title": "Alles, was noch kommt",
+        "body": "Was später dazukommt, ist enthalten – ohne weiteren Kauf."
+      }
+    ],
+    "plansTitle": "Drei Wege zu Pro",
+    "plansSubtitle": "Die Preise hängen von deinem Land ab und stehen vor dem Kauf in der App – in deiner Währung.",
+    "plans": [
+      {
+        "id": "monthly",
+        "title": "Monatlich",
+        "body": "Wird jeden Monat abgerechnet. Kündigen kannst du jederzeit."
+      },
+      {
+        "id": "yearly",
+        "title": "Jährlich",
+        "body": "Wird einmal im Jahr abgerechnet – die App zeigt, wie viel du gegenüber dem Monat sparst."
+      },
+      {
+        "id": "lifetime",
+        "title": "Lebenslang",
+        "body": "Einmal zahlen und Pro für immer behalten. Läuft nie ab."
+      }
+    ],
+    "notes": [
+      "Wer neu abonniert, kann Monat oder Jahr eine Woche gratis testen.",
+      "Familienfreigabe: ein Kauf für bis zu sechs Personen.",
+      "Was später dazukommt, ist enthalten – ohne weiteren Kauf."
+    ],
+    "legal": "Monat und Jahr verlängern sich automatisch, bis du kündigst. Kündigen kannst du jederzeit in den App-Store-Einstellungen. Lebenslang ist eine einmalige Zahlung und läuft nie ab.",
+    "terms": "Nutzungsbedingungen (EULA)",
+    "privacy": "Datenschutzerklärung",
+    "freeTitle": "Was kostenlos bleibt",
+    "freeBody": "Alles, was du zum Erfassen brauchst: Aufgaben und Unteraufgaben, Tagesansicht und Zeitachse, Diagramme und Statistiken, PDF-Bericht und CSV-Export, Widgets, die Live-Aktivität, Kontrollzentrum und Siri, iCloud-Sync und Backups sowie die App-Sperre – in 40 Sprachen. Ohne Konto, ohne Werbung, ohne Tracking.",
+    "howTitle": "So bekommst du Pro",
+    "how": [
+      "Öffne in SimpleTime Einstellungen › SimpleTime Pro.",
+      "Wähle Monatlich, Jährlich oder Lebenslang – bezahlt wird über deinen Apple Account.",
+      "Pro ist sofort freigeschaltet, auf allen deinen Geräten mit demselben Apple Account."
+    ],
+    "faqTitle": "Fragen zu Pro",
+    "ctaTitle": "Kostenlos starten.",
+    "ctaSubtitle": "Lade SimpleTime – und schalte Pro in der App frei, wann immer du willst."
+  },
+  "faq": {
+    "title": "Häufige Fragen.",
+    "subtitle": "Alles über SimpleTime – vom ersten Tipp bis zu SimpleTime Pro.",
+    "searchLabel": "Fragen durchsuchen",
+    "searchPlaceholder": "z. B. „Backup“ oder „Apple Watch“",
+    "results": "Passende Fragen: {count}",
+    "noResults": "Keine Frage passt zu „{query}“.",
+    "noResultsHint": "Probier ein anderes Wort – oder [schreib uns](@contact).",
+    "topics": "Themen",
+    "moreTitle": "Noch eine Frage?",
+    "moreBody": "Schreib uns – jede Nachricht wird gelesen und beantwortet.",
+    "moreButton": "Kontakt",
+    "categories": [
+      {
+        "id": "basics",
+        "title": "Erste Schritte",
+        "items": [
+          {
+            "id": "what-is",
+            "q": "Was ist SimpleTime?",
+            "a": [
+              "SimpleTime ist eine Zeiterfassung für iPhone, iPad und Mac. Ein Tipp startet die Uhr, ein Tipp stoppt sie. Danach zeigt dir SimpleTime, wohin deine Zeit geht – als Tagesliste oder Zeitachse, in Diagrammen und Statistiken und als PDF-Bericht oder CSV-Datei. Ohne Konto, ohne Werbung, ohne Tracking."
+            ]
+          },
+          {
+            "id": "free",
+            "q": "Ist SimpleTime kostenlos?",
+            "a": [
+              "Ja. Der Download ist kostenlos, und alles, was du zum Erfassen brauchst, ebenso: Aufgaben und Unteraufgaben, Tagesansicht, Diagramme und Statistiken, Berichte und Export, Widgets, iCloud-Sync und Backups. SimpleTime Pro ist freiwillig und bringt die Apple-Watch-App, Rückblicke, Orte, Ziele und mehr dazu. [Alles über SimpleTime Pro](@pro)"
+            ]
+          },
+          {
+            "id": "account",
+            "q": "Brauche ich ein Konto?",
+            "a": [
+              "Nein. Es gibt keine Registrierung und keinen Login – du öffnest die App und legst los. Nutzt du iCloud, läuft der Abgleich über deinen eigenen Apple Account, den wir nie zu sehen bekommen."
+            ]
+          },
+          {
+            "id": "devices",
+            "q": "Auf welchen Geräten läuft SimpleTime?",
+            "a": [
+              "Auf iPhone und iPad ab iOS 26 bzw. iPadOS 26 und auf Macs mit Apple Chip. Die App für die Apple Watch gehört zu SimpleTime Pro und braucht watchOS 26. Mit demselben Apple Account bleiben deine Einträge auf allen Geräten synchron."
+            ]
+          },
+          {
+            "id": "languages",
+            "q": "Welche Sprachen spricht SimpleTime?",
+            "a": [
+              "40 – von Deutsch und Englisch bis Arabisch, Hindi und Japanisch. Unter Einstellungen › Sprache wählst du die Sprache der App unabhängig von der Sprache deines Geräts."
+            ]
+          },
+          {
+            "id": "first-steps",
+            "q": "Wie fange ich an?",
+            "a": [
+              "Tippe im Tracking-Tab auf +, um eine Aufgabe anzulegen – mit Namen, Farbe und Symbol. Tippe auf das Dreieck daneben, und die Uhr läuft; mit Stoppen beendest du sie. Beim ersten Start zeigt dir eine kurze Tour die wichtigsten Knöpfe. Du kannst sie jederzeit wieder ansehen: Einstellungen › Tour erneut ansehen."
+            ]
+          },
+          {
+            "id": "offline",
+            "q": "Funktioniert SimpleTime ohne Internet?",
+            "a": [
+              "Ja, vollständig. Erfassen, Tagesansicht, Diagramme und Berichte funktionieren ohne Verbindung. Abgleich und Backups holen alles nach, sobald dein Gerät wieder online ist."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tracking",
+        "title": "Erfassen",
+        "items": [
+          {
+            "id": "start-stop",
+            "q": "Wie starte und stoppe ich eine Erfassung?",
+            "a": [
+              "Tippe auf das Dreieck neben einer Aufgabe, um sie zu starten. Die laufende Aufgabe steht oben im Tracking-Tab; mit Stoppen beendest du sie. Ein Tipp auf den Namen öffnet die Unteraufgaben, nach links wischen bietet Bearbeiten, Archivieren und Löschen, nach rechts wischen zeigt die Info mit allen Zahlen."
+            ]
+          },
+          {
+            "id": "one-at-a-time",
+            "q": "Können zwei Aufgaben gleichzeitig laufen?",
+            "a": [
+              "Nein. Es läuft immer höchstens eine Erfassung. Startest du eine andere Aufgabe, endet der laufende Eintrag automatisch – so überschneiden sich deine Einträge nie."
+            ]
+          },
+          {
+            "id": "add-later",
+            "q": "Ich habe vergessen zu starten – kann ich Zeiten nachtragen?",
+            "a": [
+              "Ja. Im Tag-Tab legst du einen neuen Eintrag mit Start und Ende an oder tippst auf einen bestehenden, um ihn zu ändern. Einträge dürfen sich nicht überschneiden: SimpleTime sagt dir, wenn ein Zeitraum mit einem anderen Eintrag kollidiert. Bei einer laufenden Erfassung kannst du den Start auch zurücklegen – bis zum Ende des vorherigen Eintrags."
+            ]
+          },
+          {
+            "id": "subtasks",
+            "q": "Wie funktionieren Unteraufgaben?",
+            "a": [
+              "Tippe auf den Namen einer Aufgabe, um sie zu öffnen, und lege dort mit + Unteraufgaben an. Verschachteln kannst du so tief, wie deine Arbeit es ist – Kunde, Projekt, Phase. In Diagrammen, Berichten und Zielen zählen Unteraufgaben zu der Aufgabe darüber."
+            ]
+          },
+          {
+            "id": "order",
+            "q": "Wie halte ich meine Aufgabenliste in Ordnung?",
+            "a": [
+              "Markiere, was du täglich brauchst, als Favorit – das bleibt ganz oben. Den Rest sortierst du alphabetisch, nach Nutzung, nach zuletzt benutzt oder in eigener Reihenfolge. Farbe und Symbol – oder ein Emoji – machen jede Aufgabe auf einen Blick erkennbar."
+            ]
+          },
+          {
+            "id": "archive-trash",
+            "q": "Was ist der Unterschied zwischen Archivieren und Löschen?",
+            "a": [
+              "Archivieren blendet eine Aufgabe nur aus: Ihre Einträge bleiben und zählen in allen Auswertungen weiter mit. Löschen legt die Aufgabe samt Einträgen in den Papierkorb. Von dort kannst du beides wiederherstellen – oder endgültig löschen."
+            ]
+          },
+          {
+            "id": "notes",
+            "q": "Kann ich Einträgen Notizen geben?",
+            "a": [
+              "Ja, jeder Eintrag kann eine Notiz tragen – woran du gearbeitet hast oder mit wem. Notizen stehen in der Tagesansicht und sind im CSV-Export und in den Backups enthalten."
+            ]
+          },
+          {
+            "id": "reminders",
+            "q": "Kann mich SimpleTime erinnern?",
+            "a": [
+              "Ja. In den Einstellungen unter Benachrichtigungen legst du Regeln fest – zum Beispiel eine Erinnerung, wenn eine Aufgabe seit 60 Minuten läuft, für alle Aufgaben oder nur für ausgewählte, an den Wochentagen deiner Wahl. SimpleTime kann dich auch erinnern, wenn eine Weile nichts erfasst wurde."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "insights",
+        "title": "Tagesansicht und Auswertung",
+        "items": [
+          {
+            "id": "day-view",
+            "q": "Was zeigt die Tagesansicht?",
+            "a": [
+              "Jeden Eintrag eines Tages mit Start, Ende und Dauer – als Liste oder als Zeitachse von 0 bis 24 Uhr, mit einer Marke für die aktuelle Uhrzeit. Oben siehst du, wie heute im Vergleich zu gestern läuft."
+            ]
+          },
+          {
+            "id": "charts",
+            "q": "Welche Diagramme und Statistiken gibt es?",
+            "a": [
+              "Kuchendiagramme nach Aufgabe und nach Produktivität, für einen Tag, eine Woche, einen Monat oder ein Jahr. Unter Mehr Statistiken findest du den Vergleich zum vorherigen Zeitraum, den Verlauf, die Verteilung über den Tag, deine Top-Aufgaben und den längsten und kürzesten Eintrag. Jede Aufgabe hat außerdem eine eigene Info-Seite – erster Eintrag, längster Eintrag, diese Woche, dieses Jahr."
+            ]
+          },
+          {
+            "id": "productivity",
+            "q": "Was ist der Produktivitäts-Score?",
+            "a": [
+              "Jeder Aufgabe kannst du eine Kategorie geben: produktiv, unproduktiv, notwendig – oder nicht berücksichtigen. Der Score zeigt, wie viel deiner erfassten Zeit produktiv oder notwendig war: (produktiv + notwendig) ÷ Gesamtzeit × 100."
+            ]
+          },
+          {
+            "id": "share-chart",
+            "q": "Kann ich ein Diagramm teilen?",
+            "a": [
+              "Ja, jedes Diagramm lässt sich als Bild teilen oder in Fotos sichern. Zum Sichern fragt SimpleTime nur nach der Erlaubnis, Fotos hinzuzufügen – deine Mediathek sehen kann es nicht."
+            ]
+          },
+          {
+            "id": "pdf-report",
+            "q": "Wie erstelle ich einen PDF-Bericht?",
+            "a": [
+              "Unter Einstellungen › Report exportieren wählst du einen Zeitraum – von heute bis zum gesamten Zeitraum oder einen eigenen –, suchst die Abschnitte aus und ziehst sie in die Reihenfolge, die du willst. SimpleTime erstellt das PDF mit jeder Aufgabe und Unteraufgabe, fertig zum Teilen oder Sichern. SimpleTime Pro bringt zusätzliche Abschnitte: Verlauf, Tagesverteilung, Vergleich und Ziele."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shortcuts",
+        "title": "Widgets, Siri und Fokus",
+        "items": [
+          {
+            "id": "widgets",
+            "q": "Welche Widgets gibt es?",
+            "a": [
+              "Für den Home-Bildschirm: Heute, Laufender Task und Woche. Für den Sperrbildschirm: was läuft und wie lange. Dazu einen Schalter fürs Kontrollzentrum. Läuft eine Aufgabe, zeigt sie eine Live-Aktivität auf dem Sperrbildschirm und in der Dynamic Island. Mit SimpleTime Pro kommt ein Schnellstart-Widget dazu, das du mit deinen eigenen Aufgaben bestückst."
+            ]
+          },
+          {
+            "id": "without-opening",
+            "q": "Kann ich starten, ohne die App zu öffnen?",
+            "a": [
+              "Ja, auf mehreren Wegen. Halte das App-Symbol gedrückt, um zu stoppen, was läuft, oder eine deiner Aufgaben zu starten. Tippe den Namen einer Aufgabe in die iPhone-Suche und tippe sie an. Oder nimm den Schalter im Kontrollzentrum, ein Widget, Siri – oder mit SimpleTime Pro deine Apple Watch."
+            ]
+          },
+          {
+            "id": "siri",
+            "q": "Wie funktioniert SimpleTime mit Siri und Kurzbefehlen?",
+            "a": [
+              "Sag zum Beispiel „Starte Arbeit in SimpleTime“, „Stoppe die Erfassung in SimpleTime“, „Wie viel habe ich heute in SimpleTime erfasst?“ oder „Was läuft in SimpleTime?“. Diese Sätze versteht Siri auf Deutsch und Englisch. In jeder Sprache stehen die Aktionen in der Kurzbefehle-App bereit – dort kannst du ihnen auch einen eigenen Satz geben."
+            ]
+          },
+          {
+            "id": "focus-filter",
+            "q": "Was macht der Fokusfilter?",
+            "a": [
+              "Mit einem Fokusfilter folgt SimpleTime deinem Fokus: Geht „Arbeit“ an, zeigt die Aufgabenliste nur deine Arbeitskategorie – und die Erfassung kann mit dem Fokus beginnen und enden. Eingerichtet wird er in den iOS-Einstellungen unter Fokus › dein Fokus › Fokusfilter › Filter hinzufügen › SimpleTime. Der Fokusfilter gehört zu SimpleTime Pro."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Sync, Backup und Export",
+        "items": [
+          {
+            "id": "sync",
+            "q": "Gleicht SimpleTime zwischen meinen Geräten ab?",
+            "a": [
+              "Ja, automatisch über iCloud – auf jedem Gerät, das mit demselben Apple Account angemeldet ist. Wann der Abgleich läuft, entscheidet das System; die Einstellungen zeigen, wann er zuletzt lief, und du kannst ihn dort prüfen."
+            ]
+          },
+          {
+            "id": "without-icloud",
+            "q": "Kann ich SimpleTime ohne iCloud nutzen?",
+            "a": [
+              "Ja. Ohne iCloud bleiben deine Daten auf diesem einen Gerät. Den Abgleich schaltest du in den iOS-Einstellungen unter deinem Namen › iCloud ein oder aus. Ohne iCloud sind Backups, die du exportierst und sicher aufbewahrst, umso wichtiger."
+            ]
+          },
+          {
+            "id": "backups",
+            "q": "Wie funktionieren Backups?",
+            "a": [
+              "Unter Einstellungen › Daten exportieren / importieren schaltest du automatische Backups ein – stündlich, täglich, wöchentlich oder monatlich. SimpleTime legt sie als JSON-Dateien in iCloud Drive im Ordner „SimpleTime/Backups“ ab und behält die letzten 20. Ein Backup kannst du auch jederzeit selbst exportieren."
+            ]
+          },
+          {
+            "id": "backup-password",
+            "q": "Kann ich meine Backups mit einem Passwort schützen?",
+            "a": [
+              "Ja. Mit Passwort wird die Backup-Datei auf deinem Gerät verschlüsselt, bevor sie gespeichert wird. Merk dir das Passwort gut: Ohne es kann niemand das Backup wiederherstellen – weder du noch wir. Es gibt keinen Ersatzweg."
+            ]
+          },
+          {
+            "id": "restore",
+            "q": "Wie stelle ich ein Backup wieder her?",
+            "a": [
+              "Unter Einstellungen › Daten exportieren / importieren › Backup aus JSON importieren. Vorhandene Daten bleiben erhalten, fehlende werden ergänzt. Auf einem neuen Gerät wartest du am besten, bis der iCloud-Abgleich deine Daten geliefert hat – sonst können Aufgaben doppelt entstehen."
+            ]
+          },
+          {
+            "id": "export",
+            "q": "Kann ich meine Daten exportieren?",
+            "a": [
+              "Ja, jederzeit: als CSV-Datei mit Aufgabe, Notiz, Dauer, Start und Ende – für Excel, Numbers oder jedes Auswertungswerkzeug –, als PDF-Bericht oder als vollständiges Backup im JSON-Format."
+            ]
+          },
+          {
+            "id": "import",
+            "q": "Kann ich Daten aus einer anderen App übernehmen?",
+            "a": [
+              "Nicht direkt. SimpleTime importiert seine eigenen Backups (JSON); CSV-Dateien aus anderen Apps lassen sich nicht einlesen."
+            ]
+          },
+          {
+            "id": "new-device",
+            "q": "Wie ziehe ich auf ein neues iPhone um?",
+            "a": [
+              "Melde dich mit demselben Apple Account an und installiere SimpleTime – iCloud bringt deine Einträge von selbst zurück. Nutzt du kein iCloud, exportiere auf dem alten Gerät ein Backup und importiere es auf dem neuen. Orte gehören zum jeweiligen Gerät und werden nicht abgeglichen."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "privacy",
+        "title": "Datenschutz und Sicherheit",
+        "items": [
+          {
+            "id": "data-location",
+            "q": "Wo werden meine Daten gespeichert?",
+            "a": [
+              "Auf deinen Geräten und in deiner privaten iCloud. Niemand sonst kann sie lesen – auch wir nicht. SimpleTime hat keine eigenen Server."
+            ]
+          },
+          {
+            "id": "tracking-me",
+            "q": "Trackt mich SimpleTime?",
+            "a": [
+              "Nein. Kein Analytics, keine Werbung, keine Fremd-SDKs, keine Nutzerprofile. Die App schickt deine Daten weder an uns noch an sonst jemanden. Die Einzelheiten stehen in unserer [Datenschutzerklärung](@privacy)."
+            ]
+          },
+          {
+            "id": "permissions",
+            "q": "Welche Berechtigungen will SimpleTime?",
+            "a": [
+              "Nur, was eine Funktion braucht, und erst, wenn du sie benutzt: Mitteilungen für Erinnerungen und die Hinweise der Orte, den Standort für Orte, das Hinzufügen von Fotos zum Sichern von Bildern und Face ID oder Touch ID für die App-Sperre. In den Einstellungen unter Datenschutz › Übersicht und Berechtigungen siehst du jede mit ihrem aktuellen Stand."
+            ]
+          },
+          {
+            "id": "location",
+            "q": "Wozu will SimpleTime meinen Standort?",
+            "a": [
+              "Nur für Orte, die zu SimpleTime Pro gehören: damit eine Aufgabe starten kann, wenn du irgendwo ankommst. iOS überwacht die Bereiche, die du festlegst, und meldet der App Ankommen und Gehen. Deine Orte bleiben auf deinem Gerät, und SimpleTime führt kein Protokoll darüber, wo du warst. Ohne Orte braucht SimpleTime deinen Standort nicht."
+            ]
+          },
+          {
+            "id": "app-lock",
+            "q": "Wie funktioniert die App-Sperre?",
+            "a": [
+              "Unter Einstellungen › App-Sperre wählst du, ob SimpleTime sich mit deinem iPhone-Code öffnet – samt Face ID oder Touch ID – oder mit einem eigenen Code. Im App-Umschalter bleibt SimpleTime verdeckt, und Aufgabennamen tauchen weder in der iPhone-Suche noch am App-Symbol auf. Wichtig: Vergisst du deinen eigenen Code, führt der einzige Weg zurück in die App über Löschen und Neuinstallieren."
+            ]
+          },
+          {
+            "id": "delete-all",
+            "q": "Wie lösche ich alle meine Daten?",
+            "a": [
+              "In den Einstellungen unter Datenschutz › Alle Daten löschen. Damit entfernst du alles auf einmal – alle Einträge und Aufgaben, den Papierkorb, Erinnerungen, die Backups in iCloud Drive, Exporte und Einstellungen – auf diesem Gerät, in iCloud und, sobald sie online sind, auf deinen anderen Geräten. Das lässt sich nicht rückgängig machen."
+            ]
+          },
+          {
+            "id": "diagnostics",
+            "q": "Was steht unter Diagnose?",
+            "a": [
+              "Stürzt SimpleTime ab oder hängt, meldet iOS das der App mit einem Bericht. Die Berichte bleiben auf deinem Gerät und enthalten keine Aufgaben und keine Zeiten – nur die Stelle im Programm, an der es passiert ist. Wenn du magst, teil einen mit uns: So finden wir den Fehler."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pro",
+        "title": "SimpleTime Pro",
+        "items": [
+          {
+            "id": "pro-includes",
+            "q": "Was gehört zu SimpleTime Pro?",
+            "a": [
+              "Die App für die Apple Watch, Rückblicke auf Woche, Monat und Jahr, Orte, der Jahresüberblick, Ziele, der Fokusfilter, ein Schnellstart-Widget, sieben Akzentfarben oder eine eigene samt sechzehn App-Symbolen und zusätzliche Abschnitte im PDF-Bericht. Was künftig dazukommt, ist enthalten. [Alles über SimpleTime Pro](@pro)"
+            ]
+          },
+          {
+            "id": "pro-price",
+            "q": "Was kostet SimpleTime Pro?",
+            "a": [
+              "Pro gibt es monatlich, jährlich oder als einmaligen Kauf „Lebenslang“. Die Preise hängen von deinem Land und deiner Währung ab und stehen vor dem Kauf in der App."
+            ]
+          },
+          {
+            "id": "trial",
+            "q": "Kann ich Pro erst ausprobieren?",
+            "a": [
+              "Ja. Wer neu abonniert, kann Monat oder Jahr eine Woche gratis testen; die App zeigt, ob die Testwoche für dich gilt. Kündigst du nicht spätestens 24 Stunden vor ihrem Ende, verlängert sich das Abo zum angezeigten Preis."
+            ]
+          },
+          {
+            "id": "family",
+            "q": "Kann meine Familie Pro mitnutzen?",
+            "a": [
+              "Ja. SimpleTime Pro unterstützt die Familienfreigabe – ein Kauf für bis zu sechs Personen."
+            ]
+          },
+          {
+            "id": "restore-purchase",
+            "q": "Wie bekomme ich Pro auf meine anderen Geräte?",
+            "a": [
+              "Pro gehört zu deinem Apple Account. Auf deinen anderen Geräten mit demselben Account ist es meist von selbst freigeschaltet. Falls nicht, tippe auf der Pro-Seite unter Einstellungen › SimpleTime Pro auf Wiederherstellen."
+            ]
+          },
+          {
+            "id": "cancel",
+            "q": "Wie kündige ich mein Abo?",
+            "a": [
+              "In deinen App-Store-Einstellungen – auf dem iPhone unter Einstellungen › dein Name › Abonnements – oder in der App auf der Pro-Seite unter Abo verwalten. Pro bleibt bis zum Ende des bereits bezahlten Zeitraums aktiv."
+            ]
+          },
+          {
+            "id": "lifetime-switch",
+            "q": "Ich habe ein Abo – kann ich zu Lebenslang wechseln?",
+            "a": [
+              "Ja, direkt auf der Pro-Seite. Apple beendet das Abo dabei allerdings nicht von selbst: Kündige es danach, damit es sich nicht weiter verlängert. Die App erinnert dich daran."
+            ]
+          },
+          {
+            "id": "pro-ends",
+            "q": "Was passiert, wenn Pro endet?",
+            "a": [
+              "Es geht nichts verloren. Deine Einträge, Ziele und Orte bleiben gespeichert. Die Pro-Funktionen sind wieder gesperrt – Orte starten dann zum Beispiel keine Aufgaben mehr –, und alles ist zurück, sobald Pro wieder aktiv ist."
+            ]
+          },
+          {
+            "id": "pro-offline",
+            "q": "Braucht Pro eine Internetverbindung?",
+            "a": [
+              "Nein. SimpleTime prüft deinen Kauf beim App Store, wann immer es geht. Ohne Verbindung läuft Pro weiter – bis zu zwei Wochen ohne Kontakt."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "watch-places",
+        "title": "Apple Watch und Orte",
+        "items": [
+          {
+            "id": "watch-setup",
+            "q": "Wie richte ich die App auf der Apple Watch ein?",
+            "a": [
+              "Die App für die Apple Watch gehört zu SimpleTime Pro. Installiere sie auf der Uhr und öffne SimpleTime danach einmal auf dem iPhone – nach wenigen Sekunden zeigt die Uhr deine Aufgaben. Das iPhone bleibt die Quelle: Was die Uhr startet, wird dort erfasst, mit derselben Live-Aktivität und denselben Widgets."
+            ]
+          },
+          {
+            "id": "watch-features",
+            "q": "Was kann ich auf der Apple Watch machen?",
+            "a": [
+              "Starten und stoppen am Handgelenk – deine Favoriten, zuletzt Benutztes oder jede Aufgabe über die Suche. Früher starten: vor 5, 15, 30 oder 60 Minuten oder lückenlos ab dem Ende des letzten Eintrags. Stoppen per Doppeltippen. Tag, Woche und Ziele im Blick, mit der laufenden Zeit auf dem Zifferblatt und im Smart Stack. Ist das iPhone außer Reichweite, wird dein Tipp mit seiner Uhrzeit gemerkt und später nachgetragen."
+            ]
+          },
+          {
+            "id": "places-how",
+            "q": "Wie funktionieren Orte?",
+            "a": [
+              "Lege einen Ort an – etwa dein Büro oder dein Fitnessstudio – mit einem Umkreis von 50 m bis 10 km, und wähle eine Aufgabe. Kommst du an, startet sie von selbst, oder SimpleTime fragt vorher nach. Mit einer Wartezeit startet nichts, wenn du nur vorbeifährst. Beim Gehen kann die Aufgabe stoppen, und du kannst einen Ort auf bestimmte Tage und Uhrzeiten beschränken."
+            ]
+          },
+          {
+            "id": "places-late",
+            "q": "Warum startet ein Ort zu spät oder gar nicht?",
+            "a": [
+              "Orte brauchen den Standortzugriff „Immer“ und den genauen Standort. Unter 100 m bemerkt iOS das Ankommen oft erst spät, weil der Standort im Hintergrund meist aus WLAN und Mobilfunk kommt, nicht aus GPS – ein größerer Umkreis hilft. iOS überwacht höchstens 20 Orte je App, und auf dem Mac gibt es keine Orte."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "more",
+        "title": "Weiteres",
+        "items": [
+          {
+            "id": "look",
+            "q": "Kann ich das Aussehen von SimpleTime ändern?",
+            "a": [
+              "Ja: hell, dunkel oder wie das System, dazu drei Zeilenhöhen für die Aufgabenliste. Mit SimpleTime Pro kommen sieben Akzentfarben oder eine eigene dazu – sie zieht sich durch Knöpfe, Schalter und Diagramme – und sechzehn App-Symbole."
+            ]
+          },
+          {
+            "id": "accessibility",
+            "q": "Ist SimpleTime barrierefrei?",
+            "a": [
+              "Ja. SimpleTime unterstützt VoiceOver und Dynamic Type in der ganzen App. Wenn etwas für dich nicht funktioniert, sag uns bitte Bescheid."
+            ]
+          },
+          {
+            "id": "freelance",
+            "q": "Eignet sich SimpleTime für Freelancer?",
+            "a": [
+              "Zum Erfassen, ja: Trenne Kunden und Projekte als Aufgaben und Unteraufgaben und exportiere einen PDF-Bericht oder eine CSV-Datei, wann immer du einen Nachweis brauchst. Stundensätze und Rechnungen gehören nicht zu SimpleTime – dafür nimmst du den Export in dein Rechnungsprogramm mit."
+            ]
+          },
+          {
+            "id": "platforms",
+            "q": "Gibt es SimpleTime für Android, Windows oder im Browser?",
+            "a": [
+              "Nein. SimpleTime ist für iPhone, iPad, Mac und Apple Watch gemacht. Deine Daten kannst du jederzeit als CSV exportieren."
+            ]
+          },
+          {
+            "id": "feedback",
+            "q": "Ich habe einen Fehler gefunden oder eine Idee – wohin damit?",
+            "a": [
+              "Schreib uns an [contact@simple-time.app](mailto:contact@simple-time.app). Bei einem Fehler gib bitte dein Gerätemodell und die iOS-Version an. Ist SimpleTime abgestürzt, hilft ein Bericht aus Einstellungen › Diagnose sehr. Jede Nachricht wird gelesen."
+            ]
+          },
+          {
+            "id": "support-us",
+            "q": "Wie kann ich SimpleTime unterstützen?",
+            "a": [
+              "SimpleTime wird von einer Person gemacht. Eine Bewertung im App Store hilft, ebenso, anderen davon zu erzählen – und SimpleTime Pro hält die Entwicklung am Laufen."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "updated": "Zuletzt aktualisiert",
+    "translationNote": "Dies ist eine Übersetzung der deutschen Datenschutzerklärung. Im Zweifel gilt [die deutsche Fassung](@privacy-de).",
+    "summaryTitle": "Kurz gesagt",
+    "summary": [
+      "Deine Zeit gehört dir. SimpleTime braucht kein Konto, zeigt keine Werbung und trackt dich nicht.",
+      "Deine Einträge liegen auf deinen Geräten und in deiner privaten iCloud – niemand sonst kann sie lesen, auch wir nicht. SimpleTime hat keine eigenen Server.",
+      "Diese Website setzt keine eigenen Cookies, nutzt kein Analytics und lädt nichts von Dritten."
+    ],
+    "sections": [
+      {
+        "id": "controller",
+        "title": "Verantwortlicher",
+        "paragraphs": [
+          "Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) für die App SimpleTime und diese Website ist:"
+        ],
+        "address": true
+      },
+      {
+        "id": "app",
+        "title": "Die App SimpleTime",
+        "paragraphs": [
+          "SimpleTime ist so gebaut, dass wir deine Daten nicht brauchen. Alles, was du eingibst – Aufgaben, Einträge mit ihren Zeiten und Notizen, Ziele, Erinnerungen und Einstellungen –, wird auf deinem Gerät gespeichert. Die App enthält kein Analytics, keine Werbung und keine Fremd-SDKs, und sie schickt deine Daten nicht an eigene Server: Es gibt keine. Wir haben zu keinem Zeitpunkt Zugriff auf deine Daten."
+        ],
+        "subsections": [
+          {
+            "title": "iCloud-Abgleich",
+            "paragraphs": [
+              "Bist du bei iCloud angemeldet, gleicht SimpleTime deine Daten über Apples CloudKit zwischen deinen Geräten ab – in der privaten Datenbank deines iCloud-Accounts. Apple überträgt und speichert die Daten verschlüsselt; es gilt die Datenschutzerklärung von Apple. Wir können diese Daten weder einsehen noch auf sie zugreifen. Den Abgleich schaltest du in den iOS-Einstellungen unter deinem Namen › iCloud ab – deine Daten bleiben dann auf dem Gerät."
+            ]
+          },
+          {
+            "title": "Backups",
+            "paragraphs": [
+              "Schaltest du automatische Backups ein oder exportierst du ein Backup, speichert SimpleTime eine Datei mit deinen Aufgaben, Einträgen und Erinnerungen – automatisch in deinem iCloud Drive (Ordner „SimpleTime/Backups“) oder dort, wo du es wählst. Setzt du ein Passwort, wird die Datei vor dem Speichern auf deinem Gerät verschlüsselt (AES-GCM); ohne das Passwort kann sie niemand öffnen – auch wir nicht. Von den automatischen Backups bleiben die letzten 20 erhalten."
+            ]
+          },
+          {
+            "title": "Standort (Orte)",
+            "paragraphs": [
+              "Nur wenn du Orte einrichtest – eine Funktion von SimpleTime Pro –, fragt SimpleTime nach dem Zugriff auf deinen Standort. iOS überwacht dann die Bereiche, die du festgelegt hast, und meldet der App Ankommen und Gehen; SimpleTime nutzt das ausschließlich, um die passende Aufgabe zu starten oder zu stoppen. Deine Orte werden nur auf diesem Gerät gespeichert und nicht abgeglichen. SimpleTime führt kein Protokoll darüber, wo du warst, und gibt deinen Standort nicht weiter.",
+              "Suchst du im Ort-Editor nach einer Adresse oder nutzt du die Karte, laufen Suche und Karte über Apple Karten; es gilt die Datenschutzerklärung von Apple. Den Zugriff auf deinen Standort kannst du jederzeit in den iOS-Einstellungen zurücknehmen."
+            ]
+          },
+          {
+            "title": "Mitteilungen",
+            "paragraphs": [
+              "Erinnerungen und die Hinweise der Orte entstehen auf deinem Gerät und werden dort als lokale Mitteilungen zugestellt. Damit der Abgleich aktuell bleibt, kann iCloud die App über Apples Push-Dienst im Hintergrund wecken; diese Nachrichten enthalten keine Inhalte von dir."
+            ]
+          },
+          {
+            "title": "Fotos",
+            "paragraphs": [
+              "Um ein Diagramm oder einen Rückblick als Bild zu sichern, fragt SimpleTime nach der Erlaubnis, Fotos hinzuzufügen. Es kann nur Bilder hinzufügen – deine Mediathek sehen kann es nicht."
+            ]
+          },
+          {
+            "title": "App-Sperre, Face ID und Touch ID",
+            "paragraphs": [
+              "Nutzt du die App-Sperre, prüft iOS Face ID, Touch ID oder deinen Gerätecode; SimpleTime erfährt nur, ob die Prüfung gelungen ist. Dein eigener Code und das Backup-Passwort liegen im Schlüsselbund auf deinem Gerät."
+            ]
+          },
+          {
+            "title": "Siri, Kurzbefehle, Suche und Widgets",
+            "paragraphs": [
+              "Nutzt du Siri, verarbeitet Apple deine Anfrage; SimpleTime erhält nur die erkannte Aktion. Damit du Aufgaben aus der iPhone-Suche starten kannst, kommen Aufgabennamen in den Suchindex auf deinem Gerät – nicht aber, solange die App-Sperre an ist. Widgets, die Live-Aktivität und die App auf der Apple Watch bekommen ihre Daten von der App auf deinen Geräten; die Uhr erhält sie direkt von deinem iPhone."
+            ]
+          },
+          {
+            "title": "Diagnose",
+            "paragraphs": [
+              "Stürzt SimpleTime ab oder hängt, gibt iOS der App einen Diagnosebericht. Er bleibt auf deinem Gerät, enthält keine Aufgaben und keine Zeiten und verlässt dein Gerät nur, wenn du ihn selbst teilst – etwa per E-Mail an uns. Unabhängig davon stellt uns Apple Absturzberichte und Statistiken zur Verfügung, die dich nicht identifizieren, sofern du erlaubt hast, Analysedaten mit App-Entwicklern zu teilen (iOS-Einstellungen › Datenschutz & Sicherheit › Analyse & Verbesserungen)."
+            ]
+          },
+          {
+            "title": "Käufe",
+            "paragraphs": [
+              "SimpleTime Pro wird über den App Store gekauft. Apple wickelt Zahlung und Abo ab; wir erhalten keine Zahlungsdaten und keine personenbezogenen Daten von dir. Die App fragt beim App Store nur ab, ob Pro aktiv ist. Von Apple erhalten wir Verkaufsberichte ohne personenbezogene Daten."
+            ]
+          },
+          {
+            "title": "Bewertungen",
+            "paragraphs": [
+              "SimpleTime bittet höchstens einmal über den Systemdialog von Apple um eine Bewertung. Ob und wie du bewertet hast, erfahren wir nicht."
+            ]
+          },
+          {
+            "title": "Export und Teilen",
+            "paragraphs": [
+              "CSV-Dateien, PDF-Berichte, Backups und Bilder entstehen auf deinem Gerät. Wohin sie gehen, entscheidest du – im Teilen-Menü."
+            ]
+          },
+          {
+            "title": "Löschen deiner Daten",
+            "paragraphs": [
+              "In den Einstellungen der App unter Datenschutz › Alle Daten löschen entfernst du alles, was SimpleTime gespeichert hat, auf einmal – auf diesem Gerät, in iCloud und in den Backups in iCloud Drive; über iCloud erreicht die Löschung auch deine anderen Geräte. Löschst du die App, verschwinden ihre Daten von diesem Gerät."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "website",
+        "title": "Diese Website",
+        "subsections": [
+          {
+            "title": "Hosting und Auslieferung",
+            "paragraphs": [
+              "simple-time.app wird von Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA, ausgeliefert. Beim Aufruf einer Seite übermittelt dein Browser zwangsläufig technische Daten – insbesondere deine IP-Adresse, die aufgerufene Seite, den Zeitpunkt und die Kennung deines Browsers (User-Agent). Cloudflare verarbeitet diese Daten, um die Website auszuliefern und vor Angriffen und Missbrauch zu schützen, und kann sie dafür kurzzeitig in Logdateien speichern. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren und zuverlässigen Website (Art. 6 Abs. 1 lit. f DSGVO). Cloudflare ist unter dem EU-U.S. Data Privacy Framework zertifiziert, und mit Cloudflare besteht ein Auftragsverarbeitungsvertrag. Mehr dazu: [cloudflare.com/privacypolicy](https://www.cloudflare.com/de-de/privacypolicy/)"
+            ]
+          },
+          {
+            "title": "Fehlerberichte",
+            "paragraphs": [
+              "Lässt sich eine Seite nicht laden, kann dein Browser einen kurzen technischen Fehlerbericht an Cloudflare senden (Network Error Logging) – etwa die Adresse, die Art des Fehlers und deine IP-Adresse. Er dient ausschließlich dazu, Netzwerkprobleme zu erkennen."
+            ]
+          },
+          {
+            "title": "Cookies und lokaler Speicher",
+            "paragraphs": [
+              "Wir setzen keine Cookies. Im Einzelfall kann Cloudflare ein technisch notwendiges Cookie (__cf_bm) setzen, um Menschen von Bots zu unterscheiden; es dient nicht dem Tracking. Wechselst du zwischen hellem und dunklem Erscheinungsbild, merkt sich dein Browser diese Wahl in seinem lokalen Speicher – sie verlässt dein Gerät nie. Die Suche auf der Fragen-Seite läuft vollständig in deinem Browser."
+            ]
+          },
+          {
+            "title": "Kein Analytics, keine Dritten",
+            "paragraphs": [
+              "Diese Website nutzt keine Analyse- oder Tracking-Werkzeuge, keine Werbung und keine Social-Media-Plugins und lädt keine Schriften oder Skripte von anderen Servern. Links zum App Store führen zu Apple; dort gilt die Datenschutzerklärung von Apple."
+            ]
+          },
+          {
+            "title": "E-Mail",
+            "paragraphs": [
+              "Schreibst du uns, nutzen wir deine E-Mail-Adresse und deine Nachricht, um dir zu antworten (Art. 6 Abs. 1 lit. b und f DSGVO). Unsere E-Mails liegen in unserem Auftrag bei der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur. Wir löschen Nachrichten, sobald sie nicht mehr gebraucht werden, sofern uns keine gesetzliche Pflicht zur Aufbewahrung trifft."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rights",
+        "title": "Deine Rechte",
+        "paragraphs": [
+          "Du hast das Recht auf Auskunft über deine Daten (Art. 15 DSGVO), auf Berichtigung (Art. 16) und Löschung (Art. 17), auf Einschränkung der Verarbeitung (Art. 18), auf Datenübertragbarkeit (Art. 20) und darauf, einer Verarbeitung aufgrund berechtigter Interessen zu widersprechen (Art. 21). Um diese Rechte auszuüben, schreib uns einfach. Weil die App bei uns nichts über dich speichert, betrifft eine Anfrage meist E-Mails oder diese Website; deine Daten in der App kannst du jederzeit selbst einsehen, exportieren und löschen.",
+          "Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren – zum Beispiel beim Bayerischen Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Änderungen",
+        "paragraphs": [
+          "Wir passen diese Datenschutzerklärung an, wenn sich die App, die Website oder die Rechtslage ändern. Das Datum oben zeigt die geltende Fassung."
+        ]
+      }
+    ]
+  }
+}

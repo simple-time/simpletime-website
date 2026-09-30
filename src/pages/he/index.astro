@@ -1,35 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Hero from '../../components/Hero.astro';
-import Showcase from '../../components/Showcase.astro';
-import Features from '../../components/Features.astro';
-import Gallery from '../../components/Gallery.astro';
-import Audience from '../../components/Audience.astro';
-import FAQ from '../../components/FAQ.astro';
-import CTA from '../../components/CTA.astro';
-import { useTranslations } from '../../i18n/utils';
-import { FAQ_KEYS } from '../../i18n/faq';
-
-const lang = 'he';
-const t = useTranslations(lang);
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQ_KEYS.map((k) => ({
-    '@type': 'Question',
-    name: t(`faq.${k}.q` as any),
-    acceptedAnswer: { '@type': 'Answer', text: t(`faq.${k}.a` as any) },
-  })),
-};
+import HomePage from '../../components/pages/HomePage.astro';
 ---
 
-<Layout lang={lang} path="/he/" jsonLd={[faqSchema]}>
-  <Hero lang={lang} />
-  <Showcase lang={lang} />
-  <Features lang={lang} />
-  <Gallery lang={lang} />
-  <Audience lang={lang} />
-  <FAQ lang={lang} />
-  <CTA lang={lang} />
-</Layout>
+<HomePage lang="he" />

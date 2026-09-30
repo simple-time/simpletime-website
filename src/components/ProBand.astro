@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+import type { Lang } from '../i18n/ui';
+import { langPrefix } from '../i18n/utils';
+import { getContent } from '../i18n/content';
+import proMark from '../assets/pro/mark.webp';
+
+interface Props {
+  lang: Lang;
+}
+
+// The Pro part of the App Store description, as it stands there.
+const { lang } = Astro.props;
+const { home, store } = getContent(lang);
+const pro = store.pro;
+---
+
+<section id="pro" class="scroll-mt-20 px-5 py-20 sm:px-8 sm:py-28">
+  <div
+    class="reveal relative mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] border border-line bg-surface p-7 shadow-soft sm:p-12 lg:p-14"
+  >
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+      <div
+        class="absolute -end-24 -top-24 h-[360px] w-[360px] rounded-full bg-brand-200/40 blur-[110px] dark:bg-brand-700/25"
+      >
+      </div>
+    </div>
+
+    <div class="relative grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-14">
+      <div>
+        <Image
+          src={proMark}
+          alt=""
+          width={72}
+          height={72}
+          widths={[72, 144]}
+          sizes="72px"
+          class="h-[72px] w-[72px] rounded-[22%] shadow-lift ring-1 ring-black/5 dark:ring-white/10"
+        />
+        <h2 class="text-display mt-7 text-3xl font-bold sm:text-[2.5rem]">{pro.title}</h2>
+        <p class="mt-5 text-[17px] leading-relaxed text-muted">{pro.intro}</p>
+      </div>
+
+      <div>
+        <ul class="grid gap-x-8 gap-y-4 sm:grid-cols-2">
+          {
+            pro.points.map((point) => (
+              <li class="flex gap-3 text-[15px] leading-relaxed text-ink">
+                <svg
+                  class="mt-1 h-4 w-4 shrink-0 text-brand-500 dark:text-brand-300"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M12 2.5l2.4 6.1 6.1 2.4-6.1 2.4-2.4 6.1-2.4-6.1L3.5 11l6.1-2.4z" />
+                </svg>
+                <span>{point}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="mt-8 border-t border-line pt-6 text-[14px] leading-relaxed text-subtle">{pro.pricing}</p>
+        <a
+          href={`${langPrefix(lang)}/pro/`}
+          class="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-on-accent transition-opacity hover:opacity-90"
+        >
+          {home.pro.button}
+          <svg
+            class="h-3.5 w-3.5 rtl:-scale-x-100"
+            viewBox="0 0 14 14"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 7h8"></path>
+            <path d="M7 3l4 4-4 4"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
