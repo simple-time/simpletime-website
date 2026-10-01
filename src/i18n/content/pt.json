@@ -81,7 +81,7 @@
         "Locais: as tarefas começam sozinhas quando chega – após um tempo de espera, se quiser",
         "O ano num relance: cada dia do ano numa imagem, com as suas sequências",
         "Metas por tarefa – para o dia, a semana ou o mês",
-        "Filtro de foco: o foco de trabalho liga-se, a lista mostra só o trabalho e o relógio já está a contar",
+        "Filtro de concentração: o modo Trabalho liga-se, a lista mostra só o trabalho e o relógio já está a contar",
         "Um widget de início rápido que monta a seu gosto",
         "Sete cores de destaque ou uma sua, além de dezasseis ícones da app",
         "Secções adicionais no relatório PDF: evolução, distribuição do dia, comparação, metas"
@@ -262,8 +262,8 @@
       },
       {
         "id": "focus",
-        "title": "Filtro de foco",
-        "body": "O foco de trabalho liga-se, a lista mostra só o trabalho – e o registo pode começar e terminar com ele."
+        "title": "Filtro de concentração",
+        "body": "O modo Trabalho liga-se, a lista mostra só o trabalho – e o registo pode começar e terminar com ele."
       },
       {
         "id": "widget",
@@ -317,7 +317,7 @@
     "freeBody": "Tudo o que é preciso para registar: tarefas e subtarefas, a vista do dia e a linha temporal, gráficos e estatísticas, o relatório PDF e a exportação CSV, os widgets, a atividade em tempo real, a central de controlo e a Siri, a sincronização com o iCloud e as cópias de segurança, e o bloqueio da app – em 40 idiomas. Sem conta, sem publicidade, sem rastreio.",
     "howTitle": "Como obter o Pro",
     "how": [
-      "No SimpleTime, abra Ajustes › SimpleTime Pro.",
+      "No SimpleTime, abra Definições › SimpleTime Pro.",
       "Escolha Mensal, Anual ou Vitalício – o pagamento é feito através da sua conta Apple.",
       "O Pro fica desbloqueado de imediato, em todos os seus dispositivos com a mesma conta Apple."
     ],
@@ -374,14 +374,14 @@
             "id": "languages",
             "q": "Que idiomas fala o SimpleTime?",
             "a": [
-              "40 – do português e do inglês ao árabe, ao hindi e ao japonês. Em Ajustes › Idioma, pode escolher o idioma da app independentemente do idioma do seu dispositivo."
+              "40 – do português e do inglês ao árabe, ao hindi e ao japonês. Em Definições › Idioma, pode escolher o idioma da app independentemente do idioma do seu dispositivo."
             ]
           },
           {
             "id": "first-steps",
             "q": "Como começo?",
             "a": [
-              "Toque em + no separador Registro para criar uma tarefa – com nome, cor e símbolo. Toque no triângulo ao lado e o relógio começa a contar; toque em Parar para o terminar. Na primeira abertura, um breve tour mostra-lhe os botões mais importantes. Pode revê-lo a qualquer momento em Ajustes › Ver o tour novamente."
+              "Toque em + no separador Registro para criar uma tarefa – com nome, cor e símbolo. Toque no triângulo ao lado e o relógio começa a contar; toque em Parar para o terminar. Na primeira abertura, um breve tour mostra-lhe os botões mais importantes. Pode revê-lo a qualquer momento em Definições › Ver o tour novamente."
             ]
           },
           {
@@ -436,7 +436,7 @@
             "id": "archive-trash",
             "q": "Qual é a diferença entre arquivar e apagar?",
             "a": [
-              "Arquivar apenas oculta uma tarefa: os registos dela ficam e continuam a contar em todas as análises. Apagar move a tarefa e os respetivos registos para a lixeira. A partir daí, pode restaurar ambos – ou apagá-los definitivamente."
+              "Arquivar apenas oculta uma tarefa: os registos dela ficam e continuam a contar em todas as análises. Apagar move a tarefa e os respetivos registos para o lixo. A partir daí, pode restaurar ambos – ou apagá-los definitivamente."
             ]
           },
           {
@@ -450,7 +450,7 @@
             "id": "reminders",
             "q": "O SimpleTime pode enviar-me lembretes?",
             "a": [
-              "Sim. No SimpleTime, em Ajustes › Notificações, define regras – por exemplo, um lembrete quando uma tarefa está em curso há 60 minutos, para todas as tarefas ou só para algumas, nos dias da semana que escolher. O SimpleTime também pode avisar quando nada foi registado durante algum tempo."
+              "Sim. No SimpleTime, em Definições › Notificações, define regras – por exemplo, um lembrete quando uma tarefa está em curso há 60 minutos, para todas as tarefas ou só para algumas, nos dias da semana que escolher. O SimpleTime também pode avisar quando nada foi registado durante algum tempo."
             ]
           }
         ]
@@ -491,20 +491,20 @@
             "id": "pdf-report",
             "q": "Como crio um relatório PDF?",
             "a": [
-              "Em Ajustes › Exportar relatório, escolha um período – de «Hoje» a «Todo o período», ou um personalizado –, selecione as secções que quer e arraste-as para a ordem que preferir. O SimpleTime cria o PDF com cada tarefa e subtarefa, pronto a partilhar ou guardar. O SimpleTime Pro acrescenta secções adicionais: evolução, distribuição do dia, comparação e metas."
+              "Em Definições › Exportar relatório, escolha um período – de «Hoje» a «Todo o período», ou um personalizado –, selecione as secções que quer e arraste-as para a ordem que preferir. O SimpleTime cria o PDF com cada tarefa e subtarefa, pronto a partilhar ou guardar. O SimpleTime Pro acrescenta secções adicionais: evolução, distribuição do dia, comparação e metas."
             ]
           }
         ]
       },
       {
         "id": "shortcuts",
-        "title": "Widgets, Siri e filtro de foco",
+        "title": "Widgets, Siri e filtro de concentração",
         "items": [
           {
             "id": "widgets",
             "q": "Que widgets existem?",
             "a": [
-              "Para o ecrã principal: Hoje, Tarefa em andamento e Semana. Para o ecrã bloqueado: o que está em curso e há quanto tempo. Há ainda um interruptor para a central de controlo. Enquanto uma tarefa está em curso, uma atividade em tempo real mostra-a no ecrã bloqueado e na Dynamic Island. Com o SimpleTime Pro, tem também um widget de início rápido que monta com as suas próprias tarefas."
+              "Para o ecrã principal: Hoje, Tarefa em curso e Semana. Para o ecrã bloqueado: o que está em curso e há quanto tempo. Há ainda um interruptor para a central de controlo. Enquanto uma tarefa está em curso, uma atividade em tempo real mostra-a no ecrã bloqueado e na Dynamic Island. Com o SimpleTime Pro, tem também um widget de início rápido que monta com as suas próprias tarefas."
             ]
           },
           {
@@ -523,9 +523,9 @@
           },
           {
             "id": "focus-filter",
-            "q": "O que faz o filtro de foco?",
+            "q": "O que faz o filtro de concentração?",
             "a": [
-              "Com um filtro de foco, o SimpleTime acompanha o seu modo de concentração: quando «Trabalho» se ativa, a lista de tarefas mostra apenas a sua categoria de trabalho – e o registo pode começar e terminar com esse modo. A configuração faz-se nas Definições do iOS, em Concentração › o seu modo › Filtros › Adicionar filtro › SimpleTime. O filtro de foco faz parte do SimpleTime Pro."
+              "Com um filtro de concentração, o SimpleTime acompanha o seu modo de concentração: quando «Trabalho» se ativa, a lista de tarefas mostra apenas a sua categoria de trabalho – e o registo pode começar e terminar com esse modo. A configuração faz-se nas Definições do iOS, em Concentração › o seu modo › Filtros › Adicionar filtro › SimpleTime. O filtro de concentração faz parte do SimpleTime Pro."
             ]
           }
         ]
@@ -538,7 +538,7 @@
             "id": "sync",
             "q": "O SimpleTime sincroniza entre os meus dispositivos?",
             "a": [
-              "Sim, automaticamente através do iCloud – em todos os dispositivos com sessão iniciada na mesma conta Apple. Quando a sincronização acontece é o sistema que decide; em Ajustes, vê quando foi a última sincronização e pode verificá-la aí."
+              "Sim, automaticamente através do iCloud – em todos os dispositivos com sessão iniciada na mesma conta Apple. Quando a sincronização acontece é o sistema que decide; em Definições, vê quando foi a última sincronização e pode verificá-la aí."
             ]
           },
           {
@@ -552,7 +552,7 @@
             "id": "backups",
             "q": "Como funcionam as cópias de segurança?",
             "a": [
-              "Em Ajustes › Exportar / importar dados, pode ativar cópias de segurança automáticas – a cada hora, diariamente, semanalmente ou mensalmente. O SimpleTime guarda-as como ficheiros JSON no iCloud Drive, na pasta «SimpleTime/Backups», e mantém as 20 mais recentes. Também pode exportar uma cópia de segurança manualmente a qualquer momento."
+              "Em Definições › Exportar / importar dados, pode ativar cópias de segurança automáticas – a cada hora, diariamente, semanalmente ou mensalmente. O SimpleTime guarda-as como ficheiros JSON no iCloud Drive, na pasta «SimpleTime/Backups», e mantém as 20 mais recentes. Também pode exportar uma cópia de segurança manualmente a qualquer momento."
             ]
           },
           {
@@ -566,7 +566,7 @@
             "id": "restore",
             "q": "Como restauro uma cópia de segurança?",
             "a": [
-              "Em Ajustes › Exportar / importar dados › Importar backup de um JSON. Os dados existentes mantêm-se e o que faltar é acrescentado. Num dispositivo novo, espere primeiro que a sincronização do iCloud tenha trazido os seus dados – caso contrário, as tarefas podem aparecer em duplicado."
+              "Em Definições › Exportar / importar dados › Importar cópia de segurança de um JSON. Os dados existentes mantêm-se e o que faltar é acrescentado. Num dispositivo novo, espere primeiro que a sincronização do iCloud tenha trazido os seus dados – caso contrário, as tarefas podem aparecer em duplicado."
             ]
           },
           {
@@ -614,7 +614,7 @@
             "id": "permissions",
             "q": "Que permissões pede o SimpleTime?",
             "a": [
-              "Apenas aquilo de que cada funcionalidade precisa, e só quando a usa: notificações para os lembretes e os avisos dos locais, a localização para os locais, adicionar fotografias para guardar imagens, e Face ID ou Touch ID para o bloqueio da app. Em Ajustes › Privacidade › Vista geral e permissões, vê cada uma com o respetivo estado."
+              "Apenas aquilo de que cada funcionalidade precisa, e só quando a usa: notificações para os lembretes e os avisos dos locais, a localização para os locais, adicionar fotografias para guardar imagens, e Face ID ou Touch ID para o bloqueio da app. Em Definições › Privacidade › Vista geral e permissões, vê cada uma com o respetivo estado."
             ]
           },
           {
@@ -628,14 +628,14 @@
             "id": "app-lock",
             "q": "Como funciona o bloqueio da app?",
             "a": [
-              "Em Ajustes › Bloqueio da app, escolhe se o SimpleTime abre com o código do iPhone – incluindo Face ID ou Touch ID – ou com um código próprio. No seletor de apps, o SimpleTime fica tapado, e os nomes das tarefas deixam de aparecer na pesquisa do iPhone e no ícone da app. Importante: se se esquecer do seu código próprio, a única forma de voltar a entrar na app é apagá-la e reinstalá-la."
+              "Em Definições › Bloqueio da app, escolhe se o SimpleTime abre com o código do iPhone – incluindo Face ID ou Touch ID – ou com um código próprio. No seletor de apps, o SimpleTime fica tapado, e os nomes das tarefas deixam de aparecer na pesquisa do iPhone e no ícone da app. Importante: se se esquecer do seu código próprio, a única forma de voltar a entrar na app é apagá-la e reinstalá-la."
             ]
           },
           {
             "id": "delete-all",
             "q": "Como apago todos os meus dados?",
             "a": [
-              "Em Ajustes › Privacidade › Apagar todos os dados. Assim, remove tudo de uma vez – todos os registos e tarefas, a lixeira, os lembretes, as cópias de segurança no iCloud Drive, as exportações e as definições – neste dispositivo, no iCloud e, assim que tiverem ligação, nos seus outros dispositivos. Esta ação não pode ser anulada."
+              "Em Definições › Privacidade › Apagar todos os dados. Assim, remove tudo de uma vez – todos os registos e tarefas, o lixo, os lembretes, as cópias de segurança no iCloud Drive, as exportações e as definições – neste dispositivo, no iCloud e, assim que tiverem ligação, nos seus outros dispositivos. Esta ação não pode ser anulada."
             ]
           },
           {
@@ -655,7 +655,7 @@
             "id": "pro-includes",
             "q": "O que inclui o SimpleTime Pro?",
             "a": [
-              "A app para o Apple Watch, resumos da sua semana, do seu mês e do seu ano, locais, o ano num relance, metas, o filtro de foco, um widget de início rápido, sete cores de destaque ou uma sua, além de dezasseis ícones da app, e secções adicionais no relatório PDF. O que vier depois está incluído. [Tudo sobre o SimpleTime Pro](@pro)"
+              "A app para o Apple Watch, resumos da sua semana, do seu mês e do seu ano, locais, o ano num relance, metas, o filtro de concentração, um widget de início rápido, sete cores de destaque ou uma sua, além de dezasseis ícones da app, e secções adicionais no relatório PDF. O que vier depois está incluído. [Tudo sobre o SimpleTime Pro](@pro)"
             ]
           },
           {
@@ -683,7 +683,7 @@
             "id": "restore-purchase",
             "q": "Como obtenho o Pro nos meus outros dispositivos?",
             "a": [
-              "O Pro está associado à sua conta Apple. Nos seus outros dispositivos com a mesma conta, normalmente fica desbloqueado automaticamente. Se não ficar, toque em Restaurar na página Pro, em Ajustes › SimpleTime Pro."
+              "O Pro está associado à sua conta Apple. Nos seus outros dispositivos com a mesma conta, normalmente fica desbloqueado automaticamente. Se não ficar, toque em Restaurar na página Pro, em Definições › SimpleTime Pro."
             ]
           },
           {
@@ -786,7 +786,7 @@
             "id": "feedback",
             "q": "Encontrei um erro ou tenho uma ideia – para onde escrevo?",
             "a": [
-              "Escreva-nos para [contact@simple-time.app](mailto:contact@simple-time.app). Se for um erro, indique o modelo do seu dispositivo e a versão do iOS. Se o SimpleTime tiver fechado inesperadamente, um relatório de Ajustes › Diagnóstico ajuda muito. Todas as mensagens são lidas."
+              "Escreva-nos para [contact@simple-time.app](mailto:contact@simple-time.app). Se for um erro, indique o modelo do seu dispositivo e a versão do iOS. Se o SimpleTime tiver fechado inesperadamente, um relatório de Definições › Diagnóstico ajuda muito. Todas as mensagens são lidas."
             ]
           },
           {
@@ -896,7 +896,7 @@
           {
             "title": "Apagar os seus dados",
             "paragraphs": [
-              "Na app, em Ajustes › Privacidade › Apagar todos os dados, remove de uma vez tudo o que o SimpleTime guardou – neste dispositivo, no iCloud e nas cópias de segurança no iCloud Drive; através do iCloud, a eliminação chega também aos seus outros dispositivos. Ao apagar a app, os respetivos dados são removidos desse dispositivo."
+              "Na app, em Definições › Privacidade › Apagar todos os dados, remove de uma vez tudo o que o SimpleTime guardou – neste dispositivo, no iCloud e nas cópias de segurança no iCloud Drive; através do iCloud, a eliminação chega também aos seus outros dispositivos. Ao apagar a app, os respetivos dados são removidos desse dispositivo."
             ]
           }
         ]

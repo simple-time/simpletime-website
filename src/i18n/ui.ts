@@ -493,7 +493,7 @@ export const ui = {
       'Informação legal de simple-time.app nos termos do § 5 DDG: titular, contactos e informações de responsabilidade da aplicação e do site SimpleTime.',
     'meta.pro.title': 'SimpleTime Pro – Apple Watch, locais, metas e mais',
     'meta.pro.description':
-      'O SimpleTime continua gratuito. O Pro acrescenta a app para o Apple Watch, resumos, locais, metas, o filtro de foco e mais – ao mês, ao ano ou para sempre.',
+      'O SimpleTime continua gratuito. O Pro acrescenta a app para o Apple Watch, resumos, locais, metas, o filtro de concentração e mais – ao mês, ao ano ou para sempre.',
     'meta.faq.title': 'Perguntas frequentes · SimpleTime',
     'meta.faq.description':
       'Respostas às perguntas mais frequentes sobre o SimpleTime: registo, widgets e Siri, sincronização com o iCloud e cópias de segurança, privacidade e SimpleTime Pro.',
@@ -1077,7 +1077,7 @@ export const ui = {
       'Νομικά στοιχεία του simple-time.app σύμφωνα με το § 5 DDG: κάτοχος, στοιχεία επικοινωνίας και πληροφορίες ευθύνης για την εφαρμογή και τον ιστότοπο SimpleTime.',
     'meta.pro.title': 'SimpleTime Pro – Apple Watch, μέρη, στόχοι και άλλα',
     'meta.pro.description':
-      'Το SimpleTime μένει δωρεάν. Το Pro προσθέτει την εφαρμογή για Apple Watch, ανασκοπήσεις, μέρη, στόχους, φίλτρο εστίασης και άλλα – μηνιαία, ετήσια ή μία φορά για πάντα.',
+      'Το SimpleTime μένει δωρεάν. Το Pro προσθέτει την εφαρμογή για Apple Watch, ανασκοπήσεις, μέρη, στόχους, φίλτρο συγκέντρωσης και άλλα – μηνιαία, ετήσια ή μία φορά για πάντα.',
     'meta.faq.title': 'Ερωτήσεις και απαντήσεις · SimpleTime',
     'meta.faq.description':
       'Απαντήσεις στις πιο συχνές ερωτήσεις για το SimpleTime: καταγραφή, widget και Siri, συγχρονισμός iCloud και αντίγραφα ασφαλείας, απόρρητο και SimpleTime Pro.',
