@@ -57,7 +57,7 @@
         "title": "Tüm cihazlarında",
         "points": [
           "iPhone, iPad ve Mac, iCloud üzerinden eşzamanlı",
-          "Cihazının dilinden bağımsız 40 dil",
+          "Cihazının dilinden bağımsız 41 dil",
           "Uygulamanın tamamında VoiceOver ve dinamik yazı tipi"
         ]
       },
@@ -314,7 +314,7 @@
     "terms": "Kullanım koşulları (EULA)",
     "privacy": "Gizlilik politikası",
     "freeTitle": "Ücretsiz kalanlar",
-    "freeBody": "Kayıt için ihtiyacın olan her şey: görevler ve alt görevler, gün görünümü ve zaman çizelgesi, grafikler ve istatistikler, PDF rapor ve CSV dışa aktarma, widget'lar, Canlı Etkinlik, Denetim Merkezi ve Siri, iCloud eşitlemesi ve yedekler, uygulama kilidi – 40 dilde. Hesap yok, reklam yok, takip yok.",
+    "freeBody": "Kayıt için ihtiyacın olan her şey: görevler ve alt görevler, gün görünümü ve zaman çizelgesi, grafikler ve istatistikler, PDF rapor ve CSV dışa aktarma, widget'lar, Canlı Etkinlik, Denetim Merkezi ve Siri, iCloud eşitlemesi ve yedekler, uygulama kilidi – 41 dilde. Hesap yok, reklam yok, takip yok.",
     "howTitle": "Pro'yu nasıl alırsın",
     "how": [
       "SimpleTime'da Ayarlar › SimpleTime Pro'yu aç.",
@@ -374,7 +374,7 @@
             "id": "languages",
             "q": "SimpleTime hangi dilleri konuşuyor?",
             "a": [
-              "40 dil – Türkçe ve İngilizceden Arapçaya, Hintçeye ve Japoncaya. Ayarlar › Dil bölümünde uygulamanın dilini cihazının dilinden bağımsız olarak seçebilirsin."
+              "41 dil – Türkçe ve İngilizceden Arapçaya, Hintçeye ve Japoncaya. Ayarlar › Dil bölümünde uygulamanın dilini cihazının dilinden bağımsız olarak seçebilirsin."
             ]
           },
           {

@@ -57,7 +57,7 @@
         "title": "On every device",
         "points": [
           "iPhone, iPad, and Mac, kept in sync through iCloud",
-          "40 languages, independent of your device language",
+          "41 languages, independent of your device language",
           "VoiceOver and Dynamic Type throughout"
         ]
       },
@@ -314,7 +314,7 @@
     "terms": "Terms of Use (EULA)",
     "privacy": "Privacy Policy",
     "freeTitle": "What stays free",
-    "freeBody": "Everything you need for tracking: tasks and subtasks, the day view and timeline, charts and statistics, the PDF report and CSV export, widgets, the Live Activity, Control Center and Siri, iCloud sync and backups, and the app lock – in 40 languages. No account, no ads, no tracking.",
+    "freeBody": "Everything you need for tracking: tasks and subtasks, the day view and timeline, charts and statistics, the PDF report and CSV export, widgets, the Live Activity, Control Center and Siri, iCloud sync and backups, and the app lock – in 41 languages. No account, no ads, no tracking.",
     "howTitle": "How to get Pro",
     "how": [
       "In SimpleTime, open Settings › SimpleTime Pro.",
@@ -374,7 +374,7 @@
             "id": "languages",
             "q": "Which languages does SimpleTime speak?",
             "a": [
-              "40 – from English and German to Arabic, Hindi and Japanese. Under Settings › Language, you can choose the app’s language independently of your device’s language."
+              "41 – from English and German to Arabic, Hindi and Japanese. Under Settings › Language, you can choose the app’s language independently of your device’s language."
             ]
           },
           {
