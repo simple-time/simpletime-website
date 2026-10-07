@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "Hur skapar jag en PDF-rapport?",
             "a": [
-              "Under Inställningar › Exportera rapport väljer du en period (från i dag till hela perioden, eller en egen), slår på de avsnitt du vill ha och drar dem i rätt ordning. SimpleTime skapar PDF:en med varje uppgift och deluppgift, redo att dela eller spara. SimpleTime Pro lägger till fler avsnitt: förlopp, dygnsfördelning, jämförelse och mål."
+              "Under Inställningar › Exportera rapport väljer du en period (från i dag till hela perioden, eller en egen), slår på de avsnitt du vill ha och drar dem i rätt ordning. SimpleTime skapar PDF:en med varje uppgift och deluppgift, redo att dela eller spara. SimpleTime Pro lägger till fler avsnitt: förlopp, dygnsfördelning, jämförelse och mål.",
+              "För tidrapporter finns avsnittet ”Alla poster”: varje post dag för dag med start, slut, uppgift och anteckning, plus dagssummor, totalsumma och decimaltimmar – perfekt för att stämma av timmarna mot lönebeskedet. Det är gratis, även utan Pro, och påslaget från början."
             ]
           }
         ]

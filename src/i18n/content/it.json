@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "Come creo un report PDF?",
             "a": [
-              "In Impostazioni › Esporta report scegli un periodo – da oggi a tutto il periodo, oppure uno personalizzato –, seleziona le sezioni che vuoi e trascinale nell’ordine che preferisci. SimpleTime crea il PDF con ogni attività e sotto-attività, pronto da condividere o salvare. SimpleTime Pro aggiunge altre sezioni: andamento, distribuzione nella giornata, confronto e obiettivi."
+              "In Impostazioni › Esporta report scegli un periodo – da oggi a tutto il periodo, oppure uno personalizzato –, seleziona le sezioni che vuoi e trascinale nell’ordine che preferisci. SimpleTime crea il PDF con ogni attività e sotto-attività, pronto da condividere o salvare. SimpleTime Pro aggiunge altre sezioni: andamento, distribuzione nella giornata, confronto e obiettivi.",
+              "Per i fogli ore c'è la sezione «Tutte le voci»: ogni voce giorno per giorno con inizio, fine, attività e nota, più totali giornalieri, totale complessivo e ore decimali, ideale per confrontare le tue ore con la busta paga. È gratuita, anche senza Pro, e attiva fin dall'inizio."
             ]
           }
         ]

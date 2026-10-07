@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "How do I create a PDF report?",
             "a": [
-              "Under Settings › Export Report, choose a period – from today to all time, or your own – pick the sections you want and drag them into order. SimpleTime creates the PDF with every task and subtask, ready to share or save. SimpleTime Pro adds extra sections: trend, daily spread, comparison and goals."
+              "Under Settings › Export Report, choose a period – from today to all time, or your own – pick the sections you want and drag them into order. SimpleTime creates the PDF with every task and subtask, ready to share or save. SimpleTime Pro adds extra sections: trend, daily spread, comparison and goals.",
+              "For timesheets there's the “All entries” section: every entry day by day with start, end, task and note, plus daily totals, a grand total and decimal hours – perfect for checking your hours against your payslip. It's free, no Pro needed, and switched on by default."
             ]
           }
         ]

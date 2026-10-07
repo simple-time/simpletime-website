@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "Comment créer un rapport PDF ?",
             "a": [
-              "Dans Paramètres › Exporter le rapport, choisissez une période – d’aujourd’hui à toute la période, ou une période personnalisée –, sélectionnez les sections souhaitées et faites-les glisser dans l’ordre voulu. SimpleTime crée le PDF avec chaque tâche et sous-tâche, prêt à être partagé ou enregistré. SimpleTime Pro ajoute des sections supplémentaires : évolution, répartition sur la journée, comparaison et objectifs."
+              "Dans Paramètres › Exporter le rapport, choisissez une période – d’aujourd’hui à toute la période, ou une période personnalisée –, sélectionnez les sections souhaitées et faites-les glisser dans l’ordre voulu. SimpleTime crée le PDF avec chaque tâche et sous-tâche, prêt à être partagé ou enregistré. SimpleTime Pro ajoute des sections supplémentaires : évolution, répartition sur la journée, comparaison et objectifs.",
+              "Pour les feuilles de temps, il y a la section « Toutes les entrées » : chaque entrée jour par jour avec début, fin, tâche et note, ainsi que les totaux par jour, le total général et les heures décimales – idéal pour vérifier vos heures avec votre fiche de paie. Elle est gratuite, sans Pro, et activée par défaut."
             ]
           }
         ]

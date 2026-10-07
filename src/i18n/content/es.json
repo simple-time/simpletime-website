@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "¿Cómo creo un informe PDF?",
             "a": [
-              "En Ajustes › Exportar informe, elige un período – de «Hoy» a «Todo el período», o uno personalizado –, escoge las secciones que quieras y ordénalas arrastrándolas. SimpleTime crea el PDF con cada tarea y subtarea, listo para compartir o guardar. SimpleTime Pro añade secciones adicionales: evolución, reparto del día, comparación y objetivos."
+              "En Ajustes › Exportar informe, elige un período – de «Hoy» a «Todo el período», o uno personalizado –, escoge las secciones que quieras y ordénalas arrastrándolas. SimpleTime crea el PDF con cada tarea y subtarea, listo para compartir o guardar. SimpleTime Pro añade secciones adicionales: evolución, reparto del día, comparación y objetivos.",
+              "Para las hojas de horas está la sección «Todas las entradas»: cada entrada día a día con inicio, fin, tarea y nota, además de totales diarios, total general y horas decimales; ideal para cotejar tus horas con la nómina. Es gratis, sin necesidad de Pro, y viene activada desde el principio."
             ]
           }
         ]

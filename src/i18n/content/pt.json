@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "Como crio um relatório PDF?",
             "a": [
-              "Em Definições › Exportar relatório, escolha um período – de «Hoje» a «Todo o período», ou um personalizado –, selecione as secções que quer e arraste-as para a ordem que preferir. O SimpleTime cria o PDF com cada tarefa e subtarefa, pronto a partilhar ou guardar. O SimpleTime Pro acrescenta secções adicionais: evolução, distribuição do dia, comparação e metas."
+              "Em Definições › Exportar relatório, escolha um período – de «Hoje» a «Todo o período», ou um personalizado –, selecione as secções que quer e arraste-as para a ordem que preferir. O SimpleTime cria o PDF com cada tarefa e subtarefa, pronto a partilhar ou guardar. O SimpleTime Pro acrescenta secções adicionais: evolução, distribuição do dia, comparação e metas.",
+              "Para folhas de horas existe a secção «Todos os registos»: cada registo dia a dia com início, fim, tarefa e nota, além de totais diários, total geral e horas decimais – ideal para conferir as suas horas com o recibo de vencimento. É gratuita, sem Pro, e vem ativada desde o início."
             ]
           }
         ]

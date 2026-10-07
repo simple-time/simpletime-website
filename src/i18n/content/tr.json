@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "PDF raporu nasıl oluştururum?",
             "a": [
-              "Ayarlar › Raporu dışa aktar bölümünde bir dönem seç – bugünden tüm zamanlara ya da kendi belirlediğin bir aralık –, istediğin bölümleri seç ve sürükleyerek sırala. SimpleTime her görev ve alt görevle PDF'i oluşturur; paylaşmaya ya da kaydetmeye hazırdır. SimpleTime Pro ek bölümler getirir: gelişim, gün içi dağılım, karşılaştırma ve hedefler."
+              "Ayarlar › Raporu dışa aktar bölümünde bir dönem seç – bugünden tüm zamanlara ya da kendi belirlediğin bir aralık –, istediğin bölümleri seç ve sürükleyerek sırala. SimpleTime her görev ve alt görevle PDF'i oluşturur; paylaşmaya ya da kaydetmeye hazırdır. SimpleTime Pro ek bölümler getirir: gelişim, gün içi dağılım, karşılaştırma ve hedefler.",
+              "Puantaj için “Tüm kayıtlar” bölümü var: her kayıt gün gün başlangıç, bitiş, görev ve notuyla; ayrıca günlük toplamlar, genel toplam ve ondalık saat – saatlerini maaş bordrosuyla karşılaştırmak için ideal. Ücretsizdir, Pro gerekmez ve baştan açıktır."
             ]
           }
         ]

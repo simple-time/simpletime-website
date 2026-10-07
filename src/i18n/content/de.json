@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "Wie erstelle ich einen PDF-Bericht?",
             "a": [
-              "Unter Einstellungen › Report exportieren wählst du einen Zeitraum – von heute bis zum gesamten Zeitraum oder einen eigenen –, suchst die Abschnitte aus und ziehst sie in die Reihenfolge, die du willst. SimpleTime erstellt das PDF mit jeder Aufgabe und Unteraufgabe, fertig zum Teilen oder Sichern. SimpleTime Pro bringt zusätzliche Abschnitte: Verlauf, Tagesverteilung, Vergleich und Ziele."
+              "Unter Einstellungen › Report exportieren wählst du einen Zeitraum – von heute bis zum gesamten Zeitraum oder einen eigenen –, suchst die Abschnitte aus und ziehst sie in die Reihenfolge, die du willst. SimpleTime erstellt das PDF mit jeder Aufgabe und Unteraufgabe, fertig zum Teilen oder Sichern. SimpleTime Pro bringt zusätzliche Abschnitte: Verlauf, Tagesverteilung, Vergleich und Ziele.",
+              "Für Stundenzettel gibt es den Abschnitt „Alle Einträge“: jeder Eintrag Tag für Tag mit Start, Ende, Aufgabe und Notiz, dazu Tagessummen, Gesamtsumme und Dezimalstunden – ideal, um deine Stunden mit der Lohnabrechnung abzugleichen. Er ist kostenlos, auch ohne Pro, und von Anfang an eingeschaltet."
             ]
           }
         ]

@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "Hoe maak ik een pdf-rapport?",
             "a": [
-              "Kies onder Instellingen › Rapport exporteren een periode (van vandaag tot de hele periode, of een eigen periode), zet de onderdelen aan die je wilt en sleep ze in de juiste volgorde. SimpleTime maakt de pdf met elke taak en subtaak, klaar om te delen of te bewaren. SimpleTime Pro voegt extra onderdelen toe: verloop, dagverdeling, vergelijking en doelen."
+              "Kies onder Instellingen › Rapport exporteren een periode (van vandaag tot de hele periode, of een eigen periode), zet de onderdelen aan die je wilt en sleep ze in de juiste volgorde. SimpleTime maakt de pdf met elke taak en subtaak, klaar om te delen of te bewaren. SimpleTime Pro voegt extra onderdelen toe: verloop, dagverdeling, vergelijking en doelen.",
+              "Voor urenstaten is er het onderdeel ‘Alle registraties’: elke registratie dag voor dag met start, einde, taak en notitie, plus dagtotalen, een eindtotaal en decimale uren – ideaal om je uren met je loonstrook te vergelijken. Het is gratis, ook zonder Pro, en staat standaard aan."
             ]
           }
         ]
