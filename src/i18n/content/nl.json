@@ -57,7 +57,7 @@
         "title": "Op al je apparaten",
         "points": [
           "iPhone, iPad en Mac, gesynchroniseerd via iCloud",
-          "40 talen, los van de taal van je apparaat",
+          "41 talen, los van de taal van je apparaat",
           "VoiceOver en dynamische tekst in de hele app"
         ]
       },
@@ -314,7 +314,7 @@
     "terms": "Gebruiksvoorwaarden (EULA)",
     "privacy": "Privacybeleid",
     "freeTitle": "Wat gratis blijft",
-    "freeBody": "Alles wat je nodig hebt om te registreren: taken en subtaken, de dagweergave en de tijdlijn, grafieken en statistieken, het pdf-rapport en de CSV-export, widgets, de Live activiteit, het bedieningspaneel en Siri, iCloud-synchronisatie en back-ups, en de app-vergrendeling – in 40 talen. Geen account, geen advertenties, geen tracking.",
+    "freeBody": "Alles wat je nodig hebt om te registreren: taken en subtaken, de dagweergave en de tijdlijn, grafieken en statistieken, het pdf-rapport en de CSV-export, widgets, de Live activiteit, het bedieningspaneel en Siri, iCloud-synchronisatie en back-ups, en de app-vergrendeling – in 41 talen. Geen account, geen advertenties, geen tracking.",
     "howTitle": "Zo krijg je Pro",
     "how": [
       "Open in SimpleTime Instellingen › SimpleTime Pro.",
@@ -374,7 +374,7 @@
             "id": "languages",
             "q": "Welke talen spreekt SimpleTime?",
             "a": [
-              "40 – van Nederlands, Engels en Duits tot Arabisch, Hindi en Japans. Onder Instellingen › Taal kies je de taal van de app, los van de taal van je apparaat."
+              "41 – van Nederlands, Engels en Duits tot Arabisch, Hindi en Japans. Onder Instellingen › Taal kies je de taal van de app, los van de taal van je apparaat."
             ]
           },
           {
@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "Hoe maak ik een pdf-rapport?",
             "a": [
-              "Kies onder Instellingen › Rapport exporteren een periode (van vandaag tot de hele periode, of een eigen periode), zet de onderdelen aan die je wilt en sleep ze in de juiste volgorde. SimpleTime maakt de pdf met elke taak en subtaak, klaar om te delen of te bewaren. SimpleTime Pro voegt extra onderdelen toe: verloop, dagverdeling, vergelijking en doelen."
+              "Kies onder Instellingen › Rapport exporteren een periode (van vandaag tot de hele periode, of een eigen periode), zet de onderdelen aan die je wilt en sleep ze in de juiste volgorde. SimpleTime maakt de pdf met elke taak en subtaak, klaar om te delen of te bewaren. SimpleTime Pro voegt extra onderdelen toe: verloop, dagverdeling, vergelijking en doelen.",
+              "Voor urenstaten is er het onderdeel ‘Alle registraties’: elke registratie dag voor dag met start, einde, taak en notitie, plus dagtotalen, een eindtotaal en decimale uren – ideaal om je uren met je loonstrook te vergelijken. Het is gratis, ook zonder Pro, en staat standaard aan."
             ]
           }
         ]

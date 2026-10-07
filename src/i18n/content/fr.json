@@ -57,7 +57,7 @@
         "title": "Sur tous vos appareils",
         "points": [
           "iPhone, iPad et Mac, synchronisés via iCloud",
-          "40 langues, indépendamment de la langue de votre appareil",
+          "41 langues, indépendamment de la langue de votre appareil",
           "VoiceOver et Dynamic Type dans toute l'app"
         ]
       },
@@ -314,7 +314,7 @@
     "terms": "Conditions d’utilisation (CLUF)",
     "privacy": "Politique de confidentialité",
     "freeTitle": "Ce qui reste gratuit",
-    "freeBody": "Tout ce qu’il faut pour suivre votre temps : tâches et sous-tâches, vue du jour et frise, graphiques et statistiques, rapport PDF et export CSV, widgets, activité en direct, centre de contrôle et Siri, synchronisation iCloud et sauvegardes, et le verrouillage de l’app – en 40 langues. Sans compte, sans publicité, sans pistage.",
+    "freeBody": "Tout ce qu’il faut pour suivre votre temps : tâches et sous-tâches, vue du jour et frise, graphiques et statistiques, rapport PDF et export CSV, widgets, activité en direct, centre de contrôle et Siri, synchronisation iCloud et sauvegardes, et le verrouillage de l’app – en 41 langues. Sans compte, sans publicité, sans pistage.",
     "howTitle": "Comment obtenir Pro",
     "how": [
       "Dans SimpleTime, ouvrez Paramètres › SimpleTime Pro.",
@@ -374,7 +374,7 @@
             "id": "languages",
             "q": "Quelles langues SimpleTime parle-t-il ?",
             "a": [
-              "40 – de l’anglais et de l’allemand à l’arabe, au hindi et au japonais. Dans Paramètres › Langue, vous choisissez la langue de l’app indépendamment de celle de votre appareil."
+              "41 – de l’anglais et de l’allemand à l’arabe, au hindi et au japonais. Dans Paramètres › Langue, vous choisissez la langue de l’app indépendamment de celle de votre appareil."
             ]
           },
           {
@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "Comment créer un rapport PDF ?",
             "a": [
-              "Dans Paramètres › Exporter le rapport, choisissez une période – d’aujourd’hui à toute la période, ou une période personnalisée –, sélectionnez les sections souhaitées et faites-les glisser dans l’ordre voulu. SimpleTime crée le PDF avec chaque tâche et sous-tâche, prêt à être partagé ou enregistré. SimpleTime Pro ajoute des sections supplémentaires : évolution, répartition sur la journée, comparaison et objectifs."
+              "Dans Paramètres › Exporter le rapport, choisissez une période – d’aujourd’hui à toute la période, ou une période personnalisée –, sélectionnez les sections souhaitées et faites-les glisser dans l’ordre voulu. SimpleTime crée le PDF avec chaque tâche et sous-tâche, prêt à être partagé ou enregistré. SimpleTime Pro ajoute des sections supplémentaires : évolution, répartition sur la journée, comparaison et objectifs.",
+              "Pour les feuilles de temps, il y a la section « Toutes les entrées » : chaque entrée jour par jour avec début, fin, tâche et note, ainsi que les totaux par jour, le total général et les heures décimales – idéal pour vérifier vos heures avec votre fiche de paie. Elle est gratuite, sans Pro, et activée par défaut."
             ]
           }
         ]

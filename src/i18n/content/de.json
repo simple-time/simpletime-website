@@ -57,7 +57,7 @@
         "title": "Auf allen Geräten",
         "points": [
           "iPhone, iPad und Mac, über iCloud synchron",
-          "40 Sprachen, unabhängig von der Sprache deines Geräts",
+          "41 Sprachen, unabhängig von der Sprache deines Geräts",
           "VoiceOver und Dynamic Type in der ganzen App"
         ]
       },
@@ -314,7 +314,7 @@
     "terms": "Nutzungsbedingungen (EULA)",
     "privacy": "Datenschutzerklärung",
     "freeTitle": "Was kostenlos bleibt",
-    "freeBody": "Alles, was du zum Erfassen brauchst: Aufgaben und Unteraufgaben, Tagesansicht und Zeitachse, Diagramme und Statistiken, PDF-Bericht und CSV-Export, Widgets, die Live-Aktivität, Kontrollzentrum und Siri, iCloud-Sync und Backups sowie die App-Sperre – in 40 Sprachen. Ohne Konto, ohne Werbung, ohne Tracking.",
+    "freeBody": "Alles, was du zum Erfassen brauchst: Aufgaben und Unteraufgaben, Tagesansicht und Zeitachse, Diagramme und Statistiken, PDF-Bericht und CSV-Export, Widgets, die Live-Aktivität, Kontrollzentrum und Siri, iCloud-Sync und Backups sowie die App-Sperre – in 41 Sprachen. Ohne Konto, ohne Werbung, ohne Tracking.",
     "howTitle": "So bekommst du Pro",
     "how": [
       "Öffne in SimpleTime Einstellungen › SimpleTime Pro.",
@@ -374,7 +374,7 @@
             "id": "languages",
             "q": "Welche Sprachen spricht SimpleTime?",
             "a": [
-              "40 – von Deutsch und Englisch bis Arabisch, Hindi und Japanisch. Unter Einstellungen › Sprache wählst du die Sprache der App unabhängig von der Sprache deines Geräts."
+              "41 – von Deutsch und Englisch bis Arabisch, Hindi und Japanisch. Unter Einstellungen › Sprache wählst du die Sprache der App unabhängig von der Sprache deines Geräts."
             ]
           },
           {
@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "Wie erstelle ich einen PDF-Bericht?",
             "a": [
-              "Unter Einstellungen › Report exportieren wählst du einen Zeitraum – von heute bis zum gesamten Zeitraum oder einen eigenen –, suchst die Abschnitte aus und ziehst sie in die Reihenfolge, die du willst. SimpleTime erstellt das PDF mit jeder Aufgabe und Unteraufgabe, fertig zum Teilen oder Sichern. SimpleTime Pro bringt zusätzliche Abschnitte: Verlauf, Tagesverteilung, Vergleich und Ziele."
+              "Unter Einstellungen › Report exportieren wählst du einen Zeitraum – von heute bis zum gesamten Zeitraum oder einen eigenen –, suchst die Abschnitte aus und ziehst sie in die Reihenfolge, die du willst. SimpleTime erstellt das PDF mit jeder Aufgabe und Unteraufgabe, fertig zum Teilen oder Sichern. SimpleTime Pro bringt zusätzliche Abschnitte: Verlauf, Tagesverteilung, Vergleich und Ziele.",
+              "Für Stundenzettel gibt es den Abschnitt „Alle Einträge“: jeder Eintrag Tag für Tag mit Start, Ende, Aufgabe und Notiz, dazu Tagessummen, Gesamtsumme und Dezimalstunden – ideal, um deine Stunden mit der Lohnabrechnung abzugleichen. Er ist kostenlos, auch ohne Pro, und von Anfang an eingeschaltet."
             ]
           }
         ]

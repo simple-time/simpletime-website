@@ -57,7 +57,7 @@
         "title": "Su tutti i dispositivi",
         "points": [
           "iPhone, iPad e Mac, sincronizzati via iCloud",
-          "40 lingue, indipendenti dalla lingua del dispositivo",
+          "41 lingue, indipendenti dalla lingua del dispositivo",
           "VoiceOver e testo dinamico in tutta l'app"
         ]
       },
@@ -314,7 +314,7 @@
     "terms": "Condizioni d’uso (EULA)",
     "privacy": "Informativa sulla privacy",
     "freeTitle": "Cosa resta gratuito",
-    "freeBody": "Tutto ciò che ti serve per registrare il tempo: attività e sotto-attività, vista del giorno e linea del tempo, grafici e statistiche, report PDF ed esportazione CSV, widget, attività in tempo reale, centro di controllo e Siri, sincronizzazione iCloud e backup, e il blocco dell’app – in 40 lingue. Nessun account, nessuna pubblicità, nessun tracciamento.",
+    "freeBody": "Tutto ciò che ti serve per registrare il tempo: attività e sotto-attività, vista del giorno e linea del tempo, grafici e statistiche, report PDF ed esportazione CSV, widget, attività in tempo reale, centro di controllo e Siri, sincronizzazione iCloud e backup, e il blocco dell’app – in 41 lingue. Nessun account, nessuna pubblicità, nessun tracciamento.",
     "howTitle": "Come ottenere Pro",
     "how": [
       "In SimpleTime, apri Impostazioni › SimpleTime Pro.",
@@ -374,7 +374,7 @@
             "id": "languages",
             "q": "Quali lingue parla SimpleTime?",
             "a": [
-              "40 – dall’inglese e dal tedesco all’arabo, all’hindi e al giapponese. In Impostazioni › Lingua scegli la lingua dell’app indipendentemente da quella del dispositivo."
+              "41 – dall’inglese e dal tedesco all’arabo, all’hindi e al giapponese. In Impostazioni › Lingua scegli la lingua dell’app indipendentemente da quella del dispositivo."
             ]
           },
           {
@@ -491,7 +491,8 @@
             "id": "pdf-report",
             "q": "Come creo un report PDF?",
             "a": [
-              "In Impostazioni › Esporta report scegli un periodo – da oggi a tutto il periodo, oppure uno personalizzato –, seleziona le sezioni che vuoi e trascinale nell’ordine che preferisci. SimpleTime crea il PDF con ogni attività e sotto-attività, pronto da condividere o salvare. SimpleTime Pro aggiunge altre sezioni: andamento, distribuzione nella giornata, confronto e obiettivi."
+              "In Impostazioni › Esporta report scegli un periodo – da oggi a tutto il periodo, oppure uno personalizzato –, seleziona le sezioni che vuoi e trascinale nell’ordine che preferisci. SimpleTime crea il PDF con ogni attività e sotto-attività, pronto da condividere o salvare. SimpleTime Pro aggiunge altre sezioni: andamento, distribuzione nella giornata, confronto e obiettivi.",
+              "Per i fogli ore c'è la sezione «Tutte le voci»: ogni voce giorno per giorno con inizio, fine, attività e nota, più totali giornalieri, totale complessivo e ore decimali, ideale per confrontare le tue ore con la busta paga. È gratuita, anche senza Pro, e attiva fin dall'inizio."
             ]
           }
         ]
