@@ -54,6 +54,13 @@ export const ui = {
     'nav.theme': 'Switch between light and dark',
     'skip.content': 'Skip to content',
 
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Client Project',
+    'live.since': 'since {time}',
+    'live.stop': 'Stop',
+    'gallery.prev': 'Previous image',
+    'gallery.next': 'Next image',
+
     'footer.tagline': 'One tap starts the clock.',
     'footer.legal': 'Legal',
     'footer.product': 'Product',
@@ -120,6 +127,13 @@ export const ui = {
     'nav.theme': 'Zwischen hell und dunkel wechseln',
     'skip.content': 'Zum Inhalt springen',
 
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Kundenprojekt',
+    'live.since': 'seit {time}',
+    'live.stop': 'Stoppen',
+    'gallery.prev': 'Vorheriges Bild',
+    'gallery.next': 'Nächstes Bild',
+
     'footer.tagline': 'Ein Tipp startet die Uhr.',
     'footer.legal': 'Rechtliches',
     'footer.product': 'Produkt',
@@ -184,6 +198,13 @@ export const ui = {
     'nav.language': 'Langue',
     'nav.theme': 'Basculer entre clair et sombre',
     'skip.content': 'Aller au contenu',
+
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Projet client',
+    'live.since': 'depuis {time}',
+    'live.stop': 'Arrêter',
+    'gallery.prev': 'Image précédente',
+    'gallery.next': 'Image suivante',
 
     'footer.tagline': 'Un geste lance le chrono.',
     'footer.legal': 'Informations légales',
@@ -250,6 +271,13 @@ export const ui = {
     'nav.theme': 'Cambiar entre claro y oscuro',
     'skip.content': 'Ir al contenido',
 
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Proyecto de cliente',
+    'live.since': 'desde {time}',
+    'live.stop': 'Detener',
+    'gallery.prev': 'Imagen anterior',
+    'gallery.next': 'Imagen siguiente',
+
     'footer.tagline': 'Un toque pone el reloj en marcha.',
     'footer.legal': 'Legal',
     'footer.product': 'Producto',
@@ -314,6 +342,13 @@ export const ui = {
     'nav.language': 'Lingua',
     'nav.theme': 'Passa da chiaro a scuro',
     'skip.content': 'Vai al contenuto',
+
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Progetto cliente',
+    'live.since': 'dalle {time}',
+    'live.stop': 'Interrompi',
+    'gallery.prev': 'Immagine precedente',
+    'gallery.next': 'Immagine successiva',
 
     'footer.tagline': 'Un tocco avvia il cronometro.',
     'footer.legal': 'Informazioni legali',
@@ -380,6 +415,13 @@ export const ui = {
     'nav.theme': 'Переключить светлую и тёмную тему',
     'skip.content': 'Перейти к содержимому',
 
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Проект клиента',
+    'live.since': 'с {time}',
+    'live.stop': 'Остановить',
+    'gallery.prev': 'Предыдущее изображение',
+    'gallery.next': 'Следующее изображение',
+
     'footer.tagline': 'Одно касание запускает часы.',
     'footer.legal': 'Правовая информация',
     'footer.product': 'Продукт',
@@ -444,6 +486,13 @@ export const ui = {
     'nav.language': 'Լեզու',
     'nav.theme': 'Փոխել լուսավոր և մուգ ձևը',
     'skip.content': 'Անցնել բովանդակությանը',
+
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Հաճախորդի նախագիծ',
+    'live.since': '{time}-ից',
+    'live.stop': 'Կանգնեցնել',
+    'gallery.prev': 'Նախորդ պատկերը',
+    'gallery.next': 'Հաջորդ պատկերը',
 
     'footer.tagline': 'Մեկ հպում՝ ժամանակը գնաց։',
     'footer.legal': 'Իրավական տեղեկություններ',
@@ -510,6 +559,13 @@ export const ui = {
     'nav.theme': 'Alternar entre claro e escuro',
     'skip.content': 'Ir para o conteúdo',
 
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Projeto de cliente',
+    'live.since': 'desde {time}',
+    'live.stop': 'Parar',
+    'gallery.prev': 'Imagem anterior',
+    'gallery.next': 'Imagem seguinte',
+
     'footer.tagline': 'Um toque inicia o relógio.',
     'footer.legal': 'Informação legal',
     'footer.product': 'Produto',
@@ -574,6 +630,13 @@ export const ui = {
     'nav.language': 'Dil',
     'nav.theme': 'Açık ve koyu tema arasında geçiş yap',
     'skip.content': 'İçeriğe geç',
+
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Müşteri projesi',
+    'live.since': '{time} itibarıyla',
+    'live.stop': 'Durdur',
+    'gallery.prev': 'Önceki görsel',
+    'gallery.next': 'Sonraki görsel',
 
     'footer.tagline': 'Tek dokunuş saati başlatır.',
     'footer.legal': 'Yasal bilgiler',
@@ -640,6 +703,13 @@ export const ui = {
     'nav.theme': 'التبديل بين الوضع الفاتح والداكن',
     'skip.content': 'الانتقال إلى المحتوى',
 
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'مشروع العميل',
+    'live.since': 'منذ {time}',
+    'live.stop': 'إيقاف',
+    'gallery.prev': 'الصورة السابقة',
+    'gallery.next': 'الصورة التالية',
+
     'footer.tagline': 'لمسة واحدة تُشغّل الساعة.',
     'footer.legal': 'معلومات قانونية',
     'footer.product': 'المنتج',
@@ -705,6 +775,13 @@ export const ui = {
     'nav.theme': 'ライトとダークを切り替える',
     'skip.content': '本文へ移動',
 
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'クライアント案件',
+    'live.since': '{time}から',
+    'live.stop': '停止',
+    'gallery.prev': '前の画像',
+    'gallery.next': '次の画像',
+
     'footer.tagline': 'ワンタップで計測開始。',
     'footer.legal': '法的情報',
     'footer.product': '製品',
@@ -768,6 +845,13 @@ export const ui = {
     'nav.language': '语言',
     'nav.theme': '切换浅色与深色',
     'skip.content': '跳到主要内容',
+
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': '客户项目',
+    'live.since': '自 {time}',
+    'live.stop': '停止',
+    'gallery.prev': '上一张图片',
+    'gallery.next': '下一张图片',
 
     'footer.tagline': '轻点一下，计时开始。',
     'footer.legal': '法律信息',
@@ -834,6 +918,13 @@ export const ui = {
     'nav.theme': 'हल्के और गहरे रंग के बीच बदलें',
     'skip.content': 'सामग्री पर जाएँ',
 
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'क्लाइंट प्रोजेक्ट',
+    'live.since': '{time} से',
+    'live.stop': 'रोकें',
+    'gallery.prev': 'पिछली छवि',
+    'gallery.next': 'अगली छवि',
+
     'footer.tagline': 'एक टैप और घड़ी चालू।',
     'footer.legal': 'कानूनी जानकारी',
     'footer.product': 'उत्पाद',
@@ -898,6 +989,13 @@ export const ui = {
     'nav.language': 'Taal',
     'nav.theme': 'Wisselen tussen licht en donker',
     'skip.content': 'Naar de inhoud',
+
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Klantproject',
+    'live.since': 'sinds {time}',
+    'live.stop': 'Stop',
+    'gallery.prev': 'Vorige afbeelding',
+    'gallery.next': 'Volgende afbeelding',
 
     'footer.tagline': 'Eén tik start de klok.',
     'footer.legal': 'Juridische informatie',
@@ -964,6 +1062,13 @@ export const ui = {
     'nav.theme': 'Växla mellan ljust och mörkt',
     'skip.content': 'Hoppa till innehållet',
 
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Kundprojekt',
+    'live.since': 'sedan {time}',
+    'live.stop': 'Stoppa',
+    'gallery.prev': 'Föregående bild',
+    'gallery.next': 'Nästa bild',
+
     'footer.tagline': 'Ett tryck startar klockan.',
     'footer.legal': 'Juridisk information',
     'footer.product': 'Produkt',
@@ -1028,6 +1133,13 @@ export const ui = {
     'nav.language': 'Мова',
     'nav.theme': 'Перемкнути світлу й темну тему',
     'skip.content': 'Перейти до вмісту',
+
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Проєкт клієнта',
+    'live.since': 'з {time}',
+    'live.stop': 'Зупинити',
+    'gallery.prev': 'Попереднє зображення',
+    'gallery.next': 'Наступне зображення',
 
     'footer.tagline': 'Один дотик запускає годинник.',
     'footer.legal': 'Правова інформація',
@@ -1094,6 +1206,13 @@ export const ui = {
     'nav.theme': 'Εναλλαγή ανοιχτού και σκούρου θέματος',
     'skip.content': 'Μετάβαση στο περιεχόμενο',
 
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'Έργο πελάτη',
+    'live.since': 'από {time}',
+    'live.stop': 'Διακοπή',
+    'gallery.prev': 'Προηγούμενη εικόνα',
+    'gallery.next': 'Επόμενη εικόνα',
+
     'footer.tagline': 'Ένα άγγιγμα ξεκινά το ρολόι.',
     'footer.legal': 'Νομικές πληροφορίες',
     'footer.product': 'Προϊόν',
@@ -1158,6 +1277,13 @@ export const ui = {
     'nav.language': 'שפה',
     'nav.theme': 'מעבר בין מצב בהיר לכהה',
     'skip.content': 'דילוג לתוכן',
+
+    // The Live Activity in the hero – the app's own strings and sample task.
+    'live.task': 'פרויקט לקוח',
+    'live.since': 'מאז {time}',
+    'live.stop': 'עצירה',
+    'gallery.prev': 'התמונה הקודמת',
+    'gallery.next': 'התמונה הבאה',
 
     'footer.tagline': 'הקשה אחת מפעילה את השעון.',
     'footer.legal': 'מידע משפטי',
