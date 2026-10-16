@@ -91,6 +91,8 @@ const jsonLdPayload = JSON.stringify(schemas).replace(/</g, '\\u003c');
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
     <title>{metaTitle}</title>
     <meta name="description" content={metaDescription} />
+    {/* Safari on iPhone and iPad shows its own "Get" / "Open" banner for the app. */}
+    <meta name="apple-itunes-app" content="app-id=6755532037" />
     {noIndex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
     {/* Round in the browser tab; the Apple touch icon stays square because
         iOS applies its own mask and renders transparency as black. */}

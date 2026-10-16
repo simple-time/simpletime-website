@@ -10,15 +10,85 @@ const COPY = {
     body: 'Die Seite, die du suchst, existiert nicht oder wurde verschoben.',
     home: 'Zurück zur Startseite',
   },
+  nl: {
+    title: 'Pagina niet gevonden',
+    body: 'De pagina die je zoekt bestaat niet of is verplaatst.',
+    home: 'Terug naar de startpagina',
+  },
+  sv: {
+    title: 'Sidan hittades inte',
+    body: 'Sidan du letar efter finns inte eller har flyttats.',
+    home: 'Tillbaka till startsidan',
+  },
   fr: {
     title: 'Page introuvable',
     body: 'La page que vous cherchez n’existe pas ou a été déplacée.',
     home: 'Retour à l’accueil',
   },
+  it: {
+    title: 'Pagina non trovata',
+    body: 'La pagina che cerchi non esiste o è stata spostata.',
+    home: 'Torna alla pagina iniziale',
+  },
   es: {
     title: 'Página no encontrada',
     body: 'La página que buscas no existe o se ha movido.',
     home: 'Volver al inicio',
+  },
+  pt: {
+    title: 'Página não encontrada',
+    body: 'A página que procura não existe ou foi movida.',
+    home: 'Voltar à página inicial',
+  },
+  ru: {
+    title: 'Страница не найдена',
+    body: 'Страница, которую вы ищете, не существует или была перемещена.',
+    home: 'Вернуться на главную',
+  },
+  uk: {
+    title: 'Сторінку не знайдено',
+    body: 'Сторінка, яку ви шукаєте, не існує або її переміщено.',
+    home: 'Повернутися на головну',
+  },
+  el: {
+    title: 'Η σελίδα δεν βρέθηκε',
+    body: 'Η σελίδα που αναζητάτε δεν υπάρχει ή έχει μετακινηθεί.',
+    home: 'Επιστροφή στην αρχική σελίδα',
+  },
+  tr: {
+    title: 'Sayfa bulunamadı',
+    body: 'Aradığın sayfa yok ya da taşınmış.',
+    home: 'Ana sayfaya dön',
+  },
+  hy: {
+    title: 'Էջը չի գտնվել',
+    body: 'Ձեր փնտրած էջը գոյություն չունի կամ տեղափոխվել է։',
+    home: 'Վերադառնալ գլխավոր էջ',
+  },
+  ar: {
+    title: 'الصفحة غير موجودة',
+    body: 'الصفحة التي تبحث عنها غير موجودة أو نُقلت إلى مكان آخر.',
+    home: 'العودة إلى الصفحة الرئيسية',
+  },
+  he: {
+    title: 'הדף לא נמצא',
+    body: 'הדף שחיפשתם לא קיים או שהועבר למקום אחר.',
+    home: 'חזרה לדף הבית',
+  },
+  hi: {
+    title: 'पृष्ठ नहीं मिला',
+    body: 'आप जो पृष्ठ खोज रहे हैं, वह मौजूद नहीं है या कहीं और ले जाया गया है।',
+    home: 'मुख्य पृष्ठ पर लौटें',
+  },
+  zh: {
+    title: '找不到页面',
+    body: '你要找的页面不存在或已被移动。',
+    home: '返回首页',
+  },
+  ja: {
+    title: 'ページが見つかりません',
+    body: 'お探しのページは存在しないか、移動した可能性があります。',
+    home: 'ホームに戻る',
   },
 };
 ---
@@ -69,12 +139,12 @@ const COPY = {
 
   <script is:inline define:vars={{ COPY }}>
     (function () {
-      var match = window.location.pathname.match(/^\/(de|fr|es)(?=\/|$)/);
-      if (!match) return;
-      var copy = COPY[match[1]];
+      var match = window.location.pathname.match(/^\/([a-z]{2})(?=\/|$)/);
+      var copy = match && COPY[match[1]];
       if (!copy) return;
 
       document.documentElement.lang = match[1];
+      if (match[1] === 'ar' || match[1] === 'he') document.documentElement.dir = 'rtl';
       document.getElementById('nf-title').textContent = copy.title;
       document.getElementById('nf-body').textContent = copy.body;
       document.getElementById('home-link').setAttribute('href', '/' + match[1] + '/');

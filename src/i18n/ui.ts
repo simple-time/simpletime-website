@@ -100,7 +100,7 @@ export const ui = {
   de: {
     'meta.title': 'SimpleTime – Zeiterfassung für iPhone, iPad und Mac',
     'meta.description':
-      'Ein Tipp startet die Uhr. SimpleTime erfasst, womit du deine Zeit verbringst – ohne Konto, ohne Werbung, ohne Tracking. Deine Zeiten bleiben auf deinem Gerät und in deiner iCloud.',
+      'Ein Tipp startet die Uhr. SimpleTime erfasst deine Zeit – ohne Konto, ohne Werbung, ohne Tracking. Deine Zeiten bleiben auf deinem Gerät und in deiner iCloud.',
 
     'meta.contact.description':
       'Fragen, Rückmeldungen oder ein Fehler? Schreib SimpleTime eine E-Mail – jede Nachricht wird gelesen und innerhalb weniger Werktage beantwortet.',
@@ -182,7 +182,7 @@ export const ui = {
       'Mentions légales de simple-time.app selon le § 5 DDG — éditeur, coordonnées et informations de responsabilité pour l’app et le site SimpleTime.',
     'meta.pro.title': 'SimpleTime Pro – Apple Watch, lieux, objectifs et plus encore',
     'meta.pro.description':
-      'SimpleTime reste gratuit. Pro ajoute l’app pour Apple Watch, bilans, lieux, objectifs, filtre de concentration et plus encore – au mois, à l’année ou une fois pour toutes.',
+      'SimpleTime reste gratuit. Pro ajoute l’app Apple Watch, bilans, lieux, objectifs, filtre de concentration et plus encore – au mois, à l’année ou une fois pour toutes.',
     'meta.faq.title': 'Questions fréquentes · SimpleTime',
     'meta.faq.description':
       'Réponses aux questions les plus fréquentes sur SimpleTime : suivi du temps, widgets et Siri, synchronisation iCloud et sauvegardes, confidentialité et SimpleTime Pro.',
@@ -1180,16 +1180,16 @@ export const ui = {
   el: {
     'meta.title': 'SimpleTime – Καταγραφή ώρας για iPhone, iPad και Mac',
     'meta.description':
-      'Ένα άγγιγμα ξεκινά το ρολόι. Το SimpleTime καταγράφει πού πάει ο χρόνος σου – χωρίς λογαριασμό, διαφημίσεις ή παρακολούθηση. Οι ώρες σου μένουν στη συσκευή και στο iCloud σου.',
+      'Το SimpleTime καταγράφει πού πάει ο χρόνος σου – χωρίς λογαριασμό, διαφημίσεις ή παρακολούθηση. Οι ώρες σου μένουν στη συσκευή και στο iCloud σου.',
     'meta.contact.description':
       'Έχετε μια ερώτηση, μια πρόταση ή ένα σφάλμα να αναφέρετε; Γράψτε στο SimpleTime με e-mail — διαβάζουμε κάθε μήνυμα και απαντάμε μέσα σε λίγες εργάσιμες ημέρες.',
     'meta.privacy.description':
-      'Πώς χειρίζεται το SimpleTime τα δεδομένα σου: χωρίς λογαριασμό, εργαλεία ανάλυσης ή δικούς μας διακομιστές. Οι εγγραφές σου μένουν στις συσκευές και στο ιδιωτικό σου iCloud.',
+      'Πώς χειρίζεται το SimpleTime τα δεδομένα σου: χωρίς λογαριασμό, εργαλεία ανάλυσης ή δικούς μας διακομιστές. Οι εγγραφές σου μένουν στις συσκευές και στο iCloud σου.',
     'meta.imprint.description':
       'Νομικά στοιχεία του simple-time.app σύμφωνα με το § 5 DDG: κάτοχος, στοιχεία επικοινωνίας και πληροφορίες ευθύνης για την εφαρμογή και τον ιστότοπο SimpleTime.',
     'meta.pro.title': 'SimpleTime Pro – Apple Watch, μέρη, στόχοι και άλλα',
     'meta.pro.description':
-      'Το SimpleTime μένει δωρεάν. Το Pro προσθέτει την εφαρμογή για Apple Watch, ανασκοπήσεις, μέρη, στόχους, φίλτρο συγκέντρωσης και άλλα – μηνιαία, ετήσια ή μία φορά για πάντα.',
+      'Το SimpleTime μένει δωρεάν. Το Pro προσθέτει την εφαρμογή Apple Watch, ανασκοπήσεις, μέρη, στόχους, φίλτρο συγκέντρωσης κ.ά. – μηνιαία, ετήσια ή μία φορά για πάντα.',
     'meta.faq.title': 'Ερωτήσεις και απαντήσεις · SimpleTime',
     'meta.faq.description':
       'Απαντήσεις στις πιο συχνές ερωτήσεις για το SimpleTime: καταγραφή, widget και Siri, συγχρονισμός iCloud και αντίγραφα ασφαλείας, απόρρητο και SimpleTime Pro.',
