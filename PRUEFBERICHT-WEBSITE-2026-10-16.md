@@ -364,3 +364,24 @@ Offen und von dir zu entscheiden:
 - **US-Store:** ob der App-Store-Link bewusst auf den US-Store zeigt (C2)
 - **404-Seite:** ob sie alle 18 Sprachen tragen soll (C2)
 - **Härte der E-Mail-Regeln:** ob DMARC `reject` gewollt ist. Das setzt voraus, dass alle legitimen Absender, etwa IONOS und Kontaktformulare anderer Dienste, über SPF/DKIM abgedeckt sind (S-DMARC).
+
+---
+
+## 9. Umsetzung (Stand 16.10.2026, 4 Uhr)
+
+| Befund | Stand | Wo |
+|---|---|---|
+| A1 Fokus hinter dem Menü | erledigt: Seite, Footer und Sprunglink sind bei offenem Menü `inert` | PR #11 `ff0578f` |
+| P2 Seitenköpfe und LCP | erledigt: LCP fällt auf allen gemessenen Seiten auf das erste Zeichnen; `/pro/` am Handy 3,9 → 2,3 s | PR #11 `ff0578f` |
+| A2 Armenisch bei 320 px | erledigt: `test:site` ohne Überlauf auf allen Seiten | PR #11 `ff0578f` |
+| A3 Zustand des Schalters | erledigt: „Dunkelmodus“ (Apples Begriff) mit `aria-pressed` | PR #11 `ff0578f` |
+| R1 Dunkelmodus ohne Speicher | erledigt | PR #11 `ff0578f` |
+| P1 CJK-Schriften | erledigt: Layout-CSS 241 → 58 KB roh, etwa 12 KB gzip, auf 16 von 18 Sprachen | PR #11 `a741acf` |
+| C1 Smart-App-Banner | erledigt | PR #11 `a741acf` |
+| C2 Store-Link, 404, FAQ | erledigt: Link ohne `/us/`, 404 in 18 Sprachen, CSV-Zeitraum in der FAQ. Das lokalisierte Badge bleibt offen, weil es Apples Grafiken zum Herunterladen braucht. | PR #11 `a741acf` |
+| S1 Beschreibungen | erledigt: Crawl ohne Warnung | PR #11 `a741acf` |
+| S-TXT `security.txt` | erledigt, gültig bis 15.10.2027. `check:live` warnt 30 Tage vorher. | PR #11 `a741acf` |
+| B3 workers.dev | `workers_dev: false` erledigt. Der Worker im alten Konto bleibt offen (löschen beim Schließen des Kontos). | PR #11 `a741acf` |
+| B2 Betrieb | erledigt: `.node-version`, Dependabot (Konfiguration und Einstellungen), Secret Scanning mit Push-Schutz, wöchentliche Live-Prüfung | PR #12 und Repo-Einstellungen |
+| B1 Workers Builds | offen: Die GitHub-App für `simpletime-hq` fehlt (geprüft: keine Installation in der Organisation) | Cloudflare und GitHub |
+| S-TLS, S-HTTPS, SEO1, S-DNS, S-DMARC | offen: Einstellungen an Zone und DNS | Cloudflare und IONOS |

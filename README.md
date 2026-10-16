@@ -1,6 +1,6 @@
 # SimpleTime Website
 
-Marketing website for [SimpleTime](https://apps.apple.com/us/app/simpletime-time-tracker/id6755532037), available at [simple-time.app](https://simple-time.app).
+Marketing website for [SimpleTime](https://apps.apple.com/app/simpletime-time-tracker/id6755532037), available at [simple-time.app](https://simple-time.app).
 
 Built with [Astro](https://astro.build) and [Tailwind CSS v4](https://tailwindcss.com). 18 languages (English at `/`, every other language under `/<lang>/`). No analytics, no tracking, self-hosted fonts.
 
@@ -15,6 +15,10 @@ npm run test:browser     # Playwright + axe against the built site (incl. a craw
 npm run test:site        # slow sweep: axe on every page in light and dark, reflow at 320 px
 npm run check:live       # the live server: redirects, HSTS, TLS, DNSSEC, CAA, DMARC, public copies
 ```
+
+Node comes from `.node-version`, which CI and Cloudflare Workers Builds both read. `check:live` and
+`test:site` also run every Monday (`.github/workflows/live.yml`); a failure there means something changed
+outside the repository – a Cloudflare setting, a DNS record, an expiring `security.txt` – or a page regressed.
 
 ## Pages
 

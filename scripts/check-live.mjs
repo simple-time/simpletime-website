@@ -106,6 +106,21 @@ for (const path of ['/robots.txt', '/sitemap-index.xml', '/.well-known/security.
   check(response.status === 200, `${path} present`, `${path} answers ${response.status}`);
 }
 
+// RFC 9116: security.txt carries an Expires date at most a year ahead. Warn a
+// month before it lapses, while there is still time to renew it.
+const securityTxt = await head(`${ORIGIN}/.well-known/security.txt`);
+if (securityTxt.status === 200) {
+  const expires = Date.parse((await securityTxt.text()).match(/^Expires:\s*(\S+)/m)?.[1] ?? '');
+  const days = Math.floor((expires - Date.now()) / 86_400_000);
+  check(
+    days > 30,
+    `security.txt valid for ${days} more days`,
+    Number.isNaN(days)
+      ? 'security.txt has no valid Expires line'
+      : `security.txt expires in ${days} days – move Expires in public/.well-known/security.txt a year ahead`,
+  );
+}
+
 for (const copy of COPIES) {
   try {
     const response = await head(copy);
