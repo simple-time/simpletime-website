@@ -29,8 +29,13 @@ const COPIES = [
 ];
 
 const problems = [];
+const advice = [];
 const ok = [];
 const check = (condition, good, bad) => (condition ? ok.push(good) : problems.push(bad));
+// Hardening that is recommended but was deliberately left for later (DNSSEC,
+// strict mail policy): reported every time, but it does not fail the run, so
+// the weekly job stays a signal for things that broke.
+const recommend = (condition, good, bad) => (condition ? ok.push(good) : advice.push(bad));
 
 async function head(url, init = {}) {
   return fetch(url, { method: 'GET', redirect: 'manual', ...init, headers: { 'user-agent': 'simpletime-check-live', ...init.headers } });
@@ -142,17 +147,18 @@ for (const version of ['TLSv1', 'TLSv1.1']) {
 
 const domain = HOST.replace(/^www\./, '');
 const ds = await doh(domain, 'DS');
-check(ds.length > 0, 'DNSSEC signed', 'DNSSEC not enabled (no DS record at the registry)');
+recommend(ds.length > 0, 'DNSSEC signed', 'DNSSEC not enabled (no DS record at the registry)');
 const caa = await doh(domain, 'CAA');
 check(caa.length > 0, 'CAA records present', 'no CAA record – any certificate authority may issue for the domain');
 const dmarc = (await doh(`_dmarc.${domain}`, 'TXT')).join(' ');
-check(/p=(quarantine|reject)/.test(dmarc), 'DMARC enforced', `DMARC not enforced: ${dmarc || '(none)'}`);
+recommend(/p=(quarantine|reject)/.test(dmarc), 'DMARC enforced', `DMARC not enforced: ${dmarc || '(none)'}`);
 const spf = (await doh(domain, 'TXT')).find((t) => t.includes('v=spf1')) ?? '';
-check(/-all/.test(spf), 'SPF ends in -all', `SPF is soft: ${spf || '(none)'}`);
+recommend(/-all/.test(spf), 'SPF ends in -all', `SPF is soft: ${spf || '(none)'}`);
 
 // -------------------------------------------------------------- report ---
 
 for (const line of ok) console.log(`ok    ${line}`);
+for (const line of advice) console.log(`WARN  ${line}`);
 for (const line of problems) console.log(`FAIL  ${line}`);
-console.log(`\ncheck-live: ${ok.length} ok, ${problems.length} to fix (${ORIGIN})`);
+console.log(`\ncheck-live: ${ok.length} ok, ${advice.length} recommended, ${problems.length} to fix (${ORIGIN})`);
 process.exit(problems.length ? 1 : 0);

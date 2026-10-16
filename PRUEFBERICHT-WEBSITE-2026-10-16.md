@@ -367,7 +367,7 @@ Offen und von dir zu entscheiden:
 
 ---
 
-## 9. Umsetzung (Stand 16.10.2026, 4 Uhr)
+## 9. Umsetzung (Stand 16.10.2026, gegen 4 Uhr)
 
 | Befund | Stand | Wo |
 |---|---|---|
@@ -384,4 +384,5 @@ Offen und von dir zu entscheiden:
 | B3 workers.dev | `workers_dev: false` erledigt. Der Worker im alten Konto bleibt offen (löschen beim Schließen des Kontos). | PR #11 `a741acf` |
 | B2 Betrieb | erledigt: `.node-version`, Dependabot (Konfiguration und Einstellungen), Secret Scanning mit Push-Schutz, wöchentliche Live-Prüfung | PR #12 und Repo-Einstellungen |
 | B1 Workers Builds | offen: Die GitHub-App für `simpletime-hq` fehlt (geprüft: keine Installation in der Organisation) | Cloudflare und GitHub |
-| S-TLS, S-HTTPS, SEO1, S-DNS, S-DMARC | offen: Einstellungen an Zone und DNS | Cloudflare und IONOS |
+| S-TLS, S-HTTPS, SEO1, CAA | erledigt am 16.10. gegen 3:45 Uhr: TLS ab 1.2, HTTPS-Zwang, HSTS (1 Jahr, includeSubDomains, preload), `www` → Hauptadresse mit 301 und Pfad, CAA für Google, Let’s Encrypt, SSL.com, Sectigo und iodef. `check:live`: 17 ok. | Cloudflare-Zone |
+| S-DNS (DNSSEC), S-DMARC/SPF | bewusst zurückgestellt (Entscheidung 16.10.). `check:live` meldet sie als Empfehlung (WARN), nicht als Fehler. | – |
