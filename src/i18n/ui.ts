@@ -51,7 +51,7 @@ export const ui = {
     'nav.menu': 'Open menu',
     'nav.menu.close': 'Close menu',
     'nav.language': 'Language',
-    'nav.theme': 'Switch between light and dark',
+    'nav.theme': 'Dark Mode',
     'skip.content': 'Skip to content',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -124,7 +124,7 @@ export const ui = {
     'nav.menu': 'Menü öffnen',
     'nav.menu.close': 'Menü schließen',
     'nav.language': 'Sprache',
-    'nav.theme': 'Zwischen hell und dunkel wechseln',
+    'nav.theme': 'Dunkelmodus',
     'skip.content': 'Zum Inhalt springen',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -196,7 +196,7 @@ export const ui = {
     'nav.menu': 'Ouvrir le menu',
     'nav.menu.close': 'Fermer le menu',
     'nav.language': 'Langue',
-    'nav.theme': 'Basculer entre clair et sombre',
+    'nav.theme': 'Mode sombre',
     'skip.content': 'Aller au contenu',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -268,7 +268,7 @@ export const ui = {
     'nav.menu': 'Abrir menú',
     'nav.menu.close': 'Cerrar menú',
     'nav.language': 'Idioma',
-    'nav.theme': 'Cambiar entre claro y oscuro',
+    'nav.theme': 'Modo oscuro',
     'skip.content': 'Ir al contenido',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -340,7 +340,7 @@ export const ui = {
     'nav.menu': 'Apri il menu',
     'nav.menu.close': 'Chiudi il menu',
     'nav.language': 'Lingua',
-    'nav.theme': 'Passa da chiaro a scuro',
+    'nav.theme': 'Modalità scura',
     'skip.content': 'Vai al contenuto',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -412,7 +412,7 @@ export const ui = {
     'nav.menu': 'Открыть меню',
     'nav.menu.close': 'Закрыть меню',
     'nav.language': 'Язык',
-    'nav.theme': 'Переключить светлую и тёмную тему',
+    'nav.theme': 'Тёмный режим',
     'skip.content': 'Перейти к содержимому',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -484,7 +484,7 @@ export const ui = {
     'nav.menu': 'Բացել ընտրացանկը',
     'nav.menu.close': 'Փակել ընտրացանկը',
     'nav.language': 'Լեզու',
-    'nav.theme': 'Փոխել լուսավոր և մուգ ձևը',
+    'nav.theme': 'Մուգ ռեժիմ',
     'skip.content': 'Անցնել բովանդակությանը',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -556,7 +556,7 @@ export const ui = {
     'nav.menu': 'Abrir o menu',
     'nav.menu.close': 'Fechar o menu',
     'nav.language': 'Idioma',
-    'nav.theme': 'Alternar entre claro e escuro',
+    'nav.theme': 'Modo escuro',
     'skip.content': 'Ir para o conteúdo',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -628,7 +628,7 @@ export const ui = {
     'nav.menu': 'Menüyü aç',
     'nav.menu.close': 'Menüyü kapat',
     'nav.language': 'Dil',
-    'nav.theme': 'Açık ve koyu tema arasında geçiş yap',
+    'nav.theme': 'Koyu Mod',
     'skip.content': 'İçeriğe geç',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -700,7 +700,7 @@ export const ui = {
     'nav.menu': 'فتح القائمة',
     'nav.menu.close': 'إغلاق القائمة',
     'nav.language': 'اللغة',
-    'nav.theme': 'التبديل بين الوضع الفاتح والداكن',
+    'nav.theme': 'النمط الداكن',
     'skip.content': 'الانتقال إلى المحتوى',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -772,7 +772,7 @@ export const ui = {
     'nav.menu': 'メニューを開く',
     'nav.menu.close': 'メニューを閉じる',
     'nav.language': '言語',
-    'nav.theme': 'ライトとダークを切り替える',
+    'nav.theme': 'ダークモード',
     'skip.content': '本文へ移動',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -843,7 +843,7 @@ export const ui = {
     'nav.menu': '打开菜单',
     'nav.menu.close': '关闭菜单',
     'nav.language': '语言',
-    'nav.theme': '切换浅色与深色',
+    'nav.theme': '深色模式',
     'skip.content': '跳到主要内容',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -915,7 +915,7 @@ export const ui = {
     'nav.menu': 'मेन्यू खोलें',
     'nav.menu.close': 'मेन्यू बंद करें',
     'nav.language': 'भाषा',
-    'nav.theme': 'हल्के और गहरे रंग के बीच बदलें',
+    'nav.theme': 'डार्क मोड',
     'skip.content': 'सामग्री पर जाएँ',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -987,7 +987,7 @@ export const ui = {
     'nav.menu': 'Menu openen',
     'nav.menu.close': 'Menu sluiten',
     'nav.language': 'Taal',
-    'nav.theme': 'Wisselen tussen licht en donker',
+    'nav.theme': 'Donkere modus',
     'skip.content': 'Naar de inhoud',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -1059,7 +1059,7 @@ export const ui = {
     'nav.menu': 'Öppna menyn',
     'nav.menu.close': 'Stäng menyn',
     'nav.language': 'Språk',
-    'nav.theme': 'Växla mellan ljust och mörkt',
+    'nav.theme': 'Mörkt läge',
     'skip.content': 'Hoppa till innehållet',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -1131,7 +1131,7 @@ export const ui = {
     'nav.menu': 'Відкрити меню',
     'nav.menu.close': 'Закрити меню',
     'nav.language': 'Мова',
-    'nav.theme': 'Перемкнути світлу й темну тему',
+    'nav.theme': 'Темний режим',
     'skip.content': 'Перейти до вмісту',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -1203,7 +1203,7 @@ export const ui = {
     'nav.menu': 'Άνοιγμα μενού',
     'nav.menu.close': 'Κλείσιμο μενού',
     'nav.language': 'Γλώσσα',
-    'nav.theme': 'Εναλλαγή ανοιχτού και σκούρου θέματος',
+    'nav.theme': 'Σκούρα εμφάνιση',
     'skip.content': 'Μετάβαση στο περιεχόμενο',
 
     // The Live Activity in the hero – the app's own strings and sample task.
@@ -1275,7 +1275,7 @@ export const ui = {
     'nav.menu': 'פתיחת תפריט',
     'nav.menu.close': 'סגירת תפריט',
     'nav.language': 'שפה',
-    'nav.theme': 'מעבר בין מצב בהיר לכהה',
+    'nav.theme': 'תצוגה כהה',
     'skip.content': 'דילוג לתוכן',
 
     // The Live Activity in the hero – the app's own strings and sample task.

@@ -133,15 +133,16 @@ const jsonLdPayload = JSON.stringify(schemas).replace(/</g, '\\u003c');
       (() => {
         const root = document.documentElement;
         root.classList.add('js');
+        let saved = null;
         try {
-          const saved = localStorage.getItem('theme');
-          const dark =
-            saved === 'dark' ||
-            (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
-          root.classList.toggle('dark', dark);
+          saved = localStorage.getItem('theme');
         } catch {
-          /* localStorage unavailable — fall back to the light default. */
+          /* Storage blocked: no saved choice, so the OS setting decides. */
         }
+        const dark =
+          saved === 'dark' ||
+          (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        root.classList.toggle('dark', dark);
       })();
     </script>
   </head>

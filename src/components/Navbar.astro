@@ -45,6 +45,7 @@ const links = [
         id="theme-toggle"
         class="grid h-9 w-9 place-items-center rounded-full text-ink/75 transition-colors hover:bg-surface-2 hover:text-ink"
         aria-label={t('nav.theme')}
+        aria-pressed="false"
       >
         <svg
           class="h-[17px] w-[17px] dark:hidden"
@@ -185,8 +186,13 @@ const links = [
   const root = document.documentElement;
 
   // Theme toggle — persists the explicit choice, so it wins over the OS setting.
-  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+  // aria-pressed tells screen readers whether dark mode is on; the script in
+  // <head> has already chosen the theme by the time this runs.
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle?.setAttribute('aria-pressed', String(root.classList.contains('dark')));
+  themeToggle?.addEventListener('click', () => {
     const dark = root.classList.toggle('dark');
+    themeToggle?.setAttribute('aria-pressed', String(dark));
     try {
       localStorage.setItem('theme', dark ? 'dark' : 'light');
     } catch {
@@ -206,6 +212,13 @@ const links = [
   const iconOpen = document.getElementById('menu-icon-open');
   const iconClose = document.getElementById('menu-icon-close');
 
+  // Everything outside the header: skip link, page and footer. The open menu
+  // covers all of it, so it goes inert – Tab and screen readers must not
+  // wander through links nobody can see (WCAG 2.4.11).
+  const behindMenu = Array.from(document.body.children).filter(
+    (el) => el !== header && !(el instanceof HTMLScriptElement),
+  );
+
   const setMenu = (open: boolean) => {
     menu?.classList.toggle('hidden', !open);
     iconOpen?.classList.toggle('hidden', open);
@@ -213,10 +226,18 @@ const links = [
     toggle?.setAttribute('aria-expanded', String(open));
     // The page behind a full-screen menu should not scroll.
     root.classList.toggle('overflow-hidden', open);
+    behindMenu.forEach((el) => el.toggleAttribute('inert', open));
   };
 
   toggle?.addEventListener('click', () => {
     setMenu(menu?.classList.contains('hidden') ?? true);
+  });
+
+  // The menu only exists below the lg breakpoint. When the window widens past
+  // it – a tablet turned sideways – the menu vanishes with the breakpoint and
+  // has to let go of the page as well.
+  window.matchMedia('(min-width: 64rem)').addEventListener('change', (e) => {
+    if (e.matches) setMenu(false);
   });
 
   // Close after following an in-page link, and on Escape.

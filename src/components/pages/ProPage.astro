@@ -72,17 +72,17 @@ const alt = (id: string) => shots.find((s) => s.id === id)?.alt ?? '';
         widths={[88, 176]}
         sizes="88px"
         loading="eager"
-        class="reveal mx-auto h-[76px] w-[76px] rounded-[22.5%] shadow-[0_18px_40px_-14px_rgb(0_0_0/0.75)] ring-1 ring-white/10 sm:h-[88px] sm:w-[88px]"
+        class="rise mx-auto h-[76px] w-[76px] rounded-[22.5%] shadow-[0_18px_40px_-14px_rgb(0_0_0/0.75)] ring-1 ring-white/10 sm:h-[88px] sm:w-[88px]"
       />
-      <p class="reveal delay-1 mt-7 text-[19px] font-semibold tracking-[-0.01em] text-[#9dbcff]">{pro.eyebrow}</p>
-      <h1 class="reveal delay-2 t-hero mt-3">{pro.title}</h1>
-      <p class="reveal delay-3 t-intro mx-auto mt-6 max-w-2xl text-white/75">{pro.subtitle}</p>
-      <div class="reveal delay-4 mt-9 flex justify-center">
+      <p class="rise delay-1 mt-7 text-[19px] font-semibold tracking-[-0.01em] text-[#9dbcff]">{pro.eyebrow}</p>
+      <h1 class="rise delay-2 t-hero mt-3">{pro.title}</h1>
+      <p class="rise delay-3 t-intro mx-auto mt-6 max-w-2xl text-white/75">{pro.subtitle}</p>
+      <div class="rise delay-4 mt-9 flex justify-center">
         <AppStoreButton label={t('appstore.download')} variant="onAccent" size="lg" />
       </div>
     </div>
 
-    <div class="pro-hero__stage reveal-media delay-3" dir="ltr">
+    <div class="pro-hero__stage rise-media delay-3" dir="ltr">
       <div class="pro-hero__glow" aria-hidden="true"></div>
       <WatchFrame image={watchScreen(lang, 'start')} alt="" class="pro-hero__watch pro-hero__watch--left" finish="silver" sizes="190px" loading="eager" />
       <DeviceFrame

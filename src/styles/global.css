@@ -193,6 +193,15 @@ body {
   line-height: 1.16;
 }
 
+/* A word longer than the line breaks instead of widening the page – Armenian
+   headings did at 320 px, i.e. 400 % zoom. `anywhere` rather than
+   `break-word`, so a grid or flex column may shrink below the word as well. */
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+}
+
 .text-balance {
   text-wrap: balance;
 }
@@ -340,6 +349,32 @@ body {
 .js .reveal-media.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* The top of a page does not wait for the reveal: that keeps a headline at
+   opacity 0 until script and observer have run, then fades it in – and Largest
+   Contentful Paint only counts it once it is opaque, a second late. Here it is
+   there at first paint and only settles upward, in CSS alone. */
+.rise {
+  animation: rise 1s var(--ease-out-soft) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.rise-media {
+  animation: rise-media 1.3s var(--ease-out-soft) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(18px);
+  }
+}
+
+@keyframes rise-media {
+  from {
+    transform: translateY(40px) scale(0.98);
+  }
 }
 
 /* Staggers without inline styles – the CSP allows none. */
