@@ -11,7 +11,9 @@ npm install
 npm run dev              # http://localhost:4321
 npm run build            # output to dist/, then CSP hashes into dist/_headers
 npm run check:content    # every language has every key English has
-npm run test:browser     # Playwright + axe against the built site
+npm run test:browser     # Playwright + axe against the built site (incl. a crawl of every page)
+npm run test:site        # slow sweep: axe on every page in light and dark, reflow at 320 px
+npm run check:live       # the live server: redirects, HSTS, TLS, DNSSEC, CAA, DMARC, public copies
 ```
 
 ## Pages
