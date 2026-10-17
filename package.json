@@ -11,7 +11,9 @@
     "astro": "astro",
     "postbuild": "node scripts/csp-headers.mjs",
     "test:browser": "playwright test",
-    "check:content": "node scripts/check-content.mjs"
+    "test:site": "SITE_AUDIT=1 playwright test tests/site-audit.spec.mjs --project home-desktop",
+    "check:content": "node scripts/check-content.mjs",
+    "check:live": "node scripts/check-live.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
